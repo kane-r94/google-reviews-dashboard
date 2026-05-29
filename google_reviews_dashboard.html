@@ -1020,22 +1020,34 @@ function renderPlatforms() {
   tbody.innerHTML = '';
   otherPlatforms.forEach(p => {
     const needed = calcNeeded(p.score, p.reviews, target);
-    const change = +(p.score - p.last).toFixed(1);
-    const changeBadge = change > 0 ? `<span class="change-badge change-up">▲ +${change.toFixed(1)}</span>`
+    const change = (p.score !== null && p.last !== null) ? +(p.score - p.last).toFixed(1) : null;
+    const changeBadge = change === null
+      ? '<span class="change-badge change-flat">—</span>'
+      : change > 0 ? `<span class="change-badge change-up">▲ +${change.toFixed(1)}</span>`
       : change < 0 ? `<span class="change-badge change-down">▼ ${change.toFixed(1)}</span>`
       : '<span class="change-badge change-flat">—</span>';
-    const neededCell = needed === 0
-      ? '<span class="needed-met">✓ Met</span>'
-      : `<span class="needed-val">${needed.toLocaleString()}</span>`;
+    const neededCell = needed === null
+      ? '<span class="score-na">N/A</span>'
+      : needed === 0
+        ? '<span class="needed-met">✓ Met</span>'
+        : `<span class="needed-val">${needed.toLocaleString()}</span>`;
+    const scoreDisplay = p.score !== null
+      ? `<span class="score-badge ${scoreClass(p.score)}">★ ${p.score.toFixed(1)}</span>`
+      : '<span class="score-na">N/A</span>';
+    const lastDisplay = p.last !== null
+      ? `<span class="score-badge ${scoreClass(p.last)}" style="opacity:0.6">★ ${p.last.toFixed(1)}</span>`
+      : '<span class="score-na">N/A</span>';
+    const reviewsDisplay = p.reviews !== null ? p.reviews.toLocaleString() : '—';
+    const totalDisplay = (p.reviews !== null && needed !== null) ? (p.reviews + needed).toLocaleString() : '—';
     const tr = document.createElement('tr');
     tr.innerHTML = `
       <td><span class="prop-name">${p.name}</span></td>
-      <td class="center"><span class="score-badge ${scoreClass(p.score)}">★ ${p.score.toFixed(1)}</span></td>
-      <td class="center"><span class="score-badge ${scoreClass(p.last)}" style="opacity:0.6">★ ${p.last.toFixed(1)}</span></td>
+      <td class="center">${scoreDisplay}</td>
+      <td class="center">${lastDisplay}</td>
       <td class="center">${changeBadge}</td>
-      <td class="right mono">${p.reviews.toLocaleString()}</td>
+      <td class="right mono">${reviewsDisplay}</td>
       <td class="right">${neededCell}</td>
-      <td class="right mono">${(p.reviews + needed).toLocaleString()}</td>
+      <td class="right mono">${totalDisplay}</td>
     `;
     tbody.appendChild(tr);
   });
