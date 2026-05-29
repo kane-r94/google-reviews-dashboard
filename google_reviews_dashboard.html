@@ -49,7 +49,7 @@
 
   body {
     font-family: var(--font);
-    background: #f0f4f3;
+    background: #f5f5f3;
     color: var(--gray-900);
     min-height: 100vh;
     font-size: 14px;
@@ -58,7 +58,7 @@
 
   /* ── header ── */
   .header {
-    background: var(--teal);
+    background: var(--liquorice);
     padding: 0 32px;
     display: flex;
     align-items: center;
@@ -68,21 +68,25 @@
     top: 0;
     z-index: 100;
   }
-  .header-left { display: flex; align-items: center; gap: 14px; }
-  .logo-mark {
-    width: 36px; height: 36px; border-radius: 8px;
-    background: var(--yellow);
-    display: flex; align-items: center; justify-content: center;
-    font-weight: 700; font-size: 15px; color: var(--teal); letter-spacing: -0.02em;
+  .header-left { display: flex; align-items: center; gap: 16px; }
+  .logo-img {
+    height: 32px;
+    width: auto;
+    display: block;
   }
-  .header-title { color: white; font-weight: 600; font-size: 16px; letter-spacing: -0.01em; }
-  .header-sub { color: rgba(255,255,255,0.6); font-size: 12px; margin-top: 1px; font-weight: 400; }
+  .header-divider {
+    width: 1px;
+    height: 28px;
+    background: rgba(255,255,255,0.15);
+  }
+  .header-title { color: white; font-weight: 600; font-size: 15px; letter-spacing: -0.01em; }
+  .header-sub { color: rgba(255,255,255,0.5); font-size: 12px; margin-top: 1px; font-weight: 400; }
   .header-right { display: flex; align-items: center; gap: 8px; }
-  .last-updated { font-size: 12px; color: rgba(255,255,255,0.5); font-family: var(--font); font-weight: 400; }
+  .last-updated { font-size: 12px; color: rgba(255,255,255,0.4); font-family: var(--font); font-weight: 400; }
 
   /* ── tab bar ── */
   .tab-bar {
-    background: var(--teal);
+    background: var(--liquorice);
     padding: 0 32px;
     display: flex;
     gap: 0;
@@ -237,11 +241,11 @@
   tbody tr { border-bottom: 1px solid var(--gray-100); transition: background 0.1s; }
   tbody tr:last-child { border-bottom: none; }
   tbody tr:hover { background: var(--gray-50); }
-  tbody tr.region-header { background: var(--mint-light); }
+  tbody tr.region-header { background: var(--yellow-light); }
   tbody tr.region-header td {
     font-size: 11px;
     font-weight: 600;
-    color: var(--teal);
+    color: var(--liquorice);
     letter-spacing: 0.05em;
     text-transform: uppercase;
     padding: 7px 14px;
@@ -460,10 +464,11 @@
 
 <header class="header">
   <div class="header-left">
-    <div class="logo-mark">SC</div>
+    <img src="sc_logo.png" alt="Student Cribs" class="logo-img">
+    <div class="header-divider"></div>
     <div>
-      <div class="header-title">Google Reviews Dashboard</div>
-      <div class="header-sub">Student Cribs · 26/27 Academic Year</div>
+      <div class="header-title">reviews dashboard</div>
+      <div class="header-sub">26/27 Academic Year</div>
     </div>
   </div>
   <div class="header-right">
