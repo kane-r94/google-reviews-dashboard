@@ -19,9 +19,7 @@ from pathlib import Path
 from github import Github
 from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
-from google.auth.transport.requests import Request
-from googleapiclient.discovery import build
-from googleapiclient.errors import HttpError
+from google.auth.transport.requests import Request, AuthorizedSession
 
 ROOT = Path(__file__).parent
 CONFIG_PATH = ROOT / "config.json"
@@ -86,54 +84,44 @@ def get_google_credentials() -> Credentials:
 # ---------------------------------------------------------------------------
 
 def build_reviews_service(creds: Credentials):
-    """
-    Reviews are fetched from the v4 mybusiness API, which is the version
-    that exposes the reviews endpoint with full text.
-    """
-    return build(
-        "mybusiness",
-        "v4",
-        credentials=creds,
-        discoveryServiceUrl=(
-            "https://mybusiness.googleapis.com/$discovery/rest?version=v4"
-        ),
-    )
+    """Returns an authorised session for direct HTTP calls to the v4 API."""
+    return AuthorizedSession(creds)
 
 
-def fetch_all_reviews_for_location(service, location_id: str) -> list:
+def fetch_all_reviews_for_location(session, location_id: str) -> list:
     """
     Fetch every review for a location, following pagination.
     Returns a list of review dicts.
     """
     reviews = []
     page_token = None
+    base_url = f"https://mybusiness.googleapis.com/v4/{location_id}/reviews"
 
     while True:
         try:
             params = {
-                "parent": location_id,
                 "pageSize": 50,
                 "orderBy": "updateTime desc",
             }
             if page_token:
                 params["pageToken"] = page_token
 
-            response = service.accounts().locations().reviews().list(
-                **params
-            ).execute()
+            resp = session.get(base_url, params=params, timeout=15)
 
-            page_reviews = response.get("reviews", [])
+            if resp.status_code != 200:
+                print(f"  API error {resp.status_code}: {resp.text[:300]}")
+                break
+
+            data = resp.json()
+            page_reviews = data.get("reviews", [])
             reviews.extend(page_reviews)
 
-            page_token = response.get("nextPageToken")
+            page_token = data.get("nextPageToken")
             if not page_token:
                 break
 
             time.sleep(0.5)  # polite pacing between pages
 
-        except HttpError as e:
-            print(f"  API error fetching reviews for {location_id}: {e}")
-            break
         except Exception as e:
             print(f"  Unexpected error for {location_id}: {e}")
             break
