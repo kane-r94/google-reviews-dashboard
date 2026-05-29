@@ -277,13 +277,12 @@ def build_js_properties_array(properties_data: list, previous_scores: dict) -> s
     return "\n".join(lines)
 
 
-def build_js_platforms_array(tp_data: dict, aa_data: dict, previous_platform_scores: dict) -> str:
+def build_js_platforms_array(tp_data: dict, previous_platform_scores: dict) -> str:
     """
     Build the `const otherPlatforms = [...]` block using company-level platform scores.
     """
     platforms = [
         {"name": "Trustpilot", "score": tp_data["rating"], "reviews": tp_data["review_count"]},
-        {"name": "All Agents", "score": aa_data["rating"], "reviews": aa_data["review_count"]},
     ]
 
     lines = ["const otherPlatforms = ["]
@@ -392,15 +391,6 @@ def main():
     else:
         tp_data = {"rating": None, "review_count": None}
 
-    aa_url = platforms_config.get("all_agents_url", "")
-    if aa_url:
-        print(f"Fetching: AllAgents (company)...", end=" ", flush=True)
-        aa_data = fetch_all_agents_rating(aa_url)
-        print(f"Rating: {aa_data['rating'] or 'N/A'}")
-        time.sleep(1)
-    else:
-        aa_data = {"rating": None, "review_count": None}
-
     print("\nUpdating HTML file...")
     if not HTML_PATH.exists():
         sys.exit(
@@ -415,7 +405,7 @@ def main():
     previous_platform_scores = extract_previous_platform_scores(html_content)
 
     js_properties = build_js_properties_array(properties_data, previous_scores)
-    js_platforms  = build_js_platforms_array(tp_data, aa_data, previous_platform_scores)
+    js_platforms  = build_js_platforms_array(tp_data, previous_platform_scores)
     updated_html  = inject_into_html(html_content, js_properties, js_platforms, last_updated)
     HTML_PATH.write_text(updated_html, encoding="utf-8")
     print(f"HTML updated. Last updated: {last_updated}")

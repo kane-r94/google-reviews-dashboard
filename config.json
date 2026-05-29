@@ -7,12 +7,10 @@
   },
   "targets": {
     "google_rating": 4.5,
-    "trustpilot_rating": 4.5,
-    "all_agents_rating": 4.5
+    "trustpilot_rating": 4.5
   },
   "platforms": {
-    "trustpilot_url": "https://uk.trustpilot.com/review/student-cribs.com",
-    "all_agents_url": "https://www.allagents.co.uk/student-cribs"
+    "trustpilot_url": "https://uk.trustpilot.com/review/student-cribs.com"
   },
   "properties": [
     {
