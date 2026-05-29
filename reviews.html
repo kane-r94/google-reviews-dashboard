@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reviews Feed</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #f4f6f9;
+      color: #1a1a2e;
+      min-height: 100vh;
+    }
+
+    /* ── Header ── */
+    header {
+      background: #1a1a2e;
+      color: #fff;
+      padding: 20px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    header h1 { font-size: 1.4rem; font-weight: 600; }
+    header .updated {
+      font-size: 0.8rem;
+      opacity: 0.6;
+    }
+    .back-link {
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.85rem;
+      opacity: 0.75;
+      transition: opacity 0.15s;
+    }
+    .back-link:hover { opacity: 1; }
+
+    /* ── Stats bar ── */
+    .stats-bar {
+      background: #fff;
+      border-bottom: 1px solid #e2e8f0;
+      padding: 14px 32px;
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    .stat { display: flex; flex-direction: column; }
+    .stat-value { font-size: 1.4rem; font-weight: 700; color: #1a1a2e; }
+    .stat-label { font-size: 0.75rem; color: #64748b; margin-top: 2px; }
+
+    /* ── Filters ── */
+    .filters {
+      background: #fff;
+      border-bottom: 1px solid #e2e8f0;
+      padding: 16px 32px;
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      align-items: flex-end;
+    }
+    .filter-group { display: flex; flex-direction: column; gap: 5px; }
+    .filter-group label { font-size: 0.75rem; font-weight: 600; color: #475569; text-transform: uppercase; letter-spacing: 0.04em; }
+    .filter-group select,
+    .filter-group input {
+      padding: 8px 12px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      font-size: 0.875rem;
+      background: #f8fafc;
+      color: #1a1a2e;
+      outline: none;
+      transition: border-color 0.15s;
+      min-width: 180px;
+    }
+    .filter-group select:focus,
+    .filter-group input:focus { border-color: #6366f1; background: #fff; }
+
+    .star-filters { display: flex; gap: 6px; align-items: center; }
+    .star-btn {
+      padding: 7px 14px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      background: #f8fafc;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.15s;
+      color: #475569;
+      font-weight: 500;
+    }
+    .star-btn:hover { border-color: #6366f1; color: #6366f1; }
+    .star-btn.active { background: #6366f1; border-color: #6366f1; color: #fff; }
+    .star-btn.star-1.active { background: #ef4444; border-color: #ef4444; }
+    .star-btn.star-2.active { background: #f97316; border-color: #f97316; }
+    .star-btn.star-3.active { background: #eab308; border-color: #eab308; }
+    .star-btn.star-4.active { background: #22c55e; border-color: #22c55e; }
+    .star-btn.star-5.active { background: #6366f1; border-color: #6366f1; }
+
+    .filter-actions { display: flex; gap: 8px; margin-left: auto; align-self: flex-end; }
+    .btn-reset {
+      padding: 8px 16px;
+      background: #f1f5f9;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      color: #475569;
+      transition: all 0.15s;
+    }
+    .btn-reset:hover { background: #e2e8f0; }
+
+    /* ── Sort bar ── */
+    .sort-bar {
+      padding: 12px 32px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.85rem;
+      color: #64748b;
+    }
+    .sort-bar select {
+      padding: 5px 10px;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      background: #fff;
+      color: #1a1a2e;
+      outline: none;
+    }
+    #results-count { margin-left: auto; font-weight: 500; }
+
+    /* ── Reviews grid ── */
+    .reviews-container {
+      padding: 0 32px 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 16px;
+    }
+
+    .review-card {
+      background: #fff;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: box-shadow 0.15s;
+    }
+    .review-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .reviewer-name { font-weight: 600; font-size: 0.95rem; }
+    .review-date { font-size: 0.78rem; color: #94a3b8; white-space: nowrap; }
+
+    .stars { font-size: 1.1rem; letter-spacing: 1px; }
+    .stars .star-filled { color: #f59e0b; }
+    .stars .star-empty  { color: #e2e8f0; }
+
+    .property-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.78rem;
+      color: #475569;
+    }
+    .region-badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 20px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      background: #e0e7ff;
+      color: #4338ca;
+    }
+    .region-badge.region-ne { background: #dbeafe; color: #1d4ed8; }
+    .region-badge.region-n  { background: #dcfce7; color: #15803d; }
+    .region-badge.region-m  { background: #fef3c7; color: #b45309; }
+    .region-badge.region-s  { background: #fce7f3; color: #be185d; }
+
+    .review-text {
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #374151;
+      flex: 1;
+    }
+    .review-text.no-text { color: #94a3b8; font-style: italic; }
+
+    .reply-box {
+      background: #f8fafc;
+      border-left: 3px solid #6366f1;
+      border-radius: 0 8px 8px 0;
+      padding: 10px 14px;
+      font-size: 0.82rem;
+      color: #475569;
+      line-height: 1.5;
+    }
+    .reply-box strong { color: #1a1a2e; display: block; margin-bottom: 3px; font-size: 0.8rem; }
+
+    /* ── Empty state ── */
+    .empty-state {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 60px 20px;
+      color: #94a3b8;
+    }
+    .empty-state .icon { font-size: 2.5rem; margin-bottom: 12px; }
+    .empty-state p { font-size: 0.95rem; }
+
+    /* ── Loading ── */
+    .loading {
+      text-align: center;
+      padding: 80px 20px;
+      color: #94a3b8;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 600px) {
+      header, .filters, .stats-bar, .sort-bar { padding-left: 16px; padding-right: 16px; }
+      .reviews-container { padding: 0 16px 40px; grid-template-columns: 1fr; }
+      .filter-actions { margin-left: 0; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>Reviews Feed</h1>
+    <div class="updated">Last updated: <span id="last-updated">—</span></div>
+  </div>
+  <a class="back-link" href="google_reviews_dashboard.html">← Back to Dashboard</a>
+</header>
+
+<div class="stats-bar" id="stats-bar">
+  <div class="stat"><span class="stat-value" id="stat-total">—</span><span class="stat-label">Total Reviews</span></div>
+  <div class="stat"><span class="stat-value" id="stat-avg">—</span><span class="stat-label">Average Rating</span></div>
+  <div class="stat"><span class="stat-value" id="stat-5star">—</span><span class="stat-label">5-Star Reviews</span></div>
+  <div class="stat"><span class="stat-value" id="stat-replied">—</span><span class="stat-label">Replied To</span></div>
+</div>
+
+<div class="filters">
+  <div class="filter-group">
+    <label>Region</label>
+    <select id="filter-region">
+      <option value="">All Regions</option>
+      <option value="North East (Newcastle)">North East (Newcastle)</option>
+      <option value="North (Manchester)">North (Manchester)</option>
+      <option value="Midlands (Leicester)">Midlands (Leicester)</option>
+      <option value="South (Exeter)">South (Exeter)</option>
+    </select>
+  </div>
+
+  <div class="filter-group">
+    <label>Property</label>
+    <select id="filter-property">
+      <option value="">All Properties</option>
+    </select>
+  </div>
+
+  <div class="filter-group">
+    <label>Star Rating</label>
+    <div class="star-filters">
+      <button class="star-btn star-5" data-stars="5">★ 5</button>
+      <button class="star-btn star-4" data-stars="4">★ 4</button>
+      <button class="star-btn star-3" data-stars="3">★ 3</button>
+      <button class="star-btn star-2" data-stars="2">★ 2</button>
+      <button class="star-btn star-1" data-stars="1">★ 1</button>
+    </div>
+  </div>
+
+  <div class="filter-group">
+    <label>Search</label>
+    <input type="text" id="filter-search" placeholder="Search review text…" />
+  </div>
+
+  <div class="filter-group">
+    <label>Replied</label>
+    <select id="filter-replied">
+      <option value="">All</option>
+      <option value="yes">Replied</option>
+      <option value="no">No Reply</option>
+    </select>
+  </div>
+
+  <div class="filter-actions">
+    <button class="btn-reset" id="btn-reset">Reset filters</button>
+  </div>
+</div>
+
+<div class="sort-bar">
+  <label for="sort-by">Sort by:</label>
+  <select id="sort-by">
+    <option value="date-desc">Newest first</option>
+    <option value="date-asc">Oldest first</option>
+    <option value="stars-desc">Highest rated</option>
+    <option value="stars-asc">Lowest rated</option>
+  </select>
+  <span id="results-count"></span>
+</div>
+
+<div class="reviews-container" id="reviews-container">
+  <div class="loading">Loading reviews…</div>
+</div>
+
+<script>
+  // ── State ──────────────────────────────────────────────────────────────
+  let allReviews = [];
+  let activeStars = new Set();
+
+  // ── Helpers ────────────────────────────────────────────────────────────
+  function regionClass(region) {
+    if (region.includes("North East")) return "region-ne";
+    if (region.includes("North ("))   return "region-n";
+    if (region.includes("Midlands"))  return "region-m";
+    if (region.includes("South"))     return "region-s";
+    return "";
+  }
+
+  function renderStars(n) {
+    let s = "";
+    for (let i = 1; i <= 5; i++) {
+      s += i <= n
+        ? '<span class="star-filled">★</span>'
+        : '<span class="star-empty">★</span>';
+    }
+    return s;
+  }
+
+  function escapeHtml(str) {
+    return str
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
+
+  // ── Load data ──────────────────────────────────────────────────────────
+  async function loadData() {
+    try {
+      const res = await fetch("reviews_data.json?t=" + Date.now());
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      const data = await res.json();
+
+      document.getElementById("last-updated").textContent = data.last_updated || "Unknown";
+
+      // Flatten all reviews into one array with property/region attached
+      allReviews = [];
+      const propertySelect = document.getElementById("filter-property");
+
+      for (const prop of data.properties) {
+        // Populate property dropdown
+        const opt = document.createElement("option");
+        opt.value = prop.name;
+        opt.textContent = prop.name;
+        propertySelect.appendChild(opt);
+
+        for (const review of prop.reviews) {
+          allReviews.push({
+            ...review,
+            property: prop.name,
+            region: prop.region,
+          });
+        }
+      }
+
+      updateStats(allReviews);
+      renderReviews();
+
+    } catch (err) {
+      document.getElementById("reviews-container").innerHTML =
+        `<div class="empty-state">
+          <div class="icon">⚠️</div>
+          <p>Could not load reviews_data.json.<br>Run <strong>fetch_review_text.py</strong> first to generate it.</p>
+        </div>`;
+    }
+  }
+
+  // ── Stats ──────────────────────────────────────────────────────────────
+  function updateStats(reviews) {
+    const total = reviews.length;
+    const avg = total
+      ? (reviews.reduce((s, r) => s + r.stars, 0) / total).toFixed(2)
+      : "—";
+    const fiveStar = reviews.filter(r => r.stars === 5).length;
+    const replied  = reviews.filter(r => r.has_reply).length;
+
+    document.getElementById("stat-total").textContent   = total.toLocaleString();
+    document.getElementById("stat-avg").textContent     = total ? avg : "—";
+    document.getElementById("stat-5star").textContent   = fiveStar.toLocaleString();
+    document.getElementById("stat-replied").textContent = replied.toLocaleString();
+  }
+
+  // ── Filter & sort ──────────────────────────────────────────────────────
+  function getFilteredReviews() {
+    const region   = document.getElementById("filter-region").value;
+    const property = document.getElementById("filter-property").value;
+    const search   = document.getElementById("filter-search").value.trim().toLowerCase();
+    const replied  = document.getElementById("filter-replied").value;
+    const sortBy   = document.getElementById("sort-by").value;
+
+    let filtered = allReviews.filter(r => {
+      if (region   && r.region   !== region)   return false;
+      if (property && r.property !== property) return false;
+      if (activeStars.size > 0 && !activeStars.has(r.stars)) return false;
+      if (search   && !r.text.toLowerCase().includes(search) &&
+                      !r.reviewer.toLowerCase().includes(search) &&
+                      !r.property.toLowerCase().includes(search)) return false;
+      if (replied === "yes" && !r.has_reply)  return false;
+      if (replied === "no"  &&  r.has_reply)  return false;
+      return true;
+    });
+
+    filtered.sort((a, b) => {
+      if (sortBy === "date-desc") return a.raw_date < b.raw_date ?  1 : -1;
+      if (sortBy === "date-asc")  return a.raw_date > b.raw_date ?  1 : -1;
+      if (sortBy === "stars-desc") return b.stars - a.stars;
+      if (sortBy === "stars-asc")  return a.stars - b.stars;
+      return 0;
+    });
+
+    return filtered;
+  }
+
+  // ── Render ─────────────────────────────────────────────────────────────
+  function renderReviews() {
+    const filtered = getFilteredReviews();
+    const container = document.getElementById("reviews-container");
+
+    document.getElementById("results-count").textContent =
+      filtered.length.toLocaleString() + " review" + (filtered.length !== 1 ? "s" : "");
+
+    if (filtered.length === 0) {
+      container.innerHTML = `
+        <div class="empty-state">
+          <div class="icon">🔍</div>
+          <p>No reviews match your filters.</p>
+        </div>`;
+      return;
+    }
+
+    container.innerHTML = filtered.map(r => {
+      const textHtml = r.text
+        ? `<div class="review-text">${escapeHtml(r.text)}</div>`
+        : `<div class="review-text no-text">No written review</div>`;
+
+      const replyHtml = r.has_reply
+        ? `<div class="reply-box">
+            <strong>Owner reply · ${escapeHtml(r.reply_date)}</strong>
+            ${escapeHtml(r.reply_text)}
+           </div>`
+        : "";
+
+      return `
+        <div class="review-card">
+          <div class="card-header">
+            <div>
+              <div class="reviewer-name">${escapeHtml(r.reviewer)}</div>
+              <div class="stars">${renderStars(r.stars)}</div>
+            </div>
+            <div class="review-date">${escapeHtml(r.date)}</div>
+          </div>
+          <div class="property-tag">
+            <span>${escapeHtml(r.property)}</span>
+            <span class="region-badge ${regionClass(r.region)}">${escapeHtml(r.region)}</span>
+          </div>
+          ${textHtml}
+          ${replyHtml}
+        </div>`;
+    }).join("");
+  }
+
+  // ── Events ─────────────────────────────────────────────────────────────
+  document.getElementById("filter-region").addEventListener("change", () => {
+    // Reset property dropdown when region changes
+    const region = document.getElementById("filter-region").value;
+    const propSel = document.getElementById("filter-property");
+    propSel.value = "";
+    renderReviews();
+  });
+
+  document.getElementById("filter-property").addEventListener("change", renderReviews);
+  document.getElementById("filter-replied").addEventListener("change", renderReviews);
+  document.getElementById("sort-by").addEventListener("change", renderReviews);
+
+  document.getElementById("filter-search").addEventListener("input", renderReviews);
+
+  document.querySelectorAll(".star-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const s = parseInt(btn.dataset.stars);
+      if (activeStars.has(s)) {
+        activeStars.delete(s);
+        btn.classList.remove("active");
+      } else {
+        activeStars.add(s);
+        btn.classList.add("active");
+      }
+      renderReviews();
+    });
+  });
+
+  document.getElementById("btn-reset").addEventListener("click", () => {
+    document.getElementById("filter-region").value   = "";
+    document.getElementById("filter-property").value = "";
+    document.getElementById("filter-search").value   = "";
+    document.getElementById("filter-replied").value  = "";
+    document.getElementById("sort-by").value         = "date-desc";
+    activeStars.clear();
+    document.querySelectorAll(".star-btn").forEach(b => b.classList.remove("active"));
+    renderReviews();
+  });
+
+  // ── Init ───────────────────────────────────────────────────────────────
+  loadData();
+</script>
+</body>
+</html>

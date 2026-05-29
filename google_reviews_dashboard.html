@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Google Reviews Dashboard · Student Cribs</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --teal: #18706E;
+    --teal-mid: #1a8a87;
+    --teal-light: #e1f5ee;
+    --teal-pale: #f0faf7;
+    --yellow: #FFCC00;
+    --yellow-light: #fff9e0;
+    --red: #e24b4a;
+    --red-light: #fdf2f2;
+    --green: #2e7d4f;
+    --green-light: #edf7f2;
+    --amber: #d97706;
+    --amber-light: #fffbeb;
+    --blue: #2563eb;
+    --blue-light: #eff6ff;
+    --gray-50: #f9fafb;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-300: #d1d5db;
+    --gray-500: #6b7280;
+    --gray-700: #374151;
+    --gray-900: #111827;
+    --white: #ffffff;
+    --font: 'DM Sans', sans-serif;
+    --mono: 'DM Mono', monospace;
+    --radius: 10px;
+    --radius-lg: 14px;
+    --shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: var(--font);
+    background: #f0f4f3;
+    color: var(--gray-900);
+    min-height: 100vh;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* ── header ── */
+  .header {
+    background: var(--teal);
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .header-left { display: flex; align-items: center; gap: 14px; }
+  .logo-mark {
+    width: 36px; height: 36px; border-radius: 8px;
+    background: var(--yellow);
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 600; font-size: 16px; color: var(--teal);
+  }
+  .header-title { color: white; font-weight: 600; font-size: 16px; }
+  .header-sub { color: rgba(255,255,255,0.6); font-size: 12px; margin-top: 1px; }
+  .header-right { display: flex; align-items: center; gap: 8px; }
+  .last-updated { font-size: 12px; color: rgba(255,255,255,0.5); font-family: var(--mono); }
+
+  /* ── tab bar ── */
+  .tab-bar {
+    background: var(--teal);
+    padding: 0 32px;
+    display: flex;
+    gap: 0;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    position: sticky;
+    top: 64px;
+    z-index: 99;
+  }
+  .tab-btn {
+    padding: 10px 20px;
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    color: rgba(255,255,255,0.6);
+    font-family: var(--font);
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s;
+    margin-bottom: -1px;
+  }
+  .tab-btn:hover { color: rgba(255,255,255,0.9); }
+  .tab-btn.active { color: white; border-bottom-color: var(--yellow); }
+
+  /* ── main layout ── */
+  .main { max-width: 1200px; margin: 0 auto; padding: 28px 32px; }
+
+  /* ── target calculator ── */
+  .calc-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--gray-200);
+    padding: 20px 24px;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+  .calc-label-group { flex: 0 0 auto; }
+  .calc-eyebrow { font-size: 10px; font-weight: 600; letter-spacing: 0.08em; color: var(--teal); text-transform: uppercase; margin-bottom: 4px; }
+  .calc-heading { font-size: 18px; font-weight: 600; color: var(--gray-900); }
+  .calc-sub { font-size: 12px; color: var(--gray-500); margin-top: 2px; }
+
+  .slider-group { flex: 1; min-width: 200px; }
+  .slider-top { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 8px; }
+  .slider-val {
+    font-family: var(--mono);
+    font-size: 32px;
+    font-weight: 500;
+    color: var(--teal);
+    line-height: 1;
+  }
+  .slider-hint { font-size: 11px; color: var(--gray-500); }
+  input[type=range] {
+    width: 100%;
+    height: 6px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: var(--gray-200);
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px; height: 20px;
+    border-radius: 50%;
+    background: var(--teal);
+    border: 3px solid white;
+    box-shadow: 0 0 0 1px var(--teal), 0 2px 6px rgba(24,112,110,0.3);
+    cursor: pointer;
+  }
+  .slider-ticks { display: flex; justify-content: space-between; font-size: 10px; color: var(--gray-500); font-family: var(--mono); margin-top: 5px; }
+
+  .summary-pills { display: flex; gap: 12px; flex-wrap: wrap; }
+  .pill {
+    background: var(--gray-50);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius);
+    padding: 12px 16px;
+    text-align: center;
+    min-width: 110px;
+  }
+  .pill-val { font-size: 22px; font-weight: 600; color: var(--teal); font-family: var(--mono); line-height: 1; }
+  .pill-label { font-size: 11px; color: var(--gray-500); margin-top: 4px; }
+  .pill.accent { background: var(--teal-light); border-color: var(--teal-mid); }
+  .pill.accent .pill-val { color: var(--teal); }
+
+  /* ── filters ── */
+  .filter-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+  }
+  .filter-bar-label { font-size: 12px; font-weight: 500; color: var(--gray-500); margin-right: 4px; }
+  .filter-btn {
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid var(--gray-200);
+    background: white;
+    font-size: 12px;
+    font-family: var(--font);
+    color: var(--gray-700);
+    cursor: pointer;
+    transition: all 0.15s;
+    font-weight: 500;
+  }
+  .filter-btn:hover { border-color: var(--teal); color: var(--teal); }
+  .filter-btn.active { background: var(--teal); border-color: var(--teal); color: white; }
+  .sort-select {
+    margin-left: auto;
+    padding: 6px 12px;
+    border-radius: var(--radius);
+    border: 1px solid var(--gray-200);
+    background: white;
+    font-size: 12px;
+    font-family: var(--font);
+    color: var(--gray-700);
+    cursor: pointer;
+    outline: none;
+  }
+
+  /* ── table ── */
+  .table-wrap {
+    background: white;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--gray-200);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  table { width: 100%; border-collapse: collapse; }
+  thead tr { background: var(--gray-50); border-bottom: 1px solid var(--gray-200); }
+  th {
+    padding: 10px 14px;
+    text-align: left;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--gray-500);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  th.right { text-align: right; }
+  th.center { text-align: center; }
+
+  tbody tr { border-bottom: 1px solid var(--gray-100); transition: background 0.1s; }
+  tbody tr:last-child { border-bottom: none; }
+  tbody tr:hover { background: var(--gray-50); }
+  tbody tr.region-header { background: var(--teal-pale); }
+  tbody tr.region-header td {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--teal);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 7px 14px;
+  }
+
+  td { padding: 11px 14px; font-size: 13px; color: var(--gray-900); }
+  td.right { text-align: right; }
+  td.center { text-align: center; }
+  td.muted { color: var(--gray-500); font-size: 12px; }
+  td.mono { font-family: var(--mono); font-size: 13px; }
+
+  .prop-name { font-weight: 500; }
+
+  .score-badge {
+    display: inline-flex; align-items: center; gap: 4px;
+    padding: 3px 10px; border-radius: 20px;
+    font-family: var(--mono); font-size: 13px; font-weight: 500;
+  }
+  .score-high { background: var(--green-light); color: var(--green); }
+  .score-mid  { background: var(--amber-light); color: var(--amber); }
+  .score-low  { background: var(--red-light);   color: var(--red);   }
+  .score-na   { background: var(--gray-100);    color: var(--gray-500); }
+
+  .change-badge {
+    display: inline-block;
+    padding: 2px 8px; border-radius: 20px;
+    font-family: var(--mono); font-size: 12px; font-weight: 500;
+  }
+  .change-up   { background: var(--green-light); color: var(--green); }
+  .change-down { background: var(--red-light);   color: var(--red);   }
+  .change-flat { background: var(--gray-100);    color: var(--gray-500); }
+
+  .needed-met { color: var(--green); font-weight: 600; font-family: var(--mono); }
+  .needed-val { color: var(--blue);  font-weight: 600; font-family: var(--mono); }
+  .needed-na  { color: var(--gray-300); font-family: var(--mono); }
+
+  .stars { color: var(--yellow); font-size: 12px; letter-spacing: 1px; }
+
+  .score-bar-wrap { display: flex; align-items: center; gap: 8px; }
+  .score-bar-track { flex: 1; height: 4px; background: var(--gray-200); border-radius: 2px; min-width: 60px; }
+  .score-bar-fill  { height: 4px; border-radius: 2px; transition: width 0.4s ease; }
+
+  .footer { margin-top: 20px; font-size: 11px; color: var(--gray-500); padding-bottom: 40px; }
+  .footer a { color: var(--teal); text-decoration: none; }
+
+  .empty { text-align: center; padding: 40px; color: var(--gray-500); font-size: 13px; }
+
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+  .table-wrap { animation: fadeIn 0.3s ease; }
+
+  /* ── Reviews tab ── */
+  .reviews-main { max-width: 1200px; margin: 0 auto; padding: 28px 32px 48px; }
+
+  .reviews-stats {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  .reviews-stats .pill { min-width: 120px; }
+
+  .reviews-filter-bar {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--gray-200);
+    padding: 16px 20px;
+    margin-bottom: 16px;
+    box-shadow: var(--shadow);
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    align-items: flex-end;
+  }
+  .rfg { display: flex; flex-direction: column; gap: 5px; }
+  .rfg label { font-size: 10px; font-weight: 600; letter-spacing: 0.06em; color: var(--teal); text-transform: uppercase; }
+  .rfg select, .rfg input {
+    padding: 7px 11px;
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius);
+    font-size: 12px;
+    font-family: var(--font);
+    background: var(--gray-50);
+    color: var(--gray-900);
+    outline: none;
+    transition: border-color 0.15s;
+    min-width: 160px;
+  }
+  .rfg select:focus, .rfg input:focus { border-color: var(--teal); background: white; }
+
+  .star-filter-group { display: flex; gap: 5px; flex-wrap: wrap; }
+  .sfb {
+    padding: 6px 12px;
+    border: 1px solid var(--gray-200);
+    border-radius: 20px;
+    background: white;
+    font-size: 12px;
+    font-family: var(--font);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s;
+    color: var(--gray-700);
+  }
+  .sfb:hover { border-color: var(--teal); color: var(--teal); }
+  .sfb.active { background: var(--teal); border-color: var(--teal); color: white; }
+  .sfb[data-stars="1"].active { background: var(--red);   border-color: var(--red); }
+  .sfb[data-stars="2"].active { background: var(--amber); border-color: var(--amber); }
+  .sfb[data-stars="3"].active { background: #ca8a04;      border-color: #ca8a04; }
+  .sfb[data-stars="4"].active { background: var(--green); border-color: var(--green); }
+
+  .reviews-sort-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+    font-size: 12px;
+    color: var(--gray-500);
+  }
+  .reviews-sort-bar select {
+    padding: 6px 12px;
+    border-radius: var(--radius);
+    border: 1px solid var(--gray-200);
+    background: white;
+    font-size: 12px;
+    font-family: var(--font);
+    color: var(--gray-700);
+    outline: none;
+  }
+  .reviews-count { margin-left: auto; font-weight: 500; color: var(--gray-700); }
+
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 14px;
+  }
+
+  .review-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--gray-200);
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: var(--shadow);
+    transition: box-shadow 0.15s;
+  }
+  .review-card:hover { box-shadow: var(--shadow-md); }
+
+  .rc-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+  .rc-reviewer { font-weight: 600; font-size: 13px; color: var(--gray-900); }
+  .rc-date { font-size: 11px; color: var(--gray-500); font-family: var(--mono); white-space: nowrap; }
+  .rc-stars { font-size: 13px; letter-spacing: 1px; margin-top: 1px; }
+  .rc-stars .sf { color: var(--yellow); }
+  .rc-stars .se { color: var(--gray-200); }
+
+  .rc-property {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 12px;
+    color: var(--gray-500);
+  }
+  .rc-region-badge {
+    padding: 2px 8px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 600;
+    background: var(--teal-light);
+    color: var(--teal);
+  }
+
+  .rc-text { font-size: 13px; line-height: 1.6; color: var(--gray-700); flex: 1; }
+  .rc-text.no-text { color: var(--gray-300); font-style: italic; }
+
+  .rc-reply {
+    background: var(--teal-pale);
+    border-left: 3px solid var(--teal-mid);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    padding: 9px 13px;
+    font-size: 12px;
+    color: var(--gray-700);
+    line-height: 1.5;
+  }
+  .rc-reply-label {
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--teal);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 3px;
+  }
+
+  .reviews-empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--gray-500);
+    font-size: 13px;
+  }
+  .reviews-loading {
+    text-align: center;
+    padding: 80px 20px;
+    color: var(--gray-500);
+    font-size: 13px;
+  }
+
+  @media (max-width: 640px) {
+    .header, .tab-bar { padding-left: 16px; padding-right: 16px; }
+    .main, .reviews-main { padding-left: 16px; padding-right: 16px; }
+    .reviews-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-left">
+    <div class="logo-mark">SC</div>
+    <div>
+      <div class="header-title">Google Reviews Dashboard</div>
+      <div class="header-sub">Student Cribs · 26/27 Academic Year</div>
+    </div>
+  </div>
+  <div class="header-right">
+    <span class="last-updated" id="last-updated">29 May 2026 15:00 UTC</span>
+  </div>
+</header>
+
+<div class="tab-bar">
+  <button class="tab-btn active" onclick="showTab('ratings', this)">Ratings Dashboard</button>
+  <button class="tab-btn"        onclick="showTab('reviews', this)">Reviews Feed</button>
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     TAB 1 — RATINGS DASHBOARD
+════════════════════════════════════════════════════════ -->
+<div id="panel-ratings" class="tab-panel">
+<div class="main">
+
+  <!-- Calculator -->
+  <div class="calc-card">
+    <div class="calc-label-group">
+      <div class="calc-eyebrow">Target calculator</div>
+      <div class="calc-heading">5★ Reviews needed</div>
+      <div class="calc-sub">Drag to set your target rating</div>
+    </div>
+
+    <div class="slider-group">
+      <div class="slider-top">
+        <div>
+          <div class="slider-val" id="target-display">4.5</div>
+        </div>
+        <span class="slider-hint">Target rating</span>
+      </div>
+      <input type="range" id="target-slider" min="4.0" max="5.0" step="0.1" value="4.5" oninput="onTargetChange(this.value)">
+      <div class="slider-ticks"><span>4.0</span><span>4.2</span><span>4.4</span><span>4.6</span><span>4.8</span><span>5.0</span></div>
+    </div>
+
+    <div class="summary-pills">
+      <div class="pill accent">
+        <div class="pill-val" id="total-needed">—</div>
+        <div class="pill-label">5★ needed (total)</div>
+      </div>
+      <div class="pill">
+        <div class="pill-val" id="total-reviews">1,157</div>
+        <div class="pill-label">Current reviews</div>
+      </div>
+      <div class="pill">
+        <div class="pill-val" id="already-met">—</div>
+        <div class="pill-label">Already at target</div>
+      </div>
+      <div class="pill">
+        <div class="pill-val" id="props-below">—</div>
+        <div class="pill-label">Need improvement</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Filters -->
+  <div class="filter-bar">
+    <span class="filter-bar-label">Region:</span>
+    <button class="filter-btn active" onclick="setRegion('all', this)">All</button>
+    <button class="filter-btn" onclick="setRegion('Region 1', this)">Region 1</button>
+    <button class="filter-btn" onclick="setRegion('Region 2', this)">Region 2</button>
+    <button class="filter-btn" onclick="setRegion('Region 3', this)">Region 3</button>
+    <button class="filter-btn" onclick="setRegion('Region 4', this)">Region 4</button>
+    <select class="sort-select" id="sort-select" onchange="renderTable()">
+      <option value="default">Sort: default</option>
+      <option value="score-asc">Score: low → high</option>
+      <option value="score-desc">Score: high → low</option>
+      <option value="needed-desc">Most reviews needed</option>
+      <option value="needed-asc">Fewest reviews needed</option>
+    </select>
+  </div>
+
+  <!-- Table -->
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Property</th>
+          <th class="center">Region</th>
+          <th class="center">This week</th>
+          <th class="center">Last week</th>
+          <th class="center">Change</th>
+          <th class="right">Reviews</th>
+          <th class="right">5★ to target</th>
+          <th class="right">Est. new total</th>
+        </tr>
+      </thead>
+      <tbody id="table-body"></tbody>
+    </table>
+  </div>
+
+  <div class="footer">
+    <p>Estimates assume existing reviews retain their current distribution. Properties marked N/A have no score data. Formula: <code>⌈(target × n − score × n) / (5 − target)⌉</code> where n = current review count.</p>
+  </div>
+
+  <!-- Other platforms -->
+  <div style="margin-top: 28px;">
+    <div style="font-size:10px;font-weight:600;letter-spacing:0.08em;color:var(--teal);text-transform:uppercase;margin-bottom:10px;">Other Review Platforms</div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Platform</th>
+            <th class="center">This week</th>
+            <th class="center">Last week</th>
+            <th class="center">Change</th>
+            <th class="right">Reviews</th>
+            <th class="right">5★ to target</th>
+            <th class="right">Est. new total</th>
+          </tr>
+        </thead>
+        <tbody id="platform-body"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div style="height:40px"></div>
+
+</div><!-- /.main -->
+</div><!-- /#panel-ratings -->
+
+
+<!-- ══════════════════════════════════════════════════════
+     TAB 2 — REVIEWS FEED
+════════════════════════════════════════════════════════ -->
+<div id="panel-reviews" class="tab-panel" style="display:none">
+<div class="reviews-main">
+
+  <!-- Stats -->
+  <div class="reviews-stats">
+    <div class="pill accent">
+      <div class="pill-val" id="rv-total">—</div>
+      <div class="pill-label">Total reviews</div>
+    </div>
+    <div class="pill">
+      <div class="pill-val" id="rv-avg">—</div>
+      <div class="pill-label">Average rating</div>
+    </div>
+    <div class="pill">
+      <div class="pill-val" id="rv-5star">—</div>
+      <div class="pill-label">5-star reviews</div>
+    </div>
+    <div class="pill">
+      <div class="pill-val" id="rv-replied">—</div>
+      <div class="pill-label">Replied to</div>
+    </div>
+    <div class="pill">
+      <div class="pill-val" id="rv-unreplied">—</div>
+      <div class="pill-label">No reply yet</div>
+    </div>
+  </div>
+
+  <!-- Filters -->
+  <div class="reviews-filter-bar">
+    <div class="rfg">
+      <label>Region</label>
+      <select id="rv-region">
+        <option value="">All Regions</option>
+        <option value="Region 1">Region 1 — North East</option>
+        <option value="Region 2">Region 2 — North</option>
+        <option value="Region 3">Region 3 — Midlands</option>
+        <option value="Region 4">Region 4 — South</option>
+      </select>
+    </div>
+    <div class="rfg">
+      <label>Property</label>
+      <select id="rv-property">
+        <option value="">All Properties</option>
+      </select>
+    </div>
+    <div class="rfg">
+      <label>Star Rating</label>
+      <div class="star-filter-group">
+        <button class="sfb" data-stars="5">★ 5</button>
+        <button class="sfb" data-stars="4">★ 4</button>
+        <button class="sfb" data-stars="3">★ 3</button>
+        <button class="sfb" data-stars="2">★ 2</button>
+        <button class="sfb" data-stars="1">★ 1</button>
+      </div>
+    </div>
+    <div class="rfg">
+      <label>Search</label>
+      <input type="text" id="rv-search" placeholder="Search review text…" />
+    </div>
+    <div class="rfg">
+      <label>Reply status</label>
+      <select id="rv-replied">
+        <option value="">All</option>
+        <option value="yes">Replied</option>
+        <option value="no">No reply</option>
+      </select>
+    </div>
+    <div class="rfg" style="margin-left:auto; justify-content: flex-end;">
+      <label style="opacity:0">&nbsp;</label>
+      <button class="filter-btn" id="rv-reset" style="border-radius:var(--radius)">Reset filters</button>
+    </div>
+  </div>
+
+  <div class="reviews-sort-bar">
+    <span style="color:var(--gray-500)">Sort by:</span>
+    <select id="rv-sort">
+      <option value="date-desc">Newest first</option>
+      <option value="date-asc">Oldest first</option>
+      <option value="stars-desc">Highest rated</option>
+      <option value="stars-asc">Lowest rated</option>
+    </select>
+    <span class="reviews-count" id="rv-count"></span>
+  </div>
+
+  <div class="reviews-grid" id="reviews-grid">
+    <div class="reviews-loading">Loading reviews…</div>
+  </div>
+
+</div><!-- /.reviews-main -->
+</div><!-- /#panel-reviews -->
+
+
+<script>
+/* ════════════════════════════════════════════════════════
+   RATINGS DATA  (auto-updated by fetch_reviews.py)
+════════════════════════════════════════════════════════ */
+const properties = [
+  {
+    name: "Newcastle Main",
+    region: "Region 1",
+    score: 4.7,
+    last: 4.7,
+    reviews: 165,
+  },
+  {
+    name: "Morrison Circus",
+    region: "Region 1",
+    score: 4.2,
+    last: 4.2,
+    reviews: 31,
+  },
+  {
+    name: "Byron Lofts",
+    region: "Region 1",
+    score: 4.0,
+    last: 4.0,
+    reviews: 21,
+  },
+  {
+    name: "Jesmond View",
+    region: "Region 1",
+    score: 4.0,
+    last: 4.0,
+    reviews: 45,
+  },
+  {
+    name: "Kielder House",
+    region: "Region 1",
+    score: 4.6,
+    last: 4.6,
+    reviews: 12,
+  },
+  {
+    name: "Linden House",
+    region: "Region 1",
+    score: 4.4,
+    last: 4.4,
+    reviews: 8,
+  },
+  {
+    name: "Sanderson House",
+    region: "Region 1",
+    score: 3.6,
+    last: 3.6,
+    reviews: 8,
+  },
+  {
+    name: "Shiners Yard",
+    region: "Region 1",
+    score: 4.8,
+    last: 4.8,
+    reviews: 10,
+  },
+  {
+    name: "The Square",
+    region: "Region 1",
+    score: 4.0,
+    last: 4.0,
+    reviews: 12,
+  },
+  {
+    name: "St Hilds",
+    region: "Region 1",
+    score: 5.0,
+    last: 5.0,
+    reviews: 2,
+  },
+  {
+    name: "Crossgate Lofts",
+    region: "Region 1",
+    score: 4.0,
+    last: 4.0,
+    reviews: 31,
+  },
+  {
+    name: "Manchester Main",
+    region: "Region 2",
+    score: 3.9,
+    last: 3.9,
+    reviews: 58,
+  },
+  {
+    name: "Mayfair Court",
+    region: "Region 2",
+    score: 3.5,
+    last: 3.5,
+    reviews: 104,
+  },
+  {
+    name: "Chancellors Court",
+    region: "Region 2",
+    score: null,
+    last: null,
+    reviews: null,
+  },
+  {
+    name: "Waterside Village",
+    region: "Region 2",
+    score: 4.1,
+    last: 4.1,
+    reviews: 146,
+  },
+  {
+    name: "Rodney Street",
+    region: "Region 2",
+    score: 4.8,
+    last: 4.8,
+    reviews: 122,
+  },
+  {
+    name: "Victoria Court Mews",
+    region: "Region 2",
+    score: 4.6,
+    last: 4.6,
+    reviews: 38,
+  },
+  {
+    name: "Park View",
+    region: "Region 3",
+    score: 3.4,
+    last: 3.4,
+    reviews: 50,
+  },
+  {
+    name: "Upper New Walk",
+    region: "Region 3",
+    score: 4.5,
+    last: 4.5,
+    reviews: 15,
+  },
+  {
+    name: "Hosiery",
+    region: "Region 3",
+    score: 3.9,
+    last: 3.9,
+    reviews: 62,
+  },
+  {
+    name: "Shoe & Boot",
+    region: "Region 3",
+    score: 3.9,
+    last: 3.9,
+    reviews: 167,
+  },
+  {
+    name: "Bishop Blackall School",
+    region: "Region 4",
+    score: 4.6,
+    last: 4.6,
+    reviews: 20,
+  },
+  {
+    name: "Hope Court",
+    region: "Region 4",
+    score: 3.9,
+    last: 3.9,
+    reviews: 9,
+  },
+  {
+    name: "Isca Lofts",
+    region: "Region 4",
+    score: 4.4,
+    last: 4.4,
+    reviews: 25,
+  },
+  {
+    name: "Walter Road",
+    region: "Region 4",
+    score: 4.3,
+    last: 4.3,
+    reviews: 28,
+  },
+  {
+    name: "Grosvenor Apartments",
+    region: "Region 4",
+    score: null,
+    last: null,
+    reviews: null,
+  },
+];
+
+const otherPlatforms = [
+  {
+    name: "Trustpilot",
+    score: null,
+    last: null,
+    reviews: null,
+  },
+  {
+    name: "All Agents",
+    score: null,
+    last: null,
+    reviews: null,
+  },
+];
+
+/* ════════════════════════════════════════════════════════
+   TAB SWITCHING
+════════════════════════════════════════════════════════ */
+let reviewsLoaded = false;
+
+function showTab(tab, btn) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.style.display = 'none');
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('panel-' + tab).style.display = '';
+  btn.classList.add('active');
+  if (tab === 'reviews' && !reviewsLoaded) loadReviews();
+}
+
+/* ════════════════════════════════════════════════════════
+   RATINGS TAB — existing logic
+════════════════════════════════════════════════════════ */
+let activeRegion = 'all';
+let target = 4.5;
+
+function calcNeeded(score, reviews, t) {
+  if (score === null || reviews === null) return null;
+  if (score >= t) return 0;
+  return Math.max(0, Math.ceil((t * reviews - score * reviews) / (5 - t)));
+}
+
+function scoreClass(s) {
+  if (s === null) return 'score-na';
+  if (s >= 4.5)  return 'score-high';
+  if (s >= 4.0)  return 'score-mid';
+  return 'score-low';
+}
+
+function barColor(s) {
+  if (s === null) return '#e5e7eb';
+  if (s >= 4.5)  return '#2e7d4f';
+  if (s >= 4.0)  return '#d97706';
+  return '#e24b4a';
+}
+
+function fmt(n) { return n === null ? '—' : n.toLocaleString(); }
+
+function setRegion(r, btn) {
+  activeRegion = r;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderTable();
+}
+
+function onTargetChange(val) {
+  target = parseFloat(val);
+  document.getElementById('target-display').textContent = target.toFixed(1);
+  updateSummary();
+  renderTable();
+  renderPlatforms();
+}
+
+function updateSummary() {
+  const active = properties.filter(p => p.score !== null && p.reviews !== null);
+  let totalNeeded = 0, met = 0, below = 0, totalRevs = 0;
+  active.forEach(p => {
+    const n = calcNeeded(p.score, p.reviews, target);
+    totalRevs += p.reviews;
+    if (n === 0) met++;
+    else { below++; totalNeeded += n; }
+  });
+  document.getElementById('total-needed').textContent  = totalNeeded > 0 ? totalNeeded.toLocaleString() : '0';
+  document.getElementById('total-reviews').textContent = totalRevs.toLocaleString();
+  document.getElementById('already-met').textContent   = met;
+  document.getElementById('props-below').textContent   = below;
+}
+
+function renderTable() {
+  const sort = document.getElementById('sort-select').value;
+  let rows = properties.filter(p => activeRegion === 'all' || p.region === activeRegion);
+  rows = rows.map(p => ({ ...p, needed: calcNeeded(p.score, p.reviews, target) }));
+
+  if (sort === 'score-asc')   rows.sort((a,b) => (a.score||0)-(b.score||0));
+  else if (sort === 'score-desc')  rows.sort((a,b) => (b.score||0)-(a.score||0));
+  else if (sort === 'needed-desc') rows.sort((a,b) => (b.needed||0)-(a.needed||0));
+  else if (sort === 'needed-asc')  rows.sort((a,b) => {
+    if (a.needed===null) return 1; if (b.needed===null) return -1; return a.needed-b.needed;
+  });
+
+  const tbody = document.getElementById('table-body');
+  tbody.innerHTML = '';
+  let lastRegion = null;
+
+  rows.forEach(p => {
+    if (sort === 'default' && p.region !== lastRegion) {
+      const rtr = document.createElement('tr');
+      rtr.className = 'region-header';
+      const regionNames = { 'Region 1':'Region 1 — North East', 'Region 2':'Region 2 — North', 'Region 3':'Region 3 — Midlands', 'Region 4':'Region 4 — South' };
+      rtr.innerHTML = `<td colspan="8">${regionNames[p.region]||p.region}</td>`;
+      tbody.appendChild(rtr);
+      lastRegion = p.region;
+    }
+
+    const change = (p.score !== null && p.last !== null) ? +(p.score - p.last).toFixed(1) : null;
+    const changeBadge = change === null ? '<span class="change-badge change-flat">N/A</span>'
+      : change > 0 ? `<span class="change-badge change-up">▲ +${change.toFixed(1)}</span>`
+      : change < 0 ? `<span class="change-badge change-down">▼ ${change.toFixed(1)}</span>`
+      : '<span class="change-badge change-flat">—</span>';
+
+    const scoreBadge = p.score !== null
+      ? `<span class="score-badge ${scoreClass(p.score)}">★ ${p.score.toFixed(1)}</span>`
+      : `<span class="score-badge score-na">N/A</span>`;
+
+    const lastBadge = p.last !== null
+      ? `<span class="score-badge ${scoreClass(p.last)}" style="opacity:0.6">★ ${p.last.toFixed(1)}</span>`
+      : `<span class="score-badge score-na">N/A</span>`;
+
+    const neededCell = p.needed === null ? '<span class="needed-na">N/A</span>'
+      : p.needed === 0 ? '<span class="needed-met">✓ Met</span>'
+      : `<span class="needed-val">${p.needed.toLocaleString()}</span>`;
+
+    const newTotal = p.needed === null ? '<span class="needed-na">—</span>'
+      : `<span style="font-family:var(--mono);font-size:13px">${(p.reviews + p.needed).toLocaleString()}</span>`;
+
+    const pct = p.score !== null ? ((p.score / 5) * 100).toFixed(1) : 0;
+
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td>
+        <div class="prop-name">${p.name}</div>
+        ${p.score !== null ? `<div class="score-bar-track" style="margin-top:5px"><div class="score-bar-fill" style="width:${pct}%;background:${barColor(p.score)}"></div></div>` : ''}
+      </td>
+      <td class="center muted">${p.region}</td>
+      <td class="center">${scoreBadge}</td>
+      <td class="center">${lastBadge}</td>
+      <td class="center">${changeBadge}</td>
+      <td class="right mono">${fmt(p.reviews)}</td>
+      <td class="right">${neededCell}</td>
+      <td class="right">${newTotal}</td>
+    `;
+    tbody.appendChild(tr);
+  });
+}
+
+function renderPlatforms() {
+  const tbody = document.getElementById('platform-body');
+  tbody.innerHTML = '';
+  otherPlatforms.forEach(p => {
+    const needed = calcNeeded(p.score, p.reviews, target);
+    const change = +(p.score - p.last).toFixed(1);
+    const changeBadge = change > 0 ? `<span class="change-badge change-up">▲ +${change.toFixed(1)}</span>`
+      : change < 0 ? `<span class="change-badge change-down">▼ ${change.toFixed(1)}</span>`
+      : '<span class="change-badge change-flat">—</span>';
+    const neededCell = needed === 0
+      ? '<span class="needed-met">✓ Met</span>'
+      : `<span class="needed-val">${needed.toLocaleString()}</span>`;
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td><span class="prop-name">${p.name}</span></td>
+      <td class="center"><span class="score-badge ${scoreClass(p.score)}">★ ${p.score.toFixed(1)}</span></td>
+      <td class="center"><span class="score-badge ${scoreClass(p.last)}" style="opacity:0.6">★ ${p.last.toFixed(1)}</span></td>
+      <td class="center">${changeBadge}</td>
+      <td class="right mono">${p.reviews.toLocaleString()}</td>
+      <td class="right">${neededCell}</td>
+      <td class="right mono">${(p.reviews + needed).toLocaleString()}</td>
+    `;
+    tbody.appendChild(tr);
+  });
+}
+
+// init ratings tab
+updateSummary();
+renderTable();
+renderPlatforms();
+
+
+/* ════════════════════════════════════════════════════════
+   REVIEWS TAB
+════════════════════════════════════════════════════════ */
+let allReviews = [];
+let activeStars = new Set();
+
+function esc(s) {
+  return String(s)
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function renderCardStars(n) {
+  let s = '';
+  for (let i = 1; i <= 5; i++) s += `<span class="${i<=n?'sf':'se'}">★</span>`;
+  return s;
+}
+
+async function loadReviews() {
+  try {
+    const res = await fetch('reviews_data.json?t=' + Date.now());
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const data = await res.json();
+
+    const propSel = document.getElementById('rv-property');
+    allReviews = [];
+
+    for (const prop of data.properties) {
+      const opt = document.createElement('option');
+      opt.value = prop.name;
+      opt.textContent = prop.name;
+      propSel.appendChild(opt);
+
+      for (const review of prop.reviews) {
+        allReviews.push({ ...review, property: prop.name, region: prop.region });
+      }
+    }
+
+    reviewsLoaded = true;
+    updateReviewStats(allReviews);
+    renderReviewCards();
+
+  } catch (err) {
+    document.getElementById('reviews-grid').innerHTML = `
+      <div class="reviews-empty">
+        <div style="font-size:2rem;margin-bottom:10px">📋</div>
+        <p><strong>reviews_data.json not found.</strong></p>
+        <p style="margin-top:6px;color:var(--gray-400)">Run <code>fetch_review_text.py</code> once the Google Business Profile API access is approved.</p>
+      </div>`;
+  }
+}
+
+function updateReviewStats(reviews) {
+  const total  = reviews.length;
+  const avg    = total ? (reviews.reduce((s,r) => s + r.stars, 0) / total).toFixed(2) : '—';
+  const five   = reviews.filter(r => r.stars === 5).length;
+  const rep    = reviews.filter(r => r.has_reply).length;
+  const unrep  = reviews.filter(r => !r.has_reply).length;
+
+  document.getElementById('rv-total').textContent    = total.toLocaleString();
+  document.getElementById('rv-avg').textContent      = avg;
+  document.getElementById('rv-5star').textContent    = five.toLocaleString();
+  document.getElementById('rv-replied').textContent  = rep.toLocaleString();
+  document.getElementById('rv-unreplied').textContent = unrep.toLocaleString();
+}
+
+function getFilteredReviews() {
+  const region   = document.getElementById('rv-region').value;
+  const property = document.getElementById('rv-property').value;
+  const search   = document.getElementById('rv-search').value.trim().toLowerCase();
+  const replied  = document.getElementById('rv-replied').value;
+  const sortBy   = document.getElementById('rv-sort').value;
+
+  let filtered = allReviews.filter(r => {
+    if (region   && !r.region.includes(region.replace('Region 1','North East').replace('Region 2','North (').replace('Region 3','Midlands').replace('Region 4','South'))) {
+      // match by region number
+      const rmap = {'Region 1':'Region 1','Region 2':'Region 2','Region 3':'Region 3','Region 4':'Region 4'};
+      if (region && r.region !== region) return false;
+    }
+    if (property && r.property !== property) return false;
+    if (activeStars.size > 0 && !activeStars.has(r.stars)) return false;
+    if (search && !r.text.toLowerCase().includes(search) &&
+                  !r.reviewer.toLowerCase().includes(search) &&
+                  !r.property.toLowerCase().includes(search)) return false;
+    if (replied === 'yes' && !r.has_reply)  return false;
+    if (replied === 'no'  &&  r.has_reply)  return false;
+    return true;
+  });
+
+  filtered.sort((a, b) => {
+    if (sortBy === 'date-desc')  return a.raw_date < b.raw_date ?  1 : -1;
+    if (sortBy === 'date-asc')   return a.raw_date > b.raw_date ?  1 : -1;
+    if (sortBy === 'stars-desc') return b.stars - a.stars;
+    if (sortBy === 'stars-asc')  return a.stars - b.stars;
+    return 0;
+  });
+
+  return filtered;
+}
+
+function renderReviewCards() {
+  const filtered  = getFilteredReviews();
+  const grid      = document.getElementById('reviews-grid');
+  const countEl   = document.getElementById('rv-count');
+
+  countEl.textContent = filtered.length.toLocaleString() + ' review' + (filtered.length !== 1 ? 's' : '');
+
+  if (filtered.length === 0) {
+    grid.innerHTML = `<div class="reviews-empty"><div style="font-size:2rem;margin-bottom:10px">🔍</div><p>No reviews match your filters.</p></div>`;
+    return;
+  }
+
+  grid.innerHTML = filtered.map(r => {
+    const textHtml = r.text
+      ? `<div class="rc-text">${esc(r.text)}</div>`
+      : `<div class="rc-text no-text">No written review</div>`;
+
+    const replyHtml = r.has_reply
+      ? `<div class="rc-reply"><span class="rc-reply-label">Owner reply · ${esc(r.reply_date)}</span>${esc(r.reply_text)}</div>`
+      : '';
+
+    return `
+      <div class="review-card">
+        <div class="rc-header">
+          <div>
+            <div class="rc-reviewer">${esc(r.reviewer)}</div>
+            <div class="rc-stars">${renderCardStars(r.stars)}</div>
+          </div>
+          <div class="rc-date">${esc(r.date)}</div>
+        </div>
+        <div class="rc-property">
+          <span>${esc(r.property)}</span>
+          <span class="rc-region-badge">${esc(r.region)}</span>
+        </div>
+        ${textHtml}
+        ${replyHtml}
+      </div>`;
+  }).join('');
+}
+
+// Reviews filter events
+document.getElementById('rv-region').addEventListener('change', () => {
+  document.getElementById('rv-property').value = '';
+  renderReviewCards();
+});
+document.getElementById('rv-property').addEventListener('change', renderReviewCards);
+document.getElementById('rv-replied').addEventListener('change', renderReviewCards);
+document.getElementById('rv-sort').addEventListener('change', renderReviewCards);
+document.getElementById('rv-search').addEventListener('input', renderReviewCards);
+
+document.querySelectorAll('.sfb').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const s = parseInt(btn.dataset.stars);
+    if (activeStars.has(s)) { activeStars.delete(s); btn.classList.remove('active'); }
+    else                    { activeStars.add(s);    btn.classList.add('active');    }
+    renderReviewCards();
+  });
+});
+
+document.getElementById('rv-reset').addEventListener('click', () => {
+  document.getElementById('rv-region').value   = '';
+  document.getElementById('rv-property').value = '';
+  document.getElementById('rv-search').value   = '';
+  document.getElementById('rv-replied').value  = '';
+  document.getElementById('rv-sort').value     = 'date-desc';
+  activeStars.clear();
+  document.querySelectorAll('.sfb').forEach(b => b.classList.remove('active'));
+  renderReviewCards();
+});
+</script>
+</body>
+</html>

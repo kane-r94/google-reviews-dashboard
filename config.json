@@ -1,0 +1,197 @@
+{
+  "github": {
+    "repo_owner": "kane-r94",
+    "repo_name": "reviews_dash",
+    "branch": "main",
+    "html_file_path": "google_reviews_dashboard.html"
+  },
+  "targets": {
+    "google_rating": 4.5,
+    "trustpilot_rating": 4.5,
+    "all_agents_rating": 4.5
+  },
+  "properties": [
+    {
+      "name": "Newcastle Main",
+      "region": "Region 1",
+      "google_location_id": "accounts/107779497168524188597/locations/3927651401574716321",
+      "trustpilot_url": "",
+      "all_agents_url": ""
+    },
+    {
+      "name": "Morrison Circus",
+      "region": "Region 1",
+      "google_location_id": "accounts/107779497168524188597/locations/14931406231933465191",
+      "trustpilot_url": "",
+      "all_agents_url": ""
+    },
+    {
+      "name": "Byron Lofts",
+      "region": "Region 1",
+      "google_location_id": "accounts/107779497168524188597/locations/14601958904195691817",
+      "trustpilot_url": "",
+      "all_agents_url": ""
+    },
+    {
+      "name": "Jesmond View",
+      "region": "Region 1",
+      "google_location_id": "accounts/107779497168524188597/locations/6416595033784054243",
+      "trustpilot_url": "",
+      "all_agents_url": ""
+    },
+    {
+      "name": "Kielder House",
+      "region": "Region 1",
+      "google_location_id": "accounts/107779497168524188597/locations/4246209374270172195",
+      "trustpilot_url": "",
+      "all_agents_url": ""
+    },
+    {
+      "name": "Linden House",
+      "region": "Region 1",
+      "google_location_id": "accounts/107779497168524188597/locations/1425786603926601101",
+      "trustpilot_url": "",
+      "all_agents_url": ""
+    },
+    {
+      "name": "Sanderson House",
+      "region": "Region 1",
+      "google_location_id": "accounts/107779497168524188597/locations/12602048207674568009",
+      "trustpilot_url": "",
+      "all_agents_url": ""
+    },
+    {
+      "name": "Shiners Yard",
+      "region": "Region 1",
+      "google_location_id": "accounts/107779497168524188597/locations/2203955555140891868",
+      "trustpilot_url": "",
+      "all_agents_url": ""
+    },
+    {
+      "name": "The Square",
+      "region": "Region 1",
+      "google_location_id": "accounts/107779497168524188597/locations/10799735482094063153",
+      "trustpilot_url": "",
+      "all_agents_url": ""
+    },
+    {
+      "name": "St Hilds",
+      "region": "Region 1",
+      "google_location_id": "accounts/107779497168524188597/locations/4409264278785615099",
+      "trustpilot_url": "",
+      "all_agents_url": ""
+    },
+    {
+      "name": "Crossgate Lofts",
+      "region": "Region 1",
+      "google_location_id": "accounts/107779497168524188597/locations/5181585372937324067",
+      "trustpilot_url": "",
+      "all_agents_url": ""
+    },
+    {
+      "name": "Manchester Main",
+      "region": "Region 2",
+      "google_location_id": "accounts/107779497168524188597/locations/12491368352516087344",
+      "trustpilot_url": "",
+      "all_agents_url": ""
+    },
+    {
+      "name": "Mayfair Court",
+      "region": "Region 2",
+      "google_location_id": "accounts/107779497168524188597/locations/6651984313305346733",
+      "trustpilot_url": "",
+      "all_agents_url": ""
+    },
+    {
+      "name": "Chancellors Court",
+      "region": "Region 2",
+      "google_location_id": "accounts/107779497168524188597/locations/4247027690280471013",
+      "trustpilot_url": "",
+      "all_agents_url": ""
+    },
+    {
+      "name": "Waterside Village",
+      "region": "Region 2",
+      "google_location_id": "accounts/107779497168524188597/locations/9799949533652350551",
+      "trustpilot_url": "",
+      "all_agents_url": ""
+    },
+    {
+      "name": "Rodney Street",
+      "region": "Region 2",
+      "google_location_id": "accounts/107779497168524188597/locations/2052938163940740921",
+      "trustpilot_url": "",
+      "all_agents_url": ""
+    },
+    {
+      "name": "Victoria Court Mews",
+      "region": "Region 2",
+      "google_location_id": "accounts/107779497168524188597/locations/18303258324110112544",
+      "trustpilot_url": "",
+      "all_agents_url": ""
+    },
+    {
+      "name": "Park View",
+      "region": "Region 3",
+      "google_location_id": "accounts/107779497168524188597/locations/7966060315913621743",
+      "trustpilot_url": "",
+      "all_agents_url": ""
+    },
+    {
+      "name": "Upper New Walk",
+      "region": "Region 3",
+      "google_location_id": "accounts/107779497168524188597/locations/10063252420849569242",
+      "trustpilot_url": "",
+      "all_agents_url": ""
+    },
+    {
+      "name": "Hosiery",
+      "region": "Region 3",
+      "google_location_id": "accounts/107779497168524188597/locations/10353149330968290290",
+      "trustpilot_url": "",
+      "all_agents_url": ""
+    },
+    {
+      "name": "Shoe & Boot",
+      "region": "Region 3",
+      "google_location_id": "accounts/107779497168524188597/locations/3179844953596934636",
+      "trustpilot_url": "",
+      "all_agents_url": ""
+    },
+    {
+      "name": "Bishop Blackall School",
+      "region": "Region 4",
+      "google_location_id": "accounts/107779497168524188597/locations/14116896759226732213",
+      "trustpilot_url": "",
+      "all_agents_url": ""
+    },
+    {
+      "name": "Hope Court",
+      "region": "Region 4",
+      "google_location_id": "accounts/107779497168524188597/locations/8893636601374887143",
+      "trustpilot_url": "",
+      "all_agents_url": ""
+    },
+    {
+      "name": "Isca Lofts",
+      "region": "Region 4",
+      "google_location_id": "accounts/107779497168524188597/locations/7547694381264010081",
+      "trustpilot_url": "",
+      "all_agents_url": ""
+    },
+    {
+      "name": "Walter Road",
+      "region": "Region 4",
+      "google_location_id": "accounts/107779497168524188597/locations/16847077804981565842",
+      "trustpilot_url": "",
+      "all_agents_url": ""
+    },
+    {
+      "name": "Grosvenor Apartments",
+      "region": "Region 4",
+      "google_location_id": "",
+      "trustpilot_url": "",
+      "all_agents_url": ""
+    }
+  ]
+}

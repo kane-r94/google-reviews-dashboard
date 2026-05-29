@@ -1,0 +1,15 @@
+# Never commit credentials or tokens
+credentials/token.json
+credentials/oauth_client.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+
+# OS
+.DS_Store
+Thumbs.db
