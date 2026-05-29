@@ -39,7 +39,19 @@ SCRAPE_HEADERS = {
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
         "AppleWebKit/537.36 (KHTML, like Gecko) "
         "Chrome/124.0.0.0 Safari/537.36"
-    )
+    ),
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
+    "Accept-Language": "en-GB,en;q=0.9",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Cache-Control": "max-age=0",
+    "Sec-Ch-Ua": '"Chromium";v="124", "Google Chrome";v="124", "Not-A.Brand";v="99"',
+    "Sec-Ch-Ua-Mobile": "?0",
+    "Sec-Ch-Ua-Platform": '"Windows"',
+    "Sec-Fetch-Dest": "document",
+    "Sec-Fetch-Mode": "navigate",
+    "Sec-Fetch-Site": "none",
+    "Sec-Fetch-User": "?1",
+    "Upgrade-Insecure-Requests": "1",
 }
 
 
@@ -265,28 +277,13 @@ def build_js_properties_array(properties_data: list, previous_scores: dict) -> s
     return "\n".join(lines)
 
 
-def build_js_platforms_array(properties_data: list, previous_platform_scores: dict) -> str:
+def build_js_platforms_array(tp_data: dict, aa_data: dict, previous_platform_scores: dict) -> str:
     """
-    Build the `const otherPlatforms = [...]` block.
-    Aggregates Trustpilot and AllAgents across all properties that have data.
+    Build the `const otherPlatforms = [...]` block using company-level platform scores.
     """
-    def aggregate(platform_key_rating, platform_key_count):
-        ratings = [(p[platform_key_rating]["rating"], p[platform_key_rating]["review_count"])
-                   for p in properties_data
-                   if p[platform_key_rating]["rating"] is not None]
-        if not ratings:
-            return None, None
-        total_count = sum(c for _, c in ratings if c)
-        # weighted average rating
-        weighted = sum(r * c for r, c in ratings if c) / total_count if total_count else None
-        return (round(weighted, 1) if weighted else None), total_count
-
-    tp_score, tp_count = aggregate("trustpilot", "trustpilot")
-    aa_score, aa_count = aggregate("all_agents", "all_agents")
-
     platforms = [
-        {"name": "Trustpilot", "score": tp_score, "reviews": tp_count},
-        {"name": "All Agents", "score": aa_score, "reviews": aa_count},
+        {"name": "Trustpilot", "score": tp_data["rating"], "reviews": tp_data["review_count"]},
+        {"name": "All Agents", "score": aa_data["rating"], "reviews": aa_data["review_count"]},
     ]
 
     lines = ["const otherPlatforms = ["]
@@ -377,31 +374,32 @@ def main():
         google_data = fetch_google_rating(service, prop.get("google_location_id", ""))
         print(f"Rating: {google_data['rating'] or 'N/A'}")
 
-        tp_url = prop.get("trustpilot_url", "")
-        if tp_url:
-            print("  → Trustpilot...", end=" ", flush=True)
-            tp_data = fetch_trustpilot_rating(tp_url)
-            print(f"Rating: {tp_data['rating'] or 'N/A'}")
-            time.sleep(1)
-        else:
-            tp_data = {"rating": None, "review_count": None}
-
-        aa_url = prop.get("all_agents_url", "")
-        if aa_url:
-            print("  → AllAgents...", end=" ", flush=True)
-            aa_data = fetch_all_agents_rating(aa_url)
-            print(f"Rating: {aa_data['rating'] or 'N/A'}")
-            time.sleep(1)
-        else:
-            aa_data = {"rating": None, "review_count": None}
-
         properties_data.append({
             "name": name,
             "region": prop["region"],
             "google": google_data,
-            "trustpilot": tp_data,
-            "all_agents": aa_data,
         })
+
+    # Fetch company-level platform scores
+    platforms_config = config.get("platforms", {})
+
+    tp_url = platforms_config.get("trustpilot_url", "")
+    if tp_url:
+        print(f"\nFetching: Trustpilot (company)...", end=" ", flush=True)
+        tp_data = fetch_trustpilot_rating(tp_url)
+        print(f"Rating: {tp_data['rating'] or 'N/A'}")
+        time.sleep(1)
+    else:
+        tp_data = {"rating": None, "review_count": None}
+
+    aa_url = platforms_config.get("all_agents_url", "")
+    if aa_url:
+        print(f"Fetching: AllAgents (company)...", end=" ", flush=True)
+        aa_data = fetch_all_agents_rating(aa_url)
+        print(f"Rating: {aa_data['rating'] or 'N/A'}")
+        time.sleep(1)
+    else:
+        aa_data = {"rating": None, "review_count": None}
 
     print("\nUpdating HTML file...")
     if not HTML_PATH.exists():
@@ -417,7 +415,7 @@ def main():
     previous_platform_scores = extract_previous_platform_scores(html_content)
 
     js_properties = build_js_properties_array(properties_data, previous_scores)
-    js_platforms  = build_js_platforms_array(properties_data, previous_platform_scores)
+    js_platforms  = build_js_platforms_array(tp_data, aa_data, previous_platform_scores)
     updated_html  = inject_into_html(html_content, js_properties, js_platforms, last_updated)
     HTML_PATH.write_text(updated_html, encoding="utf-8")
     print(f"HTML updated. Last updated: {last_updated}")
