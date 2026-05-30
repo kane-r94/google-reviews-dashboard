@@ -512,7 +512,7 @@
         <div class="pill-label">5★ needed (total)</div>
       </div>
       <div class="pill">
-        <div class="pill-val" id="total-reviews">1,157</div>
+        <div class="pill-val" id="total-reviews">—</div>
         <div class="pill-label">Current reviews</div>
       </div>
       <div class="pill">
@@ -522,6 +522,14 @@
       <div class="pill">
         <div class="pill-val" id="props-below">—</div>
         <div class="pill-label">Need improvement</div>
+      </div>
+      <div class="pill" style="border-color: var(--mint);">
+        <div class="pill-val" id="five-star-week" style="color: #0e6640;">—</div>
+        <div class="pill-label">5★ last 7 days</div>
+      </div>
+      <div class="pill" style="border-color: #fca5a5;">
+        <div class="pill-val" id="one-star-week" style="color: var(--red);">—</div>
+        <div class="pill-label">1★ last 7 days</div>
       </div>
     </div>
   </div>
@@ -1062,10 +1070,32 @@ function renderPlatforms() {
   });
 }
 
+async function loadWeeklyStats() {
+  try {
+    const res = await fetch('reviews_data.json?t=' + Date.now());
+    if (!res.ok) return;
+    const data = await res.json();
+    const cutoff = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
+    let five = 0, one = 0;
+    for (const prop of data.properties) {
+      for (const r of prop.reviews) {
+        const d = new Date(r.raw_date);
+        if (d >= cutoff) {
+          if (r.stars === 5) five++;
+          if (r.stars === 1) one++;
+        }
+      }
+    }
+    document.getElementById('five-star-week').textContent = five.toLocaleString();
+    document.getElementById('one-star-week').textContent  = one.toLocaleString();
+  } catch (e) { /* silently skip if JSON not available */ }
+}
+
 // init ratings tab
 updateSummary();
 renderTable();
 renderPlatforms();
+loadWeeklyStats();
 
 
 /* ════════════════════════════════════════════════════════
