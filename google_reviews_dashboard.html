@@ -712,6 +712,7 @@
       <option value="score-desc">Score: high → low</option>
       <option value="needed-desc">Most reviews needed</option>
       <option value="needed-asc">Fewest reviews needed</option>
+      <option value="last-review-asc">Last review: oldest first</option>
     </select>
   </div>
 
@@ -1256,6 +1257,18 @@ function renderTable() {
   else if (sort === 'needed-asc')  rows.sort((a,b) => {
     if (a.needed===null) return 1; if (b.needed===null) return -1; return a.needed-b.needed;
   });
+  else if (sort === 'last-review-asc') rows.sort((a,b) => {
+    const da = (window.lastReviewDates && window.lastReviewDates[a.name]) ? window.lastReviewDates[a.name] : '';
+    const db = (window.lastReviewDates && window.lastReviewDates[b.name]) ? window.lastReviewDates[b.name] : '';
+    // Properties with no date go to the bottom
+    if (!da && !db) return 0;
+    if (!da) return 1;
+    if (!db) return -1;
+    // Compare raw dates stored in a parallel lookup
+    const ra = (window.lastReviewRaw && window.lastReviewRaw[a.name]) || da;
+    const rb = (window.lastReviewRaw && window.lastReviewRaw[b.name]) || db;
+    return ra < rb ? -1 : ra > rb ? 1 : 0;
+  });
 
   const tbody = document.getElementById('table-body');
   tbody.innerHTML = '';
@@ -1353,10 +1366,12 @@ async function loadWeeklyStats() {
     document.getElementById('five-star-week').textContent = five.toLocaleString();
     document.getElementById('one-star-week').textContent  = one.toLocaleString();
 
-    // Store for renderPropertyRow and re-render table with dates populated
+    // Store for renderPropertyRow and sort-by-last-review
     window.lastReviewDates = {};
+    window.lastReviewRaw   = {};
     for (const [name, val] of Object.entries(lastDates)) {
       window.lastReviewDates[name] = val.display;
+      window.lastReviewRaw[name]   = val.raw;
     }
     renderTable();
   } catch (e) { /* silently skip if JSON not available */ }
