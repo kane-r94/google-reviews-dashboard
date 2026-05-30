@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Google Reviews Dashboard · Student Cribs</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <style>
   :root {
     /* SC Brand primary colours */
@@ -453,9 +454,163 @@
     font-size: 13px;
   }
 
+  /* ── Export CSV button ── */
+  .export-csv-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 14px;
+    background: var(--teal);
+    color: white;
+    border: none;
+    border-radius: var(--radius);
+    font-family: var(--font);
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    height: 32px;
+    transition: background 0.15s;
+    white-space: nowrap;
+  }
+  .export-csv-btn:hover { background: var(--teal-mid); }
+
+  /* ── 1-star pill clickable ── */
+  #one-star-week-pill {
+    cursor: pointer;
+    transition: box-shadow 0.15s, border-color 0.15s;
+  }
+  #one-star-week-pill:hover {
+    border-color: var(--red);
+    box-shadow: 0 0 0 2px rgba(226,75,74,0.15);
+  }
+
+  /* ── Trends tab ── */
+  .trends-main { max-width: 1200px; margin: 0 auto; padding: 28px 32px 48px; }
+  .trends-filter-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .trends-filter-bar label { font-size: 12px; font-weight: 500; color: var(--gray-500); }
+  .trends-filter-bar select {
+    padding: 6px 12px;
+    border-radius: var(--radius);
+    border: 1px solid var(--gray-200);
+    background: white;
+    font-size: 12px;
+    font-family: var(--font);
+    color: var(--gray-700);
+    outline: none;
+  }
+  .trends-charts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  @media (max-width: 800px) { .trends-charts { grid-template-columns: 1fr; } }
+  .chart-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--gray-200);
+    padding: 20px;
+    box-shadow: var(--shadow);
+  }
+  .chart-card h3 {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--gray-700);
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
+  }
+  .chart-container { position: relative; min-height: 300px; }
+  .trends-unavailable {
+    text-align: center;
+    padding: 80px 20px;
+    color: var(--gray-500);
+    font-size: 13px;
+  }
+
+  /* ── Sentiment tab ── */
+  .sentiment-main { max-width: 1200px; margin: 0 auto; padding: 28px 32px 48px; }
+  .sentiment-filter-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .sentiment-filter-bar label { font-size: 12px; font-weight: 500; color: var(--gray-500); }
+  .sentiment-filter-bar select {
+    padding: 6px 12px;
+    border-radius: var(--radius);
+    border: 1px solid var(--gray-200);
+    background: white;
+    font-size: 12px;
+    font-family: var(--font);
+    color: var(--gray-700);
+    outline: none;
+  }
+  .sentiment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+  .sentiment-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--gray-200);
+    padding: 18px 20px;
+    box-shadow: var(--shadow);
+  }
+  .sentiment-card-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .sentiment-cat-name { font-size: 13px; font-weight: 600; color: var(--gray-900); }
+  .sentiment-count { font-size: 28px; font-weight: 700; color: var(--teal); line-height: 1; letter-spacing: -0.03em; }
+  .sentiment-bar-wrap { display: flex; height: 6px; border-radius: 3px; overflow: hidden; margin: 10px 0 8px; gap: 2px; }
+  .sentiment-bar-pos { background: var(--green); border-radius: 3px; transition: width 0.4s; }
+  .sentiment-bar-neg { background: var(--red); border-radius: 3px; transition: width 0.4s; }
+  .sentiment-bar-labels { display: flex; justify-content: space-between; font-size: 10px; color: var(--gray-500); margin-bottom: 8px; }
+  .sentiment-top-prop { font-size: 11px; color: var(--gray-500); }
+  .sentiment-top-prop strong { color: var(--gray-700); }
+  .phrases-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 4px;
+  }
+  @media (max-width: 640px) { .phrases-section { grid-template-columns: 1fr; } }
+  .phrases-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--gray-200);
+    padding: 18px 20px;
+    box-shadow: var(--shadow);
+  }
+  .phrases-card h3 { font-size: 13px; font-weight: 600; margin-bottom: 12px; }
+  .phrases-card h3.pos { color: var(--green); }
+  .phrases-card h3.neg { color: var(--red); }
+  .phrase-item { display: flex; align-items: center; justify-content: space-between; padding: 5px 0; border-bottom: 1px solid var(--gray-100); font-size: 12px; color: var(--gray-700); }
+  .phrase-item:last-child { border-bottom: none; }
+  .phrase-count { font-size: 11px; font-weight: 600; color: var(--gray-500); background: var(--gray-100); padding: 2px 7px; border-radius: 20px; }
+  .sentiment-unavailable {
+    text-align: center;
+    padding: 80px 20px;
+    color: var(--gray-500);
+    font-size: 13px;
+  }
+
   @media (max-width: 640px) {
     .header, .tab-bar { padding-left: 16px; padding-right: 16px; }
     .main, .reviews-main { padding-left: 16px; padding-right: 16px; }
+    .trends-main, .sentiment-main { padding-left: 16px; padding-right: 16px; }
     .reviews-grid { grid-template-columns: 1fr; }
   }
 </style>
@@ -479,6 +634,8 @@
 <div class="tab-bar">
   <button class="tab-btn active" onclick="showTab('ratings', this)">Ratings Dashboard</button>
   <button class="tab-btn"        onclick="showTab('reviews', this)">Reviews Feed</button>
+  <button class="tab-btn"        onclick="showTab('trends', this)">Trends</button>
+  <button class="tab-btn"        onclick="showTab('sentiment', this)">Sentiment</button>
 </div>
 
 <!-- ══════════════════════════════════════════════════════
@@ -527,7 +684,7 @@
         <div class="pill-val" id="five-star-week" style="color: #0e6640;">—</div>
         <div class="pill-label">5★ last 7 days</div>
       </div>
-      <div class="pill" style="border-color: #fca5a5;">
+      <div class="pill" id="one-star-week-pill" style="border-color: #fca5a5;" onclick="goToOneStarUnreplied()" title="View 1★ reviews with no reply">
         <div class="pill-val" id="one-star-week" style="color: var(--red);">—</div>
         <div class="pill-label">1★ last 7 days</div>
       </div>
@@ -685,6 +842,7 @@
       <option value="stars-desc">Highest rated</option>
       <option value="stars-asc">Lowest rated</option>
     </select>
+    <button class="export-csv-btn" onclick="exportCSV()" title="Export filtered reviews as CSV">&#8595; Export CSV</button>
     <span class="reviews-count" id="rv-count"></span>
   </div>
 
@@ -694,6 +852,50 @@
 
 </div><!-- /.reviews-main -->
 </div><!-- /#panel-reviews -->
+
+
+<!-- ══════════════════════════════════════════════════════
+     TAB 3 — TRENDS
+════════════════════════════════════════════════════════ -->
+<div id="panel-trends" class="tab-panel" style="display:none">
+<div class="trends-main">
+  <div class="trends-filter-bar">
+    <label for="trends-region">Region:</label>
+    <select id="trends-region" onchange="updateTrendsCharts()">
+      <option value="">All Regions</option>
+      <option value="Region 1">Region 1</option>
+      <option value="Region 2">Region 2</option>
+      <option value="Region 3">Region 3</option>
+      <option value="Region 4">Region 4</option>
+    </select>
+  </div>
+  <div id="trends-content">
+    <div class="trends-unavailable">Loading trends data…</div>
+  </div>
+</div>
+</div><!-- /#panel-trends -->
+
+
+<!-- ══════════════════════════════════════════════════════
+     TAB 4 — SENTIMENT
+════════════════════════════════════════════════════════ -->
+<div id="panel-sentiment" class="tab-panel" style="display:none">
+<div class="sentiment-main">
+  <div class="sentiment-filter-bar">
+    <label for="sentiment-region">Region:</label>
+    <select id="sentiment-region" onchange="renderSentiment()">
+      <option value="">All Regions</option>
+      <option value="Region 1">Region 1</option>
+      <option value="Region 2">Region 2</option>
+      <option value="Region 3">Region 3</option>
+      <option value="Region 4">Region 4</option>
+    </select>
+  </div>
+  <div id="sentiment-content">
+    <div class="sentiment-unavailable">Loading sentiment data…</div>
+  </div>
+</div>
+</div><!-- /#panel-sentiment -->
 
 
 <script>
@@ -897,14 +1099,18 @@ const otherPlatforms = [
 /* ════════════════════════════════════════════════════════
    TAB SWITCHING
 ════════════════════════════════════════════════════════ */
-let reviewsLoaded = false;
+let reviewsLoaded   = false;
+let trendsLoaded    = false;
+let sentimentLoaded = false;
 
 function showTab(tab, btn) {
   document.querySelectorAll('.tab-panel').forEach(p => p.style.display = 'none');
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
   document.getElementById('panel-' + tab).style.display = '';
   btn.classList.add('active');
-  if (tab === 'reviews' && !reviewsLoaded) loadReviews();
+  if (tab === 'reviews'   && !reviewsLoaded)   loadReviews();
+  if (tab === 'trends'    && !trendsLoaded)     loadTrends();
+  if (tab === 'sentiment' && !sentimentLoaded)  loadSentiment();
 }
 
 /* ════════════════════════════════════════════════════════
@@ -1267,6 +1473,361 @@ document.getElementById('rv-reset').addEventListener('click', () => {
   document.querySelectorAll('.sfb').forEach(b => b.classList.remove('active'));
   renderReviewCards();
 });
+
+
+/* ════════════════════════════════════════════════════════
+   FEATURE 3 — EXPORT CSV
+════════════════════════════════════════════════════════ */
+function csvEscape(val) {
+  const s = val == null ? '' : String(val);
+  if (s.includes(',') || s.includes('"') || s.includes('\n') || s.includes('\r')) {
+    return '"' + s.replace(/"/g, '""') + '"';
+  }
+  return s;
+}
+
+function exportCSV() {
+  const filtered = getFilteredReviews();
+  const headers  = ['Property','Region','Reviewer','Stars','Date','Review Text','Has Reply','Reply Text','Reply Date'];
+  const rows     = filtered.map(r => [
+    r.property,
+    r.region,
+    r.reviewer,
+    r.stars,
+    r.date,
+    r.text || '',
+    r.has_reply ? 'Yes' : 'No',
+    r.reply_text  || '',
+    r.reply_date  || ''
+  ].map(csvEscape).join(','));
+
+  const csv  = [headers.join(','), ...rows].join('\r\n');
+  const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+  const url  = URL.createObjectURL(blob);
+  const a    = document.createElement('a');
+  const today = new Date().toISOString().slice(0,10);
+  a.href     = url;
+  a.download = `student-cribs-reviews-${today}.csv`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+
+/* ════════════════════════════════════════════════════════
+   FEATURE 4 — 1★ QUICK-LINK
+════════════════════════════════════════════════════════ */
+function goToOneStarUnreplied() {
+  // Ensure reviews are loaded first, then switch tab & apply filters
+  const reviewsBtn = document.querySelectorAll('.tab-btn')[1];
+  showTab('reviews', reviewsBtn);
+
+  // Apply filters: 1★ + no reply
+  document.getElementById('rv-region').value   = '';
+  document.getElementById('rv-property').value = '';
+  document.getElementById('rv-search').value   = '';
+  document.getElementById('rv-replied').value  = 'no';
+  document.getElementById('rv-sort').value     = 'date-desc';
+
+  activeStars.clear();
+  document.querySelectorAll('.sfb').forEach(b => b.classList.remove('active'));
+  const oneStarBtn = document.querySelector('.sfb[data-stars="1"]');
+  if (oneStarBtn) { activeStars.add(1); oneStarBtn.classList.add('active'); }
+
+  renderReviewCards();
+}
+
+
+/* ════════════════════════════════════════════════════════
+   FEATURE 1 — TRENDS TAB
+════════════════════════════════════════════════════════ */
+let trendsRawData   = null;
+let weeklyChart     = null;
+let regionChart     = null;
+
+function getWeekCommencing(date) {
+  const d = new Date(date);
+  const day = d.getDay(); // 0=Sun
+  const diff = (day === 0) ? -6 : 1 - day; // Mon
+  d.setDate(d.getDate() + diff);
+  d.setHours(0,0,0,0);
+  return d;
+}
+
+function formatWC(date) {
+  const d = new Date(date);
+  const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  return `W/C ${d.getDate()} ${months[d.getMonth()]}`;
+}
+
+async function loadTrends() {
+  try {
+    const res = await fetch('reviews_data.json?t=' + Date.now());
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    trendsRawData = await res.json();
+    trendsLoaded  = true;
+
+    // Build chart HTML
+    document.getElementById('trends-content').innerHTML = `
+      <div class="trends-charts">
+        <div class="chart-card">
+          <h3>Weekly Review Volume (last 12 weeks)</h3>
+          <div class="chart-container"><canvas id="chart-weekly"></canvas></div>
+        </div>
+        <div class="chart-card">
+          <h3>Average Rating by Region</h3>
+          <div class="chart-container"><canvas id="chart-region"></canvas></div>
+        </div>
+      </div>`;
+
+    updateTrendsCharts();
+  } catch(e) {
+    trendsLoaded = true; // don't retry
+    document.getElementById('trends-content').innerHTML =
+      `<div class="trends-unavailable"><div style="font-size:2rem;margin-bottom:10px">📊</div><p><strong>Data unavailable.</strong></p><p style="margin-top:6px;color:var(--gray-400)">Could not load reviews_data.json</p></div>`;
+  }
+}
+
+function updateTrendsCharts() {
+  if (!trendsRawData) return;
+  const regionFilter = document.getElementById('trends-region').value;
+
+  // Determine last 12 weeks
+  const now     = new Date();
+  const thisWC  = getWeekCommencing(now);
+  const weeks   = [];
+  for (let i = 11; i >= 0; i--) {
+    const d = new Date(thisWC);
+    d.setDate(d.getDate() - i * 7);
+    weeks.push(d);
+  }
+
+  const labels   = weeks.map(formatWC);
+  const countAll = weeks.map(() => 0);
+  const count5   = weeks.map(() => 0);
+  const count1   = weeks.map(() => 0);
+  const countOther = weeks.map(() => 0);
+
+  for (const prop of trendsRawData.properties) {
+    if (regionFilter && prop.region !== regionFilter) continue;
+    for (const r of prop.reviews) {
+      const wc = getWeekCommencing(r.raw_date).getTime();
+      const idx = weeks.findIndex(w => w.getTime() === wc);
+      if (idx === -1) continue;
+      countAll[idx]++;
+      if (r.stars === 5)      count5[idx]++;
+      else if (r.stars === 1) count1[idx]++;
+      else                    countOther[idx]++;
+    }
+  }
+
+  // Region avg chart data
+  const regions = ['Region 1','Region 2','Region 3','Region 4'];
+  const regionAvgs = regions.map(reg => {
+    let sum = 0, cnt = 0;
+    for (const prop of trendsRawData.properties) {
+      if (prop.region !== reg) continue;
+      for (const r of prop.reviews) { sum += r.stars; cnt++; }
+    }
+    return cnt ? +(sum / cnt).toFixed(2) : null;
+  });
+  const regionColors = ['#18706E','#A1DEC0','#FF9B5B','#A6A0DF'];
+
+  // Destroy old charts
+  if (weeklyChart) { weeklyChart.destroy(); weeklyChart = null; }
+  if (regionChart) { regionChart.destroy(); regionChart = null; }
+
+  const wCtx = document.getElementById('chart-weekly');
+  const rCtx = document.getElementById('chart-region');
+  if (!wCtx || !rCtx) return;
+
+  weeklyChart = new Chart(wCtx, {
+    type: 'bar',
+    data: {
+      labels,
+      datasets: [
+        { label: '5★', data: count5,     backgroundColor: '#2e7d4f', stack: 'a' },
+        { label: '1★', data: count1,     backgroundColor: '#e24b4a', stack: 'a' },
+        { label: 'Other', data: countOther, backgroundColor: '#d1d5db', stack: 'a' }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { position: 'bottom', labels: { font: { family: 'Poppins', size: 11 }, boxWidth: 12 } }
+      },
+      scales: {
+        x: { stacked: true, ticks: { font: { family: 'Poppins', size: 10 }, maxRotation: 45 }, grid: { display: false } },
+        y: { stacked: true, beginAtZero: true, ticks: { font: { family: 'Poppins', size: 11 } }, grid: { color: '#f3f4f6' } }
+      }
+    }
+  });
+
+  regionChart = new Chart(rCtx, {
+    type: 'bar',
+    data: {
+      labels: regions.map(r => r.replace('Region ','R')),
+      datasets: [{
+        label: 'Avg Rating',
+        data: regionAvgs,
+        backgroundColor: regionColors,
+        borderRadius: 6,
+        borderSkipped: false
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false }
+      },
+      scales: {
+        x: { ticks: { font: { family: 'Poppins', size: 11 } }, grid: { display: false } },
+        y: {
+          beginAtZero: false,
+          min: 1, max: 5,
+          ticks: { font: { family: 'Poppins', size: 11 }, stepSize: 0.5 },
+          grid: { color: '#f3f4f6' }
+        }
+      }
+    }
+  });
+}
+
+
+/* ════════════════════════════════════════════════════════
+   FEATURE 2 — SENTIMENT TAB
+════════════════════════════════════════════════════════ */
+let sentimentRawData = null;
+
+const SENTIMENT_CATEGORIES = [
+  { key: 'maintenance', label: '🏠 Maintenance',    keywords: ['maintenance','repair','fix','broken','issue','leak','damp','mould'] },
+  { key: 'staff',       label: '👥 Staff & Team',   keywords: ['staff','team','friendly','helpful','manager','wayne','brian'] },
+  { key: 'location',    label: '📍 Location',        keywords: ['location','central','transport','walk','nearby','close'] },
+  { key: 'noise',       label: '🔊 Noise',           keywords: ['noise','noisy','loud','quiet'] },
+  { key: 'value',       label: '💰 Value',           keywords: ['value','price','expensive','cheap','worth','money'] },
+  { key: 'clean',       label: '🧹 Cleanliness',     keywords: ['clean','dirty','hygiene','mess','tidy'] },
+  { key: 'comms',       label: '📞 Communication',   keywords: ['communication','response','responsive','reply','contact','slow'] },
+  { key: 'praise',      label: '⭐ Overall Praise',  keywords: ['amazing','excellent','fantastic','great','love','recommend','perfect'] }
+];
+
+async function loadSentiment() {
+  try {
+    const res = await fetch('reviews_data.json?t=' + Date.now());
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    sentimentRawData = await res.json();
+    sentimentLoaded  = true;
+    renderSentiment();
+  } catch(e) {
+    sentimentLoaded = true;
+    document.getElementById('sentiment-content').innerHTML =
+      `<div class="sentiment-unavailable"><div style="font-size:2rem;margin-bottom:10px">💬</div><p><strong>Data unavailable.</strong></p><p style="margin-top:6px;color:var(--gray-400)">Could not load reviews_data.json</p></div>`;
+  }
+}
+
+function renderSentiment() {
+  if (!sentimentRawData) return;
+  const regionFilter = document.getElementById('sentiment-region').value;
+
+  // Flatten reviews with region/property
+  const reviews = [];
+  for (const prop of sentimentRawData.properties) {
+    if (regionFilter && prop.region !== regionFilter) continue;
+    for (const r of prop.reviews) {
+      reviews.push({ ...r, property: prop.name, region: prop.region });
+    }
+  }
+
+  // Analyse categories
+  const catResults = SENTIMENT_CATEGORIES.map(cat => {
+    const matching = reviews.filter(r => {
+      const txt = (r.text || '').toLowerCase();
+      return cat.keywords.some(kw => txt.includes(kw));
+    });
+    const pos = matching.filter(r => r.stars >= 4).length;
+    const neg = matching.filter(r => r.stars <= 2).length;
+
+    // Most mentioned property
+    const propCount = {};
+    matching.forEach(r => { propCount[r.property] = (propCount[r.property] || 0) + 1; });
+    const topProp = Object.entries(propCount).sort((a,b) => b[1]-a[1])[0];
+
+    return { ...cat, total: matching.length, pos, neg, topProp: topProp ? topProp[0] : null };
+  });
+
+  // Phrases
+  const posReviews = reviews.filter(r => r.stars === 5).map(r => (r.text||'').toLowerCase());
+  const negReviews = reviews.filter(r => r.stars === 1).map(r => (r.text||'').toLowerCase());
+
+  function extractPhrases(texts, topN=12) {
+    const freq = {};
+    for (const t of texts) {
+      const words = t.replace(/[^a-z\s]/g,'').split(/\s+/).filter(w => w.length > 2);
+      const stopwords = new Set(['the','and','was','for','are','has','have','been','with','this','that','they','from','you','your','our','not','but','all','can','its','about','very','been','also','more','just','like','their','were','when','what','then','had','his','her','him','who','how','would','could','will','there','which','into','been','even','only','well','ever','need']);
+      for (let i = 0; i < words.length - 1; i++) {
+        if (stopwords.has(words[i]) || stopwords.has(words[i+1])) continue;
+        if (words[i].length < 3 || words[i+1].length < 3) continue;
+        const phrase = words[i] + ' ' + words[i+1];
+        freq[phrase] = (freq[phrase] || 0) + 1;
+      }
+    }
+    return Object.entries(freq)
+      .filter(([,n]) => n > 1)
+      .sort((a,b) => b[1]-a[1])
+      .slice(0, topN);
+  }
+
+  const posPhrases = extractPhrases(posReviews);
+  const negPhrases = extractPhrases(negReviews);
+
+  // Render
+  const cardsHtml = catResults.map(cat => {
+    const total = cat.total;
+    const posW  = total > 0 ? Math.round((cat.pos / total) * 100) : 0;
+    const negW  = total > 0 ? Math.round((cat.neg / total) * 100) : 0;
+    const topPropHtml = cat.topProp
+      ? `<div class="sentiment-top-prop">Most mentioned in: <strong>${esc(cat.topProp)}</strong></div>`
+      : `<div class="sentiment-top-prop" style="color:var(--gray-300)">No mentions yet</div>`;
+    return `
+      <div class="sentiment-card">
+        <div class="sentiment-card-header">
+          <div class="sentiment-cat-name">${cat.label}</div>
+          <div class="sentiment-count">${total}</div>
+        </div>
+        <div class="sentiment-bar-wrap">
+          <div class="sentiment-bar-pos" style="width:${posW}%"></div>
+          <div class="sentiment-bar-neg" style="width:${negW}%"></div>
+        </div>
+        <div class="sentiment-bar-labels">
+          <span style="color:var(--green)">▲ ${cat.pos} positive</span>
+          <span style="color:var(--red)">▼ ${cat.neg} negative</span>
+        </div>
+        ${topPropHtml}
+      </div>`;
+  }).join('');
+
+  function phraseListHtml(phrases) {
+    if (!phrases.length) return '<div style="color:var(--gray-300);font-size:12px">Not enough data</div>';
+    return phrases.map(([phrase, n]) =>
+      `<div class="phrase-item"><span>${esc(phrase)}</span><span class="phrase-count">${n}</span></div>`
+    ).join('');
+  }
+
+  document.getElementById('sentiment-content').innerHTML = `
+    <div class="sentiment-grid">${cardsHtml}</div>
+    <div class="phrases-section">
+      <div class="phrases-card">
+        <h3 class="pos">Top positive phrases (5★ reviews)</h3>
+        ${phraseListHtml(posPhrases)}
+      </div>
+      <div class="phrases-card">
+        <h3 class="neg">Top negative phrases (1★ reviews)</h3>
+        ${phraseListHtml(negPhrases)}
+      </div>
+    </div>`;
+}
 </script>
 </body>
 </html>

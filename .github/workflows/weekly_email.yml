@@ -1,0 +1,31 @@
+name: Weekly Email Report
+
+on:
+  schedule:
+    # Every Monday at 09:15 UTC (75 min after data update at 08:00)
+    - cron: '15 9 * * 1'
+  workflow_dispatch:  # Allow manual trigger for testing
+
+jobs:
+  send-report:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Send weekly email report
+        env:
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+        run: python send_weekly_report.py
