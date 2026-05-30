@@ -1545,6 +1545,7 @@ function goToOneStarUnreplied() {
 let trendsRawData   = null;
 let weeklyChart     = null;
 let regionChart     = null;
+let monthlyChart    = null;
 
 function getWeekCommencing(date) {
   const d = new Date(date);
@@ -1578,6 +1579,12 @@ async function loadTrends() {
         <div class="chart-card">
           <h3>Average Rating by Region</h3>
           <div class="chart-container"><canvas id="chart-region"></canvas></div>
+        </div>
+      </div>
+      <div class="trends-charts" style="margin-top:16px;">
+        <div class="chart-card" style="flex:1 1 100%;max-width:100%;">
+          <h3>Monthly Review Volume (last 12 months)</h3>
+          <div class="chart-container" style="min-height:320px;"><canvas id="chart-monthly"></canvas></div>
         </div>
       </div>`;
 
@@ -1634,12 +1641,39 @@ function updateTrendsCharts() {
   });
   const regionColors = ['#18706E','#A1DEC0','#FF9B5B','#A6A0DF'];
 
+  // Build last 12 months data
+  const monthlyLabels = [];
+  const mCount5 = [], mCount1 = [], mCountOther = [];
+  const today = new Date();
+  for (let i = 11; i >= 0; i--) {
+    const d = new Date(today.getFullYear(), today.getMonth() - i, 1);
+    monthlyLabels.push(d.toLocaleString('en-GB', { month: 'short', year: '2-digit' }));
+    mCount5.push(0); mCount1.push(0); mCountOther.push(0);
+  }
+  const firstMonth = new Date(today.getFullYear(), today.getMonth() - 11, 1);
+
+  for (const prop of trendsRawData.properties) {
+    if (regionFilter && prop.region !== regionFilter) continue;
+    for (const r of prop.reviews) {
+      const d = new Date(r.raw_date);
+      if (d < firstMonth) continue;
+      const monthsAgo = (today.getFullYear() - d.getFullYear()) * 12 + (today.getMonth() - d.getMonth());
+      const idx = 11 - monthsAgo;
+      if (idx < 0 || idx > 11) continue;
+      if (r.stars === 5)      mCount5[idx]++;
+      else if (r.stars === 1) mCount1[idx]++;
+      else                    mCountOther[idx]++;
+    }
+  }
+
   // Destroy old charts
-  if (weeklyChart) { weeklyChart.destroy(); weeklyChart = null; }
-  if (regionChart) { regionChart.destroy(); regionChart = null; }
+  if (weeklyChart)  { weeklyChart.destroy();  weeklyChart  = null; }
+  if (regionChart)  { regionChart.destroy();  regionChart  = null; }
+  if (monthlyChart) { monthlyChart.destroy(); monthlyChart = null; }
 
   const wCtx = document.getElementById('chart-weekly');
   const rCtx = document.getElementById('chart-region');
+  const mCtx = document.getElementById('chart-monthly');
   if (!wCtx || !rCtx) return;
 
   weeklyChart = new Chart(wCtx, {
@@ -1680,20 +1714,50 @@ function updateTrendsCharts() {
     options: {
       responsive: true,
       maintainAspectRatio: false,
-      plugins: {
-        legend: { display: false }
-      },
+      plugins: { legend: { display: false } },
       scales: {
         x: { ticks: { font: { family: 'Poppins', size: 11 } }, grid: { display: false } },
         y: {
-          beginAtZero: false,
-          min: 1, max: 5,
+          beginAtZero: false, min: 1, max: 5,
           ticks: { font: { family: 'Poppins', size: 11 }, stepSize: 0.5 },
           grid: { color: '#f3f4f6' }
         }
       }
     }
   });
+
+  if (mCtx) {
+    monthlyChart = new Chart(mCtx, {
+      type: 'bar',
+      data: {
+        labels: monthlyLabels,
+        datasets: [
+          { label: '5★', data: mCount5,     backgroundColor: '#2e7d4f', stack: 'a' },
+          { label: '1★', data: mCount1,     backgroundColor: '#e24b4a', stack: 'a' },
+          { label: 'Other', data: mCountOther, backgroundColor: '#d1d5db', stack: 'a' }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { position: 'bottom', labels: { font: { family: 'Poppins', size: 11 }, boxWidth: 12 } },
+          tooltip: {
+            callbacks: {
+              footer: (items) => {
+                const total = items.reduce((s, i) => s + i.parsed.y, 0);
+                return `Total: ${total}`;
+              }
+            }
+          }
+        },
+        scales: {
+          x: { stacked: true, ticks: { font: { family: 'Poppins', size: 11 } }, grid: { display: false } },
+          y: { stacked: true, beginAtZero: true, ticks: { font: { family: 'Poppins', size: 11 } }, grid: { color: '#f3f4f6' } }
+        }
+      }
+    });
+  }
 }
 
 
