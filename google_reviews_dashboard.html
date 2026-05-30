@@ -251,6 +251,13 @@
     text-transform: uppercase;
     padding: 7px 14px;
   }
+  tbody tr.region-summary { background: var(--gray-50); border-top: 2px solid var(--gray-200); }
+  tbody tr.region-summary td {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--gray-700);
+    padding: 8px 14px;
+  }
 
   td { padding: 11px 14px; font-size: 13px; color: var(--gray-900); }
   td.right { text-align: right; }
@@ -721,6 +728,7 @@
           <th class="right">Reviews</th>
           <th class="right">5★ to target</th>
           <th class="right">Est. new total</th>
+          <th class="right">Last review</th>
         </tr>
       </thead>
       <tbody id="table-body"></tbody>
@@ -1171,12 +1179,78 @@ function updateSummary() {
   document.getElementById('props-below').textContent   = below;
 }
 
+function renderPropertyRow(p, tbody) {
+  const change = (p.score !== null && p.last !== null) ? +(p.score - p.last).toFixed(1) : null;
+  const changeBadge = change === null ? '<span class="change-badge change-flat">N/A</span>'
+    : change > 0 ? `<span class="change-badge change-up">▲ +${change.toFixed(1)}</span>`
+    : change < 0 ? `<span class="change-badge change-down">▼ ${change.toFixed(1)}</span>`
+    : '<span class="change-badge change-flat">—</span>';
+
+  const scoreBadge = p.score !== null
+    ? `<span class="score-badge ${scoreClass(p.score)}">★ ${p.score.toFixed(1)}</span>`
+    : `<span class="score-badge score-na">N/A</span>`;
+
+  const lastBadge = p.last !== null
+    ? `<span class="score-badge ${scoreClass(p.last)}" style="opacity:0.6">★ ${p.last.toFixed(1)}</span>`
+    : `<span class="score-badge score-na">N/A</span>`;
+
+  const neededCell = p.needed === null ? '<span class="needed-na">N/A</span>'
+    : p.needed === 0 ? '<span class="needed-met">✓ Met</span>'
+    : `<span class="needed-val">${p.needed.toLocaleString()}</span>`;
+
+  const newTotal = p.needed === null ? '<span class="needed-na">—</span>'
+    : `<span style="font-family:var(--mono);font-size:13px">${(p.reviews + p.needed).toLocaleString()}</span>`;
+
+  const pct = p.score !== null ? ((p.score / 5) * 100).toFixed(1) : 0;
+  const lastReview = (window.lastReviewDates && window.lastReviewDates[p.name]) || '—';
+
+  const tr = document.createElement('tr');
+  tr.innerHTML = `
+    <td>
+      <div class="prop-name">${p.name}</div>
+      ${p.score !== null ? `<div class="score-bar-track" style="margin-top:5px"><div class="score-bar-fill" style="width:${pct}%;background:${barColor(p.score)}"></div></div>` : ''}
+    </td>
+    <td class="center muted">${p.region}</td>
+    <td class="center">${scoreBadge}</td>
+    <td class="center">${lastBadge}</td>
+    <td class="center">${changeBadge}</td>
+    <td class="right mono">${fmt(p.reviews)}</td>
+    <td class="right">${neededCell}</td>
+    <td class="right">${newTotal}</td>
+    <td class="right" style="color:var(--gray-500);font-size:12px;">${lastReview}</td>
+  `;
+  tbody.appendChild(tr);
+}
+
+function renderRegionSummary(regionRows, tbody) {
+  const active = regionRows.filter(p => p.score !== null && p.reviews !== null);
+  if (!active.length) return;
+  const avgScore = active.reduce((s, p) => s + p.score, 0) / active.length;
+  const totalRevs = active.reduce((s, p) => s + p.reviews, 0);
+  const totalNeeded = regionRows.reduce((s, p) => s + (p.needed || 0), 0);
+  const atTarget = active.filter(p => p.score >= target).length;
+
+  const str = document.createElement('tr');
+  str.className = 'region-summary';
+  str.innerHTML = `
+    <td colspan="2" style="color:var(--gray-500);font-style:italic;">Region total (${active.length} properties)</td>
+    <td class="center"><span class="score-badge ${scoreClass(avgScore)}">★ ${avgScore.toFixed(1)} avg</span></td>
+    <td class="center"></td>
+    <td class="center" style="font-size:11px;color:var(--gray-500);">${atTarget}/${active.length} at target</td>
+    <td class="right mono">${totalRevs.toLocaleString()}</td>
+    <td class="right">${totalNeeded > 0 ? `<span class="needed-val">${totalNeeded.toLocaleString()}</span>` : '<span class="needed-met">✓ All met</span>'}</td>
+    <td class="right"></td>
+    <td class="right"></td>
+  `;
+  tbody.appendChild(str);
+}
+
 function renderTable() {
   const sort = document.getElementById('sort-select').value;
   let rows = properties.filter(p => activeRegion === 'all' || p.region === activeRegion);
   rows = rows.map(p => ({ ...p, needed: calcNeeded(p.score, p.reviews, target) }));
 
-  if (sort === 'score-asc')   rows.sort((a,b) => (a.score||0)-(b.score||0));
+  if (sort === 'score-asc')        rows.sort((a,b) => (a.score||0)-(b.score||0));
   else if (sort === 'score-desc')  rows.sort((a,b) => (b.score||0)-(a.score||0));
   else if (sort === 'needed-desc') rows.sort((a,b) => (b.needed||0)-(a.needed||0));
   else if (sort === 'needed-asc')  rows.sort((a,b) => {
@@ -1185,57 +1259,31 @@ function renderTable() {
 
   const tbody = document.getElementById('table-body');
   tbody.innerHTML = '';
-  let lastRegion = null;
 
-  rows.forEach(p => {
-    if (sort === 'default' && p.region !== lastRegion) {
+  const regionNames = { 'Region 1':'Region 1 — North East', 'Region 2':'Region 2 — North', 'Region 3':'Region 3 — Midlands', 'Region 4':'Region 4 — South' };
+
+  if (sort === 'default') {
+    // Group by region, render with headers and summary rows
+    const regionOrder = ['Region 1','Region 2','Region 3','Region 4'];
+    for (const region of regionOrder) {
+      const regionRows = rows.filter(p => p.region === region);
+      if (!regionRows.length) continue;
+
+      // Region header
       const rtr = document.createElement('tr');
       rtr.className = 'region-header';
-      const regionNames = { 'Region 1':'Region 1 — North East', 'Region 2':'Region 2 — North', 'Region 3':'Region 3 — Midlands', 'Region 4':'Region 4 — South' };
-      rtr.innerHTML = `<td colspan="8">${regionNames[p.region]||p.region}</td>`;
+      rtr.innerHTML = `<td colspan="9">${regionNames[region]||region}</td>`;
       tbody.appendChild(rtr);
-      lastRegion = p.region;
+
+      // Property rows
+      regionRows.forEach(p => renderPropertyRow(p, tbody));
+
+      // Region summary
+      renderRegionSummary(regionRows, tbody);
     }
-
-    const change = (p.score !== null && p.last !== null) ? +(p.score - p.last).toFixed(1) : null;
-    const changeBadge = change === null ? '<span class="change-badge change-flat">N/A</span>'
-      : change > 0 ? `<span class="change-badge change-up">▲ +${change.toFixed(1)}</span>`
-      : change < 0 ? `<span class="change-badge change-down">▼ ${change.toFixed(1)}</span>`
-      : '<span class="change-badge change-flat">—</span>';
-
-    const scoreBadge = p.score !== null
-      ? `<span class="score-badge ${scoreClass(p.score)}">★ ${p.score.toFixed(1)}</span>`
-      : `<span class="score-badge score-na">N/A</span>`;
-
-    const lastBadge = p.last !== null
-      ? `<span class="score-badge ${scoreClass(p.last)}" style="opacity:0.6">★ ${p.last.toFixed(1)}</span>`
-      : `<span class="score-badge score-na">N/A</span>`;
-
-    const neededCell = p.needed === null ? '<span class="needed-na">N/A</span>'
-      : p.needed === 0 ? '<span class="needed-met">✓ Met</span>'
-      : `<span class="needed-val">${p.needed.toLocaleString()}</span>`;
-
-    const newTotal = p.needed === null ? '<span class="needed-na">—</span>'
-      : `<span style="font-family:var(--mono);font-size:13px">${(p.reviews + p.needed).toLocaleString()}</span>`;
-
-    const pct = p.score !== null ? ((p.score / 5) * 100).toFixed(1) : 0;
-
-    const tr = document.createElement('tr');
-    tr.innerHTML = `
-      <td>
-        <div class="prop-name">${p.name}</div>
-        ${p.score !== null ? `<div class="score-bar-track" style="margin-top:5px"><div class="score-bar-fill" style="width:${pct}%;background:${barColor(p.score)}"></div></div>` : ''}
-      </td>
-      <td class="center muted">${p.region}</td>
-      <td class="center">${scoreBadge}</td>
-      <td class="center">${lastBadge}</td>
-      <td class="center">${changeBadge}</td>
-      <td class="right mono">${fmt(p.reviews)}</td>
-      <td class="right">${neededCell}</td>
-      <td class="right">${newTotal}</td>
-    `;
-    tbody.appendChild(tr);
-  });
+  } else {
+    rows.forEach(p => renderPropertyRow(p, tbody));
+  }
 }
 
 function renderPlatforms() {
@@ -1283,6 +1331,9 @@ async function loadWeeklyStats() {
     const data = await res.json();
     const cutoff = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
     let five = 0, one = 0;
+
+    // Build most-recent-review date map per property
+    const lastDates = {};
     for (const prop of data.properties) {
       for (const r of prop.reviews) {
         const d = new Date(r.raw_date);
@@ -1290,10 +1341,24 @@ async function loadWeeklyStats() {
           if (r.stars === 5) five++;
           if (r.stars === 1) one++;
         }
+        // Track the most recent review date for this property
+        if (r.raw_date) {
+          if (!lastDates[prop.name] || r.raw_date > lastDates[prop.name].raw) {
+            lastDates[prop.name] = { raw: r.raw_date, display: r.date };
+          }
+        }
       }
     }
+
     document.getElementById('five-star-week').textContent = five.toLocaleString();
     document.getElementById('one-star-week').textContent  = one.toLocaleString();
+
+    // Store for renderPropertyRow and re-render table with dates populated
+    window.lastReviewDates = {};
+    for (const [name, val] of Object.entries(lastDates)) {
+      window.lastReviewDates[name] = val.display;
+    }
+    renderTable();
   } catch (e) { /* silently skip if JSON not available */ }
 }
 
