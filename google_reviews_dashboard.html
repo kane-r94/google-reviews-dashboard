@@ -82,8 +82,66 @@
   }
   .header-title { color: white; font-weight: 600; font-size: 15px; letter-spacing: -0.01em; }
   .header-sub { color: rgba(255,255,255,0.5); font-size: 12px; margin-top: 1px; font-weight: 400; }
-  .header-right { display: flex; align-items: center; gap: 8px; }
+  .header-right { display: flex; align-items: center; gap: 12px; }
   .last-updated { font-size: 12px; color: rgba(255,255,255,0.4); font-family: var(--font); font-weight: 400; }
+
+  /* ── refresh button ── */
+  .refresh-btn {
+    display: flex; align-items: center; gap: 6px;
+    padding: 6px 12px; border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.08);
+    color: rgba(255,255,255,0.75); font-family: var(--font);
+    font-size: 12px; font-weight: 500; cursor: pointer;
+    transition: all 0.15s;
+  }
+  .refresh-btn:hover:not(:disabled) { background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.35); color: white; }
+  .refresh-btn:disabled { opacity: 0.45; cursor: not-allowed; }
+  .refresh-btn svg { flex-shrink: 0; transition: transform 0.6s; }
+  .refresh-btn.spinning svg { animation: spin 1s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* ── refresh modal ── */
+  .modal-overlay {
+    display: none; position: fixed; inset: 0;
+    background: rgba(0,0,0,0.55); z-index: 1000;
+    align-items: center; justify-content: center;
+  }
+  .modal-overlay.open { display: flex; }
+  .modal-box {
+    background: white; border-radius: 12px; padding: 28px 32px;
+    width: 460px; max-width: calc(100vw - 32px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+    font-family: var(--font);
+  }
+  .modal-box h3 { margin: 0 0 6px; font-size: 16px; font-weight: 700; color: var(--liquorice); }
+  .modal-box p  { margin: 0 0 16px; font-size: 13px; color: var(--gray-500); line-height: 1.5; }
+  .modal-box ol { margin: 0 0 16px; padding-left: 18px; font-size: 13px; color: var(--gray-600); line-height: 1.8; }
+  .modal-box ol code { background: var(--gray-100); padding: 1px 5px; border-radius: 4px; font-size: 12px; }
+  .modal-input {
+    width: 100%; box-sizing: border-box;
+    padding: 8px 12px; border: 1px solid var(--gray-200);
+    border-radius: 8px; font-family: var(--font); font-size: 13px;
+    color: var(--gray-700); outline: none; margin-bottom: 16px;
+  }
+  .modal-input:focus { border-color: var(--teal); }
+  .modal-actions { display: flex; gap: 8px; justify-content: flex-end; }
+  .modal-cancel { padding: 8px 16px; border-radius: 8px; border: 1px solid var(--gray-200); background: white; font-family: var(--font); font-size: 13px; cursor: pointer; color: var(--gray-600); }
+  .modal-cancel:hover { background: var(--gray-50); }
+  .modal-save { padding: 8px 16px; border-radius: 8px; border: none; background: var(--liquorice); font-family: var(--font); font-size: 13px; cursor: pointer; color: white; font-weight: 600; }
+  .modal-save:hover { background: #2a2b2b; }
+
+  /* ── refresh toast ── */
+  .refresh-toast {
+    position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%);
+    background: var(--liquorice); color: white;
+    padding: 10px 20px; border-radius: 20px;
+    font-family: var(--font); font-size: 13px; font-weight: 500;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+    opacity: 0; transition: opacity 0.3s; pointer-events: none; z-index: 999;
+    white-space: nowrap;
+  }
+  .refresh-toast.show { opacity: 1; }
 
   /* ── tab bar ── */
   .tab-bar {
@@ -634,9 +692,39 @@
     </div>
   </div>
   <div class="header-right">
+    <button class="refresh-btn" id="refresh-btn" onclick="handleRefresh()" title="Trigger a live data refresh">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M23 4v6h-6"/><path d="M1 20v-6h6"/>
+        <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+      </svg>
+      Refresh data
+    </button>
     <span class="last-updated" id="last-updated">29 May 2026 16:21 UTC</span>
   </div>
 </header>
+
+<!-- Token setup modal -->
+<div class="modal-overlay" id="token-modal">
+  <div class="modal-box">
+    <h3>Set up manual refresh</h3>
+    <p>A GitHub token is needed to trigger the data update remotely. This is stored only in your browser — it never leaves your device or gets saved to the site.</p>
+    <ol>
+      <li>Go to <strong>github.com → Settings → Developer settings → Personal access tokens → Fine-grained tokens</strong></li>
+      <li>Click <strong>Generate new token</strong></li>
+      <li>Set repository access to <code>google-reviews-dashboard</code> only</li>
+      <li>Under Permissions → Repository → <strong>Actions: Read and write</strong></li>
+      <li>Generate and paste the token below</li>
+    </ol>
+    <input class="modal-input" id="token-input" type="password" placeholder="github_pat_..." />
+    <div class="modal-actions">
+      <button class="modal-cancel" onclick="closeTokenModal()">Cancel</button>
+      <button class="modal-save" onclick="saveToken()">Save &amp; refresh</button>
+    </div>
+  </div>
+</div>
+
+<!-- Refresh status toast -->
+<div class="refresh-toast" id="refresh-toast"></div>
 
 <div class="tab-bar">
   <button class="tab-btn active" onclick="showTab('ratings', this)">Ratings Dashboard</button>
@@ -1972,6 +2060,100 @@ function renderSentiment() {
       </div>
     </div>`;
 }
+
+
+/* ════════════════════════════════════════════════════════
+   MANUAL REFRESH
+════════════════════════════════════════════════════════ */
+
+const REPO_OWNER   = 'kane-r94';
+const REPO_NAME    = 'google-reviews-dashboard';
+const WORKFLOWS    = ['update_reviews.yml', 'update_review_text.yml'];
+const TOKEN_KEY    = 'sc_gh_refresh_token';
+
+function showToast(msg, duration = 4000) {
+  const t = document.getElementById('refresh-toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), duration);
+}
+
+function handleRefresh() {
+  const token = localStorage.getItem(TOKEN_KEY);
+  if (!token) {
+    document.getElementById('token-modal').classList.add('open');
+    return;
+  }
+  triggerRefresh(token);
+}
+
+function closeTokenModal() {
+  document.getElementById('token-modal').classList.remove('open');
+  document.getElementById('token-input').value = '';
+}
+
+function saveToken() {
+  const token = document.getElementById('token-input').value.trim();
+  if (!token) return;
+  localStorage.setItem(TOKEN_KEY, token);
+  closeTokenModal();
+  triggerRefresh(token);
+}
+
+async function triggerRefresh(token) {
+  const btn = document.getElementById('refresh-btn');
+  btn.disabled = true;
+  btn.classList.add('spinning');
+  showToast('Triggering update…', 60000);
+
+  let success = 0;
+  for (const wf of WORKFLOWS) {
+    try {
+      const res = await fetch(
+        `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/actions/workflows/${wf}/dispatches`,
+        {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${token}`,
+            'Accept': 'application/vnd.github+json',
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ ref: 'main' }),
+        }
+      );
+      if (res.status === 204) {
+        success++;
+      } else if (res.status === 401 || res.status === 403) {
+        localStorage.removeItem(TOKEN_KEY);
+        showToast('Token invalid or expired — please re-enter it.', 5000);
+        btn.disabled = false;
+        btn.classList.remove('spinning');
+        document.getElementById('token-modal').classList.add('open');
+        return;
+      } else {
+        console.warn(`Workflow ${wf} dispatch returned ${res.status}`);
+      }
+    } catch (e) {
+      console.error(`Error dispatching ${wf}:`, e);
+    }
+  }
+
+  btn.disabled = false;
+  btn.classList.remove('spinning');
+
+  if (success === WORKFLOWS.length) {
+    showToast('✓ Update triggered — takes ~2 mins. Reload the page when done.', 6000);
+  } else if (success > 0) {
+    showToast('Partially triggered — check GitHub Actions for details.', 5000);
+  } else {
+    showToast('Could not trigger update. Check your token permissions.', 5000);
+  }
+}
+
+// Allow Enter key in token input
+document.getElementById('token-input').addEventListener('keydown', e => {
+  if (e.key === 'Enter') saveToken();
+});
 </script>
 </body>
 </html>
