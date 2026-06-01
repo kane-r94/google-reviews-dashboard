@@ -1666,6 +1666,7 @@ function renderReviewCards() {
   const countEl   = document.getElementById('rv-count');
 
   countEl.textContent = filtered.length.toLocaleString() + ' review' + (filtered.length !== 1 ? 's' : '');
+  updateReviewStats(filtered);
 
   if (filtered.length === 0) {
     grid.innerHTML = `<div class="reviews-empty"><div style="font-size:2rem;margin-bottom:10px">🔍</div><p>No reviews match your filters.</p></div>`;
