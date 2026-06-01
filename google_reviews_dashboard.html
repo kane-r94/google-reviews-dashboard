@@ -688,6 +688,37 @@
     .trends-main, .sentiment-main { padding-left: 16px; padding-right: 16px; }
     .reviews-grid { grid-template-columns: 1fr; }
   }
+
+  /* ── history tab ── */
+  .section-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--gray-200);
+    padding: 24px 28px;
+  }
+  .section-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--gray-700);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 4px;
+  }
+  .history-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .history-table thead th {
+    text-align: left; font-size: 11px; font-weight: 600; color: var(--gray-500);
+    text-transform: uppercase; letter-spacing: 0.04em;
+    padding: 8px 12px; border-bottom: 2px solid var(--gray-200);
+  }
+  .history-table thead th.right { text-align: right; }
+  .history-table tbody tr { border-bottom: 1px solid var(--gray-100); transition: background 0.1s; }
+  .history-table tbody tr:hover { background: var(--gray-50); }
+  .history-table tbody td { padding: 10px 12px; color: var(--gray-700); }
+  .history-table tbody td.right { text-align: right; }
+  .history-table tbody td.mono { font-family: var(--mono); }
+  .history-change-up   { color: #16a34a; font-weight: 600; }
+  .history-change-down { color: var(--red); font-weight: 600; }
+  .history-change-flat { color: var(--gray-400); }
 </style>
 </head>
 <body>
@@ -741,6 +772,7 @@
   <button class="tab-btn"        onclick="showTab('reviews', this)">Reviews Feed</button>
   <button class="tab-btn"        onclick="showTab('trends', this)">Trends</button>
   <button class="tab-btn"        onclick="showTab('sentiment', this)">Sentiment</button>
+  <button class="tab-btn"        onclick="showTab('history', this)">History</button>
 </div>
 
 <!-- ══════════════════════════════════════════════════════
@@ -1005,6 +1037,32 @@
 </div><!-- /#panel-sentiment -->
 
 
+<!-- ══════════════════════════════════════════════════════
+     TAB 5 — HISTORY
+════════════════════════════════════════════════════════ -->
+<div id="panel-history" class="tab-panel" style="display:none">
+<div class="main">
+  <div class="section-card" style="margin-bottom:24px">
+    <div class="section-title">Update History</div>
+    <p style="font-size:13px;color:var(--gray-500);margin:0 0 16px;">Every time the data refresh runs, a snapshot of all property scores is recorded here.</p>
+    <div id="history-table-wrap">
+      <div style="color:var(--gray-400);font-size:13px;padding:24px 0;">Loading history…</div>
+    </div>
+  </div>
+  <div class="section-card">
+    <div class="section-title">Score trend over time</div>
+    <div style="margin-bottom:12px;display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+      <label style="font-size:12px;color:var(--gray-500);font-weight:500">Property:</label>
+      <select id="history-prop-select" onchange="updateHistoryChart()" style="padding:5px 10px;border-radius:6px;border:1px solid var(--gray-200);font-family:var(--font);font-size:12px;color:var(--gray-700)">
+        <option value="__avg__">All properties (avg)</option>
+      </select>
+    </div>
+    <canvas id="history-chart" height="90"></canvas>
+  </div>
+</div>
+</div><!-- /#panel-history -->
+
+
 <script>
 /* ════════════════════════════════════════════════════════
    RATINGS DATA  (auto-updated by fetch_reviews.py)
@@ -1216,6 +1274,7 @@ const otherPlatforms = [
 let reviewsLoaded   = false;
 let trendsLoaded    = false;
 let sentimentLoaded = false;
+let historyLoaded   = false;
 
 function showTab(tab, btn) {
   document.querySelectorAll('.tab-panel').forEach(p => p.style.display = 'none');
@@ -1225,6 +1284,7 @@ function showTab(tab, btn) {
   if (tab === 'reviews'   && !reviewsLoaded)   loadReviews();
   if (tab === 'trends'    && !trendsLoaded)     loadTrends();
   if (tab === 'sentiment' && !sentimentLoaded)  loadSentiment();
+  if (tab === 'history'   && !historyLoaded)    loadHistoryTab();
 }
 
 /* ════════════════════════════════════════════════════════
@@ -2087,6 +2147,178 @@ function renderSentiment() {
         ${phraseListHtml(negPhrases)}
       </div>
     </div>`;
+}
+
+
+/* ════════════════════════════════════════════════════════
+   HISTORY TAB
+════════════════════════════════════════════════════════ */
+
+let historyData    = null;
+let historyChart   = null;
+
+async function loadHistoryTab() {
+  historyLoaded = true;
+  try {
+    const res = await fetch('history.json?t=' + Date.now());
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    historyData = await res.json();
+    renderHistoryTable();
+    buildHistoryPropertySelect();
+    updateHistoryChart();
+  } catch (e) {
+    document.getElementById('history-table-wrap').innerHTML =
+      '<div style="color:var(--gray-400);font-size:13px;padding:24px 0;">No history data yet — it will appear after the next scheduled update.</div>';
+  }
+}
+
+function renderHistoryTable() {
+  const snapshots = [...(historyData.snapshots || [])].reverse(); // newest first
+  if (!snapshots.length) {
+    document.getElementById('history-table-wrap').innerHTML =
+      '<p style="color:var(--gray-400);font-size:13px;">No snapshots recorded yet.</p>';
+    return;
+  }
+
+  let html = `
+    <table class="history-table">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Time (UTC)</th>
+          <th class="right">Properties reporting</th>
+          <th class="right">Avg score</th>
+          <th class="right">vs previous</th>
+          <th class="right">Total reviews</th>
+        </tr>
+      </thead>
+      <tbody>
+  `;
+
+  snapshots.forEach((snap, i) => {
+    const active = snap.properties.filter(p => p.score !== null && p.region !== 'HQ');
+    const avgScore = active.length
+      ? (active.reduce((s, p) => s + p.score, 0) / active.length)
+      : null;
+    const totalReviews = active.reduce((s, p) => s + (p.reviews || 0), 0);
+
+    // Previous snapshot (next in reversed array = older)
+    const prevSnap = snapshots[i + 1];
+    let changeHtml = '<span class="history-change-flat">—</span>';
+    if (prevSnap && avgScore !== null) {
+      const prevActive = prevSnap.properties.filter(p => p.score !== null && p.region !== 'HQ');
+      if (prevActive.length) {
+        const prevAvg = prevActive.reduce((s, p) => s + p.score, 0) / prevActive.length;
+        const diff = avgScore - prevAvg;
+        if (Math.abs(diff) < 0.01) {
+          changeHtml = '<span class="history-change-flat">—</span>';
+        } else if (diff > 0) {
+          changeHtml = `<span class="history-change-up">▲ +${diff.toFixed(2)}</span>`;
+        } else {
+          changeHtml = `<span class="history-change-down">▼ ${diff.toFixed(2)}</span>`;
+        }
+      }
+    }
+
+    // Parse timestamp "01 Jun 2026 08:00 UTC"
+    const parts = snap.timestamp.split(' ');
+    const datePart = parts.slice(0, 3).join(' ');
+    const timePart = parts[3] || '';
+
+    html += `
+      <tr>
+        <td>${datePart}</td>
+        <td>${timePart}</td>
+        <td class="right mono">${active.length} / ${snap.properties.filter(p => p.region !== 'HQ').length}</td>
+        <td class="right">${avgScore !== null ? `<span class="score-badge ${scoreClass(avgScore)}">★ ${avgScore.toFixed(2)}</span>` : '<span class="score-na">N/A</span>'}</td>
+        <td class="right">${changeHtml}</td>
+        <td class="right mono">${totalReviews.toLocaleString()}</td>
+      </tr>
+    `;
+  });
+
+  html += '</tbody></table>';
+  document.getElementById('history-table-wrap').innerHTML = html;
+}
+
+function buildHistoryPropertySelect() {
+  const sel = document.getElementById('history-prop-select');
+  // Get unique property names (excluding HQ)
+  const names = [...new Set(
+    (historyData.snapshots || []).flatMap(s => s.properties.filter(p => p.region !== 'HQ').map(p => p.name))
+  )].sort();
+  names.forEach(name => {
+    const opt = document.createElement('option');
+    opt.value = name;
+    opt.textContent = name;
+    sel.appendChild(opt);
+  });
+}
+
+function updateHistoryChart() {
+  const snapshots = [...(historyData.snapshots || [])]; // oldest first for chart
+  const selectedProp = document.getElementById('history-prop-select').value;
+
+  const labels = snapshots.map(s => {
+    const p = s.timestamp.split(' ');
+    return `${p[0]} ${p[1]} ${p[2]}`;
+  });
+
+  let chartData;
+  if (selectedProp === '__avg__') {
+    chartData = snapshots.map(s => {
+      const active = s.properties.filter(p => p.score !== null && p.region !== 'HQ');
+      return active.length ? +(active.reduce((sum, p) => sum + p.score, 0) / active.length).toFixed(2) : null;
+    });
+  } else {
+    chartData = snapshots.map(s => {
+      const prop = s.properties.find(p => p.name === selectedProp);
+      return prop && prop.score !== null ? +prop.score.toFixed(1) : null;
+    });
+  }
+
+  const ctx = document.getElementById('history-chart').getContext('2d');
+  if (historyChart) historyChart.destroy();
+  historyChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels,
+      datasets: [{
+        label: selectedProp === '__avg__' ? 'Avg score (all properties)' : selectedProp,
+        data: chartData,
+        borderColor: '#18706E',
+        backgroundColor: 'rgba(24,112,110,0.08)',
+        borderWidth: 2.5,
+        pointRadius: 4,
+        pointBackgroundColor: '#18706E',
+        fill: true,
+        tension: 0.3,
+        spanGaps: true,
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: ctx => `★ ${ctx.parsed.y !== null ? ctx.parsed.y.toFixed(2) : 'N/A'}`,
+          }
+        }
+      },
+      scales: {
+        y: {
+          min: 3.5, max: 5.0,
+          ticks: { stepSize: 0.5, font: { family: 'Poppins', size: 11 } },
+          grid: { color: '#f1f5f9' },
+        },
+        x: {
+          ticks: { font: { family: 'Poppins', size: 11 }, maxRotation: 45 },
+          grid: { display: false },
+        }
+      }
+    }
+  });
 }
 
 

@@ -31,6 +31,7 @@ CREDENTIALS_DIR = ROOT / "credentials"
 OAUTH_CLIENT_FILE = CREDENTIALS_DIR / "oauth_client.json"
 TOKEN_FILE = CREDENTIALS_DIR / "token.json"
 HTML_PATH = ROOT / "google_reviews_dashboard.html"
+HISTORY_JSON_PATH = ROOT / "history.json"
 
 SCOPES = ["https://www.googleapis.com/auth/business.manage"]
 
@@ -352,6 +353,71 @@ def push_to_github(config: dict, html_content: str, last_updated: str):
 
 
 # ---------------------------------------------------------------------------
+# History
+# ---------------------------------------------------------------------------
+
+def load_history() -> dict:
+    """Load existing history.json, or return an empty structure."""
+    if HISTORY_JSON_PATH.exists():
+        try:
+            return json.loads(HISTORY_JSON_PATH.read_text(encoding="utf-8"))
+        except Exception:
+            pass
+    return {"snapshots": []}
+
+
+def append_snapshot(history: dict, properties_data: list, tp_data: dict, timestamp: str) -> dict:
+    """Append a new snapshot of all scores to the history dict."""
+    snapshot = {
+        "timestamp": timestamp,
+        "properties": [
+            {
+                "name": p["name"],
+                "region": p["region"],
+                "score": p["google"]["rating"],
+                "reviews": p["google"]["review_count"],
+            }
+            for p in properties_data
+        ],
+        "platforms": [
+            {"name": "Trustpilot", "score": tp_data["rating"], "reviews": tp_data["review_count"]},
+        ],
+    }
+    history["snapshots"].append(snapshot)
+    return history
+
+
+def push_history_json(config: dict, json_content: str, last_updated: str):
+    token = os.environ.get("GITHUB_TOKEN")
+    if not token:
+        print("No GITHUB_TOKEN found — skipping history push.")
+        return
+
+    gh = Github(token)
+    repo = gh.get_repo(f"{config['github']['repo_owner']}/{config['github']['repo_name']}")
+    branch = config["github"]["branch"]
+    file_path = "history.json"
+
+    try:
+        contents = repo.get_contents(file_path, ref=branch)
+        repo.update_file(
+            path=file_path,
+            message=f"chore: update history ({last_updated})",
+            content=json_content,
+            sha=contents.sha,
+            branch=branch,
+        )
+    except Exception:
+        repo.create_file(
+            path=file_path,
+            message=f"chore: create history ({last_updated})",
+            content=json_content,
+            branch=branch,
+        )
+    print(f"Pushed history.json to GitHub ({config['github']['repo_name']})")
+
+
+# ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 
@@ -411,6 +477,15 @@ def main():
     print(f"HTML updated. Last updated: {last_updated}")
 
     push_to_github(config, updated_html, last_updated)
+
+    # Append snapshot to history.json and push
+    print("\nUpdating history...")
+    history = load_history()
+    history = append_snapshot(history, properties_data, tp_data, last_updated)
+    history_json = json.dumps(history, indent=2, ensure_ascii=False)
+    HISTORY_JSON_PATH.write_text(history_json, encoding="utf-8")
+    push_history_json(config, history_json, last_updated)
+
     print("\nDone!")
 
 
