@@ -760,11 +760,11 @@
     <div class="slider-group">
       <div class="slider-top">
         <div>
-          <div class="slider-val" id="target-display">4.5</div>
+          <div class="slider-val" id="target-display">4.0</div>
         </div>
         <span class="slider-hint">Target rating</span>
       </div>
-      <input type="range" id="target-slider" min="4.0" max="5.0" step="0.1" value="4.5" oninput="onTargetChange(this.value)">
+      <input type="range" id="target-slider" min="4.0" max="5.0" step="0.1" value="4.0" oninput="onTargetChange(this.value)">
       <div class="slider-ticks"><span>4.0</span><span>4.2</span><span>4.4</span><span>4.6</span><span>4.8</span><span>5.0</span></div>
     </div>
 
@@ -799,11 +799,11 @@
   <!-- Filters -->
   <div class="filter-bar">
     <span class="filter-bar-label">Region:</span>
-    <button class="filter-btn" onclick="setRegion('all', this)">All</button>
+    <button class="filter-btn active" onclick="setRegion('all', this)">All</button>
     <button class="filter-btn" onclick="setRegion('Region 1', this)">Region 1</button>
     <button class="filter-btn" onclick="setRegion('Region 2', this)">Region 2</button>
     <button class="filter-btn" onclick="setRegion('Region 3', this)">Region 3</button>
-    <button class="filter-btn active" onclick="setRegion('Region 4', this)">Region 4</button>
+    <button class="filter-btn" onclick="setRegion('Region 4', this)">Region 4</button>
     <select class="sort-select" id="sort-select" onchange="renderTable()">
       <option value="default">Sort: default</option>
       <option value="score-asc">Score: low → high</option>
@@ -1230,8 +1230,8 @@ function showTab(tab, btn) {
 /* ════════════════════════════════════════════════════════
    RATINGS TAB — existing logic
 ════════════════════════════════════════════════════════ */
-let activeRegion = 'Region 4';
-let target = 4.5;
+let activeRegion = 'all';
+let target = 4.0;
 
 function calcNeeded(score, reviews, t) {
   if (score === null || reviews === null) return null;
