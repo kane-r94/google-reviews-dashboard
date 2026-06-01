@@ -309,6 +309,16 @@
     text-transform: uppercase;
     padding: 7px 14px;
   }
+  tbody tr.hq-header { background: var(--liquorice); }
+  tbody tr.hq-header td {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--yellow);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 7px 14px;
+  }
+  tbody tr.hq-row td { background: rgba(255,204,0,0.04); }
   tbody tr.region-summary { background: var(--gray-50); border-top: 2px solid var(--gray-200); }
   tbody tr.region-summary td {
     font-size: 12px;
@@ -1339,20 +1349,23 @@ function renderTable() {
   let rows = properties.filter(p => activeRegion === 'all' || p.region === activeRegion);
   rows = rows.map(p => ({ ...p, needed: calcNeeded(p.score, p.reviews, target) }));
 
-  if (sort === 'score-asc')        rows.sort((a,b) => (a.score||0)-(b.score||0));
-  else if (sort === 'score-desc')  rows.sort((a,b) => (b.score||0)-(a.score||0));
-  else if (sort === 'needed-desc') rows.sort((a,b) => (b.needed||0)-(a.needed||0));
-  else if (sort === 'needed-asc')  rows.sort((a,b) => {
+  // Separate HQ from regional properties
+  const hqRows      = rows.filter(p => p.region === 'HQ');
+  const regionRows  = rows.filter(p => p.region !== 'HQ');
+
+  let sortedRegion = [...regionRows];
+  if (sort === 'score-asc')        sortedRegion.sort((a,b) => (a.score||0)-(b.score||0));
+  else if (sort === 'score-desc')  sortedRegion.sort((a,b) => (b.score||0)-(a.score||0));
+  else if (sort === 'needed-desc') sortedRegion.sort((a,b) => (b.needed||0)-(a.needed||0));
+  else if (sort === 'needed-asc')  sortedRegion.sort((a,b) => {
     if (a.needed===null) return 1; if (b.needed===null) return -1; return a.needed-b.needed;
   });
-  else if (sort === 'last-review-asc') rows.sort((a,b) => {
+  else if (sort === 'last-review-asc') sortedRegion.sort((a,b) => {
     const da = (window.lastReviewDates && window.lastReviewDates[a.name]) ? window.lastReviewDates[a.name] : '';
     const db = (window.lastReviewDates && window.lastReviewDates[b.name]) ? window.lastReviewDates[b.name] : '';
-    // Properties with no date go to the bottom
     if (!da && !db) return 0;
     if (!da) return 1;
     if (!db) return -1;
-    // Compare raw dates stored in a parallel lookup
     const ra = (window.lastReviewRaw && window.lastReviewRaw[a.name]) || da;
     const rb = (window.lastReviewRaw && window.lastReviewRaw[b.name]) || db;
     return ra < rb ? -1 : ra > rb ? 1 : 0;
@@ -1361,29 +1374,37 @@ function renderTable() {
   const tbody = document.getElementById('table-body');
   tbody.innerHTML = '';
 
+  // Always render HQ at the top (only visible when "All" is selected)
+  if (hqRows.length) {
+    const htr = document.createElement('tr');
+    htr.className = 'hq-header';
+    htr.innerHTML = `<td colspan="9">London HQ</td>`;
+    tbody.appendChild(htr);
+    hqRows.forEach(p => {
+      renderPropertyRow(p, tbody);
+      // Mark the row with hq-row class for subtle highlight
+      tbody.lastElementChild.classList.add('hq-row');
+    });
+  }
+
   const regionNames = { 'Region 1':'Region 1 — North East', 'Region 2':'Region 2 — North', 'Region 3':'Region 3 — Midlands', 'Region 4':'Region 4 — South' };
 
   if (sort === 'default') {
-    // Group by region, render with headers and summary rows
     const regionOrder = ['Region 1','Region 2','Region 3','Region 4'];
     for (const region of regionOrder) {
-      const regionRows = rows.filter(p => p.region === region);
-      if (!regionRows.length) continue;
+      const rRows = sortedRegion.filter(p => p.region === region);
+      if (!rRows.length) continue;
 
-      // Region header
       const rtr = document.createElement('tr');
       rtr.className = 'region-header';
       rtr.innerHTML = `<td colspan="9">${regionNames[region]||region}</td>`;
       tbody.appendChild(rtr);
 
-      // Property rows
-      regionRows.forEach(p => renderPropertyRow(p, tbody));
-
-      // Region summary
-      renderRegionSummary(regionRows, tbody);
+      rRows.forEach(p => renderPropertyRow(p, tbody));
+      renderRegionSummary(rRows, tbody);
     }
   } else {
-    rows.forEach(p => renderPropertyRow(p, tbody));
+    sortedRegion.forEach(p => renderPropertyRow(p, tbody));
   }
 }
 

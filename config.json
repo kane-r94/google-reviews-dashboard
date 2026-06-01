@@ -14,6 +14,13 @@
   },
   "properties": [
     {
+      "name": "Student Cribs HQ",
+      "region": "HQ",
+      "google_location_id": "accounts/107779497168524188597/locations/2968262131447697625",
+      "trustpilot_url": "",
+      "all_agents_url": ""
+    },
+    {
       "name": "Newcastle Main",
       "region": "Region 1",
       "google_location_id": "accounts/107779497168524188597/locations/3927651401574716321",
