@@ -1,5 +1,5 @@
 {
-  "last_updated": "01 Jun 2026 12:25 UTC",
+  "last_updated": "02 Jun 2026 10:16 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
@@ -7921,6 +7921,16 @@
       "name": "Newcastle Main",
       "region": "Region 1",
       "reviews": [
+        {
+          "reviewer": "Emily Martin-Taylor",
+          "stars": 5,
+          "text": "Bryan and Wayne came to fix our fence today and they were fab. Really pleasant and they have fixed the fence really well. Massive thank you. It’s clear that they care a lot about their craft, and that was executed in their skill set.",
+          "date": "1 Jun 2026",
+          "raw_date": "2026-06-01T12:41:51.118628Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "emelia bland",
           "stars": 5,
