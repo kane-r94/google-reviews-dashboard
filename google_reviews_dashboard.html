@@ -750,6 +750,9 @@
   }
   .lb-total { font-weight: 700; font-size: 15px; color: var(--liquorice); }
   .lb-total-zero { color: var(--gray-300); font-weight: 500; }
+  .lb-unsure { background: rgba(255,155,91,0.05); }
+  .lb-unsure .lb-name { color: var(--gray-600); font-weight: 500; }
+  .lb-unsure-total { font-weight: 700; font-size: 15px; color: var(--tangerine); }
 </style>
 </head>
 <body>
@@ -2227,37 +2230,45 @@ function renderSentiment() {
 const LEADERBOARD_CUTOFF = new Date('2025-07-01T00:00:00Z');
 
 const maintenanceStaff = [
-  // Region 1 — North East
+  // Region 1 — North East  (David & Marc & Steve = shared → NO first-name-only term)
   { name: "David Richardson",   display: "David Richardson",          region: "Region 1", terms: ["david richardson", "david r"] },
-  { name: "Wain Beadsworth",    display: "Wain Beadsworth",           region: "Region 1", terms: ["wain beadsworth", "wain b"] },
+  { name: "Wain Beadsworth",    display: "Wain Beadsworth",           region: "Region 1", terms: ["wain beadsworth", "wain b", "wain"] },
   { name: "Marc Brackenbury",   display: "Marc Brackenbury",          region: "Region 1", terms: ["marc brackenbury", "marc b"] },
   { name: "Marc Wallace",       display: "Marc Wallace",              region: "Region 1", terms: ["marc wallace", "marc w"] },
   { name: "Steve Pritchard",    display: "Steve Pritchard",           region: "Region 1", terms: ["steve pritchard", "steven pritchard", "steve p", "steven p"] },
   { name: "Steven Hudspith",    display: "Steven Hudspith",           region: "Region 1", terms: ["steven hudspith", "steve hudspith", "steven h", "steve h"] },
-  { name: "Brian Mazzella",     display: "Brian Mazzella",            region: "Region 1", terms: ["brian mazzella", "brian m"] },
-  // Region 2 — North
-  { name: "John Boswell",       display: "John Boswell",              region: "Region 2", terms: ["john boswell", "john b"] },
-  { name: "James Lee",          display: "James Lee",                 region: "Region 2", terms: ["james lee", "james l"] },
+  { name: "Brian Mazzella",     display: "Brian Mazzella",            region: "Region 1", terms: ["brian mazzella", "brian m", "brian"] },
+  // Region 2 — North  (Mike/Michael = shared → NO first-name-only term)
+  { name: "John Boswell",       display: "John Boswell",              region: "Region 2", terms: ["john boswell", "john b", "john"] },
+  { name: "James Lee",          display: "James Lee",                 region: "Region 2", terms: ["james lee", "james l", "james"] },
   { name: "Michael Heywood",    display: "Michael (Mike) Heywood",    region: "Region 2", terms: ["michael heywood", "mike heywood", "michael h", "mike h"] },
   { name: "Mike Porter",        display: "Mike Porter",               region: "Region 2", terms: ["mike porter", "michael porter", "mike p", "michael p"] },
-  { name: "Sam Carroll",        display: "Sam Carroll",               region: "Region 2", terms: ["sam carroll", "sam c"] },
-  { name: "Chris Smith",        display: "Chris Smith",               region: "Region 2", terms: ["chris smith", "christopher smith", "chris s"] },
-  { name: "Sean Thorley",       display: "Sean Thorley",              region: "Region 2", terms: ["sean thorley", "sean t"] },
-  { name: "Mark Allen",         display: "Mark Allen",                region: "Region 2", terms: ["mark allen", "mark a"] },
-  { name: "Earl Cameron",       display: "Earl Cameron",              region: "Region 2", terms: ["earl cameron", "earl c"] },
-  // Region 3 — Midlands
+  { name: "Sam Carroll",        display: "Sam Carroll",               region: "Region 2", terms: ["sam carroll", "sam c", "sam"] },
+  { name: "Chris Smith",        display: "Chris Smith",               region: "Region 2", terms: ["chris smith", "christopher smith", "chris s", "chris"] },
+  { name: "Sean Thorley",       display: "Sean Thorley",              region: "Region 2", terms: ["sean thorley", "sean t", "sean"] },
+  { name: "Mark Allen",         display: "Mark Allen",                region: "Region 2", terms: ["mark allen", "mark a", "mark"] },
+  { name: "Earl Cameron",       display: "Earl Cameron",              region: "Region 2", terms: ["earl cameron", "earl c", "earl"] },
+  // Region 3 — Midlands  (David = shared → NO first-name-only term for David Lakin)
   { name: "David Lakin",        display: "David (Dave) Lakin",        region: "Region 3", terms: ["david lakin", "dave lakin", "david l", "dave l"] },
-  { name: "Harry King",         display: "Harry King",                region: "Region 3", terms: ["harry king", "harry k"] },
-  { name: "Wayne Arnold",       display: "Wayne Arnold",              region: "Region 3", terms: ["wayne arnold", "wayne a"] },
-  { name: "Anthony Want",       display: "Anthony 'Ant' Want",        region: "Region 3", terms: ["anthony want", "ant want", "anthony w", "ant w"] },
-  // Region 4 — South
-  { name: "Gavin Coles",        display: "Gavin (Gav) Coles",         region: "Region 4", terms: ["gavin coles", "gav coles", "gavin c", "gav c"] },
-  { name: "Gethyn Clarke",      display: "Gethyn Clarke",             region: "Region 4", terms: ["gethyn clarke", "gethyn c"] },
-  { name: "Paul Addiscot",      display: "Paul Addiscot",             region: "Region 4", terms: ["paul addiscot", "paul a"] },
-  { name: "Kev King",           display: "Kev King",                  region: "Region 4", terms: ["kev king", "kevin king", "kev k", "kevin k"] },
-  { name: "Antony Littlechild", display: "Antony (Tony) Littlechild", region: "Region 4", terms: ["antony littlechild", "tony littlechild", "antony l", "tony l"] },
-  { name: "Dan Richardson",     display: "Dan Richardson",            region: "Region 4", terms: ["dan richardson", "daniel richardson", "dan r"] },
+  { name: "Harry King",         display: "Harry King",                region: "Region 3", terms: ["harry king", "harry k", "harry"] },
+  { name: "Wayne Arnold",       display: "Wayne Arnold",              region: "Region 3", terms: ["wayne arnold", "wayne a", "wayne"] },
+  { name: "Anthony Want",       display: "Anthony 'Ant' Want",        region: "Region 3", terms: ["anthony want", "ant want", "anthony w", "ant w", "anthony", "ant"] },
+  // Region 4 — South  (Mike/Michael = shared → NO first-name-only term for Mike Cousins)
+  { name: "Gavin Coles",        display: "Gavin (Gav) Coles",         region: "Region 4", terms: ["gavin coles", "gav coles", "gavin c", "gav c", "gavin", "gav"] },
+  { name: "Gethyn Clarke",      display: "Gethyn Clarke",             region: "Region 4", terms: ["gethyn clarke", "gethyn c", "gethyn"] },
+  { name: "Paul Addiscot",      display: "Paul Addiscot",             region: "Region 4", terms: ["paul addiscot", "paul a", "paul"] },
+  { name: "Kev King",           display: "Kev King",                  region: "Region 4", terms: ["kev king", "kevin king", "kev k", "kevin k", "kev", "kevin"] },
+  { name: "Antony Littlechild", display: "Antony (Tony) Littlechild", region: "Region 4", terms: ["antony littlechild", "tony littlechild", "antony l", "tony l", "antony", "tony"] },
+  { name: "Dan Richardson",     display: "Dan Richardson",            region: "Region 4", terms: ["dan richardson", "daniel richardson", "dan r", "dan", "daniel"] },
   { name: "Mike Cousins",       display: "Mike Cousins",              region: "Region 4", terms: ["mike cousins", "michael cousins", "mike c"] },
+];
+
+// Groups where first-name-only is ambiguous — catch reviews not already attributed to a specific person
+const unsureGroups = [
+  { display: "Mike / Michael",  regions: ["Region 2", "Region 4"], firstNames: ["mike", "michael"], staffNames: ["Michael Heywood", "Mike Porter", "Mike Cousins"] },
+  { display: "David / Dave",    regions: ["Region 1", "Region 3"], firstNames: ["david", "dave"],   staffNames: ["David Richardson", "David Lakin"] },
+  { display: "Marc",            regions: ["Region 1"],             firstNames: ["marc"],             staffNames: ["Marc Brackenbury", "Marc Wallace"] },
+  { display: "Steve / Steven",  regions: ["Region 1"],             firstNames: ["steve", "steven"], staffNames: ["Steve Pritchard", "Steven Hudspith"] },
 ];
 
 function lbEscapeRegex(s) {
@@ -2293,38 +2304,67 @@ async function loadLeaderboard() {
   }
 }
 
+function lbLastDisplay(mentions) {
+  if (!mentions.length) return '—';
+  const raw = mentions.reduce((m, r) => r.raw_date > m ? r.raw_date : m, mentions[0].raw_date);
+  return new Date(raw).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+}
+
 function renderLeaderboard() {
   if (!lbAllReviews) return;
 
-  const regionFilter  = document.getElementById('lb-region').value;
-  const sevenDaysAgo  = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
+  const regionFilter = document.getElementById('lb-region').value;
+  const sevenDaysAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
 
-  // Reviews since cutoff
-  const eligible = lbAllReviews.filter(r => r.raw_date && new Date(r.raw_date) >= LEADERBOARD_CUTOFF);
+  // Reviews since cutoff, with stable index for attribution tracking
+  const eligible = lbAllReviews
+    .filter(r => r.raw_date && new Date(r.raw_date) >= LEADERBOARD_CUTOFF)
+    .map((r, i) => ({ ...r, _idx: i }));
 
-  const results = maintenanceStaff
+  // Step 1: compute per-staff mentions and track which review indices they claimed
+  const staffResults = maintenanceStaff
     .filter(s => !regionFilter || s.region === regionFilter)
     .map(s => {
       const mentions = eligible.filter(r => matchesStaff(s.terms, r.text || ''));
       const l7d = mentions.filter(r => new Date(r.raw_date) >= sevenDaysAgo).length;
-      const lastRaw = mentions.length
-        ? mentions.reduce((m, r) => r.raw_date > m ? r.raw_date : m, mentions[0].raw_date)
-        : null;
-      const lastDisplay = lastRaw
-        ? new Date(lastRaw).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })
-        : '—';
-      return { ...s, total: mentions.length, l7d, lastDisplay };
-    })
-    .sort((a, b) => b.total - a.total || b.l7d - a.l7d || a.display.localeCompare(b.display));
+      return { ...s, mentions, total: mentions.length, l7d, lastDisplay: lbLastDisplay(mentions) };
+    });
 
-  const totalMentions = results.reduce((s, r) => s + r.total, 0);
-  const activeCount   = results.filter(r => r.total > 0).length;
+  // Step 2: compute Unsure groups — reviews matching a shared first name but NOT already
+  // attributed to any specific staff member in that group
+  const unsureResults = unsureGroups
+    .filter(g => !regionFilter || g.regions.includes(regionFilter))
+    .map(g => {
+      // Build set of review indices already attributed to specific people in this group
+      const groupStaff = maintenanceStaff.filter(s => g.staffNames.includes(s.name));
+      const attributedIdxs = new Set(
+        eligible.filter(r => groupStaff.some(s => matchesStaff(s.terms, r.text || ''))).map(r => r._idx)
+      );
+      // Unsure = mentions the first name as a standalone word, NOT already attributed
+      const mentions = eligible.filter(r => {
+        if (attributedIdxs.has(r._idx)) return false;
+        return g.firstNames.some(fn => new RegExp('\\b' + fn + '\\b', 'i').test(r.text || ''));
+      });
+      const l7d = mentions.filter(r => new Date(r.raw_date) >= sevenDaysAgo).length;
+      return {
+        name: g.display, display: g.display + ' — unsure', region: 'Various',
+        mentions, total: mentions.length, l7d, lastDisplay: lbLastDisplay(mentions),
+        isUnsure: true,
+      };
+    });
 
-  document.getElementById('lb-summary').innerHTML =
-    `<strong style="color:var(--gray-700)">${totalMentions}</strong> name mentions across ` +
-    `<strong style="color:var(--gray-700)">${activeCount}</strong> of ${results.length} staff members since 1 Jul 2025`;
+  // Combine: named staff first (sorted), then unsure entries (sorted) at the bottom
+  const namedSorted  = [...staffResults].sort((a, b) => b.total - a.total || b.l7d - a.l7d || a.display.localeCompare(b.display));
+  const unsureSorted = [...unsureResults].filter(g => g.total > 0).sort((a, b) => b.total - a.total);
 
-  // Assign ranks only to staff with at least 1 mention
+  const totalMentions = namedSorted.reduce((s, r) => s + r.total, 0);
+  const activeCount   = namedSorted.filter(r => r.total > 0).length;
+  const unsureTotal   = unsureSorted.reduce((s, r) => s + r.total, 0);
+
+  let summaryHtml = `<strong style="color:var(--gray-700)">${totalMentions}</strong> confirmed mentions across <strong style="color:var(--gray-700)">${activeCount}</strong> of ${namedSorted.length} staff members since 1 Jul 2025`;
+  if (unsureTotal > 0) summaryHtml += ` · <span style="color:var(--tangerine);font-weight:600">${unsureTotal} unattributed</span> (first name only, multiple possible matches)`;
+  document.getElementById('lb-summary').innerHTML = summaryHtml;
+
   let rankCounter = 0;
   let html = `
     <table class="lb-table">
@@ -2341,9 +2381,12 @@ function renderLeaderboard() {
       <tbody>
   `;
 
-  results.forEach(s => {
+  function renderRow(s) {
     let rankCell, rowClass = '';
-    if (s.total > 0) {
+    if (s.isUnsure) {
+      rankCell = `<td class="lb-rank" style="font-size:13px">❓</td>`;
+      rowClass = 'lb-unsure';
+    } else if (s.total > 0) {
       rankCounter++;
       const medal = rankCounter === 1 ? '🥇' : rankCounter === 2 ? '🥈' : rankCounter === 3 ? '🥉' : rankCounter;
       rankCell = `<td class="lb-rank">${medal}</td>`;
@@ -2352,26 +2395,34 @@ function renderLeaderboard() {
       rankCell = `<td class="lb-rank" style="color:var(--gray-300)">—</td>`;
       rowClass = 'lb-zero';
     }
-
     const totalCell = s.total > 0
-      ? `<td class="right"><span class="lb-total">${s.total}</span></td>`
+      ? `<td class="right"><span class="${s.isUnsure ? 'lb-unsure-total' : 'lb-total'}">${s.total}</span></td>`
       : `<td class="right"><span class="lb-total-zero">0</span></td>`;
-
     const l7dCell = s.l7d > 0
-      ? `<td class="right"><span class="lb-l7d-badge">+${s.l7d}</span></td>`
+      ? `<td class="right"><span class="lb-l7d-badge">${s.isUnsure ? '' : '+'}${s.l7d}</span></td>`
       : `<td class="right" style="color:var(--gray-300)">—</td>`;
-
+    const nameDisplay = s.isUnsure
+      ? `${s.display} <span style="font-size:11px;color:var(--gray-400);font-weight:400">(first name only)</span>`
+      : s.display;
     html += `
       <tr class="${rowClass}">
         ${rankCell}
-        <td class="lb-name">${s.display}</td>
+        <td class="lb-name">${nameDisplay}</td>
         <td style="font-size:12px;color:var(--gray-500)">${s.region}</td>
         ${totalCell}
         ${l7dCell}
         <td class="right lb-date">${s.lastDisplay}</td>
       </tr>
     `;
-  });
+  }
+
+  namedSorted.forEach(renderRow);
+
+  // Unsure entries — add a divider row first if there are any
+  if (unsureSorted.length > 0) {
+    html += `<tr><td colspan="6" style="padding:8px 16px;font-size:11px;font-weight:600;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;background:var(--gray-50);border-top:2px solid var(--gray-200)">Unattributed — first name only</td></tr>`;
+    unsureSorted.forEach(renderRow);
+  }
 
   html += '</tbody></table>';
   document.getElementById('lb-table-wrap').innerHTML = html;
