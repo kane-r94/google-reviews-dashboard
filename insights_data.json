@@ -1,0 +1,144 @@
+{
+  "last_updated": "04 Jun 2026 15:35 UTC",
+  "date_range": {
+    "start": "2024-12",
+    "end": "2026-06"
+  },
+  "properties": [
+    {
+      "name": "Student Cribs HQ",
+      "region": "HQ",
+      "monthly": []
+    },
+    {
+      "name": "Newcastle Main",
+      "region": "Region 1",
+      "monthly": []
+    },
+    {
+      "name": "Morrison Circus",
+      "region": "Region 1",
+      "monthly": []
+    },
+    {
+      "name": "Byron Lofts",
+      "region": "Region 1",
+      "monthly": []
+    },
+    {
+      "name": "Jesmond View",
+      "region": "Region 1",
+      "monthly": []
+    },
+    {
+      "name": "Kielder House",
+      "region": "Region 1",
+      "monthly": []
+    },
+    {
+      "name": "Linden House",
+      "region": "Region 1",
+      "monthly": []
+    },
+    {
+      "name": "Sanderson House",
+      "region": "Region 1",
+      "monthly": []
+    },
+    {
+      "name": "Shiners Yard",
+      "region": "Region 1",
+      "monthly": []
+    },
+    {
+      "name": "The Square",
+      "region": "Region 1",
+      "monthly": []
+    },
+    {
+      "name": "St Hilds",
+      "region": "Region 1",
+      "monthly": []
+    },
+    {
+      "name": "Crossgate Lofts",
+      "region": "Region 1",
+      "monthly": []
+    },
+    {
+      "name": "Manchester Main",
+      "region": "Region 2",
+      "monthly": []
+    },
+    {
+      "name": "Mayfair Court",
+      "region": "Region 2",
+      "monthly": []
+    },
+    {
+      "name": "Chancellors Court",
+      "region": "Region 2",
+      "monthly": []
+    },
+    {
+      "name": "Waterside Village",
+      "region": "Region 2",
+      "monthly": []
+    },
+    {
+      "name": "Rodney Street",
+      "region": "Region 2",
+      "monthly": []
+    },
+    {
+      "name": "Victoria Court Mews",
+      "region": "Region 2",
+      "monthly": []
+    },
+    {
+      "name": "Park View",
+      "region": "Region 3",
+      "monthly": []
+    },
+    {
+      "name": "Upper New Walk",
+      "region": "Region 3",
+      "monthly": []
+    },
+    {
+      "name": "Hosiery",
+      "region": "Region 3",
+      "monthly": []
+    },
+    {
+      "name": "Shoe & Boot",
+      "region": "Region 3",
+      "monthly": []
+    },
+    {
+      "name": "Bishop Blackall School",
+      "region": "Region 4",
+      "monthly": []
+    },
+    {
+      "name": "Hope Court",
+      "region": "Region 4",
+      "monthly": []
+    },
+    {
+      "name": "Isca Lofts",
+      "region": "Region 4",
+      "monthly": []
+    },
+    {
+      "name": "Walter Road",
+      "region": "Region 4",
+      "monthly": []
+    },
+    {
+      "name": "TW1X",
+      "region": "Region 4",
+      "monthly": []
+    }
+  ]
+}
