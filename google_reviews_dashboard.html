@@ -2325,11 +2325,13 @@ const unsureGroups = [
   { display: "Steve / Steven",  regions: ["Region 1"],             firstNames: ["steve", "steven"], staffNames: ["Steve Pritchard", "Steven Hudspith"] },
 ];
 
-// Property-level attribution rules — ambiguous first-name mentions at a specific property
+// Property-level attribution rules — ambiguous first-name mentions at specific properties
 // are attributed to a named staff member rather than going to Unsure.
 // Only applies AFTER specific term matching (full name / initial) has already run.
 const propertyAttributionRules = [
-  { property: "Rodney Street", firstNames: ["mike", "michael"], staffName: "Michael Heywood" },
+  { properties: ["Rodney Street"],                            firstNames: ["mike", "michael"], staffName: "Michael Heywood" },
+  { properties: ["Hosiery", "Shoe & Boot", "Upper New Walk"], firstNames: ["david", "dave"],   staffName: "David Lakin"     },
+  { properties: ["Newcastle Main"],                           firstNames: ["marc"],            staffName: "Marc Wallace"    },
 ];
 
 function lbEscapeRegex(s) {
@@ -2407,7 +2409,7 @@ function showStaffReviews(staffName) {
       const specificIdxs = new Set(indexed.filter(r => groupStaff.some(s => matchesStaff(s.terms, r.text || ''))).map(r => r._idx));
       const ruleMatches = indexed.filter(r => {
         if (specificIdxs.has(r._idx)) return false;
-        if (r.property !== rule.property) return false;
+        if (!rule.properties.includes(r.property)) return false;
         return rule.firstNames.some(fn => new RegExp('\\b' + fn + '\\b', 'i').test(r.text || ''));
       });
       propMentions = propMentions.concat(ruleMatches);
@@ -2517,7 +2519,7 @@ function renderLeaderboard() {
     );
     const ruleMatches = eligible.filter(r => {
       if (specificIdxs.has(r._idx)) return false;
-      if (r.property !== rule.property) return false;
+      if (!rule.properties.includes(r.property)) return false;
       return rule.firstNames.some(fn => new RegExp('\\b' + fn + '\\b', 'i').test(r.text || ''));
     });
     const existingIdxs = new Set(target.mentions.map(m => m._idx));
