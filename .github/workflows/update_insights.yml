@@ -1,0 +1,32 @@
+name: Update Insights
+
+on:
+  schedule:
+    # Every Monday at 09:00 UTC (after ratings at 08:00)
+    - cron: "0 9 * * 1"
+  workflow_dispatch:
+
+jobs:
+  update-insights:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4.2.2
+
+      - name: Set up Python
+        uses: actions/setup-python@v5.6.0
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Fetch insights data
+        env:
+          GOOGLE_TOKEN_JSON: ${{ secrets.GOOGLE_TOKEN_JSON }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python fetch_insights.py

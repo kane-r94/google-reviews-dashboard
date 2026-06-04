@@ -753,6 +753,46 @@
   .lb-unsure { background: rgba(255,155,91,0.05); }
   .lb-unsure .lb-name { color: var(--gray-600); font-weight: 500; }
   .lb-unsure-total { font-weight: 700; font-size: 15px; color: var(--tangerine); }
+  /* ── insights tab ── */
+  .insights-filter-bar {
+    display: flex; align-items: flex-end; gap: 20px; flex-wrap: wrap;
+    background: white; border-radius: var(--radius-lg); border: 1px solid var(--gray-200);
+    padding: 16px 20px; margin-bottom: 24px;
+  }
+  .insights-filter-group { display: flex; flex-direction: column; gap: 5px; }
+  .insights-filter-group label { font-size: 11px; font-weight: 600; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.04em; }
+  .insights-filter-group select {
+    padding: 7px 12px; border-radius: var(--radius); border: 1px solid var(--gray-200);
+    background: white; font-family: var(--font); font-size: 13px; color: var(--gray-700); outline: none;
+  }
+  .insights-filter-group select:focus { border-color: var(--teal); }
+  .insights-tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  @media (max-width: 640px) { .insights-tiles { grid-template-columns: 1fr; } }
+  .insights-tile {
+    background: white; border-radius: var(--radius-lg); border: 1px solid var(--gray-200);
+    padding: 22px 24px; display: flex; flex-direction: column; gap: 4px;
+  }
+  .insights-tile-icon { font-size: 22px; margin-bottom: 6px; }
+  .insights-tile-label { font-size: 12px; font-weight: 600; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.04em; }
+  .insights-tile-val { font-size: 32px; font-weight: 700; color: var(--liquorice); letter-spacing: -0.03em; margin-top: 4px; }
+  .insights-tile-change { font-size: 12px; font-weight: 600; margin-top: 2px; }
+  .insights-tile-change.up   { color: #16a34a; }
+  .insights-tile-change.down { color: var(--red); }
+  .insights-tile-change.flat { color: var(--gray-400); }
+  .insights-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .insights-table thead th {
+    text-align: left; font-size: 11px; font-weight: 600; color: var(--gray-500);
+    text-transform: uppercase; letter-spacing: 0.04em;
+    padding: 10px 20px; border-bottom: 2px solid var(--gray-200); background: var(--gray-50);
+  }
+  .insights-table thead th.right { text-align: right; }
+  .insights-table tbody tr { border-bottom: 1px solid var(--gray-100); transition: background 0.1s; }
+  .insights-table tbody tr:hover { background: var(--gray-50); }
+  .insights-table tbody td { padding: 11px 20px; color: var(--gray-700); }
+  .insights-table tbody td.right { text-align: right; font-family: var(--mono); font-size: 13px; }
+  .insights-table tbody td.muted { font-size: 12px; color: var(--gray-500); }
+  .insights-no-data { padding: 40px 24px; text-align: center; color: var(--gray-400); font-size: 13px; }
+
   .lb-name-link { cursor: pointer; text-decoration: underline; text-decoration-style: dotted; text-underline-offset: 3px; }
   .lb-name-link:hover { color: var(--teal); }
 
@@ -848,6 +888,7 @@
   <button class="tab-btn"        onclick="showTab('sentiment', this)">Sentiment</button>
   <button class="tab-btn"        onclick="showTab('history', this)">History</button>
   <button class="tab-btn"        onclick="showTab('leaderboard', this)">Leaderboard</button>
+  <button class="tab-btn"        onclick="showTab('insights', this)">Insights</button>
 </div>
 
 <!-- ══════════════════════════════════════════════════════
@@ -1172,6 +1213,78 @@
 </div>
 </div><!-- /#panel-leaderboard -->
 
+
+<!-- ══════════════════════════════════════════════════════
+     TAB 7 — INSIGHTS
+════════════════════════════════════════════════════════ -->
+<div id="panel-insights" class="tab-panel" style="display:none">
+<div class="main">
+
+  <!-- Filter bar -->
+  <div class="insights-filter-bar">
+    <div class="insights-filter-group">
+      <label>Region</label>
+      <select id="ins-region" onchange="onInsightsRegionChange()">
+        <option value="">All Regions</option>
+        <option value="Region 1">Region 1 — North East</option>
+        <option value="Region 2">Region 2 — North</option>
+        <option value="Region 3">Region 3 — Midlands</option>
+        <option value="Region 4">Region 4 — South</option>
+      </select>
+    </div>
+    <div class="insights-filter-group">
+      <label>Property</label>
+      <select id="ins-property" onchange="renderInsights()">
+        <option value="">All Properties</option>
+      </select>
+    </div>
+    <div class="insights-filter-group">
+      <label>Date range</label>
+      <select id="ins-period" onchange="renderInsights()">
+        <option value="3">Last 3 months</option>
+        <option value="6">Last 6 months</option>
+        <option value="12" selected>Last 12 months</option>
+        <option value="18">All available</option>
+      </select>
+    </div>
+    <div style="margin-left:auto;font-size:12px;color:var(--gray-400)" id="ins-updated"></div>
+  </div>
+
+  <!-- Metric tiles -->
+  <div class="insights-tiles" id="insights-tiles">
+    <div class="insights-tile">
+      <div class="insights-tile-icon">🔍</div>
+      <div class="insights-tile-label">Search Impressions</div>
+      <div class="insights-tile-val" id="ins-impressions">—</div>
+      <div class="insights-tile-change" id="ins-impressions-change"></div>
+    </div>
+    <div class="insights-tile">
+      <div class="insights-tile-icon">🧭</div>
+      <div class="insights-tile-label">Direction Requests</div>
+      <div class="insights-tile-val" id="ins-directions">—</div>
+      <div class="insights-tile-change" id="ins-directions-change"></div>
+    </div>
+    <div class="insights-tile">
+      <div class="insights-tile-icon">📞</div>
+      <div class="insights-tile-label">Phone Calls</div>
+      <div class="insights-tile-val" id="ins-calls">—</div>
+      <div class="insights-tile-change" id="ins-calls-change"></div>
+    </div>
+  </div>
+
+  <!-- Property breakdown table -->
+  <div class="section-card" style="padding:0;overflow:hidden;margin-top:24px">
+    <div style="padding:18px 24px 14px;border-bottom:1px solid var(--gray-100)">
+      <div class="section-title">Property breakdown</div>
+    </div>
+    <div id="ins-table-wrap">
+      <div style="padding:24px;color:var(--gray-400);font-size:13px;">Loading insights…</div>
+    </div>
+  </div>
+
+</div>
+</div><!-- /#panel-insights -->
+
 <!-- Staff reviews modal -->
 <div class="modal-overlay" id="staff-modal" onclick="closeStaffModal(event)">
   <div class="staff-modal-box" onclick="event.stopPropagation()">
@@ -1400,6 +1513,7 @@ let trendsLoaded      = false;
 let sentimentLoaded   = false;
 let historyLoaded     = false;
 let leaderboardLoaded = false;
+let insightsLoaded    = false;
 
 function showTab(tab, btn) {
   document.querySelectorAll('.tab-panel').forEach(p => p.style.display = 'none');
@@ -1411,6 +1525,7 @@ function showTab(tab, btn) {
   if (tab === 'sentiment'   && !sentimentLoaded)    loadSentiment();
   if (tab === 'history'     && !historyLoaded)      loadHistoryTab();
   if (tab === 'leaderboard' && !leaderboardLoaded)  loadLeaderboard();
+  if (tab === 'insights'    && !insightsLoaded)     loadInsightsTab();
 }
 
 /* ════════════════════════════════════════════════════════
@@ -2278,6 +2393,176 @@ function renderSentiment() {
 
 
 /* ════════════════════════════════════════════════════════
+   INSIGHTS TAB
+════════════════════════════════════════════════════════ */
+
+let insightsData = null;
+
+async function loadInsightsTab() {
+  insightsLoaded = true;
+  try {
+    const res = await fetch('insights_data.json?t=' + Date.now());
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    insightsData = await res.json();
+    populateInsightsPropertyFilter();
+    if (insightsData.last_updated) {
+      document.getElementById('ins-updated').textContent = 'Updated ' + insightsData.last_updated;
+    }
+    renderInsights();
+  } catch (e) {
+    document.getElementById('ins-table-wrap').innerHTML =
+      '<div class="insights-no-data">No insights data yet — run <code>fetch_insights.py</code> or trigger a refresh.</div>';
+    ['ins-impressions','ins-directions','ins-calls'].forEach(id => {
+      document.getElementById(id).textContent = 'N/A';
+    });
+  }
+}
+
+function populateInsightsPropertyFilter() {
+  const sel = document.getElementById('ins-property');
+  // Clear existing options except "All"
+  while (sel.options.length > 1) sel.remove(1);
+  if (!insightsData) return;
+  const regionFilter = document.getElementById('ins-region').value;
+  insightsData.properties
+    .filter(p => !regionFilter || p.region === regionFilter)
+    .forEach(p => {
+      const opt = document.createElement('option');
+      opt.value = p.name;
+      opt.textContent = p.name;
+      sel.appendChild(opt);
+    });
+}
+
+function onInsightsRegionChange() {
+  document.getElementById('ins-property').value = '';
+  populateInsightsPropertyFilter();
+  renderInsights();
+}
+
+function getInsightsMonths(monthsBack) {
+  // Returns a Set of "YYYY-MM" strings for the last N months
+  const months = new Set();
+  const now = new Date();
+  for (let i = 0; i < monthsBack; i++) {
+    const d = new Date(now.getFullYear(), now.getMonth() - i, 1);
+    months.add(d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0'));
+  }
+  return months;
+}
+
+function sumInsightsForProperty(prop, monthSet) {
+  let impr = 0, dirs = 0, calls = 0;
+  for (const m of (prop.monthly || [])) {
+    if (monthSet.has(m.month)) {
+      impr  += m.search_impressions || 0;
+      dirs  += m.direction_requests || 0;
+      calls += m.calls || 0;
+    }
+  }
+  return { impr, dirs, calls };
+}
+
+function insightsChangeBadge(curr, prev, elId) {
+  const el = document.getElementById(elId);
+  if (!el) return;
+  if (prev === 0) { el.textContent = ''; el.className = 'insights-tile-change flat'; return; }
+  const pct = Math.round(((curr - prev) / prev) * 100);
+  if (pct === 0) {
+    el.textContent = '— same as previous period';
+    el.className = 'insights-tile-change flat';
+  } else if (pct > 0) {
+    el.textContent = `▲ +${pct}% vs previous period`;
+    el.className = 'insights-tile-change up';
+  } else {
+    el.textContent = `▼ ${pct}% vs previous period`;
+    el.className = 'insights-tile-change down';
+  }
+}
+
+function renderInsights() {
+  if (!insightsData) return;
+
+  const regionFilter   = document.getElementById('ins-region').value;
+  const propertyFilter = document.getElementById('ins-property').value;
+  const monthsBack     = parseInt(document.getElementById('ins-period').value, 10);
+
+  const currMonths = getInsightsMonths(monthsBack);
+  const prevMonths = getInsightsMonths(monthsBack * 2);
+  // Previous period = same number of months, immediately before current
+  const prevOnlyMonths = new Set([...prevMonths].filter(m => !currMonths.has(m)));
+
+  const filtered = insightsData.properties.filter(p => {
+    if (regionFilter   && p.region !== regionFilter)   return false;
+    if (propertyFilter && p.name   !== propertyFilter) return false;
+    return true;
+  });
+
+  // Aggregate totals
+  let totalImpr = 0, totalDirs = 0, totalCalls = 0;
+  let prevImpr  = 0, prevDirs  = 0, prevCalls  = 0;
+  const rowData = [];
+
+  filtered.forEach(p => {
+    const curr = sumInsightsForProperty(p, currMonths);
+    const prev = sumInsightsForProperty(p, prevOnlyMonths);
+    totalImpr  += curr.impr;  totalDirs  += curr.dirs;  totalCalls  += curr.calls;
+    prevImpr   += prev.impr;  prevDirs   += prev.dirs;  prevCalls   += prev.calls;
+    rowData.push({ name: p.name, region: p.region, ...curr });
+  });
+
+  // Sort by search impressions desc
+  rowData.sort((a, b) => b.impr - a.impr);
+
+  // Update tiles
+  document.getElementById('ins-impressions').textContent = totalImpr.toLocaleString();
+  document.getElementById('ins-directions').textContent  = totalDirs.toLocaleString();
+  document.getElementById('ins-calls').textContent       = totalCalls.toLocaleString();
+  insightsChangeBadge(totalImpr,  prevImpr,  'ins-impressions-change');
+  insightsChangeBadge(totalDirs,  prevDirs,  'ins-directions-change');
+  insightsChangeBadge(totalCalls, prevCalls, 'ins-calls-change');
+
+  // Table
+  const hasAnyData = rowData.some(r => r.impr > 0 || r.dirs > 0 || r.calls > 0);
+  if (!hasAnyData) {
+    document.getElementById('ins-table-wrap').innerHTML =
+      '<div class="insights-no-data">No data available for the selected filters and period.</div>';
+    return;
+  }
+
+  let html = `
+    <table class="insights-table">
+      <thead>
+        <tr>
+          <th>Property</th>
+          <th>Region</th>
+          <th class="right">Search impressions</th>
+          <th class="right">Direction requests</th>
+          <th class="right">Phone calls</th>
+        </tr>
+      </thead>
+      <tbody>
+  `;
+
+  rowData.forEach(r => {
+    const noData = r.impr === 0 && r.dirs === 0 && r.calls === 0;
+    html += `
+      <tr${noData ? ' style="opacity:0.4"' : ''}>
+        <td style="font-weight:600;color:var(--liquorice)">${r.name}</td>
+        <td class="muted">${r.region}</td>
+        <td class="right">${r.impr  > 0 ? r.impr.toLocaleString()  : '—'}</td>
+        <td class="right">${r.dirs  > 0 ? r.dirs.toLocaleString()  : '—'}</td>
+        <td class="right">${r.calls > 0 ? r.calls.toLocaleString() : '—'}</td>
+      </tr>
+    `;
+  });
+
+  html += '</tbody></table>';
+  document.getElementById('ins-table-wrap').innerHTML = html;
+}
+
+
+/* ════════════════════════════════════════════════════════
    LEADERBOARD TAB
 ════════════════════════════════════════════════════════ */
 
@@ -2867,7 +3152,7 @@ function updateHistoryChart() {
 
 const REPO_OWNER   = 'kane-r94';
 const REPO_NAME    = 'google-reviews-dashboard';
-const WORKFLOWS    = ['update_reviews.yml', 'update_review_text.yml'];
+const WORKFLOWS    = ['update_reviews.yml', 'update_review_text.yml', 'update_insights.yml'];
 const TOKEN_KEY    = 'sc_gh_refresh_token';
 
 function showToast(msg, duration = 4000) {
