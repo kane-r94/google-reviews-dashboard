@@ -2325,6 +2325,13 @@ const unsureGroups = [
   { display: "Steve / Steven",  regions: ["Region 1"],             firstNames: ["steve", "steven"], staffNames: ["Steve Pritchard", "Steven Hudspith"] },
 ];
 
+// Property-level attribution rules — ambiguous first-name mentions at a specific property
+// are attributed to a named staff member rather than going to Unsure.
+// Only applies AFTER specific term matching (full name / initial) has already run.
+const propertyAttributionRules = [
+  { property: "Rodney Street", firstNames: ["mike", "michael"], staffName: "Michael Heywood" },
+];
+
 function lbEscapeRegex(s) {
   return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
@@ -2388,23 +2395,53 @@ function showStaffReviews(staffName) {
   if (staff) {
     terms = staff.terms;
     displayName = staff.display;
-    mentions = eligible.filter(r => matchesStaff(terms, r.text || ''));
+    const indexed = eligible.map((r, i) => ({ ...r, _idx: i }));
+    const baseMentions = indexed.filter(r => matchesStaff(terms, r.text || ''));
+    // Also apply property attribution rules for this staff member
+    const propRules = propertyAttributionRules.filter(rule => rule.staffName === staff.name);
+    let propMentions = [];
+    propRules.forEach(rule => {
+      const unsureGroup = unsureGroups.find(g => g.staffNames.includes(staff.name));
+      if (!unsureGroup) return;
+      const groupStaff = maintenanceStaff.filter(s => unsureGroup.staffNames.includes(s.name));
+      const specificIdxs = new Set(indexed.filter(r => groupStaff.some(s => matchesStaff(s.terms, r.text || ''))).map(r => r._idx));
+      const ruleMatches = indexed.filter(r => {
+        if (specificIdxs.has(r._idx)) return false;
+        if (r.property !== rule.property) return false;
+        return rule.firstNames.some(fn => new RegExp('\\b' + fn + '\\b', 'i').test(r.text || ''));
+      });
+      propMentions = propMentions.concat(ruleMatches);
+    });
+    // Combine base + property-attributed (dedup)
+    const baseIdxs = new Set(baseMentions.map(r => r._idx));
+    mentions = [...baseMentions, ...propMentions.filter(r => !baseIdxs.has(r._idx))];
+    // Use all matched terms + property first names for highlighting
+    terms = [...terms, ...propRules.flatMap(r => r.firstNames)];
   } else {
     // Unsure group — same logic as renderLeaderboard
     terms = unsure.firstNames;
     displayName = unsure.display + ' (unattributed)';
+    const indexed = eligible.map((r, i) => ({ ...r, _idx: i }));
     const groupStaff = maintenanceStaff.filter(s => unsure.staffNames.includes(s.name));
     const attributedIdxs = new Set(
-      eligible.map((r, i) => ({ ...r, _idx: i }))
-        .filter(r => groupStaff.some(s => matchesStaff(s.terms, r.text || '')))
-        .map(r => r._idx)
+      indexed.filter(r => groupStaff.some(s => matchesStaff(s.terms, r.text || ''))).map(r => r._idx)
     );
-    mentions = eligible
-      .map((r, i) => ({ ...r, _idx: i }))
-      .filter(r => {
-        if (attributedIdxs.has(r._idx)) return false;
-        return unsure.firstNames.some(fn => new RegExp('\\b' + fn + '\\b', 'i').test(r.text || ''));
-      });
+    // Also exclude property-rule claimed reviews
+    const propClaimedIdxs = new Set();
+    propertyAttributionRules.forEach(rule => {
+      const rg = unsureGroups.find(g => g.staffNames.includes(rule.staffName) && g.display === unsure.display);
+      if (!rg) return;
+      const gStaff = maintenanceStaff.filter(s => rg.staffNames.includes(s.name));
+      const specIdxs = new Set(indexed.filter(r => gStaff.some(s => matchesStaff(s.terms, r.text || ''))).map(r => r._idx));
+      indexed.filter(r => !specIdxs.has(r._idx) && r.property === rule.property &&
+        rule.firstNames.some(fn => new RegExp('\\b' + fn + '\\b', 'i').test(r.text || '')))
+        .forEach(r => propClaimedIdxs.add(r._idx));
+    });
+    mentions = indexed.filter(r => {
+      if (attributedIdxs.has(r._idx)) return false;
+      if (propClaimedIdxs.has(r._idx)) return false;
+      return unsure.firstNames.some(fn => new RegExp('\\b' + fn + '\\b', 'i').test(r.text || ''));
+    });
   }
 
   // Sort newest first
@@ -2457,7 +2494,7 @@ function renderLeaderboard() {
     .filter(r => r.raw_date && new Date(r.raw_date) >= LEADERBOARD_CUTOFF)
     .map((r, i) => ({ ...r, _idx: i }));
 
-  // Step 1: compute per-staff mentions and track which review indices they claimed
+  // Step 1: compute per-staff mentions from specific terms
   const staffResults = maintenanceStaff
     .filter(s => !regionFilter || s.region === regionFilter)
     .map(s => {
@@ -2466,19 +2503,45 @@ function renderLeaderboard() {
       return { ...s, mentions, total: mentions.length, l7d, lastDisplay: lbLastDisplay(mentions) };
     });
 
+  // Step 1b: apply property attribution rules — unattributed first-name-only reviews
+  // from specific properties go to the designated staff member rather than Unsure
+  const propertyRuleClaimedByGroup = {}; // unsureGroup.display -> Set of _idx
+  propertyAttributionRules.forEach(rule => {
+    const target = staffResults.find(s => s.name === rule.staffName);
+    if (!target) return;
+    const unsureGroup = unsureGroups.find(g => g.staffNames.includes(rule.staffName));
+    if (!unsureGroup) return;
+    const groupStaff = maintenanceStaff.filter(s => unsureGroup.staffNames.includes(s.name));
+    const specificIdxs = new Set(
+      eligible.filter(r => groupStaff.some(s => matchesStaff(s.terms, r.text || ''))).map(r => r._idx)
+    );
+    const ruleMatches = eligible.filter(r => {
+      if (specificIdxs.has(r._idx)) return false;
+      if (r.property !== rule.property) return false;
+      return rule.firstNames.some(fn => new RegExp('\\b' + fn + '\\b', 'i').test(r.text || ''));
+    });
+    const existingIdxs = new Set(target.mentions.map(m => m._idx));
+    ruleMatches.forEach(r => { if (!existingIdxs.has(r._idx)) target.mentions.push(r); });
+    target.total = target.mentions.length;
+    target.l7d = target.mentions.filter(r => new Date(r.raw_date) >= sevenDaysAgo).length;
+    target.lastDisplay = lbLastDisplay(target.mentions);
+    if (!propertyRuleClaimedByGroup[unsureGroup.display]) propertyRuleClaimedByGroup[unsureGroup.display] = new Set();
+    ruleMatches.forEach(r => propertyRuleClaimedByGroup[unsureGroup.display].add(r._idx));
+  });
+
   // Step 2: compute Unsure groups — reviews matching a shared first name but NOT already
-  // attributed to any specific staff member in that group
+  // attributed by specific terms OR property attribution rules
   const unsureResults = unsureGroups
     .filter(g => !regionFilter || g.regions.includes(regionFilter))
     .map(g => {
-      // Build set of review indices already attributed to specific people in this group
       const groupStaff = maintenanceStaff.filter(s => g.staffNames.includes(s.name));
       const attributedIdxs = new Set(
         eligible.filter(r => groupStaff.some(s => matchesStaff(s.terms, r.text || ''))).map(r => r._idx)
       );
-      // Unsure = mentions the first name as a standalone word, NOT already attributed
+      const propClaimedIdxs = propertyRuleClaimedByGroup[g.display] || new Set();
       const mentions = eligible.filter(r => {
         if (attributedIdxs.has(r._idx)) return false;
+        if (propClaimedIdxs.has(r._idx)) return false;
         return g.firstNames.some(fn => new RegExp('\\b' + fn + '\\b', 'i').test(r.text || ''));
       });
       const l7d = mentions.filter(r => new Date(r.raw_date) >= sevenDaysAgo).length;
