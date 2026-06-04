@@ -2624,7 +2624,9 @@ const propertyAttributionRules = [
 // and the property context makes the attribution clear.
 const propertyRedirectRules = [
   // "Wayne" at Newcastle is almost certainly Wain Beadsworth (misspelling), not Wayne Arnold (Midlands)
-  { properties: ["Newcastle Main"], firstNames: ["wayne", "wain"], fromStaff: "Wayne Arnold", toStaff: "Wain Beadsworth" },
+  { properties: ["Newcastle Main"], firstNames: ["wayne", "wain"], fromStaff: "Wayne Arnold",  toStaff: "Wain Beadsworth" },
+  // "Mark" at Newcastle is Marc Wallace (common misspelling of Marc), not Mark Allen (North)
+  { properties: ["Newcastle Main"], firstNames: ["mark"],          fromStaff: "Mark Allen",    toStaff: "Marc Wallace"    },
 ];
 
 function lbEscapeRegex(s) {
