@@ -2334,6 +2334,14 @@ const propertyAttributionRules = [
   { properties: ["Newcastle Main"],                           firstNames: ["marc"],            staffName: "Marc Wallace"    },
 ];
 
+// Property redirect rules — move a first-name match FROM one staff member TO another
+// at specific properties. Used when the same first name belongs to staff in different regions
+// and the property context makes the attribution clear.
+const propertyRedirectRules = [
+  // "Wayne" at Newcastle is almost certainly Wain Beadsworth (misspelling), not Wayne Arnold (Midlands)
+  { properties: ["Newcastle Main"], firstNames: ["wayne", "wain"], fromStaff: "Wayne Arnold", toStaff: "Wain Beadsworth" },
+];
+
 function lbEscapeRegex(s) {
   return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
@@ -2416,9 +2424,32 @@ function showStaffReviews(staffName) {
     });
     // Combine base + property-attributed (dedup)
     const baseIdxs = new Set(baseMentions.map(r => r._idx));
-    mentions = [...baseMentions, ...propMentions.filter(r => !baseIdxs.has(r._idx))];
+    let combined = [...baseMentions, ...propMentions.filter(r => !baseIdxs.has(r._idx))];
+    // Apply property redirect rules — add reviews redirected TO this staff member
+    const redirectRulesToMe = propertyRedirectRules.filter(r => r.toStaff === staff.name);
+    redirectRulesToMe.forEach(rule => {
+      // Find the fromStaff's matching reviews at these properties
+      const fromStaffData = maintenanceStaff.find(s => s.name === rule.fromStaff);
+      if (!fromStaffData) return;
+      const redirectMatches = indexed.filter(r =>
+        rule.properties.includes(r.property) &&
+        matchesStaff(fromStaffData.terms, r.text || '') &&
+        rule.firstNames.some(fn => new RegExp('\\b' + lbEscapeRegex(fn) + '\\b', 'i').test(r.text || ''))
+      );
+      const combinedIdxs = new Set(combined.map(m => m._idx));
+      redirectMatches.forEach(r => { if (!combinedIdxs.has(r._idx)) combined.push(r); });
+    });
+    // Remove reviews redirected AWAY from this staff member to someone else
+    const redirectRulesFromMe = propertyRedirectRules.filter(r => r.fromStaff === staff.name);
+    redirectRulesFromMe.forEach(rule => {
+      combined = combined.filter(r =>
+        !(rule.properties.includes(r.property) &&
+          rule.firstNames.some(fn => new RegExp('\\b' + lbEscapeRegex(fn) + '\\b', 'i').test(r.text || '')))
+      );
+    });
+    mentions = combined;
     // Use all matched terms + property first names for highlighting
-    terms = [...terms, ...propRules.flatMap(r => r.firstNames)];
+    terms = [...new Set([...terms, ...propRules.flatMap(r => r.firstNames), ...redirectRulesToMe.flatMap(r => r.firstNames)])];
   } else {
     // Unsure group — same logic as renderLeaderboard
     terms = unsure.firstNames;
@@ -2529,6 +2560,30 @@ function renderLeaderboard() {
     target.lastDisplay = lbLastDisplay(target.mentions);
     if (!propertyRuleClaimedByGroup[unsureGroup.display]) propertyRuleClaimedByGroup[unsureGroup.display] = new Set();
     ruleMatches.forEach(r => propertyRuleClaimedByGroup[unsureGroup.display].add(r._idx));
+  });
+
+  // Step 1c: apply property redirect rules — move reviews from one staff member to another
+  propertyRedirectRules.forEach(rule => {
+    const fromStaff = staffResults.find(s => s.name === rule.fromStaff);
+    const toStaff   = staffResults.find(s => s.name === rule.toStaff);
+    if (!fromStaff || !toStaff) return;
+    const redirectReviews = fromStaff.mentions.filter(r =>
+      rule.properties.includes(r.property) &&
+      rule.firstNames.some(fn => new RegExp('\\b' + lbEscapeRegex(fn) + '\\b', 'i').test(r.text || ''))
+    );
+    if (!redirectReviews.length) return;
+    const redirectIdxs = new Set(redirectReviews.map(r => r._idx));
+    // Remove from fromStaff
+    fromStaff.mentions = fromStaff.mentions.filter(r => !redirectIdxs.has(r._idx));
+    fromStaff.total = fromStaff.mentions.length;
+    fromStaff.l7d = fromStaff.mentions.filter(r => new Date(r.raw_date) >= sevenDaysAgo).length;
+    fromStaff.lastDisplay = lbLastDisplay(fromStaff.mentions);
+    // Add to toStaff (dedup)
+    const toIdxs = new Set(toStaff.mentions.map(m => m._idx));
+    redirectReviews.forEach(r => { if (!toIdxs.has(r._idx)) toStaff.mentions.push(r); });
+    toStaff.total = toStaff.mentions.length;
+    toStaff.l7d = toStaff.mentions.filter(r => new Date(r.raw_date) >= sevenDaysAgo).length;
+    toStaff.lastDisplay = lbLastDisplay(toStaff.mentions);
   });
 
   // Step 2: compute Unsure groups — reviews matching a shared first name but NOT already
