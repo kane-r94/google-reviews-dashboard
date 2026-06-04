@@ -1565,6 +1565,180 @@
           "reviews": null
         }
       ]
+    },
+    {
+      "timestamp": "04 Jun 2026 15:26 UTC",
+      "properties": [
+        {
+          "name": "Student Cribs HQ",
+          "region": "HQ",
+          "score": 4.4,
+          "reviews": 792
+        },
+        {
+          "name": "Newcastle Main",
+          "region": "Region 1",
+          "score": 4.7,
+          "reviews": 166
+        },
+        {
+          "name": "Morrison Circus",
+          "region": "Region 1",
+          "score": 4.2,
+          "reviews": 31
+        },
+        {
+          "name": "Byron Lofts",
+          "region": "Region 1",
+          "score": 4.0,
+          "reviews": 21
+        },
+        {
+          "name": "Jesmond View",
+          "region": "Region 1",
+          "score": 4.0,
+          "reviews": 45
+        },
+        {
+          "name": "Kielder House",
+          "region": "Region 1",
+          "score": 4.6,
+          "reviews": 12
+        },
+        {
+          "name": "Linden House",
+          "region": "Region 1",
+          "score": 4.4,
+          "reviews": 8
+        },
+        {
+          "name": "Sanderson House",
+          "region": "Region 1",
+          "score": 3.6,
+          "reviews": 8
+        },
+        {
+          "name": "Shiners Yard",
+          "region": "Region 1",
+          "score": 4.8,
+          "reviews": 10
+        },
+        {
+          "name": "The Square",
+          "region": "Region 1",
+          "score": 4.0,
+          "reviews": 12
+        },
+        {
+          "name": "St Hilds",
+          "region": "Region 1",
+          "score": 5.0,
+          "reviews": 2
+        },
+        {
+          "name": "Crossgate Lofts",
+          "region": "Region 1",
+          "score": 4.0,
+          "reviews": 31
+        },
+        {
+          "name": "Manchester Main",
+          "region": "Region 2",
+          "score": 3.9,
+          "reviews": 58
+        },
+        {
+          "name": "Mayfair Court",
+          "region": "Region 2",
+          "score": 3.5,
+          "reviews": 104
+        },
+        {
+          "name": "Chancellors Court",
+          "region": "Region 2",
+          "score": null,
+          "reviews": null
+        },
+        {
+          "name": "Waterside Village",
+          "region": "Region 2",
+          "score": 4.1,
+          "reviews": 146
+        },
+        {
+          "name": "Rodney Street",
+          "region": "Region 2",
+          "score": 4.8,
+          "reviews": 122
+        },
+        {
+          "name": "Victoria Court Mews",
+          "region": "Region 2",
+          "score": 4.6,
+          "reviews": 38
+        },
+        {
+          "name": "Park View",
+          "region": "Region 3",
+          "score": 3.4,
+          "reviews": 50
+        },
+        {
+          "name": "Upper New Walk",
+          "region": "Region 3",
+          "score": 4.5,
+          "reviews": 15
+        },
+        {
+          "name": "Hosiery",
+          "region": "Region 3",
+          "score": 3.9,
+          "reviews": 62
+        },
+        {
+          "name": "Shoe & Boot",
+          "region": "Region 3",
+          "score": 3.9,
+          "reviews": 167
+        },
+        {
+          "name": "Bishop Blackall School",
+          "region": "Region 4",
+          "score": 4.6,
+          "reviews": 20
+        },
+        {
+          "name": "Hope Court",
+          "region": "Region 4",
+          "score": 3.9,
+          "reviews": 9
+        },
+        {
+          "name": "Isca Lofts",
+          "region": "Region 4",
+          "score": 4.4,
+          "reviews": 25
+        },
+        {
+          "name": "Walter Road",
+          "region": "Region 4",
+          "score": 4.3,
+          "reviews": 28
+        },
+        {
+          "name": "TW1X",
+          "region": "Region 4",
+          "score": null,
+          "reviews": null
+        }
+      ],
+      "platforms": [
+        {
+          "name": "Trustpilot",
+          "score": null,
+          "reviews": null
+        }
+      ]
     }
   ]
 }
