@@ -38,7 +38,7 @@ DAILY_METRICS = [
     "BUSINESS_IMPRESSIONS_MOBILE_MAPS",
     "BUSINESS_IMPRESSIONS_MOBILE_SEARCH",
     "CALL_CLICKS",
-    "DIRECTIONS_CLICKS",
+    "BUSINESS_DIRECTION_REQUESTS",
 ]
 
 # Metrics that contribute to "search impressions" total
@@ -146,27 +146,29 @@ def parse_daily_to_monthly(response_data: dict) -> list:
     """Aggregate daily API response into a sorted list of monthly dicts."""
     monthly = {}
 
-    for series in (response_data or {}).get("multiDailyMetricTimeSeries", []):
-        metric      = series.get("dailyMetric", "")
-        dated_vals  = series.get("timeSeries", {}).get("datedValues", [])
+    # Response structure: multiDailyMetricTimeSeries → dailyMetricTimeSeries → metrics
+    for outer in (response_data or {}).get("multiDailyMetricTimeSeries", []):
+        for series in outer.get("dailyMetricTimeSeries", []):
+            metric     = series.get("dailyMetric", "")
+            dated_vals = series.get("timeSeries", {}).get("datedValues", [])
 
-        for item in dated_vals:
-            d     = item.get("date", {})
-            yr    = d.get("year",  0)
-            mo    = d.get("month", 0)
-            value = int(item.get("value", 0) or 0)
+            for item in dated_vals:
+                d     = item.get("date", {})
+                yr    = d.get("year",  0)
+                mo    = d.get("month", 0)
+                value = int(item.get("value", 0) or 0)
 
-            key = f"{yr}-{str(mo).zfill(2)}"
-            if key not in monthly:
-                monthly[key] = {"month": key, "search_impressions": 0,
-                                "direction_requests": 0, "calls": 0}
+                key = f"{yr}-{str(mo).zfill(2)}"
+                if key not in monthly:
+                    monthly[key] = {"month": key, "search_impressions": 0,
+                                    "direction_requests": 0, "calls": 0}
 
-            if metric in IMPRESSION_METRICS:
-                monthly[key]["search_impressions"] += value
-            elif metric == "DIRECTIONS_CLICKS":
-                monthly[key]["direction_requests"] += value
-            elif metric == "CALL_CLICKS":
-                monthly[key]["calls"] += value
+                if metric in IMPRESSION_METRICS:
+                    monthly[key]["search_impressions"] += value
+                elif metric == "BUSINESS_DIRECTION_REQUESTS":
+                    monthly[key]["direction_requests"] += value
+                elif metric == "CALL_CLICKS":
+                    monthly[key]["calls"] += value
 
     return sorted(monthly.values(), key=lambda x: x["month"])
 
@@ -243,11 +245,12 @@ def main():
             print(f"  Fetching: {name}...", end=" ", flush=True)
 
             data = fetch_insights_for_location(session, numeric_id, start_date, end_date)
+
             monthly = parse_daily_to_monthly(data)
 
-            total_impr = sum(m["search_impressions"] for m in monthly)
-            total_dirs = sum(m["direction_requests"]  for m in monthly)
-            total_calls = sum(m["calls"]              for m in monthly)
+            total_impr  = sum(m["search_impressions"] for m in monthly)
+            total_dirs  = sum(m["direction_requests"]  for m in monthly)
+            total_calls = sum(m["calls"]               for m in monthly)
 
             if total_impr or total_dirs or total_calls:
                 print(f"{total_impr:,} impressions, {total_dirs:,} directions, {total_calls:,} calls")

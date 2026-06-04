@@ -1,5 +1,5 @@
 {
-  "last_updated": "04 Jun 2026 15:35 UTC",
+  "last_updated": "04 Jun 2026 15:47 UTC",
   "date_range": {
     "start": "2024-12",
     "end": "2026-06"
@@ -8,72 +8,1682 @@
     {
       "name": "Student Cribs HQ",
       "region": "HQ",
-      "monthly": []
+      "monthly": [
+        {
+          "month": "2024-12",
+          "search_impressions": 2042,
+          "direction_requests": 35,
+          "calls": 18
+        },
+        {
+          "month": "2025-01",
+          "search_impressions": 2278,
+          "direction_requests": 64,
+          "calls": 20
+        },
+        {
+          "month": "2025-02",
+          "search_impressions": 1857,
+          "direction_requests": 30,
+          "calls": 20
+        },
+        {
+          "month": "2025-03",
+          "search_impressions": 2300,
+          "direction_requests": 39,
+          "calls": 21
+        },
+        {
+          "month": "2025-04",
+          "search_impressions": 2237,
+          "direction_requests": 35,
+          "calls": 32
+        },
+        {
+          "month": "2025-05",
+          "search_impressions": 2485,
+          "direction_requests": 55,
+          "calls": 26
+        },
+        {
+          "month": "2025-06",
+          "search_impressions": 2597,
+          "direction_requests": 78,
+          "calls": 75
+        },
+        {
+          "month": "2025-07",
+          "search_impressions": 2269,
+          "direction_requests": 55,
+          "calls": 77
+        },
+        {
+          "month": "2025-08",
+          "search_impressions": 3534,
+          "direction_requests": 94,
+          "calls": 40
+        },
+        {
+          "month": "2025-09",
+          "search_impressions": 3942,
+          "direction_requests": 59,
+          "calls": 78
+        },
+        {
+          "month": "2025-10",
+          "search_impressions": 6088,
+          "direction_requests": 35,
+          "calls": 26
+        },
+        {
+          "month": "2025-11",
+          "search_impressions": 4902,
+          "direction_requests": 48,
+          "calls": 20
+        },
+        {
+          "month": "2025-12",
+          "search_impressions": 2333,
+          "direction_requests": 64,
+          "calls": 36
+        },
+        {
+          "month": "2026-01",
+          "search_impressions": 3081,
+          "direction_requests": 68,
+          "calls": 25
+        },
+        {
+          "month": "2026-02",
+          "search_impressions": 2620,
+          "direction_requests": 50,
+          "calls": 24
+        },
+        {
+          "month": "2026-03",
+          "search_impressions": 2850,
+          "direction_requests": 64,
+          "calls": 14
+        },
+        {
+          "month": "2026-04",
+          "search_impressions": 2900,
+          "direction_requests": 63,
+          "calls": 13
+        },
+        {
+          "month": "2026-05",
+          "search_impressions": 2661,
+          "direction_requests": 62,
+          "calls": 36
+        },
+        {
+          "month": "2026-06",
+          "search_impressions": 26,
+          "direction_requests": 6,
+          "calls": 0
+        }
+      ]
     },
     {
       "name": "Newcastle Main",
       "region": "Region 1",
-      "monthly": []
+      "monthly": [
+        {
+          "month": "2024-12",
+          "search_impressions": 1285,
+          "direction_requests": 0,
+          "calls": 16
+        },
+        {
+          "month": "2025-01",
+          "search_impressions": 1663,
+          "direction_requests": 0,
+          "calls": 22
+        },
+        {
+          "month": "2025-02",
+          "search_impressions": 1364,
+          "direction_requests": 7,
+          "calls": 32
+        },
+        {
+          "month": "2025-03",
+          "search_impressions": 1795,
+          "direction_requests": 27,
+          "calls": 19
+        },
+        {
+          "month": "2025-04",
+          "search_impressions": 1738,
+          "direction_requests": 44,
+          "calls": 39
+        },
+        {
+          "month": "2025-05",
+          "search_impressions": 1888,
+          "direction_requests": 15,
+          "calls": 44
+        },
+        {
+          "month": "2025-06",
+          "search_impressions": 1748,
+          "direction_requests": 0,
+          "calls": 41
+        },
+        {
+          "month": "2025-07",
+          "search_impressions": 1426,
+          "direction_requests": 0,
+          "calls": 90
+        },
+        {
+          "month": "2025-08",
+          "search_impressions": 2642,
+          "direction_requests": 0,
+          "calls": 31
+        },
+        {
+          "month": "2025-09",
+          "search_impressions": 3687,
+          "direction_requests": 0,
+          "calls": 52
+        },
+        {
+          "month": "2025-10",
+          "search_impressions": 10520,
+          "direction_requests": 0,
+          "calls": 63
+        },
+        {
+          "month": "2025-11",
+          "search_impressions": 7921,
+          "direction_requests": 2,
+          "calls": 67
+        },
+        {
+          "month": "2025-12",
+          "search_impressions": 2538,
+          "direction_requests": 0,
+          "calls": 37
+        },
+        {
+          "month": "2026-01",
+          "search_impressions": 2865,
+          "direction_requests": 0,
+          "calls": 40
+        },
+        {
+          "month": "2026-02",
+          "search_impressions": 2284,
+          "direction_requests": 0,
+          "calls": 20
+        },
+        {
+          "month": "2026-03",
+          "search_impressions": 2228,
+          "direction_requests": 0,
+          "calls": 16
+        },
+        {
+          "month": "2026-04",
+          "search_impressions": 2283,
+          "direction_requests": 0,
+          "calls": 16
+        },
+        {
+          "month": "2026-05",
+          "search_impressions": 2037,
+          "direction_requests": 0,
+          "calls": 45
+        },
+        {
+          "month": "2026-06",
+          "search_impressions": 0,
+          "direction_requests": 0,
+          "calls": 0
+        }
+      ]
     },
     {
       "name": "Morrison Circus",
       "region": "Region 1",
-      "monthly": []
+      "monthly": [
+        {
+          "month": "2024-12",
+          "search_impressions": 350,
+          "direction_requests": 47,
+          "calls": 3
+        },
+        {
+          "month": "2025-01",
+          "search_impressions": 550,
+          "direction_requests": 53,
+          "calls": 2
+        },
+        {
+          "month": "2025-02",
+          "search_impressions": 554,
+          "direction_requests": 83,
+          "calls": 1
+        },
+        {
+          "month": "2025-03",
+          "search_impressions": 565,
+          "direction_requests": 138,
+          "calls": 0
+        },
+        {
+          "month": "2025-04",
+          "search_impressions": 507,
+          "direction_requests": 78,
+          "calls": 3
+        },
+        {
+          "month": "2025-05",
+          "search_impressions": 523,
+          "direction_requests": 77,
+          "calls": 5
+        },
+        {
+          "month": "2025-06",
+          "search_impressions": 455,
+          "direction_requests": 78,
+          "calls": 1
+        },
+        {
+          "month": "2025-07",
+          "search_impressions": 505,
+          "direction_requests": 65,
+          "calls": 7
+        },
+        {
+          "month": "2025-08",
+          "search_impressions": 497,
+          "direction_requests": 74,
+          "calls": 1
+        },
+        {
+          "month": "2025-09",
+          "search_impressions": 420,
+          "direction_requests": 104,
+          "calls": 1
+        },
+        {
+          "month": "2025-10",
+          "search_impressions": 438,
+          "direction_requests": 63,
+          "calls": 2
+        },
+        {
+          "month": "2025-11",
+          "search_impressions": 395,
+          "direction_requests": 64,
+          "calls": 1
+        },
+        {
+          "month": "2025-12",
+          "search_impressions": 282,
+          "direction_requests": 128,
+          "calls": 1
+        },
+        {
+          "month": "2026-01",
+          "search_impressions": 360,
+          "direction_requests": 63,
+          "calls": 1
+        },
+        {
+          "month": "2026-02",
+          "search_impressions": 401,
+          "direction_requests": 85,
+          "calls": 1
+        },
+        {
+          "month": "2026-03",
+          "search_impressions": 490,
+          "direction_requests": 122,
+          "calls": 1
+        },
+        {
+          "month": "2026-04",
+          "search_impressions": 407,
+          "direction_requests": 103,
+          "calls": 4
+        },
+        {
+          "month": "2026-05",
+          "search_impressions": 330,
+          "direction_requests": 101,
+          "calls": 3
+        },
+        {
+          "month": "2026-06",
+          "search_impressions": 6,
+          "direction_requests": 9,
+          "calls": 0
+        }
+      ]
     },
     {
       "name": "Byron Lofts",
       "region": "Region 1",
-      "monthly": []
+      "monthly": [
+        {
+          "month": "2024-12",
+          "search_impressions": 222,
+          "direction_requests": 106,
+          "calls": 1
+        },
+        {
+          "month": "2025-01",
+          "search_impressions": 242,
+          "direction_requests": 61,
+          "calls": 0
+        },
+        {
+          "month": "2025-02",
+          "search_impressions": 268,
+          "direction_requests": 96,
+          "calls": 4
+        },
+        {
+          "month": "2025-03",
+          "search_impressions": 303,
+          "direction_requests": 84,
+          "calls": 0
+        },
+        {
+          "month": "2025-04",
+          "search_impressions": 73,
+          "direction_requests": 40,
+          "calls": 0
+        },
+        {
+          "month": "2025-05",
+          "search_impressions": 110,
+          "direction_requests": 53,
+          "calls": 0
+        },
+        {
+          "month": "2025-06",
+          "search_impressions": 151,
+          "direction_requests": 79,
+          "calls": 1
+        },
+        {
+          "month": "2025-07",
+          "search_impressions": 217,
+          "direction_requests": 67,
+          "calls": 0
+        },
+        {
+          "month": "2025-08",
+          "search_impressions": 271,
+          "direction_requests": 106,
+          "calls": 0
+        },
+        {
+          "month": "2025-09",
+          "search_impressions": 381,
+          "direction_requests": 186,
+          "calls": 1
+        },
+        {
+          "month": "2025-10",
+          "search_impressions": 434,
+          "direction_requests": 198,
+          "calls": 5
+        },
+        {
+          "month": "2025-11",
+          "search_impressions": 476,
+          "direction_requests": 232,
+          "calls": 7
+        },
+        {
+          "month": "2025-12",
+          "search_impressions": 260,
+          "direction_requests": 144,
+          "calls": 1
+        },
+        {
+          "month": "2026-01",
+          "search_impressions": 224,
+          "direction_requests": 119,
+          "calls": 4
+        },
+        {
+          "month": "2026-02",
+          "search_impressions": 276,
+          "direction_requests": 141,
+          "calls": 1
+        },
+        {
+          "month": "2026-03",
+          "search_impressions": 313,
+          "direction_requests": 159,
+          "calls": 3
+        },
+        {
+          "month": "2026-04",
+          "search_impressions": 334,
+          "direction_requests": 159,
+          "calls": 2
+        },
+        {
+          "month": "2026-05",
+          "search_impressions": 204,
+          "direction_requests": 138,
+          "calls": 1
+        },
+        {
+          "month": "2026-06",
+          "search_impressions": 3,
+          "direction_requests": 0,
+          "calls": 0
+        }
+      ]
     },
     {
       "name": "Jesmond View",
       "region": "Region 1",
-      "monthly": []
+      "monthly": [
+        {
+          "month": "2024-12",
+          "search_impressions": 1203,
+          "direction_requests": 152,
+          "calls": 9
+        },
+        {
+          "month": "2025-01",
+          "search_impressions": 1333,
+          "direction_requests": 154,
+          "calls": 4
+        },
+        {
+          "month": "2025-02",
+          "search_impressions": 1297,
+          "direction_requests": 143,
+          "calls": 11
+        },
+        {
+          "month": "2025-03",
+          "search_impressions": 1421,
+          "direction_requests": 179,
+          "calls": 4
+        },
+        {
+          "month": "2025-04",
+          "search_impressions": 1066,
+          "direction_requests": 154,
+          "calls": 7
+        },
+        {
+          "month": "2025-05",
+          "search_impressions": 1291,
+          "direction_requests": 170,
+          "calls": 8
+        },
+        {
+          "month": "2025-06",
+          "search_impressions": 976,
+          "direction_requests": 146,
+          "calls": 4
+        },
+        {
+          "month": "2025-07",
+          "search_impressions": 1077,
+          "direction_requests": 316,
+          "calls": 16
+        },
+        {
+          "month": "2025-08",
+          "search_impressions": 1211,
+          "direction_requests": 200,
+          "calls": 6
+        },
+        {
+          "month": "2025-09",
+          "search_impressions": 1872,
+          "direction_requests": 326,
+          "calls": 20
+        },
+        {
+          "month": "2025-10",
+          "search_impressions": 6164,
+          "direction_requests": 378,
+          "calls": 7
+        },
+        {
+          "month": "2025-11",
+          "search_impressions": 4320,
+          "direction_requests": 422,
+          "calls": 14
+        },
+        {
+          "month": "2025-12",
+          "search_impressions": 1387,
+          "direction_requests": 244,
+          "calls": 3
+        },
+        {
+          "month": "2026-01",
+          "search_impressions": 1590,
+          "direction_requests": 225,
+          "calls": 2
+        },
+        {
+          "month": "2026-02",
+          "search_impressions": 1643,
+          "direction_requests": 245,
+          "calls": 2
+        },
+        {
+          "month": "2026-03",
+          "search_impressions": 1517,
+          "direction_requests": 198,
+          "calls": 7
+        },
+        {
+          "month": "2026-04",
+          "search_impressions": 1311,
+          "direction_requests": 199,
+          "calls": 3
+        },
+        {
+          "month": "2026-05",
+          "search_impressions": 1395,
+          "direction_requests": 211,
+          "calls": 8
+        },
+        {
+          "month": "2026-06",
+          "search_impressions": 16,
+          "direction_requests": 14,
+          "calls": 0
+        }
+      ]
     },
     {
       "name": "Kielder House",
       "region": "Region 1",
-      "monthly": []
+      "monthly": [
+        {
+          "month": "2024-12",
+          "search_impressions": 698,
+          "direction_requests": 78,
+          "calls": 4
+        },
+        {
+          "month": "2025-01",
+          "search_impressions": 754,
+          "direction_requests": 86,
+          "calls": 1
+        },
+        {
+          "month": "2025-02",
+          "search_impressions": 687,
+          "direction_requests": 91,
+          "calls": 0
+        },
+        {
+          "month": "2025-03",
+          "search_impressions": 749,
+          "direction_requests": 82,
+          "calls": 0
+        },
+        {
+          "month": "2025-04",
+          "search_impressions": 582,
+          "direction_requests": 85,
+          "calls": 0
+        },
+        {
+          "month": "2025-05",
+          "search_impressions": 645,
+          "direction_requests": 104,
+          "calls": 0
+        },
+        {
+          "month": "2025-06",
+          "search_impressions": 497,
+          "direction_requests": 102,
+          "calls": 0
+        },
+        {
+          "month": "2025-07",
+          "search_impressions": 518,
+          "direction_requests": 110,
+          "calls": 3
+        },
+        {
+          "month": "2025-08",
+          "search_impressions": 598,
+          "direction_requests": 95,
+          "calls": 0
+        },
+        {
+          "month": "2025-09",
+          "search_impressions": 1101,
+          "direction_requests": 148,
+          "calls": 0
+        },
+        {
+          "month": "2025-10",
+          "search_impressions": 4151,
+          "direction_requests": 186,
+          "calls": 2
+        },
+        {
+          "month": "2025-11",
+          "search_impressions": 2873,
+          "direction_requests": 155,
+          "calls": 3
+        },
+        {
+          "month": "2025-12",
+          "search_impressions": 794,
+          "direction_requests": 105,
+          "calls": 2
+        },
+        {
+          "month": "2026-01",
+          "search_impressions": 788,
+          "direction_requests": 98,
+          "calls": 1
+        },
+        {
+          "month": "2026-02",
+          "search_impressions": 868,
+          "direction_requests": 94,
+          "calls": 1
+        },
+        {
+          "month": "2026-03",
+          "search_impressions": 801,
+          "direction_requests": 107,
+          "calls": 1
+        },
+        {
+          "month": "2026-04",
+          "search_impressions": 749,
+          "direction_requests": 61,
+          "calls": 4
+        },
+        {
+          "month": "2026-05",
+          "search_impressions": 741,
+          "direction_requests": 107,
+          "calls": 0
+        },
+        {
+          "month": "2026-06",
+          "search_impressions": 10,
+          "direction_requests": 4,
+          "calls": 0
+        }
+      ]
     },
     {
       "name": "Linden House",
       "region": "Region 1",
-      "monthly": []
+      "monthly": [
+        {
+          "month": "2024-12",
+          "search_impressions": 201,
+          "direction_requests": 59,
+          "calls": 1
+        },
+        {
+          "month": "2025-01",
+          "search_impressions": 252,
+          "direction_requests": 55,
+          "calls": 1
+        },
+        {
+          "month": "2025-02",
+          "search_impressions": 229,
+          "direction_requests": 82,
+          "calls": 0
+        },
+        {
+          "month": "2025-03",
+          "search_impressions": 301,
+          "direction_requests": 87,
+          "calls": 0
+        },
+        {
+          "month": "2025-04",
+          "search_impressions": 241,
+          "direction_requests": 70,
+          "calls": 0
+        },
+        {
+          "month": "2025-05",
+          "search_impressions": 289,
+          "direction_requests": 37,
+          "calls": 0
+        },
+        {
+          "month": "2025-06",
+          "search_impressions": 192,
+          "direction_requests": 54,
+          "calls": 0
+        },
+        {
+          "month": "2025-07",
+          "search_impressions": 251,
+          "direction_requests": 66,
+          "calls": 0
+        },
+        {
+          "month": "2025-08",
+          "search_impressions": 209,
+          "direction_requests": 52,
+          "calls": 2
+        },
+        {
+          "month": "2025-09",
+          "search_impressions": 222,
+          "direction_requests": 76,
+          "calls": 3
+        },
+        {
+          "month": "2025-10",
+          "search_impressions": 392,
+          "direction_requests": 94,
+          "calls": 1
+        },
+        {
+          "month": "2025-11",
+          "search_impressions": 331,
+          "direction_requests": 85,
+          "calls": 0
+        },
+        {
+          "month": "2025-12",
+          "search_impressions": 200,
+          "direction_requests": 80,
+          "calls": 0
+        },
+        {
+          "month": "2026-01",
+          "search_impressions": 216,
+          "direction_requests": 102,
+          "calls": 0
+        },
+        {
+          "month": "2026-02",
+          "search_impressions": 155,
+          "direction_requests": 73,
+          "calls": 0
+        },
+        {
+          "month": "2026-03",
+          "search_impressions": 179,
+          "direction_requests": 69,
+          "calls": 0
+        },
+        {
+          "month": "2026-04",
+          "search_impressions": 191,
+          "direction_requests": 61,
+          "calls": 0
+        },
+        {
+          "month": "2026-05",
+          "search_impressions": 140,
+          "direction_requests": 39,
+          "calls": 0
+        },
+        {
+          "month": "2026-06",
+          "search_impressions": 3,
+          "direction_requests": 2,
+          "calls": 0
+        }
+      ]
     },
     {
       "name": "Sanderson House",
       "region": "Region 1",
-      "monthly": []
+      "monthly": [
+        {
+          "month": "2024-12",
+          "search_impressions": 126,
+          "direction_requests": 48,
+          "calls": 0
+        },
+        {
+          "month": "2025-01",
+          "search_impressions": 150,
+          "direction_requests": 28,
+          "calls": 0
+        },
+        {
+          "month": "2025-02",
+          "search_impressions": 200,
+          "direction_requests": 36,
+          "calls": 0
+        },
+        {
+          "month": "2025-03",
+          "search_impressions": 161,
+          "direction_requests": 59,
+          "calls": 0
+        },
+        {
+          "month": "2025-04",
+          "search_impressions": 181,
+          "direction_requests": 44,
+          "calls": 0
+        },
+        {
+          "month": "2025-05",
+          "search_impressions": 222,
+          "direction_requests": 59,
+          "calls": 0
+        },
+        {
+          "month": "2025-06",
+          "search_impressions": 178,
+          "direction_requests": 46,
+          "calls": 0
+        },
+        {
+          "month": "2025-07",
+          "search_impressions": 211,
+          "direction_requests": 37,
+          "calls": 1
+        },
+        {
+          "month": "2025-08",
+          "search_impressions": 236,
+          "direction_requests": 60,
+          "calls": 1
+        },
+        {
+          "month": "2025-09",
+          "search_impressions": 263,
+          "direction_requests": 56,
+          "calls": 2
+        },
+        {
+          "month": "2025-10",
+          "search_impressions": 547,
+          "direction_requests": 53,
+          "calls": 0
+        },
+        {
+          "month": "2025-11",
+          "search_impressions": 334,
+          "direction_requests": 73,
+          "calls": 1
+        },
+        {
+          "month": "2025-12",
+          "search_impressions": 194,
+          "direction_requests": 50,
+          "calls": 0
+        },
+        {
+          "month": "2026-01",
+          "search_impressions": 204,
+          "direction_requests": 47,
+          "calls": 0
+        },
+        {
+          "month": "2026-02",
+          "search_impressions": 163,
+          "direction_requests": 44,
+          "calls": 0
+        },
+        {
+          "month": "2026-03",
+          "search_impressions": 165,
+          "direction_requests": 35,
+          "calls": 0
+        },
+        {
+          "month": "2026-04",
+          "search_impressions": 189,
+          "direction_requests": 66,
+          "calls": 0
+        },
+        {
+          "month": "2026-05",
+          "search_impressions": 145,
+          "direction_requests": 43,
+          "calls": 0
+        },
+        {
+          "month": "2026-06",
+          "search_impressions": 3,
+          "direction_requests": 0,
+          "calls": 0
+        }
+      ]
     },
     {
       "name": "Shiners Yard",
       "region": "Region 1",
-      "monthly": []
+      "monthly": [
+        {
+          "month": "2024-12",
+          "search_impressions": 116,
+          "direction_requests": 41,
+          "calls": 0
+        },
+        {
+          "month": "2025-01",
+          "search_impressions": 118,
+          "direction_requests": 51,
+          "calls": 1
+        },
+        {
+          "month": "2025-02",
+          "search_impressions": 147,
+          "direction_requests": 79,
+          "calls": 0
+        },
+        {
+          "month": "2025-03",
+          "search_impressions": 134,
+          "direction_requests": 80,
+          "calls": 0
+        },
+        {
+          "month": "2025-04",
+          "search_impressions": 115,
+          "direction_requests": 53,
+          "calls": 1
+        },
+        {
+          "month": "2025-05",
+          "search_impressions": 134,
+          "direction_requests": 72,
+          "calls": 2
+        },
+        {
+          "month": "2025-06",
+          "search_impressions": 149,
+          "direction_requests": 74,
+          "calls": 3
+        },
+        {
+          "month": "2025-07",
+          "search_impressions": 158,
+          "direction_requests": 107,
+          "calls": 1
+        },
+        {
+          "month": "2025-08",
+          "search_impressions": 141,
+          "direction_requests": 63,
+          "calls": 1
+        },
+        {
+          "month": "2025-09",
+          "search_impressions": 146,
+          "direction_requests": 103,
+          "calls": 1
+        },
+        {
+          "month": "2025-10",
+          "search_impressions": 303,
+          "direction_requests": 104,
+          "calls": 2
+        },
+        {
+          "month": "2025-11",
+          "search_impressions": 316,
+          "direction_requests": 136,
+          "calls": 2
+        },
+        {
+          "month": "2025-12",
+          "search_impressions": 150,
+          "direction_requests": 92,
+          "calls": 0
+        },
+        {
+          "month": "2026-01",
+          "search_impressions": 134,
+          "direction_requests": 47,
+          "calls": 0
+        },
+        {
+          "month": "2026-02",
+          "search_impressions": 114,
+          "direction_requests": 63,
+          "calls": 0
+        },
+        {
+          "month": "2026-03",
+          "search_impressions": 140,
+          "direction_requests": 79,
+          "calls": 0
+        },
+        {
+          "month": "2026-04",
+          "search_impressions": 149,
+          "direction_requests": 69,
+          "calls": 0
+        },
+        {
+          "month": "2026-05",
+          "search_impressions": 141,
+          "direction_requests": 60,
+          "calls": 1
+        },
+        {
+          "month": "2026-06",
+          "search_impressions": 3,
+          "direction_requests": 0,
+          "calls": 0
+        }
+      ]
     },
     {
       "name": "The Square",
       "region": "Region 1",
-      "monthly": []
+      "monthly": [
+        {
+          "month": "2024-12",
+          "search_impressions": 347,
+          "direction_requests": 23,
+          "calls": 0
+        },
+        {
+          "month": "2025-01",
+          "search_impressions": 339,
+          "direction_requests": 43,
+          "calls": 0
+        },
+        {
+          "month": "2025-02",
+          "search_impressions": 349,
+          "direction_requests": 45,
+          "calls": 0
+        },
+        {
+          "month": "2025-03",
+          "search_impressions": 372,
+          "direction_requests": 30,
+          "calls": 0
+        },
+        {
+          "month": "2025-04",
+          "search_impressions": 286,
+          "direction_requests": 47,
+          "calls": 0
+        },
+        {
+          "month": "2025-05",
+          "search_impressions": 295,
+          "direction_requests": 27,
+          "calls": 0
+        },
+        {
+          "month": "2025-06",
+          "search_impressions": 265,
+          "direction_requests": 56,
+          "calls": 0
+        },
+        {
+          "month": "2025-07",
+          "search_impressions": 241,
+          "direction_requests": 79,
+          "calls": 0
+        },
+        {
+          "month": "2025-08",
+          "search_impressions": 337,
+          "direction_requests": 80,
+          "calls": 0
+        },
+        {
+          "month": "2025-09",
+          "search_impressions": 310,
+          "direction_requests": 77,
+          "calls": 0
+        },
+        {
+          "month": "2025-10",
+          "search_impressions": 450,
+          "direction_requests": 63,
+          "calls": 0
+        },
+        {
+          "month": "2025-11",
+          "search_impressions": 377,
+          "direction_requests": 63,
+          "calls": 0
+        },
+        {
+          "month": "2025-12",
+          "search_impressions": 224,
+          "direction_requests": 106,
+          "calls": 0
+        },
+        {
+          "month": "2026-01",
+          "search_impressions": 271,
+          "direction_requests": 45,
+          "calls": 0
+        },
+        {
+          "month": "2026-02",
+          "search_impressions": 224,
+          "direction_requests": 50,
+          "calls": 0
+        },
+        {
+          "month": "2026-03",
+          "search_impressions": 220,
+          "direction_requests": 79,
+          "calls": 0
+        },
+        {
+          "month": "2026-04",
+          "search_impressions": 301,
+          "direction_requests": 65,
+          "calls": 0
+        },
+        {
+          "month": "2026-05",
+          "search_impressions": 207,
+          "direction_requests": 44,
+          "calls": 0
+        },
+        {
+          "month": "2026-06",
+          "search_impressions": 3,
+          "direction_requests": 0,
+          "calls": 0
+        }
+      ]
     },
     {
       "name": "St Hilds",
       "region": "Region 1",
-      "monthly": []
+      "monthly": [
+        {
+          "month": "2024-12",
+          "search_impressions": 181,
+          "direction_requests": 49,
+          "calls": 0
+        },
+        {
+          "month": "2025-01",
+          "search_impressions": 259,
+          "direction_requests": 34,
+          "calls": 0
+        },
+        {
+          "month": "2025-02",
+          "search_impressions": 263,
+          "direction_requests": 51,
+          "calls": 1
+        },
+        {
+          "month": "2025-03",
+          "search_impressions": 211,
+          "direction_requests": 74,
+          "calls": 0
+        },
+        {
+          "month": "2025-04",
+          "search_impressions": 174,
+          "direction_requests": 55,
+          "calls": 0
+        },
+        {
+          "month": "2025-05",
+          "search_impressions": 207,
+          "direction_requests": 76,
+          "calls": 0
+        },
+        {
+          "month": "2025-06",
+          "search_impressions": 223,
+          "direction_requests": 95,
+          "calls": 0
+        },
+        {
+          "month": "2025-07",
+          "search_impressions": 148,
+          "direction_requests": 47,
+          "calls": 1
+        },
+        {
+          "month": "2025-08",
+          "search_impressions": 223,
+          "direction_requests": 108,
+          "calls": 1
+        },
+        {
+          "month": "2025-09",
+          "search_impressions": 252,
+          "direction_requests": 62,
+          "calls": 1
+        },
+        {
+          "month": "2025-10",
+          "search_impressions": 1170,
+          "direction_requests": 75,
+          "calls": 2
+        },
+        {
+          "month": "2025-11",
+          "search_impressions": 609,
+          "direction_requests": 41,
+          "calls": 0
+        },
+        {
+          "month": "2025-12",
+          "search_impressions": 191,
+          "direction_requests": 79,
+          "calls": 1
+        },
+        {
+          "month": "2026-01",
+          "search_impressions": 240,
+          "direction_requests": 48,
+          "calls": 0
+        },
+        {
+          "month": "2026-02",
+          "search_impressions": 175,
+          "direction_requests": 64,
+          "calls": 0
+        },
+        {
+          "month": "2026-03",
+          "search_impressions": 163,
+          "direction_requests": 84,
+          "calls": 0
+        },
+        {
+          "month": "2026-04",
+          "search_impressions": 173,
+          "direction_requests": 40,
+          "calls": 1
+        },
+        {
+          "month": "2026-05",
+          "search_impressions": 134,
+          "direction_requests": 54,
+          "calls": 1
+        },
+        {
+          "month": "2026-06",
+          "search_impressions": 5,
+          "direction_requests": 0,
+          "calls": 0
+        }
+      ]
     },
     {
       "name": "Crossgate Lofts",
       "region": "Region 1",
-      "monthly": []
+      "monthly": [
+        {
+          "month": "2024-12",
+          "search_impressions": 549,
+          "direction_requests": 127,
+          "calls": 4
+        },
+        {
+          "month": "2025-01",
+          "search_impressions": 728,
+          "direction_requests": 148,
+          "calls": 6
+        },
+        {
+          "month": "2025-02",
+          "search_impressions": 752,
+          "direction_requests": 138,
+          "calls": 9
+        },
+        {
+          "month": "2025-03",
+          "search_impressions": 597,
+          "direction_requests": 139,
+          "calls": 8
+        },
+        {
+          "month": "2025-04",
+          "search_impressions": 453,
+          "direction_requests": 116,
+          "calls": 1
+        },
+        {
+          "month": "2025-05",
+          "search_impressions": 541,
+          "direction_requests": 131,
+          "calls": 2
+        },
+        {
+          "month": "2025-06",
+          "search_impressions": 644,
+          "direction_requests": 140,
+          "calls": 8
+        },
+        {
+          "month": "2025-07",
+          "search_impressions": 574,
+          "direction_requests": 160,
+          "calls": 11
+        },
+        {
+          "month": "2025-08",
+          "search_impressions": 559,
+          "direction_requests": 209,
+          "calls": 16
+        },
+        {
+          "month": "2025-09",
+          "search_impressions": 795,
+          "direction_requests": 249,
+          "calls": 26
+        },
+        {
+          "month": "2025-10",
+          "search_impressions": 2447,
+          "direction_requests": 571,
+          "calls": 19
+        },
+        {
+          "month": "2025-11",
+          "search_impressions": 1744,
+          "direction_requests": 424,
+          "calls": 15
+        },
+        {
+          "month": "2025-12",
+          "search_impressions": 511,
+          "direction_requests": 167,
+          "calls": 2
+        },
+        {
+          "month": "2026-01",
+          "search_impressions": 683,
+          "direction_requests": 230,
+          "calls": 3
+        },
+        {
+          "month": "2026-02",
+          "search_impressions": 584,
+          "direction_requests": 191,
+          "calls": 2
+        },
+        {
+          "month": "2026-03",
+          "search_impressions": 497,
+          "direction_requests": 171,
+          "calls": 0
+        },
+        {
+          "month": "2026-04",
+          "search_impressions": 421,
+          "direction_requests": 101,
+          "calls": 2
+        },
+        {
+          "month": "2026-05",
+          "search_impressions": 489,
+          "direction_requests": 179,
+          "calls": 1
+        },
+        {
+          "month": "2026-06",
+          "search_impressions": 13,
+          "direction_requests": 0,
+          "calls": 0
+        }
+      ]
     },
     {
       "name": "Manchester Main",
       "region": "Region 2",
-      "monthly": []
+      "monthly": [
+        {
+          "month": "2024-12",
+          "search_impressions": 1070,
+          "direction_requests": 57,
+          "calls": 23
+        },
+        {
+          "month": "2025-01",
+          "search_impressions": 1305,
+          "direction_requests": 71,
+          "calls": 22
+        },
+        {
+          "month": "2025-02",
+          "search_impressions": 1090,
+          "direction_requests": 45,
+          "calls": 15
+        },
+        {
+          "month": "2025-03",
+          "search_impressions": 1371,
+          "direction_requests": 47,
+          "calls": 18
+        },
+        {
+          "month": "2025-04",
+          "search_impressions": 1441,
+          "direction_requests": 44,
+          "calls": 21
+        },
+        {
+          "month": "2025-05",
+          "search_impressions": 1475,
+          "direction_requests": 32,
+          "calls": 39
+        },
+        {
+          "month": "2025-06",
+          "search_impressions": 1287,
+          "direction_requests": 25,
+          "calls": 37
+        },
+        {
+          "month": "2025-07",
+          "search_impressions": 946,
+          "direction_requests": 59,
+          "calls": 70
+        },
+        {
+          "month": "2025-08",
+          "search_impressions": 1564,
+          "direction_requests": 49,
+          "calls": 64
+        },
+        {
+          "month": "2025-09",
+          "search_impressions": 2048,
+          "direction_requests": 41,
+          "calls": 73
+        },
+        {
+          "month": "2025-10",
+          "search_impressions": 3806,
+          "direction_requests": 48,
+          "calls": 39
+        },
+        {
+          "month": "2025-11",
+          "search_impressions": 3804,
+          "direction_requests": 44,
+          "calls": 48
+        },
+        {
+          "month": "2025-12",
+          "search_impressions": 1519,
+          "direction_requests": 69,
+          "calls": 38
+        },
+        {
+          "month": "2026-01",
+          "search_impressions": 1905,
+          "direction_requests": 69,
+          "calls": 42
+        },
+        {
+          "month": "2026-02",
+          "search_impressions": 1597,
+          "direction_requests": 47,
+          "calls": 26
+        },
+        {
+          "month": "2026-03",
+          "search_impressions": 1693,
+          "direction_requests": 40,
+          "calls": 40
+        },
+        {
+          "month": "2026-04",
+          "search_impressions": 1960,
+          "direction_requests": 55,
+          "calls": 14
+        },
+        {
+          "month": "2026-05",
+          "search_impressions": 1456,
+          "direction_requests": 62,
+          "calls": 26
+        },
+        {
+          "month": "2026-06",
+          "search_impressions": 5,
+          "direction_requests": 0,
+          "calls": 0
+        }
+      ]
     },
     {
       "name": "Mayfair Court",
       "region": "Region 2",
-      "monthly": []
+      "monthly": [
+        {
+          "month": "2024-12",
+          "search_impressions": 992,
+          "direction_requests": 238,
+          "calls": 37
+        },
+        {
+          "month": "2025-01",
+          "search_impressions": 1447,
+          "direction_requests": 234,
+          "calls": 52
+        },
+        {
+          "month": "2025-02",
+          "search_impressions": 1383,
+          "direction_requests": 235,
+          "calls": 29
+        },
+        {
+          "month": "2025-03",
+          "search_impressions": 1681,
+          "direction_requests": 367,
+          "calls": 54
+        },
+        {
+          "month": "2025-04",
+          "search_impressions": 1312,
+          "direction_requests": 334,
+          "calls": 50
+        },
+        {
+          "month": "2025-05",
+          "search_impressions": 1157,
+          "direction_requests": 292,
+          "calls": 41
+        },
+        {
+          "month": "2025-06",
+          "search_impressions": 949,
+          "direction_requests": 276,
+          "calls": 32
+        },
+        {
+          "month": "2025-07",
+          "search_impressions": 842,
+          "direction_requests": 340,
+          "calls": 39
+        },
+        {
+          "month": "2025-08",
+          "search_impressions": 1113,
+          "direction_requests": 298,
+          "calls": 39
+        },
+        {
+          "month": "2025-09",
+          "search_impressions": 1234,
+          "direction_requests": 406,
+          "calls": 53
+        },
+        {
+          "month": "2025-10",
+          "search_impressions": 1313,
+          "direction_requests": 525,
+          "calls": 27
+        },
+        {
+          "month": "2025-11",
+          "search_impressions": 1589,
+          "direction_requests": 434,
+          "calls": 19
+        },
+        {
+          "month": "2025-12",
+          "search_impressions": 1084,
+          "direction_requests": 336,
+          "calls": 10
+        },
+        {
+          "month": "2026-01",
+          "search_impressions": 1078,
+          "direction_requests": 331,
+          "calls": 9
+        },
+        {
+          "month": "2026-02",
+          "search_impressions": 1064,
+          "direction_requests": 371,
+          "calls": 10
+        },
+        {
+          "month": "2026-03",
+          "search_impressions": 1255,
+          "direction_requests": 354,
+          "calls": 9
+        },
+        {
+          "month": "2026-04",
+          "search_impressions": 1320,
+          "direction_requests": 278,
+          "calls": 6
+        },
+        {
+          "month": "2026-05",
+          "search_impressions": 1023,
+          "direction_requests": 292,
+          "calls": 10
+        },
+        {
+          "month": "2026-06",
+          "search_impressions": 16,
+          "direction_requests": 11,
+          "calls": 0
+        }
+      ]
     },
     {
       "name": "Chancellors Court",
@@ -83,57 +1693,1322 @@
     {
       "name": "Waterside Village",
       "region": "Region 2",
-      "monthly": []
+      "monthly": [
+        {
+          "month": "2024-12",
+          "search_impressions": 670,
+          "direction_requests": 91,
+          "calls": 3
+        },
+        {
+          "month": "2025-01",
+          "search_impressions": 792,
+          "direction_requests": 79,
+          "calls": 7
+        },
+        {
+          "month": "2025-02",
+          "search_impressions": 721,
+          "direction_requests": 91,
+          "calls": 6
+        },
+        {
+          "month": "2025-03",
+          "search_impressions": 810,
+          "direction_requests": 115,
+          "calls": 9
+        },
+        {
+          "month": "2025-04",
+          "search_impressions": 658,
+          "direction_requests": 99,
+          "calls": 2
+        },
+        {
+          "month": "2025-05",
+          "search_impressions": 656,
+          "direction_requests": 63,
+          "calls": 6
+        },
+        {
+          "month": "2025-06",
+          "search_impressions": 594,
+          "direction_requests": 83,
+          "calls": 3
+        },
+        {
+          "month": "2025-07",
+          "search_impressions": 542,
+          "direction_requests": 90,
+          "calls": 5
+        },
+        {
+          "month": "2025-08",
+          "search_impressions": 861,
+          "direction_requests": 98,
+          "calls": 10
+        },
+        {
+          "month": "2025-09",
+          "search_impressions": 823,
+          "direction_requests": 157,
+          "calls": 13
+        },
+        {
+          "month": "2025-10",
+          "search_impressions": 1084,
+          "direction_requests": 250,
+          "calls": 7
+        },
+        {
+          "month": "2025-11",
+          "search_impressions": 1582,
+          "direction_requests": 177,
+          "calls": 4
+        },
+        {
+          "month": "2025-12",
+          "search_impressions": 923,
+          "direction_requests": 126,
+          "calls": 5
+        },
+        {
+          "month": "2026-01",
+          "search_impressions": 1072,
+          "direction_requests": 122,
+          "calls": 6
+        },
+        {
+          "month": "2026-02",
+          "search_impressions": 881,
+          "direction_requests": 143,
+          "calls": 8
+        },
+        {
+          "month": "2026-03",
+          "search_impressions": 885,
+          "direction_requests": 118,
+          "calls": 3
+        },
+        {
+          "month": "2026-04",
+          "search_impressions": 1009,
+          "direction_requests": 140,
+          "calls": 6
+        },
+        {
+          "month": "2026-05",
+          "search_impressions": 750,
+          "direction_requests": 58,
+          "calls": 3
+        },
+        {
+          "month": "2026-06",
+          "search_impressions": 16,
+          "direction_requests": 6,
+          "calls": 0
+        }
+      ]
     },
     {
       "name": "Rodney Street",
       "region": "Region 2",
-      "monthly": []
+      "monthly": [
+        {
+          "month": "2024-12",
+          "search_impressions": 792,
+          "direction_requests": 30,
+          "calls": 4
+        },
+        {
+          "month": "2025-01",
+          "search_impressions": 1080,
+          "direction_requests": 35,
+          "calls": 14
+        },
+        {
+          "month": "2025-02",
+          "search_impressions": 899,
+          "direction_requests": 57,
+          "calls": 2
+        },
+        {
+          "month": "2025-03",
+          "search_impressions": 950,
+          "direction_requests": 57,
+          "calls": 2
+        },
+        {
+          "month": "2025-04",
+          "search_impressions": 812,
+          "direction_requests": 34,
+          "calls": 2
+        },
+        {
+          "month": "2025-05",
+          "search_impressions": 563,
+          "direction_requests": 29,
+          "calls": 5
+        },
+        {
+          "month": "2025-06",
+          "search_impressions": 584,
+          "direction_requests": 37,
+          "calls": 6
+        },
+        {
+          "month": "2025-07",
+          "search_impressions": 531,
+          "direction_requests": 49,
+          "calls": 10
+        },
+        {
+          "month": "2025-08",
+          "search_impressions": 848,
+          "direction_requests": 54,
+          "calls": 11
+        },
+        {
+          "month": "2025-09",
+          "search_impressions": 885,
+          "direction_requests": 76,
+          "calls": 24
+        },
+        {
+          "month": "2025-10",
+          "search_impressions": 1708,
+          "direction_requests": 77,
+          "calls": 6
+        },
+        {
+          "month": "2025-11",
+          "search_impressions": 1707,
+          "direction_requests": 87,
+          "calls": 17
+        },
+        {
+          "month": "2025-12",
+          "search_impressions": 747,
+          "direction_requests": 71,
+          "calls": 2
+        },
+        {
+          "month": "2026-01",
+          "search_impressions": 866,
+          "direction_requests": 78,
+          "calls": 24
+        },
+        {
+          "month": "2026-02",
+          "search_impressions": 728,
+          "direction_requests": 39,
+          "calls": 6
+        },
+        {
+          "month": "2026-03",
+          "search_impressions": 706,
+          "direction_requests": 68,
+          "calls": 2
+        },
+        {
+          "month": "2026-04",
+          "search_impressions": 700,
+          "direction_requests": 30,
+          "calls": 4
+        },
+        {
+          "month": "2026-05",
+          "search_impressions": 674,
+          "direction_requests": 55,
+          "calls": 7
+        },
+        {
+          "month": "2026-06",
+          "search_impressions": 12,
+          "direction_requests": 2,
+          "calls": 0
+        }
+      ]
     },
     {
       "name": "Victoria Court Mews",
       "region": "Region 2",
-      "monthly": []
+      "monthly": [
+        {
+          "month": "2024-12",
+          "search_impressions": 596,
+          "direction_requests": 33,
+          "calls": 2
+        },
+        {
+          "month": "2025-01",
+          "search_impressions": 639,
+          "direction_requests": 32,
+          "calls": 3
+        },
+        {
+          "month": "2025-02",
+          "search_impressions": 562,
+          "direction_requests": 34,
+          "calls": 3
+        },
+        {
+          "month": "2025-03",
+          "search_impressions": 708,
+          "direction_requests": 58,
+          "calls": 5
+        },
+        {
+          "month": "2025-04",
+          "search_impressions": 745,
+          "direction_requests": 37,
+          "calls": 1
+        },
+        {
+          "month": "2025-05",
+          "search_impressions": 720,
+          "direction_requests": 69,
+          "calls": 0
+        },
+        {
+          "month": "2025-06",
+          "search_impressions": 603,
+          "direction_requests": 63,
+          "calls": 6
+        },
+        {
+          "month": "2025-07",
+          "search_impressions": 498,
+          "direction_requests": 80,
+          "calls": 3
+        },
+        {
+          "month": "2025-08",
+          "search_impressions": 808,
+          "direction_requests": 62,
+          "calls": 4
+        },
+        {
+          "month": "2025-09",
+          "search_impressions": 1058,
+          "direction_requests": 68,
+          "calls": 7
+        },
+        {
+          "month": "2025-10",
+          "search_impressions": 2860,
+          "direction_requests": 129,
+          "calls": 3
+        },
+        {
+          "month": "2025-11",
+          "search_impressions": 2408,
+          "direction_requests": 98,
+          "calls": 1
+        },
+        {
+          "month": "2025-12",
+          "search_impressions": 906,
+          "direction_requests": 110,
+          "calls": 3
+        },
+        {
+          "month": "2026-01",
+          "search_impressions": 898,
+          "direction_requests": 80,
+          "calls": 0
+        },
+        {
+          "month": "2026-02",
+          "search_impressions": 723,
+          "direction_requests": 59,
+          "calls": 1
+        },
+        {
+          "month": "2026-03",
+          "search_impressions": 842,
+          "direction_requests": 83,
+          "calls": 0
+        },
+        {
+          "month": "2026-04",
+          "search_impressions": 794,
+          "direction_requests": 53,
+          "calls": 3
+        },
+        {
+          "month": "2026-05",
+          "search_impressions": 871,
+          "direction_requests": 73,
+          "calls": 6
+        },
+        {
+          "month": "2026-06",
+          "search_impressions": 7,
+          "direction_requests": 3,
+          "calls": 0
+        }
+      ]
     },
     {
       "name": "Park View",
       "region": "Region 3",
-      "monthly": []
+      "monthly": [
+        {
+          "month": "2024-12",
+          "search_impressions": 716,
+          "direction_requests": 96,
+          "calls": 4
+        },
+        {
+          "month": "2025-01",
+          "search_impressions": 843,
+          "direction_requests": 73,
+          "calls": 9
+        },
+        {
+          "month": "2025-02",
+          "search_impressions": 680,
+          "direction_requests": 82,
+          "calls": 17
+        },
+        {
+          "month": "2025-03",
+          "search_impressions": 820,
+          "direction_requests": 134,
+          "calls": 9
+        },
+        {
+          "month": "2025-04",
+          "search_impressions": 622,
+          "direction_requests": 142,
+          "calls": 12
+        },
+        {
+          "month": "2025-05",
+          "search_impressions": 640,
+          "direction_requests": 153,
+          "calls": 13
+        },
+        {
+          "month": "2025-06",
+          "search_impressions": 463,
+          "direction_requests": 103,
+          "calls": 6
+        },
+        {
+          "month": "2025-07",
+          "search_impressions": 528,
+          "direction_requests": 84,
+          "calls": 24
+        },
+        {
+          "month": "2025-08",
+          "search_impressions": 729,
+          "direction_requests": 161,
+          "calls": 17
+        },
+        {
+          "month": "2025-09",
+          "search_impressions": 901,
+          "direction_requests": 222,
+          "calls": 27
+        },
+        {
+          "month": "2025-10",
+          "search_impressions": 1716,
+          "direction_requests": 244,
+          "calls": 11
+        },
+        {
+          "month": "2025-11",
+          "search_impressions": 1467,
+          "direction_requests": 189,
+          "calls": 13
+        },
+        {
+          "month": "2025-12",
+          "search_impressions": 643,
+          "direction_requests": 130,
+          "calls": 9
+        },
+        {
+          "month": "2026-01",
+          "search_impressions": 717,
+          "direction_requests": 87,
+          "calls": 8
+        },
+        {
+          "month": "2026-02",
+          "search_impressions": 708,
+          "direction_requests": 101,
+          "calls": 10
+        },
+        {
+          "month": "2026-03",
+          "search_impressions": 734,
+          "direction_requests": 118,
+          "calls": 19
+        },
+        {
+          "month": "2026-04",
+          "search_impressions": 717,
+          "direction_requests": 121,
+          "calls": 6
+        },
+        {
+          "month": "2026-05",
+          "search_impressions": 643,
+          "direction_requests": 116,
+          "calls": 16
+        },
+        {
+          "month": "2026-06",
+          "search_impressions": 6,
+          "direction_requests": 6,
+          "calls": 0
+        }
+      ]
     },
     {
       "name": "Upper New Walk",
       "region": "Region 3",
-      "monthly": []
+      "monthly": [
+        {
+          "month": "2024-12",
+          "search_impressions": 557,
+          "direction_requests": 57,
+          "calls": 7
+        },
+        {
+          "month": "2025-01",
+          "search_impressions": 849,
+          "direction_requests": 75,
+          "calls": 14
+        },
+        {
+          "month": "2025-02",
+          "search_impressions": 644,
+          "direction_requests": 55,
+          "calls": 10
+        },
+        {
+          "month": "2025-03",
+          "search_impressions": 819,
+          "direction_requests": 66,
+          "calls": 10
+        },
+        {
+          "month": "2025-04",
+          "search_impressions": 617,
+          "direction_requests": 36,
+          "calls": 1
+        },
+        {
+          "month": "2025-05",
+          "search_impressions": 620,
+          "direction_requests": 39,
+          "calls": 6
+        },
+        {
+          "month": "2025-06",
+          "search_impressions": 505,
+          "direction_requests": 56,
+          "calls": 6
+        },
+        {
+          "month": "2025-07",
+          "search_impressions": 617,
+          "direction_requests": 34,
+          "calls": 4
+        },
+        {
+          "month": "2025-08",
+          "search_impressions": 1045,
+          "direction_requests": 45,
+          "calls": 12
+        },
+        {
+          "month": "2025-09",
+          "search_impressions": 1184,
+          "direction_requests": 50,
+          "calls": 8
+        },
+        {
+          "month": "2025-10",
+          "search_impressions": 1743,
+          "direction_requests": 69,
+          "calls": 2
+        },
+        {
+          "month": "2025-11",
+          "search_impressions": 1203,
+          "direction_requests": 68,
+          "calls": 2
+        },
+        {
+          "month": "2025-12",
+          "search_impressions": 581,
+          "direction_requests": 95,
+          "calls": 0
+        },
+        {
+          "month": "2026-01",
+          "search_impressions": 760,
+          "direction_requests": 59,
+          "calls": 3
+        },
+        {
+          "month": "2026-02",
+          "search_impressions": 508,
+          "direction_requests": 67,
+          "calls": 2
+        },
+        {
+          "month": "2026-03",
+          "search_impressions": 545,
+          "direction_requests": 67,
+          "calls": 1
+        },
+        {
+          "month": "2026-04",
+          "search_impressions": 582,
+          "direction_requests": 57,
+          "calls": 1
+        },
+        {
+          "month": "2026-05",
+          "search_impressions": 655,
+          "direction_requests": 37,
+          "calls": 2
+        },
+        {
+          "month": "2026-06",
+          "search_impressions": 0,
+          "direction_requests": 0,
+          "calls": 0
+        }
+      ]
     },
     {
       "name": "Hosiery",
       "region": "Region 3",
-      "monthly": []
+      "monthly": [
+        {
+          "month": "2024-12",
+          "search_impressions": 381,
+          "direction_requests": 83,
+          "calls": 4
+        },
+        {
+          "month": "2025-01",
+          "search_impressions": 512,
+          "direction_requests": 102,
+          "calls": 7
+        },
+        {
+          "month": "2025-02",
+          "search_impressions": 497,
+          "direction_requests": 112,
+          "calls": 11
+        },
+        {
+          "month": "2025-03",
+          "search_impressions": 670,
+          "direction_requests": 127,
+          "calls": 11
+        },
+        {
+          "month": "2025-04",
+          "search_impressions": 507,
+          "direction_requests": 96,
+          "calls": 3
+        },
+        {
+          "month": "2025-05",
+          "search_impressions": 588,
+          "direction_requests": 107,
+          "calls": 14
+        },
+        {
+          "month": "2025-06",
+          "search_impressions": 645,
+          "direction_requests": 120,
+          "calls": 11
+        },
+        {
+          "month": "2025-07",
+          "search_impressions": 483,
+          "direction_requests": 142,
+          "calls": 12
+        },
+        {
+          "month": "2025-08",
+          "search_impressions": 662,
+          "direction_requests": 114,
+          "calls": 7
+        },
+        {
+          "month": "2025-09",
+          "search_impressions": 841,
+          "direction_requests": 150,
+          "calls": 8
+        },
+        {
+          "month": "2025-10",
+          "search_impressions": 940,
+          "direction_requests": 178,
+          "calls": 6
+        },
+        {
+          "month": "2025-11",
+          "search_impressions": 851,
+          "direction_requests": 198,
+          "calls": 14
+        },
+        {
+          "month": "2025-12",
+          "search_impressions": 536,
+          "direction_requests": 120,
+          "calls": 7
+        },
+        {
+          "month": "2026-01",
+          "search_impressions": 689,
+          "direction_requests": 88,
+          "calls": 5
+        },
+        {
+          "month": "2026-02",
+          "search_impressions": 586,
+          "direction_requests": 63,
+          "calls": 14
+        },
+        {
+          "month": "2026-03",
+          "search_impressions": 572,
+          "direction_requests": 105,
+          "calls": 5
+        },
+        {
+          "month": "2026-04",
+          "search_impressions": 572,
+          "direction_requests": 68,
+          "calls": 4
+        },
+        {
+          "month": "2026-05",
+          "search_impressions": 679,
+          "direction_requests": 122,
+          "calls": 9
+        },
+        {
+          "month": "2026-06",
+          "search_impressions": 7,
+          "direction_requests": 1,
+          "calls": 0
+        }
+      ]
     },
     {
       "name": "Shoe & Boot",
       "region": "Region 3",
-      "monthly": []
+      "monthly": [
+        {
+          "month": "2024-12",
+          "search_impressions": 1117,
+          "direction_requests": 195,
+          "calls": 9
+        },
+        {
+          "month": "2025-01",
+          "search_impressions": 1397,
+          "direction_requests": 231,
+          "calls": 21
+        },
+        {
+          "month": "2025-02",
+          "search_impressions": 1210,
+          "direction_requests": 186,
+          "calls": 22
+        },
+        {
+          "month": "2025-03",
+          "search_impressions": 1340,
+          "direction_requests": 221,
+          "calls": 17
+        },
+        {
+          "month": "2025-04",
+          "search_impressions": 1058,
+          "direction_requests": 142,
+          "calls": 18
+        },
+        {
+          "month": "2025-05",
+          "search_impressions": 1174,
+          "direction_requests": 148,
+          "calls": 11
+        },
+        {
+          "month": "2025-06",
+          "search_impressions": 1323,
+          "direction_requests": 199,
+          "calls": 12
+        },
+        {
+          "month": "2025-07",
+          "search_impressions": 1106,
+          "direction_requests": 227,
+          "calls": 19
+        },
+        {
+          "month": "2025-08",
+          "search_impressions": 1369,
+          "direction_requests": 190,
+          "calls": 23
+        },
+        {
+          "month": "2025-09",
+          "search_impressions": 1666,
+          "direction_requests": 403,
+          "calls": 26
+        },
+        {
+          "month": "2025-10",
+          "search_impressions": 1749,
+          "direction_requests": 392,
+          "calls": 14
+        },
+        {
+          "month": "2025-11",
+          "search_impressions": 1663,
+          "direction_requests": 355,
+          "calls": 26
+        },
+        {
+          "month": "2025-12",
+          "search_impressions": 1215,
+          "direction_requests": 201,
+          "calls": 31
+        },
+        {
+          "month": "2026-01",
+          "search_impressions": 1379,
+          "direction_requests": 310,
+          "calls": 13
+        },
+        {
+          "month": "2026-02",
+          "search_impressions": 1155,
+          "direction_requests": 240,
+          "calls": 11
+        },
+        {
+          "month": "2026-03",
+          "search_impressions": 1294,
+          "direction_requests": 260,
+          "calls": 4
+        },
+        {
+          "month": "2026-04",
+          "search_impressions": 1309,
+          "direction_requests": 265,
+          "calls": 7
+        },
+        {
+          "month": "2026-05",
+          "search_impressions": 1497,
+          "direction_requests": 351,
+          "calls": 39
+        },
+        {
+          "month": "2026-06",
+          "search_impressions": 24,
+          "direction_requests": 0,
+          "calls": 0
+        }
+      ]
     },
     {
       "name": "Bishop Blackall School",
       "region": "Region 4",
-      "monthly": []
+      "monthly": [
+        {
+          "month": "2024-12",
+          "search_impressions": 539,
+          "direction_requests": 119,
+          "calls": 0
+        },
+        {
+          "month": "2025-01",
+          "search_impressions": 739,
+          "direction_requests": 127,
+          "calls": 4
+        },
+        {
+          "month": "2025-02",
+          "search_impressions": 718,
+          "direction_requests": 126,
+          "calls": 0
+        },
+        {
+          "month": "2025-03",
+          "search_impressions": 857,
+          "direction_requests": 133,
+          "calls": 1
+        },
+        {
+          "month": "2025-04",
+          "search_impressions": 614,
+          "direction_requests": 57,
+          "calls": 0
+        },
+        {
+          "month": "2025-05",
+          "search_impressions": 897,
+          "direction_requests": 136,
+          "calls": 4
+        },
+        {
+          "month": "2025-06",
+          "search_impressions": 712,
+          "direction_requests": 98,
+          "calls": 6
+        },
+        {
+          "month": "2025-07",
+          "search_impressions": 561,
+          "direction_requests": 138,
+          "calls": 10
+        },
+        {
+          "month": "2025-08",
+          "search_impressions": 1062,
+          "direction_requests": 125,
+          "calls": 9
+        },
+        {
+          "month": "2025-09",
+          "search_impressions": 1972,
+          "direction_requests": 265,
+          "calls": 10
+        },
+        {
+          "month": "2025-10",
+          "search_impressions": 6889,
+          "direction_requests": 335,
+          "calls": 10
+        },
+        {
+          "month": "2025-11",
+          "search_impressions": 3661,
+          "direction_requests": 238,
+          "calls": 7
+        },
+        {
+          "month": "2025-12",
+          "search_impressions": 985,
+          "direction_requests": 140,
+          "calls": 0
+        },
+        {
+          "month": "2026-01",
+          "search_impressions": 1301,
+          "direction_requests": 133,
+          "calls": 10
+        },
+        {
+          "month": "2026-02",
+          "search_impressions": 1020,
+          "direction_requests": 113,
+          "calls": 1
+        },
+        {
+          "month": "2026-03",
+          "search_impressions": 1044,
+          "direction_requests": 172,
+          "calls": 6
+        },
+        {
+          "month": "2026-04",
+          "search_impressions": 815,
+          "direction_requests": 54,
+          "calls": 2
+        },
+        {
+          "month": "2026-05",
+          "search_impressions": 996,
+          "direction_requests": 198,
+          "calls": 6
+        },
+        {
+          "month": "2026-06",
+          "search_impressions": 10,
+          "direction_requests": 13,
+          "calls": 0
+        }
+      ]
     },
     {
       "name": "Hope Court",
       "region": "Region 4",
-      "monthly": []
+      "monthly": [
+        {
+          "month": "2024-12",
+          "search_impressions": 296,
+          "direction_requests": 57,
+          "calls": 0
+        },
+        {
+          "month": "2025-01",
+          "search_impressions": 444,
+          "direction_requests": 28,
+          "calls": 3
+        },
+        {
+          "month": "2025-02",
+          "search_impressions": 360,
+          "direction_requests": 27,
+          "calls": 0
+        },
+        {
+          "month": "2025-03",
+          "search_impressions": 439,
+          "direction_requests": 50,
+          "calls": 2
+        },
+        {
+          "month": "2025-04",
+          "search_impressions": 259,
+          "direction_requests": 44,
+          "calls": 0
+        },
+        {
+          "month": "2025-05",
+          "search_impressions": 483,
+          "direction_requests": 79,
+          "calls": 0
+        },
+        {
+          "month": "2025-06",
+          "search_impressions": 292,
+          "direction_requests": 53,
+          "calls": 0
+        },
+        {
+          "month": "2025-07",
+          "search_impressions": 207,
+          "direction_requests": 32,
+          "calls": 2
+        },
+        {
+          "month": "2025-08",
+          "search_impressions": 440,
+          "direction_requests": 61,
+          "calls": 2
+        },
+        {
+          "month": "2025-09",
+          "search_impressions": 831,
+          "direction_requests": 89,
+          "calls": 1
+        },
+        {
+          "month": "2025-10",
+          "search_impressions": 3223,
+          "direction_requests": 73,
+          "calls": 1
+        },
+        {
+          "month": "2025-11",
+          "search_impressions": 1353,
+          "direction_requests": 66,
+          "calls": 0
+        },
+        {
+          "month": "2025-12",
+          "search_impressions": 380,
+          "direction_requests": 78,
+          "calls": 1
+        },
+        {
+          "month": "2026-01",
+          "search_impressions": 581,
+          "direction_requests": 67,
+          "calls": 3
+        },
+        {
+          "month": "2026-02",
+          "search_impressions": 436,
+          "direction_requests": 30,
+          "calls": 0
+        },
+        {
+          "month": "2026-03",
+          "search_impressions": 509,
+          "direction_requests": 89,
+          "calls": 1
+        },
+        {
+          "month": "2026-04",
+          "search_impressions": 338,
+          "direction_requests": 40,
+          "calls": 0
+        },
+        {
+          "month": "2026-05",
+          "search_impressions": 456,
+          "direction_requests": 52,
+          "calls": 4
+        },
+        {
+          "month": "2026-06",
+          "search_impressions": 1,
+          "direction_requests": 3,
+          "calls": 0
+        }
+      ]
     },
     {
       "name": "Isca Lofts",
       "region": "Region 4",
-      "monthly": []
+      "monthly": [
+        {
+          "month": "2024-12",
+          "search_impressions": 475,
+          "direction_requests": 82,
+          "calls": 0
+        },
+        {
+          "month": "2025-01",
+          "search_impressions": 733,
+          "direction_requests": 95,
+          "calls": 3
+        },
+        {
+          "month": "2025-02",
+          "search_impressions": 579,
+          "direction_requests": 83,
+          "calls": 5
+        },
+        {
+          "month": "2025-03",
+          "search_impressions": 740,
+          "direction_requests": 103,
+          "calls": 4
+        },
+        {
+          "month": "2025-04",
+          "search_impressions": 473,
+          "direction_requests": 54,
+          "calls": 0
+        },
+        {
+          "month": "2025-05",
+          "search_impressions": 673,
+          "direction_requests": 137,
+          "calls": 2
+        },
+        {
+          "month": "2025-06",
+          "search_impressions": 474,
+          "direction_requests": 112,
+          "calls": 4
+        },
+        {
+          "month": "2025-07",
+          "search_impressions": 457,
+          "direction_requests": 109,
+          "calls": 1
+        },
+        {
+          "month": "2025-08",
+          "search_impressions": 921,
+          "direction_requests": 157,
+          "calls": 19
+        },
+        {
+          "month": "2025-09",
+          "search_impressions": 1378,
+          "direction_requests": 196,
+          "calls": 16
+        },
+        {
+          "month": "2025-10",
+          "search_impressions": 4321,
+          "direction_requests": 253,
+          "calls": 2
+        },
+        {
+          "month": "2025-11",
+          "search_impressions": 2032,
+          "direction_requests": 232,
+          "calls": 6
+        },
+        {
+          "month": "2025-12",
+          "search_impressions": 601,
+          "direction_requests": 100,
+          "calls": 2
+        },
+        {
+          "month": "2026-01",
+          "search_impressions": 828,
+          "direction_requests": 125,
+          "calls": 0
+        },
+        {
+          "month": "2026-02",
+          "search_impressions": 585,
+          "direction_requests": 113,
+          "calls": 0
+        },
+        {
+          "month": "2026-03",
+          "search_impressions": 662,
+          "direction_requests": 119,
+          "calls": 2
+        },
+        {
+          "month": "2026-04",
+          "search_impressions": 504,
+          "direction_requests": 57,
+          "calls": 0
+        },
+        {
+          "month": "2026-05",
+          "search_impressions": 696,
+          "direction_requests": 130,
+          "calls": 4
+        },
+        {
+          "month": "2026-06",
+          "search_impressions": 4,
+          "direction_requests": 2,
+          "calls": 0
+        }
+      ]
     },
     {
       "name": "Walter Road",
       "region": "Region 4",
-      "monthly": []
+      "monthly": [
+        {
+          "month": "2024-12",
+          "search_impressions": 255,
+          "direction_requests": 16,
+          "calls": 5
+        },
+        {
+          "month": "2025-01",
+          "search_impressions": 319,
+          "direction_requests": 54,
+          "calls": 4
+        },
+        {
+          "month": "2025-02",
+          "search_impressions": 330,
+          "direction_requests": 25,
+          "calls": 0
+        },
+        {
+          "month": "2025-03",
+          "search_impressions": 321,
+          "direction_requests": 49,
+          "calls": 2
+        },
+        {
+          "month": "2025-04",
+          "search_impressions": 292,
+          "direction_requests": 56,
+          "calls": 1
+        },
+        {
+          "month": "2025-05",
+          "search_impressions": 213,
+          "direction_requests": 68,
+          "calls": 3
+        },
+        {
+          "month": "2025-06",
+          "search_impressions": 187,
+          "direction_requests": 26,
+          "calls": 2
+        },
+        {
+          "month": "2025-07",
+          "search_impressions": 237,
+          "direction_requests": 38,
+          "calls": 1
+        },
+        {
+          "month": "2025-08",
+          "search_impressions": 262,
+          "direction_requests": 39,
+          "calls": 4
+        },
+        {
+          "month": "2025-09",
+          "search_impressions": 213,
+          "direction_requests": 36,
+          "calls": 0
+        },
+        {
+          "month": "2025-10",
+          "search_impressions": 275,
+          "direction_requests": 67,
+          "calls": 0
+        },
+        {
+          "month": "2025-11",
+          "search_impressions": 224,
+          "direction_requests": 34,
+          "calls": 0
+        },
+        {
+          "month": "2025-12",
+          "search_impressions": 177,
+          "direction_requests": 83,
+          "calls": 0
+        },
+        {
+          "month": "2026-01",
+          "search_impressions": 189,
+          "direction_requests": 37,
+          "calls": 1
+        },
+        {
+          "month": "2026-02",
+          "search_impressions": 204,
+          "direction_requests": 25,
+          "calls": 0
+        },
+        {
+          "month": "2026-03",
+          "search_impressions": 178,
+          "direction_requests": 50,
+          "calls": 1
+        },
+        {
+          "month": "2026-04",
+          "search_impressions": 202,
+          "direction_requests": 58,
+          "calls": 0
+        },
+        {
+          "month": "2026-05",
+          "search_impressions": 176,
+          "direction_requests": 54,
+          "calls": 1
+        },
+        {
+          "month": "2026-06",
+          "search_impressions": 4,
+          "direction_requests": 0,
+          "calls": 0
+        }
+      ]
     },
     {
       "name": "TW1X",
