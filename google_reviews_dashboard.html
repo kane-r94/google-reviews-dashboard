@@ -719,6 +719,37 @@
   .history-change-up   { color: #16a34a; font-weight: 600; }
   .history-change-down { color: var(--red); font-weight: 600; }
   .history-change-flat { color: var(--gray-400); }
+
+  /* ── leaderboard tab ── */
+  .lb-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .lb-table thead th {
+    text-align: left; font-size: 11px; font-weight: 600; color: var(--gray-500);
+    text-transform: uppercase; letter-spacing: 0.04em;
+    padding: 10px 16px; border-bottom: 2px solid var(--gray-200);
+    background: var(--gray-50);
+  }
+  .lb-table thead th.right { text-align: right; }
+  .lb-table tbody tr { border-bottom: 1px solid var(--gray-100); transition: background 0.1s; }
+  .lb-table tbody tr:last-child { border-bottom: none; }
+  .lb-table tbody tr:hover { background: var(--gray-50); }
+  .lb-table tbody td { padding: 11px 16px; color: var(--gray-700); vertical-align: middle; }
+  .lb-table tbody td.right { text-align: right; }
+  .lb-rank { font-size: 18px; width: 48px; text-align: center !important; }
+  .lb-name { font-weight: 600; color: var(--liquorice); }
+  .lb-region-badge { font-size: 11px; color: var(--gray-500); font-weight: 400; }
+  .lb-date { font-size: 12px; color: var(--gray-500); }
+  .lb-zero td { color: var(--gray-400) !important; }
+  .lb-zero .lb-name { color: var(--gray-400) !important; font-weight: 500; }
+  .lb-top-1 { background: linear-gradient(90deg, rgba(255,204,0,0.08) 0%, transparent 60%); }
+  .lb-top-2 { background: linear-gradient(90deg, rgba(200,200,200,0.1) 0%, transparent 60%); }
+  .lb-top-3 { background: linear-gradient(90deg, rgba(180,130,90,0.08) 0%, transparent 60%); }
+  .lb-l7d-badge {
+    display: inline-block; background: #dcfce7; color: #16a34a;
+    font-weight: 700; font-size: 12px;
+    padding: 2px 8px; border-radius: 20px;
+  }
+  .lb-total { font-weight: 700; font-size: 15px; color: var(--liquorice); }
+  .lb-total-zero { color: var(--gray-300); font-weight: 500; }
 </style>
 </head>
 <body>
@@ -773,6 +804,7 @@
   <button class="tab-btn"        onclick="showTab('trends', this)">Trends</button>
   <button class="tab-btn"        onclick="showTab('sentiment', this)">Sentiment</button>
   <button class="tab-btn"        onclick="showTab('history', this)">History</button>
+  <button class="tab-btn"        onclick="showTab('leaderboard', this)">Leaderboard</button>
 </div>
 
 <!-- ══════════════════════════════════════════════════════
@@ -1063,6 +1095,41 @@
 </div><!-- /#panel-history -->
 
 
+<!-- ══════════════════════════════════════════════════════
+     TAB 6 — LEADERBOARD
+════════════════════════════════════════════════════════ -->
+<div id="panel-leaderboard" class="tab-panel" style="display:none">
+<div class="main">
+
+  <div style="margin-bottom:20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
+    <div>
+      <div style="font-size:20px;font-weight:700;color:var(--liquorice);letter-spacing:-0.02em">Maintenance Staff Leaderboard</div>
+      <div style="font-size:13px;color:var(--gray-500);margin-top:3px">Reviews mentioning staff by name · since 1 Jul 2025</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:8px">
+      <label style="font-size:12px;font-weight:500;color:var(--gray-500)">Region:</label>
+      <select id="lb-region" onchange="renderLeaderboard()" style="padding:6px 12px;border-radius:var(--radius);border:1px solid var(--gray-200);font-family:var(--font);font-size:12px;color:var(--gray-700);background:white">
+        <option value="">All Regions</option>
+        <option value="Region 1">Region 1 — North East</option>
+        <option value="Region 2">Region 2 — North</option>
+        <option value="Region 3">Region 3 — Midlands</option>
+        <option value="Region 4">Region 4 — South</option>
+      </select>
+    </div>
+  </div>
+
+  <div id="lb-summary" style="margin-bottom:16px;font-size:13px;color:var(--gray-500)"></div>
+
+  <div class="section-card" style="padding:0;overflow:hidden">
+    <div id="lb-table-wrap" style="padding:24px">
+      <div style="color:var(--gray-400);font-size:13px;">Loading leaderboard…</div>
+    </div>
+  </div>
+
+</div>
+</div><!-- /#panel-leaderboard -->
+
+
 <script>
 /* ════════════════════════════════════════════════════════
    RATINGS DATA  (auto-updated by fetch_reviews.py)
@@ -1271,20 +1338,22 @@ const otherPlatforms = [
 /* ════════════════════════════════════════════════════════
    TAB SWITCHING
 ════════════════════════════════════════════════════════ */
-let reviewsLoaded   = false;
-let trendsLoaded    = false;
-let sentimentLoaded = false;
-let historyLoaded   = false;
+let reviewsLoaded     = false;
+let trendsLoaded      = false;
+let sentimentLoaded   = false;
+let historyLoaded     = false;
+let leaderboardLoaded = false;
 
 function showTab(tab, btn) {
   document.querySelectorAll('.tab-panel').forEach(p => p.style.display = 'none');
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
   document.getElementById('panel-' + tab).style.display = '';
   btn.classList.add('active');
-  if (tab === 'reviews'   && !reviewsLoaded)   loadReviews();
-  if (tab === 'trends'    && !trendsLoaded)     loadTrends();
-  if (tab === 'sentiment' && !sentimentLoaded)  loadSentiment();
-  if (tab === 'history'   && !historyLoaded)    loadHistoryTab();
+  if (tab === 'reviews'     && !reviewsLoaded)     loadReviews();
+  if (tab === 'trends'      && !trendsLoaded)       loadTrends();
+  if (tab === 'sentiment'   && !sentimentLoaded)    loadSentiment();
+  if (tab === 'history'     && !historyLoaded)      loadHistoryTab();
+  if (tab === 'leaderboard' && !leaderboardLoaded)  loadLeaderboard();
 }
 
 /* ════════════════════════════════════════════════════════
@@ -2148,6 +2217,164 @@ function renderSentiment() {
         ${phraseListHtml(negPhrases)}
       </div>
     </div>`;
+}
+
+
+/* ════════════════════════════════════════════════════════
+   LEADERBOARD TAB
+════════════════════════════════════════════════════════ */
+
+const LEADERBOARD_CUTOFF = new Date('2025-07-01T00:00:00Z');
+
+const maintenanceStaff = [
+  // Region 1 — North East
+  { name: "David Richardson",   display: "David Richardson",          region: "Region 1", terms: ["david richardson", "david r"] },
+  { name: "Wain Beadsworth",    display: "Wain Beadsworth",           region: "Region 1", terms: ["wain beadsworth", "wain b"] },
+  { name: "Marc Brackenbury",   display: "Marc Brackenbury",          region: "Region 1", terms: ["marc brackenbury", "marc b"] },
+  { name: "Marc Wallace",       display: "Marc Wallace",              region: "Region 1", terms: ["marc wallace", "marc w"] },
+  { name: "Steve Pritchard",    display: "Steve Pritchard",           region: "Region 1", terms: ["steve pritchard", "steven pritchard", "steve p", "steven p"] },
+  { name: "Steven Hudspith",    display: "Steven Hudspith",           region: "Region 1", terms: ["steven hudspith", "steve hudspith", "steven h", "steve h"] },
+  { name: "Brian Mazzella",     display: "Brian Mazzella",            region: "Region 1", terms: ["brian mazzella", "brian m"] },
+  // Region 2 — North
+  { name: "John Boswell",       display: "John Boswell",              region: "Region 2", terms: ["john boswell", "john b"] },
+  { name: "James Lee",          display: "James Lee",                 region: "Region 2", terms: ["james lee", "james l"] },
+  { name: "Michael Heywood",    display: "Michael (Mike) Heywood",    region: "Region 2", terms: ["michael heywood", "mike heywood", "michael h", "mike h"] },
+  { name: "Mike Porter",        display: "Mike Porter",               region: "Region 2", terms: ["mike porter", "michael porter", "mike p", "michael p"] },
+  { name: "Sam Carroll",        display: "Sam Carroll",               region: "Region 2", terms: ["sam carroll", "sam c"] },
+  { name: "Chris Smith",        display: "Chris Smith",               region: "Region 2", terms: ["chris smith", "christopher smith", "chris s"] },
+  { name: "Sean Thorley",       display: "Sean Thorley",              region: "Region 2", terms: ["sean thorley", "sean t"] },
+  { name: "Mark Allen",         display: "Mark Allen",                region: "Region 2", terms: ["mark allen", "mark a"] },
+  { name: "Earl Cameron",       display: "Earl Cameron",              region: "Region 2", terms: ["earl cameron", "earl c"] },
+  // Region 3 — Midlands
+  { name: "David Lakin",        display: "David (Dave) Lakin",        region: "Region 3", terms: ["david lakin", "dave lakin", "david l", "dave l"] },
+  { name: "Harry King",         display: "Harry King",                region: "Region 3", terms: ["harry king", "harry k"] },
+  { name: "Wayne Arnold",       display: "Wayne Arnold",              region: "Region 3", terms: ["wayne arnold", "wayne a"] },
+  { name: "Anthony Want",       display: "Anthony 'Ant' Want",        region: "Region 3", terms: ["anthony want", "ant want", "anthony w", "ant w"] },
+  // Region 4 — South
+  { name: "Gavin Coles",        display: "Gavin (Gav) Coles",         region: "Region 4", terms: ["gavin coles", "gav coles", "gavin c", "gav c"] },
+  { name: "Gethyn Clarke",      display: "Gethyn Clarke",             region: "Region 4", terms: ["gethyn clarke", "gethyn c"] },
+  { name: "Paul Addiscot",      display: "Paul Addiscot",             region: "Region 4", terms: ["paul addiscot", "paul a"] },
+  { name: "Kev King",           display: "Kev King",                  region: "Region 4", terms: ["kev king", "kevin king", "kev k", "kevin k"] },
+  { name: "Antony Littlechild", display: "Antony (Tony) Littlechild", region: "Region 4", terms: ["antony littlechild", "tony littlechild", "antony l", "tony l"] },
+  { name: "Dan Richardson",     display: "Dan Richardson",            region: "Region 4", terms: ["dan richardson", "daniel richardson", "dan r"] },
+  { name: "Mike Cousins",       display: "Mike Cousins",              region: "Region 4", terms: ["mike cousins", "michael cousins", "mike c"] },
+];
+
+function lbEscapeRegex(s) {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+function matchesStaff(terms, text) {
+  if (!text) return false;
+  return terms.some(term => {
+    const regex = new RegExp('\\b' + lbEscapeRegex(term) + '\\b', 'i');
+    return regex.test(text);
+  });
+}
+
+let lbAllReviews = null;
+
+async function loadLeaderboard() {
+  leaderboardLoaded = true;
+  try {
+    const res = await fetch('reviews_data.json?t=' + Date.now());
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const data = await res.json();
+    lbAllReviews = [];
+    for (const prop of data.properties) {
+      for (const r of prop.reviews) {
+        lbAllReviews.push({ ...r, property: prop.name, propRegion: prop.region });
+      }
+    }
+    renderLeaderboard();
+  } catch (e) {
+    document.getElementById('lb-table-wrap').innerHTML =
+      '<p style="color:var(--gray-400);font-size:13px;">No review data available yet.</p>';
+  }
+}
+
+function renderLeaderboard() {
+  if (!lbAllReviews) return;
+
+  const regionFilter  = document.getElementById('lb-region').value;
+  const sevenDaysAgo  = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
+
+  // Reviews since cutoff
+  const eligible = lbAllReviews.filter(r => r.raw_date && new Date(r.raw_date) >= LEADERBOARD_CUTOFF);
+
+  const results = maintenanceStaff
+    .filter(s => !regionFilter || s.region === regionFilter)
+    .map(s => {
+      const mentions = eligible.filter(r => matchesStaff(s.terms, r.text || ''));
+      const l7d = mentions.filter(r => new Date(r.raw_date) >= sevenDaysAgo).length;
+      const lastRaw = mentions.length
+        ? mentions.reduce((m, r) => r.raw_date > m ? r.raw_date : m, mentions[0].raw_date)
+        : null;
+      const lastDisplay = lastRaw
+        ? new Date(lastRaw).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })
+        : '—';
+      return { ...s, total: mentions.length, l7d, lastDisplay };
+    })
+    .sort((a, b) => b.total - a.total || b.l7d - a.l7d || a.display.localeCompare(b.display));
+
+  const totalMentions = results.reduce((s, r) => s + r.total, 0);
+  const activeCount   = results.filter(r => r.total > 0).length;
+
+  document.getElementById('lb-summary').innerHTML =
+    `<strong style="color:var(--gray-700)">${totalMentions}</strong> name mentions across ` +
+    `<strong style="color:var(--gray-700)">${activeCount}</strong> of ${results.length} staff members since 1 Jul 2025`;
+
+  // Assign ranks only to staff with at least 1 mention
+  let rankCounter = 0;
+  let html = `
+    <table class="lb-table">
+      <thead>
+        <tr>
+          <th style="text-align:center">Rank</th>
+          <th>Name</th>
+          <th>Region</th>
+          <th class="right">Total mentions</th>
+          <th class="right">Last 7 days</th>
+          <th class="right">Last mentioned</th>
+        </tr>
+      </thead>
+      <tbody>
+  `;
+
+  results.forEach(s => {
+    let rankCell, rowClass = '';
+    if (s.total > 0) {
+      rankCounter++;
+      const medal = rankCounter === 1 ? '🥇' : rankCounter === 2 ? '🥈' : rankCounter === 3 ? '🥉' : rankCounter;
+      rankCell = `<td class="lb-rank">${medal}</td>`;
+      if (rankCounter <= 3) rowClass = `lb-top-${rankCounter}`;
+    } else {
+      rankCell = `<td class="lb-rank" style="color:var(--gray-300)">—</td>`;
+      rowClass = 'lb-zero';
+    }
+
+    const totalCell = s.total > 0
+      ? `<td class="right"><span class="lb-total">${s.total}</span></td>`
+      : `<td class="right"><span class="lb-total-zero">0</span></td>`;
+
+    const l7dCell = s.l7d > 0
+      ? `<td class="right"><span class="lb-l7d-badge">+${s.l7d}</span></td>`
+      : `<td class="right" style="color:var(--gray-300)">—</td>`;
+
+    html += `
+      <tr class="${rowClass}">
+        ${rankCell}
+        <td class="lb-name">${s.display}</td>
+        <td style="font-size:12px;color:var(--gray-500)">${s.region}</td>
+        ${totalCell}
+        ${l7dCell}
+        <td class="right lb-date">${s.lastDisplay}</td>
+      </tr>
+    `;
+  });
+
+  html += '</tbody></table>';
+  document.getElementById('lb-table-wrap').innerHTML = html;
 }
 
 
