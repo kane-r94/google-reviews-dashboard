@@ -2,7 +2,8 @@
 fetch_insights.py
 
 Fetches Google Business Profile insights (search impressions, direction requests,
-phone calls) for all properties over the last 18 months and saves to insights_data.json.
+phone calls) for all properties using the Business Profile Performance API v1.
+Data is aggregated monthly over the last 18 months and saved to insights_data.json.
 
 Run locally:   python fetch_insights.py
 Run in CI:     the GitHub Actions workflow runs this every Monday at 09:00 UTC.
@@ -12,7 +13,7 @@ import json
 import os
 import sys
 import time
-from datetime import datetime, timezone
+from datetime import datetime, timezone, date
 from pathlib import Path
 
 from github import Github
@@ -29,12 +30,24 @@ INSIGHTS_JSON_PATH = ROOT / "insights_data.json"
 
 SCOPES = ["https://www.googleapis.com/auth/business.manage"]
 
-METRICS = [
-    "QUERIES_DIRECT",
-    "QUERIES_INDIRECT",
-    "ACTIONS_PHONE",
-    "ACTIONS_DRIVING_DIRECTIONS",
+BASE_URL = "https://businessprofileperformance.googleapis.com/v1"
+
+DAILY_METRICS = [
+    "BUSINESS_IMPRESSIONS_DESKTOP_MAPS",
+    "BUSINESS_IMPRESSIONS_DESKTOP_SEARCH",
+    "BUSINESS_IMPRESSIONS_MOBILE_MAPS",
+    "BUSINESS_IMPRESSIONS_MOBILE_SEARCH",
+    "CALL_CLICKS",
+    "DIRECTIONS_CLICKS",
 ]
+
+# Metrics that contribute to "search impressions" total
+IMPRESSION_METRICS = {
+    "BUSINESS_IMPRESSIONS_DESKTOP_MAPS",
+    "BUSINESS_IMPRESSIONS_DESKTOP_SEARCH",
+    "BUSINESS_IMPRESSIONS_MOBILE_MAPS",
+    "BUSINESS_IMPRESSIONS_MOBILE_SEARCH",
+}
 
 
 # ---------------------------------------------------------------------------
@@ -81,73 +94,79 @@ def get_google_credentials() -> Credentials:
 # ---------------------------------------------------------------------------
 
 def get_date_range():
-    """Return (start, end) covering the last 18 months, aligned to month boundaries."""
-    now = datetime.now(timezone.utc)
-    # End = start of the current month
-    end = now.replace(day=1, hour=0, minute=0, second=0, microsecond=0)
-    # Start = 18 months back
-    month = end.month - 18
-    year = end.year + (month - 1) // 12
+    """Return (start_date, end_date) as date objects covering the last 18 months."""
+    today = date.today()
+    # Start = first day of the month 18 months ago
+    month = today.month - 18
+    year  = today.year + (month - 1) // 12
     month = ((month - 1) % 12) + 1
-    start = end.replace(year=year, month=month)
-    return start, end
+    start = date(year, month, 1)
+    return start, today
 
 
 # ---------------------------------------------------------------------------
-# API calls
+# API calls — Business Profile Performance API v1
 # ---------------------------------------------------------------------------
 
-def fetch_insights_batch(session, account_id: str, location_names: list, start_time, end_time) -> list:
-    """Fetch insights for up to 10 locations in one API call."""
-    url = f"https://mybusiness.googleapis.com/v4/{account_id}/locations:reportInsights"
+def fetch_insights_for_location(session, location_id_numeric: str, start_date, end_date) -> dict | None:
+    """
+    Fetch daily metrics for a single location.
+    location_id_numeric: numeric portion of the location ID only, e.g. "3927651401574716321"
+    """
+    url = (
+        f"{BASE_URL}/locations/{location_id_numeric}"
+        f":fetchMultiDailyMetricsTimeSeries"
+    )
 
-    payload = {
-        "locationNames": location_names,
-        "basicRequest": {
-            "metricRequests": [
-                {"metric": m, "options": ["AGGREGATED_MONTHLY"]}
-                for m in METRICS
-            ],
-            "timeRange": {
-                "startTime": start_time.strftime("%Y-%m-%dT%H:%M:%SZ"),
-                "endTime":   end_time.strftime("%Y-%m-%dT%H:%M:%SZ"),
-            },
-        },
-    }
+    # Build query string manually — multiple values for dailyMetrics
+    parts = [f"dailyMetrics={m}" for m in DAILY_METRICS]
+    parts += [
+        f"dailyRange.startDate.year={start_date.year}",
+        f"dailyRange.startDate.month={start_date.month}",
+        f"dailyRange.startDate.day={start_date.day}",
+        f"dailyRange.endDate.year={end_date.year}",
+        f"dailyRange.endDate.month={end_date.month}",
+        f"dailyRange.endDate.day={end_date.day}",
+    ]
 
-    resp = session.post(url, json=payload, timeout=30)
-    if resp.status_code != 200:
-        print(f"  Insights API error {resp.status_code}: {resp.text[:300]}")
-        return []
+    full_url = url + "?" + "&".join(parts)
 
-    return resp.json().get("locationMetrics", [])
+    try:
+        resp = session.get(full_url, timeout=30)
+        if resp.status_code != 200:
+            print(f"  API error {resp.status_code}: {resp.text[:200]}")
+            return None
+        return resp.json()
+    except Exception as e:
+        print(f"  Request error: {e}")
+        return None
 
 
-def parse_location_metrics(location_metrics: dict) -> list:
-    """Parse one location's metricValues into a list of monthly dicts."""
+def parse_daily_to_monthly(response_data: dict) -> list:
+    """Aggregate daily API response into a sorted list of monthly dicts."""
     monthly = {}
 
-    for metric_data in location_metrics.get("metricValues", []):
-        metric = metric_data.get("metric", "")
-        for dim_val in metric_data.get("dimensionalValues", []):
-            time_range = dim_val.get("timeDimension", {}).get("timeRange", {})
-            start_str  = time_range.get("startTime", "")[:7]   # "YYYY-MM"
-            value      = int(dim_val.get("value", 0) or 0)
+    for series in (response_data or {}).get("multiDailyMetricTimeSeries", []):
+        metric      = series.get("dailyMetric", "")
+        dated_vals  = series.get("timeSeries", {}).get("datedValues", [])
 
-            if start_str not in monthly:
-                monthly[start_str] = {
-                    "month": start_str,
-                    "search_impressions": 0,
-                    "direction_requests": 0,
-                    "calls": 0,
-                }
+        for item in dated_vals:
+            d     = item.get("date", {})
+            yr    = d.get("year",  0)
+            mo    = d.get("month", 0)
+            value = int(item.get("value", 0) or 0)
 
-            if metric in ("QUERIES_DIRECT", "QUERIES_INDIRECT"):
-                monthly[start_str]["search_impressions"] += value
-            elif metric == "ACTIONS_DRIVING_DIRECTIONS":
-                monthly[start_str]["direction_requests"] += value
-            elif metric == "ACTIONS_PHONE":
-                monthly[start_str]["calls"] += value
+            key = f"{yr}-{str(mo).zfill(2)}"
+            if key not in monthly:
+                monthly[key] = {"month": key, "search_impressions": 0,
+                                "direction_requests": 0, "calls": 0}
+
+            if metric in IMPRESSION_METRICS:
+                monthly[key]["search_impressions"] += value
+            elif metric == "DIRECTIONS_CLICKS":
+                monthly[key]["direction_requests"] += value
+            elif metric == "CALL_CLICKS":
+                monthly[key]["calls"] += value
 
     return sorted(monthly.values(), key=lambda x: x["month"])
 
@@ -164,7 +183,7 @@ def push_insights_json(config: dict, json_content: str, last_updated: str):
 
     gh = Github(token)
     repo = gh.get_repo(f"{config['github']['repo_owner']}/{config['github']['repo_name']}")
-    branch   = config["github"]["branch"]
+    branch    = config["github"]["branch"]
     file_path = "insights_data.json"
 
     try:
@@ -192,60 +211,53 @@ def push_insights_json(config: dict, json_content: str, last_updated: str):
 
 def main():
     print("=== Insights Fetcher ===\n")
-    config = load_config()
+    config       = load_config()
     last_updated = datetime.now(timezone.utc).strftime("%d %b %Y %H:%M UTC")
 
     print("Authenticating with Google Business Profile API...")
     creds   = get_google_credentials()
     session = AuthorizedSession(creds)
 
-    start_time, end_time = get_date_range()
-    print(f"Date range: {start_time.strftime('%b %Y')} → {end_time.strftime('%b %Y')}\n")
+    start_date, end_date = get_date_range()
+    print(f"Date range: {start_date.strftime('%b %Y')} → {end_date.strftime('%b %Y')}\n")
 
-    # Only process properties with a location ID
-    valid_props = [p for p in config["properties"] if p.get("google_location_id")]
-    if not valid_props:
-        sys.exit("ERROR: No properties with google_location_id found in config.json")
-
-    # Extract account ID from the first location path
-    account_id = valid_props[0]["google_location_id"].split("/locations/")[0]
-
-    # Batch API calls — max 10 locations per request
-    all_metrics = {}
-    batch_size  = 10
-    location_ids = [p["google_location_id"] for p in valid_props]
-
-    for i in range(0, len(location_ids), batch_size):
-        batch = location_ids[i : i + batch_size]
-        print(f"Fetching batch {i // batch_size + 1} ({len(batch)} locations)...", end=" ", flush=True)
-        metrics = fetch_insights_batch(session, account_id, batch, start_time, end_time)
-        for m in metrics:
-            all_metrics[m["locationName"]] = m
-        print(f"{len(metrics)} returned")
-        time.sleep(1)
-
-    # Build output
     output = {
         "last_updated": last_updated,
         "date_range": {
-            "start": start_time.strftime("%Y-%m"),
-            "end":   end_time.strftime("%Y-%m"),
+            "start": start_date.strftime("%Y-%m"),
+            "end":   end_date.strftime("%Y-%m"),
         },
         "properties": [],
     }
 
     for prop in config["properties"]:
+        name    = prop["name"]
         loc_id  = prop.get("google_location_id", "")
         monthly = []
-        if loc_id and loc_id in all_metrics:
-            monthly = parse_location_metrics(all_metrics[loc_id])
-            total_impr = sum(m["search_impressions"] for m in monthly)
-            print(f"  {prop['name']}: {total_impr:,} search impressions")
+
+        if not loc_id:
+            print(f"  {name}: skipped (no location ID)")
         else:
-            print(f"  {prop['name']}: no data")
+            # Extract just the numeric ID: "accounts/.../locations/1234" → "1234"
+            numeric_id = loc_id.split("/locations/")[-1]
+            print(f"  Fetching: {name}...", end=" ", flush=True)
+
+            data = fetch_insights_for_location(session, numeric_id, start_date, end_date)
+            monthly = parse_daily_to_monthly(data)
+
+            total_impr = sum(m["search_impressions"] for m in monthly)
+            total_dirs = sum(m["direction_requests"]  for m in monthly)
+            total_calls = sum(m["calls"]              for m in monthly)
+
+            if total_impr or total_dirs or total_calls:
+                print(f"{total_impr:,} impressions, {total_dirs:,} directions, {total_calls:,} calls")
+            else:
+                print("no data returned")
+
+            time.sleep(0.3)   # polite pacing
 
         output["properties"].append({
-            "name":    prop["name"],
+            "name":    name,
             "region":  prop["region"],
             "monthly": monthly,
         })
