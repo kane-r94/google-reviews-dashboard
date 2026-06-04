@@ -753,6 +753,46 @@
   .lb-unsure { background: rgba(255,155,91,0.05); }
   .lb-unsure .lb-name { color: var(--gray-600); font-weight: 500; }
   .lb-unsure-total { font-weight: 700; font-size: 15px; color: var(--tangerine); }
+  .lb-name-link { cursor: pointer; text-decoration: underline; text-decoration-style: dotted; text-underline-offset: 3px; }
+  .lb-name-link:hover { color: var(--teal); }
+
+  /* ── staff reviews modal ── */
+  .staff-modal-box {
+    background: white; border-radius: 14px;
+    width: 680px; max-width: calc(100vw - 32px);
+    max-height: 85vh; display: flex; flex-direction: column;
+    box-shadow: 0 24px 80px rgba(0,0,0,0.25);
+    font-family: var(--font);
+  }
+  .staff-modal-header {
+    display: flex; align-items: flex-start; justify-content: space-between;
+    padding: 22px 24px 18px; border-bottom: 1px solid var(--gray-200);
+    flex-shrink: 0;
+  }
+  .staff-modal-name { font-size: 17px; font-weight: 700; color: var(--liquorice); letter-spacing: -0.02em; }
+  .staff-modal-sub  { font-size: 12px; color: var(--gray-500); margin-top: 3px; }
+  .staff-modal-close {
+    background: none; border: none; font-size: 22px; line-height: 1;
+    color: var(--gray-400); cursor: pointer; padding: 0 4px; margin-top: -2px;
+    transition: color 0.15s;
+  }
+  .staff-modal-close:hover { color: var(--liquorice); }
+  .staff-modal-body { overflow-y: auto; padding: 16px 24px 24px; flex: 1; }
+  .sr-card {
+    border: 1px solid var(--gray-200); border-radius: 10px;
+    padding: 14px 16px; margin-bottom: 12px; background: white;
+    transition: border-color 0.1s;
+  }
+  .sr-card:last-child { margin-bottom: 0; }
+  .sr-card:hover { border-color: var(--teal); }
+  .sr-card-top { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; flex-wrap: wrap; }
+  .sr-stars { color: var(--yellow); font-size: 14px; letter-spacing: 1px; }
+  .sr-stars .se { color: var(--gray-200); }
+  .sr-reviewer { font-weight: 600; font-size: 13px; color: var(--liquorice); }
+  .sr-meta { font-size: 12px; color: var(--gray-500); margin-left: auto; text-align: right; }
+  .sr-property { font-size: 11px; color: var(--teal); font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 6px; }
+  .sr-text { font-size: 13px; color: var(--gray-600); line-height: 1.6; }
+  .sr-highlight { background: rgba(255,204,0,0.35); border-radius: 3px; padding: 0 2px; font-weight: 600; color: var(--liquorice); }
 </style>
 </head>
 <body>
@@ -1131,6 +1171,20 @@
 
 </div>
 </div><!-- /#panel-leaderboard -->
+
+<!-- Staff reviews modal -->
+<div class="modal-overlay" id="staff-modal" onclick="closeStaffModal(event)">
+  <div class="staff-modal-box" onclick="event.stopPropagation()">
+    <div class="staff-modal-header">
+      <div>
+        <div class="staff-modal-name" id="staff-modal-name"></div>
+        <div class="staff-modal-sub"  id="staff-modal-sub"></div>
+      </div>
+      <button class="staff-modal-close" onclick="closeStaffModal()">&times;</button>
+    </div>
+    <div class="staff-modal-body" id="staff-modal-body"></div>
+  </div>
+</div>
 
 
 <script>
@@ -2304,6 +2358,88 @@ async function loadLeaderboard() {
   }
 }
 
+function highlightTerms(text, terms) {
+  if (!text) return '<em style="color:var(--gray-400)">No written review</em>';
+  let result = esc(text);
+  terms.forEach(term => {
+    const regex = new RegExp('(' + lbEscapeRegex(term) + ')', 'gi');
+    result = result.replace(regex, '<span class="sr-highlight">$1</span>');
+  });
+  return result;
+}
+
+function renderStarHtml(n) {
+  let s = '';
+  for (let i = 1; i <= 5; i++) s += `<span class="${i <= n ? '' : 'se'}">★</span>`;
+  return s;
+}
+
+function showStaffReviews(staffName) {
+  // Find staff member or unsure group
+  const staff    = maintenanceStaff.find(s => s.name === staffName);
+  const unsure   = unsureGroups.find(g => g.display === staffName);
+  if (!staff && !unsure) return;
+
+  const sevenDaysAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
+  const eligible = lbAllReviews.filter(r => r.raw_date && new Date(r.raw_date) >= LEADERBOARD_CUTOFF);
+
+  let mentions, terms, displayName;
+
+  if (staff) {
+    terms = staff.terms;
+    displayName = staff.display;
+    mentions = eligible.filter(r => matchesStaff(terms, r.text || ''));
+  } else {
+    // Unsure group — same logic as renderLeaderboard
+    terms = unsure.firstNames;
+    displayName = unsure.display + ' (unattributed)';
+    const groupStaff = maintenanceStaff.filter(s => unsure.staffNames.includes(s.name));
+    const attributedIdxs = new Set(
+      eligible.map((r, i) => ({ ...r, _idx: i }))
+        .filter(r => groupStaff.some(s => matchesStaff(s.terms, r.text || '')))
+        .map(r => r._idx)
+    );
+    mentions = eligible
+      .map((r, i) => ({ ...r, _idx: i }))
+      .filter(r => {
+        if (attributedIdxs.has(r._idx)) return false;
+        return unsure.firstNames.some(fn => new RegExp('\\b' + fn + '\\b', 'i').test(r.text || ''));
+      });
+  }
+
+  // Sort newest first
+  mentions.sort((a, b) => (a.raw_date < b.raw_date ? 1 : -1));
+
+  const l7d = mentions.filter(r => new Date(r.raw_date) >= sevenDaysAgo).length;
+
+  document.getElementById('staff-modal-name').textContent = displayName;
+  document.getElementById('staff-modal-sub').textContent =
+    `${mentions.length} mention${mentions.length !== 1 ? 's' : ''} since 1 Jul 2025` +
+    (l7d > 0 ? ` · ${l7d} in last 7 days` : '');
+
+  const bodyHtml = mentions.length === 0
+    ? '<p style="color:var(--gray-400);font-size:13px;padding:8px 0">No reviews found.</p>'
+    : mentions.map(r => `
+        <div class="sr-card">
+          <div class="sr-card-top">
+            <span class="sr-stars">${renderStarHtml(r.stars)}</span>
+            <span class="sr-reviewer">${esc(r.reviewer || 'Anonymous')}</span>
+            <span class="sr-meta">${r.date || ''}</span>
+          </div>
+          <div class="sr-property">${esc(r.property || '')}</div>
+          <div class="sr-text">${highlightTerms(r.text, terms)}</div>
+        </div>
+      `).join('');
+
+  document.getElementById('staff-modal-body').innerHTML = bodyHtml;
+  document.getElementById('staff-modal').classList.add('open');
+}
+
+function closeStaffModal(e) {
+  if (e && e.target !== document.getElementById('staff-modal')) return;
+  document.getElementById('staff-modal').classList.remove('open');
+}
+
 function lbLastDisplay(mentions) {
   if (!mentions.length) return '—';
   const raw = mentions.reduce((m, r) => r.raw_date > m ? r.raw_date : m, mentions[0].raw_date);
@@ -2401,9 +2537,13 @@ function renderLeaderboard() {
     const l7dCell = s.l7d > 0
       ? `<td class="right"><span class="lb-l7d-badge">${s.isUnsure ? '' : '+'}${s.l7d}</span></td>`
       : `<td class="right" style="color:var(--gray-300)">—</td>`;
-    const nameDisplay = s.isUnsure
+    const clickName = s.isUnsure ? s.display.replace(' — unsure', '') : s.name;
+    const nameInner = s.isUnsure
       ? `${s.display} <span style="font-size:11px;color:var(--gray-400);font-weight:400">(first name only)</span>`
       : s.display;
+    const nameDisplay = s.total > 0
+      ? `<span class="lb-name-link" onclick="showStaffReviews('${clickName.replace(/'/g, "\\'")}')" title="Click to view reviews">${nameInner}</span>`
+      : nameInner;
     html += `
       <tr class="${rowClass}">
         ${rankCell}
