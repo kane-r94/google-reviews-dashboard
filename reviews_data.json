@@ -1,5 +1,5 @@
 {
-  "last_updated": "04 Jun 2026 16:18 UTC",
+  "last_updated": "05 Jun 2026 09:40 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
@@ -19136,6 +19136,16 @@
       "name": "Bishop Blackall School",
       "region": "Region 4",
       "reviews": [
+        {
+          "reviewer": "Jasmin Siavoshy",
+          "stars": 1,
+          "text": "Awfully kept building. Student cribs doesn’t care that our oven is broken and won’t replace it. They do not care that we have no cooking facilities!!!!! Do NOT live here",
+          "date": "4 Jun 2026",
+          "raw_date": "2026-06-04T17:07:41.604068Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Yasmin",
           "stars": 5,
