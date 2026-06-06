@@ -1,10 +1,20 @@
 {
-  "last_updated": "05 Jun 2026 09:40 UTC",
+  "last_updated": "06 Jun 2026 08:29 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
       "region": "HQ",
       "reviews": [
+        {
+          "reviewer": "Rita Shahi",
+          "stars": 4,
+          "text": "",
+          "date": "5 Jun 2026",
+          "raw_date": "2026-06-05T12:03:05.041385Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "jennifer ajoku",
           "stars": 5,
