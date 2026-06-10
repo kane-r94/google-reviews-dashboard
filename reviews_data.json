@@ -1,26 +1,26 @@
 {
-  "last_updated": "09 Jun 2026 09:36 UTC",
+  "last_updated": "10 Jun 2026 09:52 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
       "region": "HQ",
       "reviews": [
         {
-          "reviewer": "Rita Shahi",
-          "stars": 4,
-          "text": "",
-          "date": "5 Jun 2026",
-          "raw_date": "2026-06-05T12:03:05.041385Z",
-          "has_reply": false,
-          "reply_text": "",
-          "reply_date": ""
-        },
-        {
           "reviewer": "jennifer ajoku",
           "stars": 5,
           "text": "",
           "date": "2 Jun 2026",
           "raw_date": "2026-06-02T14:03:38.087569Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Rita Shahi",
+          "stars": 4,
+          "text": "",
+          "date": "5 Jun 2026",
+          "raw_date": "2026-06-05T12:03:05.041385Z",
           "has_reply": false,
           "reply_text": "",
           "reply_date": ""
