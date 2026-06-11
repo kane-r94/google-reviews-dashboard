@@ -1,10 +1,40 @@
 {
-  "last_updated": "10 Jun 2026 09:52 UTC",
+  "last_updated": "11 Jun 2026 10:17 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
       "region": "HQ",
       "reviews": [
+        {
+          "reviewer": "Zac Wilton",
+          "stars": 5,
+          "text": "",
+          "date": "11 Jun 2026",
+          "raw_date": "2026-06-11T09:57:25.022747Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Isabelle Sharman",
+          "stars": 4,
+          "text": "They are useful with repairs and everything and easy to contacts",
+          "date": "11 Jun 2026",
+          "raw_date": "2026-06-11T09:57:23.732535Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Hannah Woods",
+          "stars": 5,
+          "text": "Always responded very quickly to maintenance issues and very generous!!",
+          "date": "11 Jun 2026",
+          "raw_date": "2026-06-11T08:56:31.864054Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "jennifer ajoku",
           "stars": 5,
@@ -11467,6 +11497,16 @@
       "name": "Manchester Main",
       "region": "Region 2",
       "reviews": [
+        {
+          "reviewer": "amy boatwright",
+          "stars": 5,
+          "text": "Had a great year with student cribs, Mike P was our regular maintenance man and he took the time to get to know us and always did a top job 😊",
+          "date": "10 Jun 2026",
+          "raw_date": "2026-06-10T12:40:45.012902Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Asri Maharani",
           "stars": 1,
