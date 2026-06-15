@@ -1,5 +1,5 @@
 {
-  "last_updated": "15 Jun 2026 08:44 UTC",
+  "last_updated": "15 Jun 2026 09:41 UTC",
   "date_range": {
     "start": "2024-12",
     "end": "2026-06"
@@ -1688,7 +1688,122 @@
     {
       "name": "Chancellors Court",
       "region": "Region 2",
-      "monthly": []
+      "monthly": [
+        {
+          "month": "2024-12",
+          "search_impressions": 537,
+          "direction_requests": 103,
+          "calls": 14
+        },
+        {
+          "month": "2025-01",
+          "search_impressions": 1610,
+          "direction_requests": 233,
+          "calls": 37
+        },
+        {
+          "month": "2025-02",
+          "search_impressions": 1466,
+          "direction_requests": 276,
+          "calls": 14
+        },
+        {
+          "month": "2025-03",
+          "search_impressions": 1632,
+          "direction_requests": 333,
+          "calls": 47
+        },
+        {
+          "month": "2025-04",
+          "search_impressions": 1231,
+          "direction_requests": 236,
+          "calls": 22
+        },
+        {
+          "month": "2025-05",
+          "search_impressions": 1010,
+          "direction_requests": 251,
+          "calls": 37
+        },
+        {
+          "month": "2025-06",
+          "search_impressions": 938,
+          "direction_requests": 196,
+          "calls": 26
+        },
+        {
+          "month": "2025-07",
+          "search_impressions": 781,
+          "direction_requests": 318,
+          "calls": 36
+        },
+        {
+          "month": "2025-08",
+          "search_impressions": 1058,
+          "direction_requests": 174,
+          "calls": 33
+        },
+        {
+          "month": "2025-09",
+          "search_impressions": 1270,
+          "direction_requests": 281,
+          "calls": 39
+        },
+        {
+          "month": "2025-10",
+          "search_impressions": 1132,
+          "direction_requests": 305,
+          "calls": 26
+        },
+        {
+          "month": "2025-11",
+          "search_impressions": 1941,
+          "direction_requests": 266,
+          "calls": 16
+        },
+        {
+          "month": "2025-12",
+          "search_impressions": 1226,
+          "direction_requests": 232,
+          "calls": 4
+        },
+        {
+          "month": "2026-01",
+          "search_impressions": 1127,
+          "direction_requests": 175,
+          "calls": 16
+        },
+        {
+          "month": "2026-02",
+          "search_impressions": 990,
+          "direction_requests": 240,
+          "calls": 1
+        },
+        {
+          "month": "2026-03",
+          "search_impressions": 1391,
+          "direction_requests": 283,
+          "calls": 3
+        },
+        {
+          "month": "2026-04",
+          "search_impressions": 1236,
+          "direction_requests": 161,
+          "calls": 5
+        },
+        {
+          "month": "2026-05",
+          "search_impressions": 909,
+          "direction_requests": 183,
+          "calls": 3
+        },
+        {
+          "month": "2026-06",
+          "search_impressions": 332,
+          "direction_requests": 83,
+          "calls": 11
+        }
+      ]
     },
     {
       "name": "Waterside Village",
