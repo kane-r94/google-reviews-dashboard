@@ -973,7 +973,7 @@
           <th class="center">Last week</th>
           <th class="center">Change</th>
           <th class="right">Reviews</th>
-          <th class="right">5★ to target</th>
+          <th class="right">5★ to +0.1</th>
           <th class="right">Est. new total</th>
           <th class="right">Last review</th>
         </tr>
@@ -983,7 +983,7 @@
   </div>
 
   <div class="footer">
-    <p>Estimates assume existing reviews retain their current distribution. Properties marked N/A have no score data. Formula: <code>⌈(target × n − score × n) / (5 − target)⌉</code> where n = current review count.</p>
+    <p>Estimates assume existing reviews retain their current distribution. Properties marked N/A have no score data. Formula: <code>⌈(0.1 × n) / (4.9 − score)⌉</code> where n = current review count.</p>
   </div>
 
   <!-- Other platforms -->
@@ -998,7 +998,7 @@
             <th class="center">Last week</th>
             <th class="center">Change</th>
             <th class="right">Reviews</th>
-            <th class="right">5★ to target</th>
+            <th class="right">5★ to +0.1</th>
             <th class="right">Est. new total</th>
           </tr>
         </thead>
@@ -1540,6 +1540,14 @@ function calcNeeded(score, reviews, t) {
   return Math.max(0, Math.ceil((t * reviews - score * reviews) / (5 - t)));
 }
 
+function calcNextIncrease(score, reviews) {
+  if (score === null || reviews === null) return null;
+  if (score >= 5.0) return 0;
+  const denom = 4.9 - score;
+  if (denom <= 0) return 0;
+  return Math.max(1, Math.ceil((0.1 * reviews) / denom));
+}
+
 function scoreClass(s) {
   if (s === null) return 'score-na';
   if (s >= 4.5)  return 'score-high';
@@ -1602,7 +1610,7 @@ function renderPropertyRow(p, tbody) {
     : `<span class="score-badge score-na">N/A</span>`;
 
   const neededCell = p.needed === null ? '<span class="needed-na">N/A</span>'
-    : p.needed === 0 ? '<span class="needed-met">✓ Met</span>'
+    : p.needed === 0 ? '<span class="needed-met">★ Max</span>'
     : `<span class="needed-val">${p.needed.toLocaleString()}</span>`;
 
   const newTotal = p.needed === null ? '<span class="needed-na">—</span>'
@@ -1655,7 +1663,7 @@ function renderRegionSummary(regionRows, tbody) {
 function renderTable() {
   const sort = document.getElementById('sort-select').value;
   let rows = properties.filter(p => activeRegion === 'all' || p.region === activeRegion);
-  rows = rows.map(p => ({ ...p, needed: calcNeeded(p.score, p.reviews, target) }));
+  rows = rows.map(p => ({ ...p, needed: calcNextIncrease(p.score, p.reviews) }));
 
   // Separate HQ from regional properties
   const hqRows      = rows.filter(p => p.region === 'HQ');
@@ -1720,7 +1728,7 @@ function renderPlatforms() {
   const tbody = document.getElementById('platform-body');
   tbody.innerHTML = '';
   otherPlatforms.forEach(p => {
-    const needed = calcNeeded(p.score, p.reviews, target);
+    const needed = calcNextIncrease(p.score, p.reviews);
     const change = (p.score !== null && p.last !== null) ? +(p.score - p.last).toFixed(1) : null;
     const changeBadge = change === null
       ? '<span class="change-badge change-flat">—</span>'
@@ -1730,7 +1738,7 @@ function renderPlatforms() {
     const neededCell = needed === null
       ? '<span class="score-na">N/A</span>'
       : needed === 0
-        ? '<span class="needed-met">✓ Met</span>'
+        ? '<span class="needed-met">★ Max</span>'
         : `<span class="needed-val">${needed.toLocaleString()}</span>`;
     const scoreDisplay = p.score !== null
       ? `<span class="score-badge ${scoreClass(p.score)}">★ ${p.score.toFixed(1)}</span>`
