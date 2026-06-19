@@ -1,10 +1,20 @@
 {
-  "last_updated": "18 Jun 2026 10:16 UTC",
+  "last_updated": "19 Jun 2026 10:21 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
       "region": "HQ",
       "reviews": [
+        {
+          "reviewer": "Maisie Milsom",
+          "stars": 1,
+          "text": "",
+          "date": "18 Jun 2026",
+          "raw_date": "2026-06-18T16:56:20.425296Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Liam Hogan",
           "stars": 5,
@@ -8012,6 +8022,26 @@
       "region": "Region 1",
       "reviews": [
         {
+          "reviewer": "Abbie",
+          "stars": 4,
+          "text": "I have lived with student cribs for the last 3 years in 2 different properties. The flats have been beautiful and they have been very helpful if anything has gone wrong. The portal is great and it is easy to get it contact with anyone if help is needed.",
+          "date": "18 Jun 2026",
+          "raw_date": "2026-06-18T15:31:39.377592Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Erica",
+          "stars": 3,
+          "text": "Propperty was decent however had a lot of difficulties with customer service when having issues with appliances. These were fixed but over a long period of time which was frustrating. However other then that the propperty was alright for the rent etc",
+          "date": "14 Aug 2025",
+          "raw_date": "2025-08-14T10:59:43.418552Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
           "reviewer": "Emily Martin-Taylor",
           "stars": 5,
           "text": "Bryan and Wayne came to fix our fence today and they were fab. Really pleasant and they have fixed the fence really well. Massive thank you. It’s clear that they care a lot about their craft, and that was executed in their skill set.",
@@ -10676,6 +10706,16 @@
       "region": "Region 1",
       "reviews": [
         {
+          "reviewer": "Will Ghosh",
+          "stars": 4,
+          "text": "Great accommodation with helpful management",
+          "date": "18 Jun 2026",
+          "raw_date": "2026-06-18T15:33:44.706695Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
           "reviewer": "Alessia Spinks",
           "stars": 5,
           "text": "",
@@ -11079,6 +11119,16 @@
       "name": "The Square",
       "region": "Region 1",
       "reviews": [
+        {
+          "reviewer": "Aaron Craigie",
+          "stars": 4,
+          "text": "All issues were fixed pretty quickly, good location and adequate standard equipment",
+          "date": "18 Jun 2026",
+          "raw_date": "2026-06-18T11:48:05.806224Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Millie Page",
           "stars": 1,
@@ -18842,6 +18892,56 @@
       "region": "Region 3",
       "reviews": [
         {
+          "reviewer": "Edidiong “Eddymike” Effanga",
+          "stars": 4,
+          "text": "",
+          "date": "18 Jun 2026",
+          "raw_date": "2026-06-18T14:33:52.819507Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Dennis Calota",
+          "stars": 5,
+          "text": "Not finding accommodation that’s this nice and affordable anywhere else. Just know who you are moving in with",
+          "date": "18 Jun 2026",
+          "raw_date": "2026-06-18T14:08:11.227013Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "MY Verse",
+          "stars": 4,
+          "text": "it was amazing",
+          "date": "18 Jun 2026",
+          "raw_date": "2026-06-18T13:48:19.905722Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Albert",
+          "stars": 4,
+          "text": "",
+          "date": "19 Sep 2025",
+          "raw_date": "2025-09-19T20:20:32.521824Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "mitzi green",
+          "stars": 5,
+          "text": "David and harry are so helpful and lovely!",
+          "date": "22 Apr 2026",
+          "raw_date": "2026-04-22T11:48:18.151274Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
           "reviewer": "BhagyaRaj Sunny",
           "stars": 5,
           "text": "Very happy",
@@ -18907,16 +19007,6 @@
           "text": "Harry and Dave are amazing",
           "date": "22 Apr 2026",
           "raw_date": "2026-04-22T14:16:46.732526Z",
-          "has_reply": false,
-          "reply_text": "",
-          "reply_date": ""
-        },
-        {
-          "reviewer": "mitzi green",
-          "stars": 5,
-          "text": "David and harry are so helpful and lovely!",
-          "date": "22 Apr 2026",
-          "raw_date": "2026-04-22T11:48:18.151274Z",
           "has_reply": false,
           "reply_text": "",
           "reply_date": ""
@@ -19427,16 +19517,6 @@
           "text": "The maintenance team is always quick, helpful, and friendly whenever something comes up. Really appreciate how well everything is looked after.",
           "date": "26 Nov 2025",
           "raw_date": "2025-11-26T13:23:25.410526Z",
-          "has_reply": false,
-          "reply_text": "",
-          "reply_date": ""
-        },
-        {
-          "reviewer": "Albert",
-          "stars": 4,
-          "text": "",
-          "date": "19 Sep 2025",
-          "raw_date": "2025-09-19T20:20:32.521824Z",
           "has_reply": false,
           "reply_text": "",
           "reply_date": ""
