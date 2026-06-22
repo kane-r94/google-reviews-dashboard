@@ -1,5 +1,5 @@
 {
-  "last_updated": "22 Jun 2026 08:53 UTC",
+  "last_updated": "22 Jun 2026 11:47 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
@@ -20989,6 +20989,16 @@
       "name": "Isca Lofts",
       "region": "Region 4",
       "reviews": [
+        {
+          "reviewer": "Sachin Shajikumar",
+          "stars": 4,
+          "text": "The rooms are really spacious and you can't beat the location near the city center.  Well-maintained apart from some minor issues. Definitely great bang for your buck!",
+          "date": "22 Jun 2026",
+          "raw_date": "2026-06-22T11:06:00.187439Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Utkarsh Singhania",
           "stars": 5,
