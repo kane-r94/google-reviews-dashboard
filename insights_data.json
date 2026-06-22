@@ -1,5 +1,5 @@
 {
-  "last_updated": "21 Jun 2026 21:37 UTC",
+  "last_updated": "22 Jun 2026 08:54 UTC",
   "date_range": {
     "start": "2024-12",
     "end": "2026-06"
@@ -11,8 +11,8 @@
       "monthly": [
         {
           "month": "2024-12",
-          "search_impressions": 723,
-          "direction_requests": 17,
+          "search_impressions": 648,
+          "direction_requests": 14,
           "calls": 13
         },
         {
@@ -119,7 +119,7 @@
         },
         {
           "month": "2026-06",
-          "search_impressions": 1958,
+          "search_impressions": 2070,
           "direction_requests": 45,
           "calls": 25
         }
@@ -239,7 +239,7 @@
         },
         {
           "month": "2026-06",
-          "search_impressions": 1335,
+          "search_impressions": 1398,
           "direction_requests": 0,
           "calls": 24
         }
@@ -359,8 +359,8 @@
         },
         {
           "month": "2026-06",
-          "search_impressions": 180,
-          "direction_requests": 48,
+          "search_impressions": 185,
+          "direction_requests": 49,
           "calls": 1
         }
       ]
@@ -479,7 +479,7 @@
         },
         {
           "month": "2026-06",
-          "search_impressions": 112,
+          "search_impressions": 115,
           "direction_requests": 45,
           "calls": 0
         }
@@ -599,7 +599,7 @@
         },
         {
           "month": "2026-06",
-          "search_impressions": 640,
+          "search_impressions": 658,
           "direction_requests": 128,
           "calls": 1
         }
@@ -611,8 +611,8 @@
       "monthly": [
         {
           "month": "2024-12",
-          "search_impressions": 139,
-          "direction_requests": 28,
+          "search_impressions": 121,
+          "direction_requests": 25,
           "calls": 1
         },
         {
@@ -719,8 +719,8 @@
         },
         {
           "month": "2026-06",
-          "search_impressions": 350,
-          "direction_requests": 57,
+          "search_impressions": 359,
+          "direction_requests": 62,
           "calls": 0
         }
       ]
@@ -839,7 +839,7 @@
         },
         {
           "month": "2026-06",
-          "search_impressions": 82,
+          "search_impressions": 84,
           "direction_requests": 31,
           "calls": 0
         }
@@ -959,7 +959,7 @@
         },
         {
           "month": "2026-06",
-          "search_impressions": 113,
+          "search_impressions": 115,
           "direction_requests": 40,
           "calls": 0
         }
@@ -971,8 +971,8 @@
       "monthly": [
         {
           "month": "2024-12",
-          "search_impressions": 37,
-          "direction_requests": 12,
+          "search_impressions": 31,
+          "direction_requests": 11,
           "calls": 0
         },
         {
@@ -1079,8 +1079,8 @@
         },
         {
           "month": "2026-06",
-          "search_impressions": 62,
-          "direction_requests": 24,
+          "search_impressions": 63,
+          "direction_requests": 25,
           "calls": 3
         }
       ]
@@ -1199,7 +1199,7 @@
         },
         {
           "month": "2026-06",
-          "search_impressions": 104,
+          "search_impressions": 109,
           "direction_requests": 47,
           "calls": 0
         }
@@ -1319,8 +1319,8 @@
         },
         {
           "month": "2026-06",
-          "search_impressions": 77,
-          "direction_requests": 28,
+          "search_impressions": 83,
+          "direction_requests": 39,
           "calls": 0
         }
       ]
@@ -1439,7 +1439,7 @@
         },
         {
           "month": "2026-06",
-          "search_impressions": 325,
+          "search_impressions": 335,
           "direction_requests": 121,
           "calls": 2
         }
@@ -1559,7 +1559,7 @@
         },
         {
           "month": "2026-06",
-          "search_impressions": 931,
+          "search_impressions": 984,
           "direction_requests": 47,
           "calls": 15
         }
@@ -1571,9 +1571,9 @@
       "monthly": [
         {
           "month": "2024-12",
-          "search_impressions": 323,
-          "direction_requests": 82,
-          "calls": 14
+          "search_impressions": 295,
+          "direction_requests": 80,
+          "calls": 11
         },
         {
           "month": "2025-01",
@@ -1679,8 +1679,8 @@
         },
         {
           "month": "2026-06",
-          "search_impressions": 518,
-          "direction_requests": 178,
+          "search_impressions": 527,
+          "direction_requests": 199,
           "calls": 6
         }
       ]
@@ -1799,8 +1799,8 @@
         },
         {
           "month": "2026-06",
-          "search_impressions": 482,
-          "direction_requests": 108,
+          "search_impressions": 493,
+          "direction_requests": 110,
           "calls": 14
         }
       ]
@@ -1811,8 +1811,8 @@
       "monthly": [
         {
           "month": "2024-12",
-          "search_impressions": 272,
-          "direction_requests": 36,
+          "search_impressions": 248,
+          "direction_requests": 33,
           "calls": 1
         },
         {
@@ -1919,7 +1919,7 @@
         },
         {
           "month": "2026-06",
-          "search_impressions": 492,
+          "search_impressions": 500,
           "direction_requests": 46,
           "calls": 2
         }
@@ -2039,8 +2039,8 @@
         },
         {
           "month": "2026-06",
-          "search_impressions": 478,
-          "direction_requests": 21,
+          "search_impressions": 500,
+          "direction_requests": 30,
           "calls": 5
         }
       ]
@@ -2159,8 +2159,8 @@
         },
         {
           "month": "2026-06",
-          "search_impressions": 409,
-          "direction_requests": 46,
+          "search_impressions": 438,
+          "direction_requests": 47,
           "calls": 3
         }
       ]
@@ -2171,8 +2171,8 @@
       "monthly": [
         {
           "month": "2024-12",
-          "search_impressions": 259,
-          "direction_requests": 41,
+          "search_impressions": 234,
+          "direction_requests": 39,
           "calls": 3
         },
         {
@@ -2279,7 +2279,7 @@
         },
         {
           "month": "2026-06",
-          "search_impressions": 335,
+          "search_impressions": 341,
           "direction_requests": 74,
           "calls": 4
         }
@@ -2399,7 +2399,7 @@
         },
         {
           "month": "2026-06",
-          "search_impressions": 420,
+          "search_impressions": 465,
           "direction_requests": 21,
           "calls": 5
         }
@@ -2519,7 +2519,7 @@
         },
         {
           "month": "2026-06",
-          "search_impressions": 385,
+          "search_impressions": 417,
           "direction_requests": 104,
           "calls": 5
         }
@@ -2639,7 +2639,7 @@
         },
         {
           "month": "2026-06",
-          "search_impressions": 921,
+          "search_impressions": 948,
           "direction_requests": 163,
           "calls": 18
         }
@@ -2759,7 +2759,7 @@
         },
         {
           "month": "2026-06",
-          "search_impressions": 543,
+          "search_impressions": 558,
           "direction_requests": 98,
           "calls": 4
         }
@@ -2771,7 +2771,7 @@
       "monthly": [
         {
           "month": "2024-12",
-          "search_impressions": 67,
+          "search_impressions": 57,
           "direction_requests": 30,
           "calls": 0
         },
@@ -2879,7 +2879,7 @@
         },
         {
           "month": "2026-06",
-          "search_impressions": 239,
+          "search_impressions": 252,
           "direction_requests": 32,
           "calls": 1
         }
@@ -2999,7 +2999,7 @@
         },
         {
           "month": "2026-06",
-          "search_impressions": 341,
+          "search_impressions": 353,
           "direction_requests": 48,
           "calls": 3
         }
@@ -3011,7 +3011,7 @@
       "monthly": [
         {
           "month": "2024-12",
-          "search_impressions": 81,
+          "search_impressions": 77,
           "direction_requests": 5,
           "calls": 1
         },
@@ -3119,7 +3119,7 @@
         },
         {
           "month": "2026-06",
-          "search_impressions": 128,
+          "search_impressions": 133,
           "direction_requests": 20,
           "calls": 1
         }
@@ -3239,7 +3239,7 @@
         },
         {
           "month": "2026-06",
-          "search_impressions": 71,
+          "search_impressions": 78,
           "direction_requests": 27,
           "calls": 1
         }
