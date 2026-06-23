@@ -1,5 +1,5 @@
 {
-  "last_updated": "22 Jun 2026 11:47 UTC",
+  "last_updated": "23 Jun 2026 09:32 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
@@ -8021,6 +8021,16 @@
       "name": "Newcastle Main",
       "region": "Region 1",
       "reviews": [
+        {
+          "reviewer": "Millie Brown",
+          "stars": 4,
+          "text": "",
+          "date": "22 Jun 2026",
+          "raw_date": "2026-06-22T15:42:06.540420Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Abbie",
           "stars": 4,
