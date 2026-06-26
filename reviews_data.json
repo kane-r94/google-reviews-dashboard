@@ -1,5 +1,5 @@
 {
-  "last_updated": "25 Jun 2026 08:55 UTC",
+  "last_updated": "26 Jun 2026 08:47 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
@@ -11628,6 +11628,36 @@
       "region": "Region 2",
       "reviews": [
         {
+          "reviewer": "Thomas Skipper",
+          "stars": 5,
+          "text": "Mike P is the best maintenance man!",
+          "date": "25 Jun 2026",
+          "raw_date": "2026-06-25T10:33:50.612759Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "avery",
+          "stars": 5,
+          "text": "Excellent maintenance staff, shoutout to Mike P!!!",
+          "date": "25 Jun 2026",
+          "raw_date": "2026-06-25T11:12:42.706465Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "betty o’connor",
+          "stars": 5,
+          "text": "Mike P is nice and good at fixing our house",
+          "date": "25 Jun 2026",
+          "raw_date": "2026-06-25T10:33:08.981450Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
           "reviewer": "Emily Hopson",
           "stars": 5,
           "text": "Great service provided. Safe clean homes :)",
@@ -13289,6 +13319,26 @@
       "name": "Chancellors Court",
       "region": "Region 2",
       "reviews": [
+        {
+          "reviewer": "leonski",
+          "stars": 1,
+          "text": "Moving out in a month and after 10 months of complaints, over 40 maintenance issues reported.\nA Christmas that was freezing cold due to promises about fixing windows that was never met.\nWould not recommend this place to anyone.\nAfter 10 months of being ignored and passed from one person to the next I can officially say it was the worst accommodation I have stayed at during my time at uni.",
+          "date": "25 Jun 2026",
+          "raw_date": "2026-06-25T16:03:09.731966Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "aislynn hawkin",
+          "stars": 5,
+          "text": "Sam came to fix our door quick and rapid service :)",
+          "date": "25 Jun 2026",
+          "raw_date": "2026-06-25T14:05:27.681054Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Tee",
           "stars": 5,
