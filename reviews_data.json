@@ -1,10 +1,20 @@
 {
-  "last_updated": "26 Jun 2026 08:57 UTC",
+  "last_updated": "27 Jun 2026 08:31 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
       "region": "HQ",
       "reviews": [
+        {
+          "reviewer": "Nia stephens",
+          "stars": 5,
+          "text": "Amazing agency, as a student landlords and agency's can sometimes take advantage of you but student cribs never has, any issues with housing are fixed within a day or so, particularly Geth! Geth was incredibly helpful all year, fixing everything and was very kind. Any broken furniture ect was replaced quickly. Great service!",
+          "date": "26 Jun 2026",
+          "raw_date": "2026-06-26T16:04:07.544193Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Maisie Milsom",
           "stars": 1,
@@ -16052,6 +16062,16 @@
       "region": "Region 2",
       "reviews": [
         {
+          "reviewer": "Dominic Ignagni",
+          "stars": 5,
+          "text": "Great flats right in the center of town. I’ve enjoyed every minute I’ve live here.",
+          "date": "26 Jun 2026",
+          "raw_date": "2026-06-26T13:12:03.996088Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
           "reviewer": "polly barker",
           "stars": 5,
           "text": "John and Mike were fab maintenance men and always really helpful and lovely when we had any queries!",
@@ -20963,6 +20983,16 @@
       "name": "Hope Court",
       "region": "Region 4",
       "reviews": [
+        {
+          "reviewer": "sanjanaa",
+          "stars": 3,
+          "text": "A few issues but maintenance does respond at a somewhat timely manner. the place is safe, and it’s always a fun time if you live with your friends. the fire alarm has always been annoying because the detectors are so sensitive.",
+          "date": "26 Jun 2026",
+          "raw_date": "2026-06-26T13:15:25.286074Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Samuel Williams",
           "stars": 4,
