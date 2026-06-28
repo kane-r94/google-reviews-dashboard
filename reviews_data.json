@@ -1,5 +1,5 @@
 {
-  "last_updated": "27 Jun 2026 08:31 UTC",
+  "last_updated": "28 Jun 2026 08:46 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
@@ -11637,6 +11637,16 @@
       "name": "Manchester Main",
       "region": "Region 2",
       "reviews": [
+        {
+          "reviewer": "Ashok Linga",
+          "stars": 4,
+          "text": "",
+          "date": "27 Jun 2026",
+          "raw_date": "2026-06-27T10:20:47.941370Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Thomas Skipper",
           "stars": 5,
