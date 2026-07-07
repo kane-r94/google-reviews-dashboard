@@ -1,10 +1,30 @@
 {
-  "last_updated": "06 Jul 2026 10:11 UTC",
+  "last_updated": "07 Jul 2026 09:34 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
       "region": "HQ",
       "reviews": [
+        {
+          "reviewer": "Francis kojo Aboagye",
+          "stars": 4,
+          "text": "",
+          "date": "7 Jul 2026",
+          "raw_date": "2026-07-07T07:08:06.440640Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Manan Sheikh",
+          "stars": 5,
+          "text": "Student cribs provide you the most affordable accommodation with no deposit.",
+          "date": "6 Jul 2026",
+          "raw_date": "2026-07-06T11:05:02.429191Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "CHRISTIANAH ADEYEMO",
           "stars": 5,
@@ -16092,6 +16112,16 @@
       "region": "Region 2",
       "reviews": [
         {
+          "reviewer": "Olivia Duddy",
+          "stars": 4,
+          "text": "Cannot fault the maintenance team, nothing but kind and efficient. Had some issues using the tenant portal but I think that’s down to system issues",
+          "date": "7 Jul 2026",
+          "raw_date": "2026-07-07T00:14:29.653783Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
           "reviewer": "Dominic Ignagni",
           "stars": 5,
           "text": "Great flats right in the center of town. I’ve enjoyed every minute I’ve live here.",
@@ -19031,6 +19061,16 @@
       "name": "Shoe & Boot",
       "region": "Region 3",
       "reviews": [
+        {
+          "reviewer": "Blessing Ifesinachi",
+          "stars": 5,
+          "text": "Ashyre and krizia\nI’m really grateful for the support I received tonight. Thank you for allowing me to stay at my Cribs accommodation — it made a huge difference and helped me feel safe and settled. I appreciate the kindness and understanding shown.",
+          "date": "6 Jul 2026",
+          "raw_date": "2026-07-06T16:45:22.396929Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Edidiong “Eddymike” Effanga",
           "stars": 4,
