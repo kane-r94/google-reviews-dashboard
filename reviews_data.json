@@ -1,10 +1,20 @@
 {
-  "last_updated": "07 Jul 2026 09:34 UTC",
+  "last_updated": "08 Jul 2026 08:21 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
       "region": "HQ",
       "reviews": [
+        {
+          "reviewer": "Anya Miracle",
+          "stars": 5,
+          "text": "He was incredibly attentive and patient, making sure to listen to all of my concerns and ease my worries.",
+          "date": "7 Jul 2026",
+          "raw_date": "2026-07-07T12:24:16.253596Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Francis kojo Aboagye",
           "stars": 4,
