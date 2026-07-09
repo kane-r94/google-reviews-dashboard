@@ -1,10 +1,20 @@
 {
-  "last_updated": "08 Jul 2026 08:21 UTC",
+  "last_updated": "09 Jul 2026 09:32 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
       "region": "HQ",
       "reviews": [
+        {
+          "reviewer": "Daisy Lilley",
+          "stars": 1,
+          "text": "do not rent with student cribs. If i could give 0 stars i would. one room had an enormous hole in the ceiling that wasn’t fixed for months. one room had a really bad leak that they tried to convince us was just condensation because it was winter? obviously turned out to be a leak. our house was covered in black mould. worst of all, the communication was horrible and it was super rare to get any notice when work was being done, let alone the legal requirement of 24 hours. this meant that we had random men wandering round our all girl house with no warning and hugely invasive work being done, such as the kitchen counters being ripped out, the floor being ripped up, the oven and stove being out of use showers being redone etc etc, none of which we would be warned about so often we’d be left unable to cook or shower or use rooms in the house and would have no way of preparing for this. we had a pipe leak in the kitchen and rang the emergency number and literally never heard back. they never sent anyone or even followed up in any way at all. honestly could’ve ruined my uni experience, i would dissuade anyone from even considering using student cribs.",
+          "date": "8 Jul 2026",
+          "raw_date": "2026-07-08T18:20:42.219256Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Anya Miracle",
           "stars": 5,
@@ -8072,6 +8082,16 @@
       "region": "Region 1",
       "reviews": [
         {
+          "reviewer": "Leo Managh",
+          "stars": 5,
+          "text": "Great service from Brian! Made sure all of the issues were resolved to a high standard",
+          "date": "8 Jul 2026",
+          "raw_date": "2026-07-08T14:34:29.631050Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
           "reviewer": "Erin Christie",
           "stars": 5,
           "text": "marc wallas came to do a job and was very polite :)",
@@ -11209,6 +11229,16 @@
       "name": "The Square",
       "region": "Region 1",
       "reviews": [
+        {
+          "reviewer": "Grace",
+          "stars": 5,
+          "text": "Had maintenance come in, Brian was lovely, fixed all the issue he came for and more! Explained things to me in such a nice way, lovely guy!",
+          "date": "8 Jul 2026",
+          "raw_date": "2026-07-08T15:28:55.370561Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Aaron Craigie",
           "stars": 4,
