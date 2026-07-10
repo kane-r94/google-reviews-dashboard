@@ -1,10 +1,20 @@
 {
-  "last_updated": "09 Jul 2026 09:32 UTC",
+  "last_updated": "10 Jul 2026 09:28 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
       "region": "HQ",
       "reviews": [
+        {
+          "reviewer": "Amelie Hubert",
+          "stars": 5,
+          "text": "",
+          "date": "9 Jul 2026",
+          "raw_date": "2026-07-09T11:02:32.344633Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Daisy Lilley",
           "stars": 1,
