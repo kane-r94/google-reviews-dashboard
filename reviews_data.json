@@ -1,5 +1,5 @@
 {
-  "last_updated": "15 Jul 2026 08:01 UTC",
+  "last_updated": "16 Jul 2026 08:06 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
@@ -8101,6 +8101,26 @@
       "name": "Newcastle Main",
       "region": "Region 1",
       "reviews": [
+        {
+          "reviewer": "Lois Giuliani",
+          "stars": 5,
+          "text": "Marc was absolutely fantastic. He was incredibly helpful, approachable, and clearly very knowledgeable about his work. What really stood out was how willing he was to go the extra mile to make sure everything was sorted properly.\n\nHe responded quickly and got the job done efficiently without cutting any corners. I really appreciate his effort.",
+          "date": "15 Jul 2026",
+          "raw_date": "2026-07-15T14:03:46.853293Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Evie Sinclair",
+          "stars": 5,
+          "text": "marc has been so helpful and polite from the start, sorted our issues so fast and everything was completed to a really high standard, thank you so much for all the help",
+          "date": "15 Jul 2026",
+          "raw_date": "2026-07-15T12:53:36.778095Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Emma Tennant",
           "stars": 5,
