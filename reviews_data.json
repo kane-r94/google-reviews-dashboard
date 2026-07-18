@@ -1,5 +1,5 @@
 {
-  "last_updated": "17 Jul 2026 08:03 UTC",
+  "last_updated": "18 Jul 2026 07:42 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
@@ -8101,6 +8101,16 @@
       "name": "Newcastle Main",
       "region": "Region 1",
       "reviews": [
+        {
+          "reviewer": "Lazy Otaku",
+          "stars": 5,
+          "text": "Wain came to fix our kitchen extremely friendly guy did an amazing job and went above in better Ned repairing things that I hadn’t reported as I hadn’t noticed them",
+          "date": "17 Jul 2026",
+          "raw_date": "2026-07-17T12:57:36.054497Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Lois Giuliani",
           "stars": 5,
