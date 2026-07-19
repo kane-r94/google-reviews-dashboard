@@ -1,10 +1,20 @@
 {
-  "last_updated": "18 Jul 2026 07:42 UTC",
+  "last_updated": "19 Jul 2026 08:09 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
       "region": "HQ",
       "reviews": [
+        {
+          "reviewer": "Kiera Ann",
+          "stars": 5,
+          "text": "We moved in recently and the staff have been so helpful especially the out of hours staff were amazing especially emily and tatianna we had some issues with plumbing and a window and they immediately got back to us and sorted the maintenance!!",
+          "date": "18 Jul 2026",
+          "raw_date": "2026-07-18T11:57:17.651063Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Kitijan Thiyagarasa",
           "stars": 5,
