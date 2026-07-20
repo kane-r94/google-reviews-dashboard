@@ -188,22 +188,28 @@ def push_insights_json(config: dict, json_content: str, last_updated: str):
     branch    = config["github"]["branch"]
     file_path = "insights_data.json"
 
-    try:
-        contents = repo.get_contents(file_path, ref=branch)
-        repo.update_file(
-            path=file_path,
-            message=f"chore: update insights ({last_updated})",
-            content=json_content,
-            sha=contents.sha,
-            branch=branch,
-        )
-    except Exception:
-        repo.create_file(
-            path=file_path,
-            message=f"chore: create insights ({last_updated})",
-            content=json_content,
-            branch=branch,
-        )
+    for attempt in range(3):
+        try:
+            contents = repo.get_contents(file_path, ref=branch)
+            repo.update_file(
+                path=file_path,
+                message=f"chore: update insights ({last_updated})",
+                content=json_content,
+                sha=contents.sha,
+                branch=branch,
+            )
+            break
+        except Exception as e:
+            if "404" in str(e):
+                repo.create_file(
+                    path=file_path,
+                    message=f"chore: create insights ({last_updated})",
+                    content=json_content,
+                    branch=branch,
+                )
+                break
+            if attempt == 2:
+                raise
     print(f"Pushed insights_data.json to GitHub ({config['github']['repo_name']})")
 
 
