@@ -1,5 +1,5 @@
 {
-  "last_updated": "21 Jul 2026 08:21 UTC",
+  "last_updated": "22 Jul 2026 08:21 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
@@ -8122,6 +8122,76 @@
       "region": "Region 1",
       "reviews": [
         {
+          "reviewer": "Elsa Gordon",
+          "stars": 5,
+          "text": "",
+          "date": "21 Jul 2026",
+          "raw_date": "2026-07-21T15:18:07.538600Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Nuala Cullen",
+          "stars": 5,
+          "text": "",
+          "date": "21 Jul 2026",
+          "raw_date": "2026-07-21T13:35:50.527968Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "ELLE EMAR",
+          "stars": 4,
+          "text": "Company is a bit disorganised when doing admin and the same problems kept popping up but now that those are sorted everything is smooth sailing and maintenance guys are great, issues reported are solved quite fast which was good as there was a few things broken in the property when we got it",
+          "date": "21 Jul 2026",
+          "raw_date": "2026-07-21T12:41:53.793004Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Annabel Hugill",
+          "stars": 5,
+          "text": "",
+          "date": "21 Jul 2026",
+          "raw_date": "2026-07-21T12:34:22.359035Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Emily Monk",
+          "stars": 5,
+          "text": "",
+          "date": "21 Jul 2026",
+          "raw_date": "2026-07-21T11:50:30.950265Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "mia dobson",
+          "stars": 4,
+          "text": "Great , simple and easy , all houses we viewed were nice and modern",
+          "date": "21 Jul 2026",
+          "raw_date": "2026-07-21T11:37:00.176334Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Macy Renwick",
+          "stars": 5,
+          "text": "",
+          "date": "21 Jul 2026",
+          "raw_date": "2026-07-21T11:32:50.384737Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
           "reviewer": "Lazy Otaku",
           "stars": 5,
           "text": "Wain came to fix our kitchen extremely friendly guy did an amazing job and went above in better Ned repairing things that I hadn’t reported as I hadn’t noticed them",
@@ -10410,6 +10480,36 @@
       "region": "Region 1",
       "reviews": [
         {
+          "reviewer": "jack caton",
+          "stars": 5,
+          "text": "",
+          "date": "21 Jul 2026",
+          "raw_date": "2026-07-21T21:56:53.831670Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Isabella Williams",
+          "stars": 5,
+          "text": "",
+          "date": "21 Jul 2026",
+          "raw_date": "2026-07-21T20:35:44.254024Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "ZakNJ",
+          "stars": 5,
+          "text": "",
+          "date": "21 Jul 2026",
+          "raw_date": "2026-07-21T12:12:47.357413Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
           "reviewer": "Jeanie Falconer",
           "stars": 5,
           "text": "Make renting easy",
@@ -10896,6 +10996,26 @@
       "region": "Region 1",
       "reviews": [
         {
+          "reviewer": "luke",
+          "stars": 5,
+          "text": "",
+          "date": "21 Jul 2026",
+          "raw_date": "2026-07-21T17:46:05.433452Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Macy Moore",
+          "stars": 5,
+          "text": "It’s been lovely. Smooth process on the day which makes everything better",
+          "date": "21 Jul 2026",
+          "raw_date": "2026-07-21T14:15:43.815981Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
           "reviewer": "Will Ghosh",
           "stars": 4,
           "text": "Great accommodation with helpful management",
@@ -11204,6 +11324,16 @@
       "region": "Region 1",
       "reviews": [
         {
+          "reviewer": "Dylan Welsh",
+          "stars": 5,
+          "text": "Well designed interiors, maintenance quickly dealt with. The location is great for getting into the city centre.",
+          "date": "21 Jul 2026",
+          "raw_date": "2026-07-21T13:56:36.675482Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
           "reviewer": "Wain Beadsworth",
           "stars": 5,
           "text": "",
@@ -11309,6 +11439,16 @@
       "name": "The Square",
       "region": "Region 1",
       "reviews": [
+        {
+          "reviewer": "Mary Stewart",
+          "stars": 4,
+          "text": "Honestly a decent experience overall, flat is lovely with just a few maintenance issues that have been getting fixed. Easy process and flexible especially good for students",
+          "date": "21 Jul 2026",
+          "raw_date": "2026-07-21T14:42:13.360069Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Grace",
           "stars": 5,
@@ -11797,6 +11937,46 @@
       "name": "Manchester Main",
       "region": "Region 2",
       "reviews": [
+        {
+          "reviewer": "Jack Rodea",
+          "stars": 5,
+          "text": "",
+          "date": "22 Jul 2026",
+          "raw_date": "2026-07-22T00:49:56.412339Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "isabella certo-mackay",
+          "stars": 5,
+          "text": "",
+          "date": "21 Jul 2026",
+          "raw_date": "2026-07-21T12:53:08.923478Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Benji",
+          "stars": 3,
+          "text": "",
+          "date": "21 Jul 2026",
+          "raw_date": "2026-07-21T12:33:28.941252Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "tilly millard",
+          "stars": 3,
+          "text": "",
+          "date": "21 Jul 2026",
+          "raw_date": "2026-07-21T11:11:46.774851Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Ashok Linga",
           "stars": 4,
@@ -16232,6 +16412,16 @@
       "region": "Region 2",
       "reviews": [
         {
+          "reviewer": "grace",
+          "stars": 5,
+          "text": "great service",
+          "date": "21 Jul 2026",
+          "raw_date": "2026-07-21T13:38:20.310511Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
           "reviewer": "Olivia Duddy",
           "stars": 4,
           "text": "Cannot fault the maintenance team, nothing but kind and efficient. Had some issues using the tenant portal but I think that’s down to system issues",
@@ -18536,6 +18726,36 @@
       "region": "Region 3",
       "reviews": [
         {
+          "reviewer": "FRIDAY EGEDE NWEKORI",
+          "stars": 5,
+          "text": "My move-in experience was generally positive, and the staff were friendly and helpful throughout the check-in process. However, I realized that I preferred another vacant room after seeing the property in person, as I had only viewed it through a video before moving in. And this concern was being attended to, professionally.",
+          "date": "21 Jul 2026",
+          "raw_date": "2026-07-21T16:43:00.033568Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Keira Hogarth",
+          "stars": 5,
+          "text": "staff are friendly and approachable, rooms are adequately sized for the cost and maintenance staff are really good too!",
+          "date": "21 Jul 2026",
+          "raw_date": "2026-07-21T15:00:41.764279Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "HOUSEOFCAKES",
+          "stars": 5,
+          "text": "",
+          "date": "21 Jul 2026",
+          "raw_date": "2026-07-21T14:55:07.484675Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
           "reviewer": "Amelia Bleasdale",
           "stars": 5,
           "text": "Student cribs flat is what you make it to be, the interior design of the flat is very modern and sanitary. Me and my friends have lived there the past year we have made a conscious effort to keep the flat clean which makes the flat more enjoyable to live in and keeps its looking nice. The maintenance team have been incredible and fix all issues as quickly as possible. When your wanting a sanitary, homely looking place to live with your friends during your uni academic year I recommend student cribs.",
@@ -19182,6 +19402,66 @@
       "region": "Region 3",
       "reviews": [
         {
+          "reviewer": "Sarthak Patil",
+          "stars": 4,
+          "text": "",
+          "date": "21 Jul 2026",
+          "raw_date": "2026-07-21T17:27:05.706372Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Sandeep Gunasekaran",
+          "stars": 5,
+          "text": "Very good place to live. I recommend students and Professionals to stay here, worth for money.\nThanks students Cribs",
+          "date": "21 Jul 2026",
+          "raw_date": "2026-07-21T15:37:14.373999Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Manan Sheikh",
+          "stars": 4,
+          "text": "Overall my stay at student cribs is very good because the accommodation is comfortable and the location is very near to the city centre.",
+          "date": "21 Jul 2026",
+          "raw_date": "2026-07-21T14:43:12.345154Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Heather Smith",
+          "stars": 4,
+          "text": "Really happy with my booking experience.",
+          "date": "21 Jul 2026",
+          "raw_date": "2026-07-21T14:24:23.013212Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Olivia Armani",
+          "stars": 5,
+          "text": "student cribs is sooo good. best accomodation with the most things for your money. 24/7 maintenance, modern housing and furniture great location",
+          "date": "26 Nov 2025",
+          "raw_date": "2025-11-26T14:57:13.474054Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "MY Verse",
+          "stars": 4,
+          "text": "it was amazing",
+          "date": "18 Jun 2026",
+          "raw_date": "2026-06-18T13:48:19.905722Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
           "reviewer": "N",
           "stars": 1,
           "text": "Genuinely the worst accommodation I have ever stayed in. Apparently, cleaning between tenants is considered optional. We were promised the house would be cleaned and the carpets changed before we moved in — shockingly, neither happened. Instead, we were welcomed to disgusting old carpets, a foul smell, and the previous tenants mess ,that made the house feel like a damp skip.\n\nThe houses also seem to have been built using the cheapest materials money can buy. Something was constantly breaking, so calling maintenance practically became a hobby. Even when things were “fixed,” it was usually just a temporary solution until the problem inevitably came back. Our bathroom lights didn’t work properly the entire time we were there leaving us to shower in the dark with only phone touch lights, and the bathroom was constantly flooding .\n\nThe number of empty promises was almost impressive. Cleaning? Didn’t happen. New carpets? Didn’t happen. Proper repairs? Apparently too much to ask.\n\nThey clearly prioritise profit over providing students with decent living conditions. Their approach seems to be: one tenant out, throw the next ones in, collect the rent, repeat. Cleaning and basic standards are apparently optional.I genuinely counted down the days until I could move out. If you’re considering living here, do yourself a favour and look literally anywhere else.",
@@ -19217,16 +19497,6 @@
           "text": "Not finding accommodation that’s this nice and affordable anywhere else. Just know who you are moving in with",
           "date": "18 Jun 2026",
           "raw_date": "2026-06-18T14:08:11.227013Z",
-          "has_reply": false,
-          "reply_text": "",
-          "reply_date": ""
-        },
-        {
-          "reviewer": "MY Verse",
-          "stars": 4,
-          "text": "it was amazing",
-          "date": "18 Jun 2026",
-          "raw_date": "2026-06-18T13:48:19.905722Z",
           "has_reply": false,
           "reply_text": "",
           "reply_date": ""
@@ -19797,16 +20067,6 @@
           "text": "Decent flat, the running of the company is quite bureaucratic to be honest but if you’re willing to put up with that, by all means, enquire!",
           "date": "26 Nov 2025",
           "raw_date": "2025-11-26T15:07:51.666155Z",
-          "has_reply": false,
-          "reply_text": "",
-          "reply_date": ""
-        },
-        {
-          "reviewer": "Olivia Armani",
-          "stars": 5,
-          "text": "student cribs is sooo good. best accomodation with the most things for your money. 24/7 maintenance, modern housing and furniture great location",
-          "date": "26 Nov 2025",
-          "raw_date": "2025-11-26T14:57:13.474054Z",
           "has_reply": false,
           "reply_text": "",
           "reply_date": ""
@@ -20918,6 +21178,16 @@
       "region": "Region 4",
       "reviews": [
         {
+          "reviewer": "Megan Evans",
+          "stars": 3,
+          "text": "",
+          "date": "21 Jul 2026",
+          "raw_date": "2026-07-21T15:03:49.936994Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
           "reviewer": "X X",
           "stars": 1,
           "text": "Want to sleep past 8? Don’t bother living here as the maintenance men are as loud as they can be, throwing things in the skips and shouting. Want to sleep AT ALL? Don’t bother living here because the fire alarm has had issues for 8 months and it WILL go off at 2am. It will go off for over an hour, the cribs team on the phone will be useless, incompetent and apathetic. And this will happen for days in a row. It’ll happen every day of exams week. Sleep deprivation torture comes to mind. Don’t bother to chase it up with student cribs. They don’t care. They’ll leave you to rot, just because you’re students. Just don’t bloody bother. Don’t spend your money or waste your time. Choose peace.",
@@ -21555,6 +21825,16 @@
       "name": "Walter Road",
       "region": "Region 4",
       "reviews": [
+        {
+          "reviewer": "steeve xavier siby",
+          "stars": 5,
+          "text": "",
+          "date": "21 Jul 2026",
+          "raw_date": "2026-07-21T14:35:39.086055Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Ellie Kelsall",
           "stars": 5,
