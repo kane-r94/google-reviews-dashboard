@@ -1,5 +1,5 @@
 {
-  "last_updated": "25 Jul 2026 08:00 UTC",
+  "last_updated": "26 Jul 2026 08:20 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
@@ -9968,6 +9968,16 @@
       "region": "Region 1",
       "reviews": [
         {
+          "reviewer": "thalia",
+          "stars": 5,
+          "text": "",
+          "date": "25 Jul 2026",
+          "raw_date": "2026-07-25T17:41:57.244627Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
           "reviewer": "Emilie",
           "stars": 5,
           "text": "Great location. Good place to live as a student. Nice apartment to be in as a student. Feel safe.",
@@ -11343,6 +11353,16 @@
       "name": "Shiners Yard",
       "region": "Region 1",
       "reviews": [
+        {
+          "reviewer": "amelie",
+          "stars": 5,
+          "text": "",
+          "date": "25 Jul 2026",
+          "raw_date": "2026-07-25T10:32:08.763077Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Dylan Welsh",
           "stars": 5,
