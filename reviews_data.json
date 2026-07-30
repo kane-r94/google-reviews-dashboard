@@ -1,5 +1,5 @@
 {
-  "last_updated": "29 Jul 2026 08:33 UTC",
+  "last_updated": "30 Jul 2026 08:18 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
@@ -11028,16 +11028,6 @@
           "has_reply": false,
           "reply_text": "",
           "reply_date": ""
-        },
-        {
-          "reviewer": "Šarūnas Žaronaitis",
-          "stars": 5,
-          "text": "",
-          "date": "4 Feb 2019",
-          "raw_date": "2019-02-04T21:39:42.935564Z",
-          "has_reply": false,
-          "reply_text": "",
-          "reply_date": ""
         }
       ]
     },
@@ -13739,6 +13729,16 @@
       "name": "Chancellors Court",
       "region": "Region 2",
       "reviews": [
+        {
+          "reviewer": "Djxy 2252",
+          "stars": 5,
+          "text": "Sam did a great job repairing my bathroom by fixing the toliet position and the leaking sink",
+          "date": "29 Jul 2026",
+          "raw_date": "2026-07-29T11:41:04.567803Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "leonski",
           "stars": 1,
