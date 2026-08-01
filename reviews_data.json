@@ -1,5 +1,5 @@
 {
-  "last_updated": "31 Jul 2026 08:43 UTC",
+  "last_updated": "01 Aug 2026 08:13 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
@@ -8152,6 +8152,26 @@
       "region": "Region 1",
       "reviews": [
         {
+          "reviewer": "Ruby Thompson",
+          "stars": 5,
+          "text": "Brian came to fix a window and he was very friendly and fixed it very quickly.",
+          "date": "31 Jul 2026",
+          "raw_date": "2026-07-31T15:00:58.371980Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Alicia Crawshaw",
+          "stars": 5,
+          "text": "Very good company our bins got nicked and they replaced them quite quickly",
+          "date": "31 Jul 2026",
+          "raw_date": "2026-07-31T14:24:57.542762Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
           "reviewer": "Lois Giuliani",
           "stars": 5,
           "text": "Wayne did a fantastic job putting up my shelves. He was quick, professional, and clearly knew what he was doing. Everything was fitted perfectly and left neat and tidy afterwards. Really pleased with the result",
@@ -12692,7 +12712,1048 @@
     {
       "name": "Mayfair Court",
       "region": "Region 2",
-      "reviews": []
+      "reviews": [
+        {
+          "reviewer": "KaYi Associates",
+          "stars": 5,
+          "text": "",
+          "date": "3 Apr 2026",
+          "raw_date": "2026-04-03T10:58:51.382409Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Anto Agus Sugianto",
+          "stars": 3,
+          "text": "Peace and quiet",
+          "date": "27 Mar 2026",
+          "raw_date": "2026-03-27T06:22:49.610098Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Hussain",
+          "stars": 1,
+          "text": "",
+          "date": "13 Mar 2026",
+          "raw_date": "2026-03-13T01:03:18.246030Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Jake Robinson",
+          "stars": 5,
+          "text": "",
+          "date": "9 Feb 2026",
+          "raw_date": "2026-02-09T16:43:18.017012Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Shannon Watts",
+          "stars": 3,
+          "text": "",
+          "date": "10 Jan 2026",
+          "raw_date": "2026-01-10T22:18:42.022098Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Paul Wardle",
+          "stars": 1,
+          "text": "My experience living here was mixed. The staff on site were friendly and the maintenance team were always helpful. However, the accommodation quality did not match the price in my view.\n\nWhen I moved out, my housemate and I, as well as several friends in another apartment, were informed that our deposits would not be returned. This was surprising given that we completed a full inventory at check-in. The reasons provided for the deductions did not align with our own records.\n\nThis year was also the first time a specific figure was applied to the ‘fair use’ utilities policy. As a result, a number of tenants were charged additional amounts for utilities that had previously been included in the rent. In our case, we were told our electric and water usage over an eleven-month period exceeded £2,200, which did not reflect our understanding of typical consumption. When I asked for evidence, this was not provided.\n\nIf you like the accommodation, it may still suit you. I would just recommend being prepared for potential end-of-tenancy charges for deposits and utilities, and keeping detailed records throughout your stay.",
+          "date": "21 Sep 2018",
+          "raw_date": "2018-09-21T11:12:19.325006Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Oliver Lambert",
+          "stars": 2,
+          "text": "Moved here in July. Its been over 2 months and I still have no working shower, a wasp nest that still has not been removed. Im now being ignored by the management team etc and I’m expected to pay another £2k+ instalment. This company has been nothing but a major disappointment and I would strongly consider other student housing options.\n\nEdit: Shower now finally fixed.\n\nMove in date: (28/07/2025)\nShower fixed date: (25/10/2025)\n\nI still think this is a long time to wait.",
+          "date": "23 Sep 2025",
+          "raw_date": "2025-09-23T16:02:18.372652Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Paul Garton",
+          "stars": 2,
+          "text": "Over priced and not well maintained. Good location but that’s about it.",
+          "date": "26 Aug 2025",
+          "raw_date": "2025-08-26T18:12:00.651294Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Mairead",
+          "stars": 1,
+          "text": "Awful experience with maintenance team and dealing with a broken shower. Not sure if the maintenance for Mezzino and Student Cribs are the same, as I’m aware they changed hands during my tenancy, but it’s beside the point. My shower has been broken since November. After about five attempts of trying to fix it (without testing if it worked before they left, evidently), they ended up closing all my maintenance request tickets. Whenever I rang them, they’d tell me United Utilities would come and sort it, but nobody arrived! I move out in less than 24 hours and I can assure you the shower still runs freezing cold. Sent three copies of my complaints in the last few months and not one of them has seen a response. I struggle with OCD and it makes taking baths really hard for me- I’m lucky my hometown isn’t far from here, or I’d have no idea what to do. I find it to be really unfair, especially considering I have clarified my issues on many, many occasions.",
+          "date": "3 Aug 2025",
+          "raw_date": "2025-08-03T17:34:50.097585Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Hannah Elizabeth",
+          "stars": 1,
+          "text": "",
+          "date": "29 Jul 2025",
+          "raw_date": "2025-07-29T12:54:55.087356Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Luke McNamara",
+          "stars": 1,
+          "text": "An absolute dive about as water tight as a colander, and in trying to dispute 300£ out of 7,500£ of the extortionate rent which has been raised, studen cribs will threaten their tenants with court orders until they extract every penny, avoid",
+          "date": "26 Jul 2025",
+          "raw_date": "2025-07-26T23:31:50.387093Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Sam_j_1504",
+          "stars": 1,
+          "text": "Finally managed to move out of this hole. First it was a leaky roof that was like a tap that meant I couldn’t live in the room without getting ill from the damp. Then as a cherry on the cake at 9am on the last day of our tenancy came in to find 5 people clearing out the whole apartment with all our stuff in bin bags, then to be told if we were an hour later our hundreds of pounds of stuff wouldve been thrown in the bin. This was after calling and telling them the situation and them saying that it was fine and they wouldn’t do our apartment yet.",
+          "date": "1 Jun 2023",
+          "raw_date": "2023-06-01T09:20:58.710600Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "The Cplus",
+          "stars": 5,
+          "text": "Great space",
+          "date": "11 Jun 2025",
+          "raw_date": "2025-06-11T12:03:21.218118Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Amelia",
+          "stars": 3,
+          "text": "Maintenance took ages to fix a bathroom door and bedroom doors to the point where I had to fix it myself. I loved living here compared to my previous accommodation but I had to leave here due to the high cost of rent and electricity. No locks on bedroom doors. Staff were helpful and wonderful but it was the maintenance that was the problem. I do not blame the staff in any way. I know there were management changes and I hear now they are improving things.",
+          "date": "11 Feb 2025",
+          "raw_date": "2025-02-11T20:48:34.450049Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Ali Hassan",
+          "stars": 1,
+          "text": "",
+          "date": "21 Nov 2024",
+          "raw_date": "2024-11-21T02:37:34.476082Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "N M",
+          "stars": 1,
+          "text": "The worst accommodation I have ever lived in during my four years at university.\nMove in was awful, we were informed only the night before that the toilet WAS NOT BUILT, issues with furniture, and the list was endless. We had to move in to the fourth floor with NO LIFT. Toilet took MONTHS to be built causing me to live out of the kitchen due to maintenance having to come every day for months. Communication was awful, I don’t think I ever sent an email and got a response to it without begging. I was once locked out of the flat ( as they disabled everyone’s access keys as they ‘forgot’ to renew them ) and did not get a response for 6 hours after calling emergency number and management probably 60+ times, with fear of not having anywhere to stay at night . They never knew how to solve our problems. I remember getting a ‘there’s nothing we can do about it’ after finding a mouse in my clean flat due to holes in the wall, they came to fix it and promised everything is fixed just for us to find the mouse again with more holes in the walls that were not covered.\nManagement was always rude and unhelpful. We stayed patient for so long and when we went to finally communicate our frustration we never even got an apology.\nOverall had a horrible toll on my mental health as an international student doing my Master’s with no other home to go to.\nAlso, never allowed us to view the flat prior to booking but promised it was EXACTLY like the video they sent us ( complete lie ).\nDO NOT LIVE IN THIS ACCOMMODATION IT WAS THE WORST EXPERIENCE I HAVE EVER ENCOUNTERED.\n\nEdit: No I will not be contacting the office to only be left on delivered again. I tried to speak to you in person about my issues respectfully numerous times and never was respected back. Maybe go through your emails and give people back their deposits? You are an awful service and I  truly would never want to communicate with you again, as it always felt like talking to myself.",
+          "date": "25 Sep 2024",
+          "raw_date": "2024-09-25T20:02:28.222182Z",
+          "has_reply": true,
+          "reply_text": "Hello, can I please request you contact the office regarding your feedback as we would like to discuss this in more detail and see exactly where these issues arouse. There is never a better time for us to learn from past mistakes and we would love for you to give us that opportunity here. Please contact me direct via email at Alex@Mezzino.co.uk. I look forward to hearing from you soon.",
+          "reply_date": "7 Oct 2024"
+        },
+        {
+          "reviewer": "Ben Davidson",
+          "stars": 1,
+          "text": "Pros: ideal location, with Sainsburys opposite and many bus stops nearby.\n-Some new staff joined near the end of my tenancy, which may lead to improvements. (Alex was helpful)\n\nCons: Move-in wasn't good at all. Numerous issues such as bathroom light not working (bathroom didn't have a window so this was a problem). Bedroom light and bathroom extractor fan also broken.  Hob extractor hood was held in place by two 15mm screws underneath it, which were barely hammered into the adjacent wooden cupboard. As a result, the extractor fell out of place and was extremely close to taking my mum's head off, who was helping me move in.\n- Maintenance team were unreliable. Issues would either be fixed in 24 hours or it would take around 4-6 weeks to hear back from them. These problems from the move-in were not fully resolved until some time had elapsed.\n- Building was shoddy and tired upon move-in, and external construction work was ongoing throughout most of the year.\n- Maintenance were conducting checks on every flats radiators, and left mine on after they had finished. As a result, the radiator was left on at a high temperature for around a day or two as both me and my flatmate were not at home. This is annoying, especially when you are the one paying the electricity bill.\n- Maintenance entered my flatmates room and fixed his lightbulb while he was asleep. He went to bed and woke up with a new ceiling light which was a bit strange.\n- Wasn't able to get an in-person viewing before renting the flat, despite months of trying. I Wouldn't have moved in if I had to got to experience this place beforehand\n\nOverall, I wouldn't recommend this accommodation. You would be better off renting a privately owned flat/house, rather than using Mezzino. This accommodation is worn down and has many issues - Mezzino decide not to address these issues and just let a load of students put up with these problems.",
+          "date": "29 Jul 2024",
+          "raw_date": "2024-07-29T17:04:46.060326Z",
+          "has_reply": true,
+          "reply_text": "Hi Ben, Thank you for your review your feedback is very useful to use as it helps us to make further improvements to our service and our properties. \n\nAs you have mentioned we have a new team in place, including new management and new members of our facilities team. The team at Mezzino Manchester have already made several changes to the way we operate and the way in which maintenance requests are carried out.\nThis year we have been holding open events to allow all new tenants the opportunity to see their new apartment before moving in. We have also been hosting private viewings for anyone unable to attend an open day. I note that you say in your review you was unable to do this before you moved in and I am sorry this was the case, but as I say this is one improvement we have made since January 2024. In addition we are currently running at a response time of maximum 48 hours for all non emergency maintenance requests and maximum 12 hours for all emergency requests. On average we are now able to deal with maintenance requests the same day they are reported to us. This is down to the amazing work our team at Mezzino Manchester have been doing over the last few months on site. \n\nAs for the building itself, I note that you have stated the building is tired. Whilst the property is around 25 years old we are currently going through a summer process of replenishing the apartments and improving where possible to make sure all our apartments offer value for money and give all our tenants a comfortable living experience whilst with us here at Mezzino Manchester. \n\nAgain, I am sorry you have had the expeirnece you had had whilst staying with us and I can assure you we are and will continue to do everything we can to make our service better and offer the best possible service to all our tenants here at Mezzino Manchester. \n\nIf you would like to discuss your feedback further please feel free to email me at Alex@Mezzino.co.uk.",
+          "reply_date": "5 Aug 2024"
+        },
+        {
+          "reviewer": "Tayo Olufon",
+          "stars": 5,
+          "text": "I sincerely had a beautiful experience at Mayfair Court from start to finish, despite my specific preferences regarding my accommodation! The management consistently prioritised my satisfaction, and nothing beats an intentional team, really. I found the open-door policy, efficient maintenance and communication system particularly commendable. I highly recommend Mayfair Court to any student seeking a comfortable home while studying!",
+          "date": "28 Feb 2024",
+          "raw_date": "2024-02-28T10:50:58.734859Z",
+          "has_reply": true,
+          "reply_text": "Thank you Tayo for your lovely review!",
+          "reply_date": "28 Feb 2024"
+        },
+        {
+          "reviewer": "Tom",
+          "stars": 1,
+          "text": "AVOID THIS PLACE. Rooms don't look anything like the pictures, and on moving in day you'll most likely receive broken/damaged furniture and a dirty room. This was the case with myself and almost every other tenant I spoke to. I've seen recent google reviews where Mezzino have responded trying to justify any complaints. I'd be wary of their responses as they've recently been advertising an Open Day for this accom on Facebook. It seems they are trying to paint a false picture that they care about complaints to try to encourage prospective tenants to book a room with them. However there are poor reviews from a year before making the same complaints, so if Mezzino genuinely took these issues seriously, they wouldn't still be receiving these same criticisms a year later from new tenants. Do not make the same mistake we did, there are better accommodations that are lower priced and actually look like their pictures. Looking forward to see what dishonest response I receive from Mezzino regarding this.",
+          "date": "11 Feb 2024",
+          "raw_date": "2024-02-11T05:53:16.277006Z",
+          "has_reply": true,
+          "reply_text": "Hi Tom,\n\nDue to changes in management staff at our Manchester sites in the last 6 months, our daily operations have improved drastically, and we are hoping to improve further in as many areas as possible. Therefore, the feedback of you and your fellow residents is always taken on board wherever possible to aid us in bettering ourselves. We offer an open door policy, as such you are more than welcome to pop into the accommodation office at any time during business hours to talk to a member of the team about any issues you may have surrounding your tenancy and/or the apartment you stay in. \n\nWe hope you are well!\nMezzino Manchester Team",
+          "reply_date": "12 Feb 2024"
+        },
+        {
+          "reviewer": "Steve Brookes",
+          "stars": 1,
+          "text": "Generally tired and shabby accommodation  heavily over-priced with poor responses to maintenance requests. Recommend  avoid this accommodation. It is not Manchester Met Uni certified and were it to be so they could exercise some input over the excessive rents.",
+          "date": "9 Feb 2024",
+          "raw_date": "2024-02-09T19:24:07.580198Z",
+          "has_reply": true,
+          "reply_text": "Hi Mr Brookes,\n\nThank you for your feedback.\n\nWe assure you that all of our rental costs are in line with the market for alike properties and all facilities issues logged in the correct manner are reviewed and addressed as quickly as possible.\n\nOur records show that the tenant you have written the review on behalf of has rebooked with us for the following academic year at Chancellor's Court and as such we ask that you email us on manchester@mezzino.co.uk if you have any concerns or issues you wish to discuss.\n\nMany thanks,\nMezzino Manchester",
+          "reply_date": "10 Feb 2024"
+        },
+        {
+          "reviewer": "Kelly-Ann Hinder",
+          "stars": 3,
+          "text": "Accommodation - move in day was such a disappointment. What should have been a happy day was the complete opposite. It was nothing like the photos on the website for sure. Damaged blinds and furniture. Mouse in the house trap, also silver finish. List was endless. Overall 1 star\n\nCommunication - to start with was very poor, but one day Alex answered the phone and from then on we got sorted with all of the obstacles we faced. He kept me in the loop on everything. Went out of his way to get answers we needed with a re-let. Hes a credit to their team. Overall 5 stars (all Alex!)",
+          "date": "7 Feb 2024",
+          "raw_date": "2024-02-07T13:36:32.338917Z",
+          "has_reply": true,
+          "reply_text": "Hi Kelly,\n\nWe sincerely apologise for any issues your daughter faced when moving into Chancellors Court. \n\nUnfortunately, the summer operations period does not always run so smoothly as we have a 2-week period between tenancies to ensure everything is ready for our new residents. We rely heavily on suppliers and 3rd party contractors to deliver on time, and this can make it rather difficult to resolve all issues prior to our check in day if we get let down.\n\nWe strive to improve in all areas required to ensure tenant satisfaction, as such your feedback is much appreciated and will be taken on board by the team.\n\nBest wishes,\nMezzino Manchester",
+          "reply_date": "10 Feb 2024"
+        },
+        {
+          "reviewer": "Ahmed Yahia",
+          "stars": 3,
+          "text": "",
+          "date": "18 Dec 2023",
+          "raw_date": "2023-12-18T03:39:47.951668Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "razie hoseyni",
+          "stars": 1,
+          "text": "The worst accomodation I have ever seen in my life. The worst management team. Firstly, the night before our check in the manager of the accommodation send an email saying they still haven’t cleaned the place and we should expect broken and damaged utilities, and they will all be fixed and cleaned within a week. My flatmates and I checked into a total MESS. We couldn’t stay the nights for the first week until WE cleaned the house. It’s been a month now and still we haven’t seen any cleaners, deep cleaning the house, and NO MAINTENANCE, and I must mention the list of broken stuff is LONG.",
+          "date": "4 Oct 2023",
+          "raw_date": "2023-10-04T20:05:27.256142Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "kate",
+          "stars": 1,
+          "text": "Rooms look NOTHING like the pictures, they are scamming everyone",
+          "date": "23 Jul 2023",
+          "raw_date": "2023-07-23T02:26:32.933332Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Stephen Sharkey",
+          "stars": 4,
+          "text": "",
+          "date": "17 May 2023",
+          "raw_date": "2023-05-17T23:50:26.872813Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Revfatherson Daniel (otregemuyon)",
+          "stars": 4,
+          "text": "Nice nd busy environment 👏",
+          "date": "7 Apr 2023",
+          "raw_date": "2023-04-07T11:41:13.634814Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Holly Anderson",
+          "stars": 1,
+          "text": "I never write bad reviews usually but me and my flat mate have had a terrible experience the entirety of our year at Mayfair Court. Firstly, as soon as we moved in we quickly discovered a mouse infestation that has still not been sorted or even bothered with after numerous complaints and maintenance requests. The staff use the same excuse every time and nothing actually gets sorted. Me and my flat mate have had to spend half of our time at home because the mice started coming into our bedrooms which is completely unhygienic and unacceptable.The flats themselves are dark and dingy, nothing like the show flats we were initially shown. I honestly would avoid this place at all costs it is over priced and they think that they can get away with it because we are students. Please avoid.",
+          "date": "4 Apr 2023",
+          "raw_date": "2023-04-04T13:52:54.453048Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Izzy Drysdale",
+          "stars": 1,
+          "text": "The WORST place I’ve lived throughout my 3 years at university and the first year was pretty hard to top. I currently live at Mayfair Court and from the day I moved in it was full of red flags. The first being the pictures online look absolutely nothing like what you get in person they’re vastly different with the pictures advertising nice looking newly furnished apartments. What you get is a dated, dark, dingy apartment with little space and poor quality furniture and appliances. Secondly, the day I was moving in I requested access to the car park so I could empty my car of all of my belongings and move my stuff in more easily, to be told absolutely not it’s against company policy and there is not a chance I would be given any access for any period of time without paying the monthly amount for a parking space, (which isn’t actually needed by the way as there is street parking, which they obviously fail to mention before you pay for the car park). Thirdly, there are a number of problems we have had since moving in in September that have still to this day not been fixed, the shower being one of them, lifting floors, lights not working, the fridge breaking (all of our food going off, but they wouldn’t reimburse any of our costs as they ‘gave us a fridge within 24 hours’ which was actually out of their staff room and contained other peoples food), last night our electricity shut off as the toaster tripped the fuse, to which we couldn’t turn back on as the fuse box is locked in a cupboard in the apartment that we do not have access to meaning we had to call out of hours staff due to the office being shut which were unhelpful and clueless. All of these problems stated above have been reported to maintenance on the online portal which states all of these jobs have been ‘completed’ when no one has ever been to fix any of them and we have had them since sepetember. The members of staff are rude, have a cocky attitude, are reluctant to help anyone, give the same excuses everytime an issue is addressed  ‘it’s company policy’. Their own members of staff are leaving positive reviews to make it appear as a nice place to live, which couldn’t be further from the truth, the bedroom doors do not lock so unless you know and trust your flat mate, you could have some issues there. AVOID THIS COMPANY AT ALL COSTS, the room rates are extortionate for what you get and the hassle of living with multiple problems for them to not be fixed for months does not amount to the price you pay and the rude attitude you get when reporting problems. WASTE OF MONEY, NOT STUDENT FRIENDLY, POOR QUALITY, RUDE MEMBERS OF STAFF, I’d give 0 stars if I could.",
+          "date": "7 Mar 2023",
+          "raw_date": "2023-03-07T09:37:31.307808Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Khalid MOHAMMED",
+          "stars": 5,
+          "text": "",
+          "date": "3 Feb 2023",
+          "raw_date": "2023-02-03T09:10:45.726315Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "kalyan rathod",
+          "stars": 5,
+          "text": "",
+          "date": "26 Jan 2023",
+          "raw_date": "2023-01-26T21:40:56.263778Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "steve talbot",
+          "stars": 5,
+          "text": "My son and his friend have lived at Mayfair Court since September. Anyone thinking of student accommodation in Manchester should have a good look at this place.\n\nI have experience in student accommodation all over the UK (I have a commercial carpet cleaning business and have cleaned carpets in thousands of halls etc). I can honestly say this is head and shoulders above the standard halls.\n\nStudent accommodation is usually very grubby but this works as it is 1, 2 or max 3 people per flat. It is clean and tidy in common areas.\n\nJordan and Ian are very approachable and if you want to ask any questions before you move in just ring them (I must have rung about 20 times with questions before letting my son move in).\n\nWetherspoons downstairs is full of students.",
+          "date": "19 Jan 2023",
+          "raw_date": "2023-01-19T20:17:58.820315Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "PROUD STUDIO",
+          "stars": 5,
+          "text": "",
+          "date": "22 Dec 2022",
+          "raw_date": "2022-12-22T18:43:52.991601Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Niko Merlak",
+          "stars": 1,
+          "text": "Worst student accommodation in Manchester. Dirty flat, broken tiles in the bathroom, dirty mattress, broken bathtub, shower not working, power going out...Do not book! I've also heard that they can be problematic about deposits so I will be giving an update once I move out (sadly I paid in advance, so I cannot back out now).",
+          "date": "29 Nov 2022",
+          "raw_date": "2022-11-29T21:45:39.237638Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Kris Perry",
+          "stars": 5,
+          "text": "Ok",
+          "date": "17 Nov 2022",
+          "raw_date": "2022-11-17T15:21:56.551933Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Daisy Brobbey",
+          "stars": 5,
+          "text": "",
+          "date": "22 Sep 2022",
+          "raw_date": "2022-09-22T14:41:28.370444Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "John Smith",
+          "stars": 1,
+          "text": "We were one of a few chuffed Mom & Dad's we met on the day who had come along with their son's & daughters to help them move in, but me and the wife quickly realized that along with us there were others who were about to get a kick in the teeth. Soon became apparent that others had rooms that were far from complete and in a wrecked dirty state. Initially we thought it was just us. Basically told 'lump it, your on a long list, deal with it'. All the hard work we seen them do all summer worrying about saving for the deposits looking forward makes it even more despicable when they turned up to a hovel",
+          "date": "11 Sep 2022",
+          "raw_date": "2022-09-11T09:30:05.446790Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "chukmr6",
+          "stars": 1,
+          "text": "PLEASE READ..... For start offs isn't it a conflict of interest when the people working there are leaving reviews?. Where oh where is a '0' star button when you need one.!!!!!? Somebody should report these lot to trading standards SERIOUSLY. We just moved in our friend & just felt we had to share what we experienced on the moving in day & since. They had damaged furniture & a REALLY BAD grubby flat needs loads doing & their paying for the privilege!!. They have fobbed off from day one - not cool having your friend in tears on the phone & there's nothing you can do 😠 . This place really DO NOT CARE. Some flats looked okay as we got chatting to some of the others who moved in, but some looked like trap houses!!. After what we saw I would AVOID this place spend your money elsewhere.",
+          "date": "14 Sep 2022",
+          "raw_date": "2022-09-14T11:40:24.623662Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "kendel jeffers",
+          "stars": 1,
+          "text": "",
+          "date": "13 May 2022",
+          "raw_date": "2022-05-13T08:37:18.543617Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Ash J",
+          "stars": 4,
+          "text": "They need to fix some of the automatic locks",
+          "date": "4 May 2022",
+          "raw_date": "2022-05-04T15:53:23.613451Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Hassan Muhammad",
+          "stars": 4,
+          "text": "",
+          "date": "19 Feb 2022",
+          "raw_date": "2022-02-19T08:38:51.314720Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Daniel Smith",
+          "stars": 5,
+          "text": "",
+          "date": "12 Jan 2022",
+          "raw_date": "2022-01-12T11:19:58.904614Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Zahid Hussain",
+          "stars": 4,
+          "text": "This place is secure student accommodation  and their is parking available outside. However if your looking for somewhere then this place may not be for you. Internally there is laminate flooring everywhere and anyone walking on your floor or above will disturb/annoy you",
+          "date": "11 Nov 2021",
+          "raw_date": "2021-11-11T09:50:50.694979Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Jainam Gala",
+          "stars": 5,
+          "text": "Amazing student accommodation in an amazing area",
+          "date": "26 Oct 2021",
+          "raw_date": "2021-10-26T16:16:53.219568Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Kennedy Apanyin",
+          "stars": 5,
+          "text": "",
+          "date": "26 Sep 2021",
+          "raw_date": "2021-09-26T02:46:21.804118Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Bharath Billa",
+          "stars": 3,
+          "text": "",
+          "date": "21 Sep 2021",
+          "raw_date": "2021-09-21T21:25:19.558281Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "john mc gettrick",
+          "stars": 5,
+          "text": "Working on the building quite.modern and very very busy",
+          "date": "1 Jul 2021",
+          "raw_date": "2021-07-01T18:12:00.748746Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Stuart Watson",
+          "stars": 5,
+          "text": "Great place to live as a postgrad student, I've lived here for the second and third year of my PhD and have renewed for my last year. Staff are very accommodating and the parcel collection system is great. The car parking is very secure and very reasonably priced.\n\nSainsburys is just across the road and the bus stop is just on the door step.",
+          "date": "29 Jun 2021",
+          "raw_date": "2021-06-29T11:56:10.733975Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "James Holt",
+          "stars": 1,
+          "text": "",
+          "date": "18 Jun 2021",
+          "raw_date": "2021-06-18T16:05:48.469211Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Charlotte Barnes",
+          "stars": 5,
+          "text": "I've lived at Mayfair Court for 2 years now. Great accommodation in a great location and would recommend to anyone who is looking to live here. Staff are very friendly and attentive - whenever there are any issues it is sorted promptly. It really has been the perfect accommodation whilst studying at University.",
+          "date": "26 May 2021",
+          "raw_date": "2021-05-26T19:39:59.640280Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "dr bakar",
+          "stars": 5,
+          "text": "Nice student accommodations.",
+          "date": "23 May 2021",
+          "raw_date": "2021-05-23T11:03:18.385923Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Niamh",
+          "stars": 5,
+          "text": "Great accommodation, perfect for students studying in Manchester! The staff are really friendly and helpful!",
+          "date": "11 May 2021",
+          "raw_date": "2021-05-11T09:54:58.006550Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "kate",
+          "stars": 5,
+          "text": "Great accommodation. I've lived at Mayfair for 2 years and would highly recommend. Perfect location and very convenient for students. Staff are friendly and attentive also.",
+          "date": "6 May 2021",
+          "raw_date": "2021-05-06T17:41:09.613824Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "lee northrop",
+          "stars": 5,
+          "text": "",
+          "date": "10 Apr 2021",
+          "raw_date": "2021-04-10T16:51:13.750733Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Shashank Singh",
+          "stars": 5,
+          "text": "Excellent accommodation! The rooms are spacious and have a nice modern feel to them. The staff is amiable and helpful. It is also situated in a convenient location, close to all local amenities. I would highly recommend it.",
+          "date": "15 Mar 2021",
+          "raw_date": "2021-03-15T16:25:28.717242Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Semil Patel",
+          "stars": 5,
+          "text": "It's a great student accommodation to live in as it's got great security, supermarkets and take-aways nearby and easy bus access downstairs that takes you to University and town centre. A diverse number of students choose to come here as it's one of the safest private accommodations in fallowfield and has a great staff and RC team. All rooms are well designed and spacious, with great bathrooms and ensuites. I highly recommend moving here.",
+          "date": "13 Mar 2021",
+          "raw_date": "2021-03-13T16:43:32.377150Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "kudzai hombas",
+          "stars": 5,
+          "text": "It's been a perfect accommodation,  right next to the bus stop and Sainsbury's. Maintenance always get issues sorted very quickly and staff always help with any problems or questions you might have. Would definitely stay again if i am a student in Manchester in the future!",
+          "date": "3 Mar 2021",
+          "raw_date": "2021-03-03T11:14:55.220386Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Alice Webb",
+          "stars": 1,
+          "text": "(please read!) Don't waste your money, would not recommend, their is way better, cheaper and safer! accommodation in Fallowfield than this. The bedroom doors do not lock! so anyone can walk into your room and the maintenance never gets done! I filled in a maintenance form numerous of times for the same problem and different problems and it never gets resolved. One time I had NO HOT WATER and they didn't resolve it until 4 days later!  The biggest problem I had was when the person I lived with brought back random! strange people who did not live at this accommodation and ruined the living room area and damaged the walls in the apartment and again was not resolved straight away and when I rang the emergency number to complain, no one came to help sort it out. So I had to deal with screaming / shouting / loud noise all night of random people who were vandalising the apartment that I was paying for! and when a global pandemic happens and everyone goes home to be with their families during lockdown and your not even staying in the accommodation, they expect you to still pay for it! not like other accommodations that I know who didn't make their tenants pay rent, who have a heart! Mezzino will take your money! and will not be understanding. You do not get value for money, look elsewhere!",
+          "date": "7 Dec 2020",
+          "raw_date": "2020-12-07T10:12:26.551752Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Danielle Bravo",
+          "stars": 4,
+          "text": "",
+          "date": "13 Sep 2020",
+          "raw_date": "2020-09-13T10:31:55.358137Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Graham Allan",
+          "stars": 4,
+          "text": "A good variety off flat sizes in a well situated area.",
+          "date": "30 Aug 2020",
+          "raw_date": "2020-08-30T06:49:50.656311Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "George Thresher",
+          "stars": 3,
+          "text": "Ideal location in the centre of Fallowfield right by the bus stop, Sainsbury’s and Friendship. The sofas in our flat were absolutely horrendous but the rest of the kitchen furniture was decent. Slow WiFi, rubbish water pressure and loud residents standing outside their flats smoking and shouting till the early hours. All of the team are lovely (especially Will) apart from Ian who, to put it bluntly, isn’t very friendly (maybe he woke up on the wrong side of the bed those days?). All in all, 3/5, wouldn’t stay again.",
+          "date": "24 Aug 2020",
+          "raw_date": "2020-08-24T11:52:16.363931Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "James",
+          "stars": 5,
+          "text": "Excellent accommodation! Although the property is on the higher end in terms of price, the location within the city is as good as you'll get.\n\nThe team are amazing and run the place well. Quality of furniture is excellent and the size of the properties are great. Underground car park is also a huge bonus! Would 100% percent recommend.",
+          "date": "5 Aug 2020",
+          "raw_date": "2020-08-05T18:40:12.622026Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Vilius Ciuzas",
+          "stars": 1,
+          "text": "Nobody cares that somebody left pub in apartment and Nobody lets in no helpers",
+          "date": "1 Aug 2020",
+          "raw_date": "2020-08-01T20:07:08.052856Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Angela Ovington",
+          "stars": 1,
+          "text": "",
+          "date": "6 Jun 2020",
+          "raw_date": "2020-06-06T11:30:29.593739Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "m hx",
+          "stars": 2,
+          "text": "Sahara desert, outer space, the bottom of the Pacific ocean - 3 places where you will find a better internet connection than the one at Mayfair Court. The website advertises the WiFi as 'superfast' which is kinda mad. They also say they offer '50mbps speeds thoughout' but I'm pretty sure they meant to write 5 or its just false advertising. I can't watch football, play Ps4 online or use Netflix. Using the Internet for general searches isn't too bad though even that can be slow at times, but if you want to watch a YouTube video or something you're better off going home to watch it than trying to get it working here.\nThe rooms are decent sizes (in the 3 bed flat) and the wooden furniture is nice however the desk is so narrow you can barely fit an a4 paper on it so I just use it as a TV stand instead. Also bare in mind there's no locks on the doors. The beds massive but try not to lean back or the mattress will slide off. I think my phone torch would give more light to the room though cos the lighting is extremely dull. The en suite bathroom is good and easy to maintain but the locks tend to come off the bathroom doors and I've nearly got locked in my own bathroom a couple of times. Kitchen is massive and a nice open space can't really say anything negative about it except that when we first moved in turning the cooker/oven on would cause a blackout in the flat and it took 3 weeks for it to be replaced. Also, whenever you use the washing machine it feels like there's an earthquake but once you adjust to that sensation you'll be fine.\nThe area is alright cos there's lots of takeaways and shops around, but there's a also a brothel across the road so basically after 10pm there's all sorts of strange nittys walking about. Also there's lots of shouting going on throughout the night which will wake you up at times,and of it's not the people outside waking you up it's Mayfair courts fire alarm which seems to have a mind of its own. In terms of uni it's around a 50 minute work to mmu and 35/40 min walk to UoM so you may have to get a bus pass which is expensive.\nAlso be EXTREMELY careful with everything cos you will get charged with no hesitation if something messes up (probably why the deposit is so high at £250). To be honest I'd rather get normal student accommodation through uni like I did last year as they are a lot more understanding about things and issues with the accommodation get resolved with a whole lot more urgency. Mayfair Court emphasises that they are different from normal accommodation cos they offer more of an apartment style for young adults as opposed to typical student accommodation but all this means is your problems take 10x longer to be sorted but they're 10x quicker to charge you for anything that goes wrong, and some of the staff will wind you up with their sly comments. I understand some charges are fair but sometimes the staff feel like greedy landlords whereas I found with university accommodation last year they were much more empathetic to the tenants point of view.\nIf you do move here don't join the Facebook group cos all you'll see is loads of posts saying 'nobody likes your music turn it off' in 10,000 different ways, nothing useful.\nOverall it definitely has good points but no way is it worth £145 a week in my opinion especially being so far from uni and the city centre. Also the contract ends at the end of July so if you're like me and your uni course finishes in May you'll be paying for nothing for a couple of months.\nSo in conclusion I would recommend moving here if you are out of options and homelessness is the only alternative. I was really excited to move here after the viewing but it has not lived up to expectations, I'm not biased in any way, I've just been frustrated with many things about this place and don't want other people to go through that too. I've gave 2 stars out of sympathy.",
+          "date": "18 Feb 2020",
+          "raw_date": "2020-02-18T22:37:32.591006Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Liam Panchaud",
+          "stars": 2,
+          "text": "Pretty expensive for what it is. For reference, I stayed in a 2 bed, 2 bath apartment for £147.50 per week.\n\nPost is well handled, the staff/RC team are all great, and it's a good location. Rooms are fairly spacious, but the desks are very narrow.\n\nFurnishings are not modern apart from the sofas. The coffee tables etc are a bit 70s for a 'modern' appartment. The electric radiators are also pretty old and can let out an interesting smell.\n\nInternet is advertised as 'up to' 100 Mbps, but you're lucky to get 10 during the evening. This is their internet provider's fault really, but still not really acceptable. There is also only WiFi available as far as I can tell, no Ethernet ports.\n\nI've had leaks during heavy rainfall due to poor window seals, which has the added bonus of making soundproofing non existent. During a storm it caused large parts of the kitchen/living room area to flood (I'm not on the ground floor). I raised this the first time it happened and it was inspected, but nothing happened. I suspect because it requires more serious building/maintenance works.\n\nFurther to the sound proofing, I assume it's luck of the draw whether your flat will have decent window seals or not, but given that I don't and Cubo (the club) is right outside my bedroom window, be prepared for muffled but pretty loud music until 2am on the nights that they're open.\n\nFloors/ceilings and walls are not soundproofed well at all, so you'll always be able to hear your upstairs neighbours.\n\nOn site secure parking is also extra, something to bear in mind if you drive.\n\nThe place is decent, I just wouldn't expect these problems for the price I'm paying. How much these would affect you depends on the room you get assigned.",
+          "date": "10 Feb 2020",
+          "raw_date": "2020-02-10T10:18:19.774537Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "John Swales",
+          "stars": 5,
+          "text": "Super rooms",
+          "date": "24 Jan 2020",
+          "raw_date": "2020-01-24T18:07:50.598434Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "YOUTUBERBEY",
+          "stars": 5,
+          "text": "",
+          "date": "9 Dec 2019",
+          "raw_date": "2019-12-09T14:09:17.704884Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Chris Dawkins",
+          "stars": 5,
+          "text": "",
+          "date": "1 Dec 2019",
+          "raw_date": "2019-12-01T14:02:33.541558Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Dafydd M",
+          "stars": 3,
+          "text": "",
+          "date": "30 Nov 2019",
+          "raw_date": "2019-11-30T15:56:10.951972Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "RedBaron1916",
+          "stars": 5,
+          "text": "Great looking place. Really smart looking and very well run. Recommended",
+          "date": "3 Nov 2019",
+          "raw_date": "2019-11-03T11:55:11.809430Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Carmen Parke",
+          "stars": 5,
+          "text": "",
+          "date": "6 Oct 2019",
+          "raw_date": "2019-10-06T11:28:38.304734Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Dan Wilkinson",
+          "stars": 4,
+          "text": "",
+          "date": "23 Aug 2019",
+          "raw_date": "2019-08-23T14:53:56.104293Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Anahita Zardoshti",
+          "stars": 5,
+          "text": "Overall it has been a great experience staying at Mayfair Court. The location is great with everything you need close by. It’s a minute walk from the bus stop, there is a big Sainsbury’s right opposite and a Weatherspoons, McDonalds, Nando's and many more restaurants all within a five minute walk. There is also a pharmacy, hair dressers and the Owen’s Park computer cluster all near by. It is a very safe and secure accommodation with friendly and helpful staff. Parking space is also available. The flats are clean, modern and very spacious.",
+          "date": "12 Jun 2019",
+          "raw_date": "2019-06-12T09:27:20.016149Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Daisy Dawson",
+          "stars": 5,
+          "text": "I have lived at this accommodation for 3 years now! I have nothing but great stuff to say. The staff have always treated us with care and always looked after us on a personal level even though there is loads of tenants they have to care for. The maintenance man Alan is always so happy to help and puts everybody first which has always been appreciated by me and my friends. The location is perfect lots of places to eat and drink that are always busy and full of friendly faces. There is also lots of shops including a huge sainsburys. It also never feels far from town when there is a bus stop on your door step that has buses into town nearly every 15 minutes. The flats have always been in great conditions every year, everything clean and new. Anyone that is thinking about staying here I would strongly recommend it. I have always felt at home and safe here which is a very important when you are in a new city finding your feet.",
+          "date": "29 May 2019",
+          "raw_date": "2019-05-29T13:39:50.942622Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Nick Stringer",
+          "stars": 5,
+          "text": "I have lived in a 3 bedroom apartment in Mayfair Court for three years. It has a nice modern feel with large rooms and an open plan living area. The building is very secure and in a fantastic location, everything you need is right on the doorstep (sainsbury's, bus route and pubs). The staff are all very friendly and helpful. When we moved in mezzino had recently taken over the building and it has improved a lot while we have been here.",
+          "date": "29 May 2019",
+          "raw_date": "2019-05-29T11:12:07.870157Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Henry Noorveriandi",
+          "stars": 5,
+          "text": "Have been living there for two years with family in two bed rooms apartment. We love it. The location is great. The staffs are really friendly and helpful.",
+          "date": "19 Apr 2019",
+          "raw_date": "2019-04-19T07:44:27.995312Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Asri Maharani",
+          "stars": 5,
+          "text": "Lived here for two years now. The room is great, the staffs are very helpful, and the environment is very nice.",
+          "date": "19 Apr 2019",
+          "raw_date": "2019-04-19T07:39:50.609687Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Ray Perez",
+          "stars": 5,
+          "text": "I have enjoyed living in Mayfair Court for the past year. The location is convenient with the bus stop right outside and being right across Sainsbury's. The place feels safe and the area is generally secure. It’s not perfect but I am super satisfied with the condition and furnishings of the flats, maintenance usually resolves my issues fairly quick. Highly recommend as a student accommodation!",
+          "date": "18 Apr 2019",
+          "raw_date": "2019-04-18T10:48:23.233398Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "paolo parisi",
+          "stars": 5,
+          "text": "Lived here for three years now and have experienced how the place has changed since mezzino bought the building. Vast improvement in the facilities and living areas. Staff respond quickly to any issues I have had and any maintenance work needed is sorted within a couple of days. Communal areas are cleaned daily in the week as is the car park and ramp. Couldn’t get a better location if you are a student, bus stop as soon as you walk out the door to get into university. Finally feels very secure and gated car parking is great. Only recommendation is to keep updating the flats, but besides that my experience has been 5 star!",
+          "date": "16 Apr 2019",
+          "raw_date": "2019-04-16T15:54:27.393354Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Martin",
+          "stars": 5,
+          "text": "A good place to live, great location and helpful/friendly staff 24/7.",
+          "date": "16 Apr 2019",
+          "raw_date": "2019-04-16T13:21:19.699357Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Veroniki Nikolopoulou",
+          "stars": 5,
+          "text": "Mayfair Court is a great place to live. Safe location, beautiful apartments and the staff is always very helpful. I've been living there for a year and I have already booked for next year. Would highly recomend!",
+          "date": "11 Apr 2019",
+          "raw_date": "2019-04-11T20:38:02.896352Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Emma Hackett",
+          "stars": 5,
+          "text": "Mayfair court is a really safe student accommodation with excellent staff that are very friendly and helpful. Stayed here this year and have already booked for next year. Would recommend to anyone!",
+          "date": "5 Apr 2019",
+          "raw_date": "2019-04-05T10:48:46.467493Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "raj sahota",
+          "stars": 4,
+          "text": "I lived in Chancellors Court which is modern, spacious and secure. It is nearby to Sainsbury’s, pharmacy and a local chip shop. The rooms have everything you need and the bathroom has bath. The service is always friendly and helpful.",
+          "date": "2 Apr 2019",
+          "raw_date": "2019-04-02T10:13:11.617274Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Anna Cox",
+          "stars": 5,
+          "text": "Best place to be interms of saftey and location!! The team of staff members are really helpful, as well as the onsite members who are useful for fixing any problems you've got! Second year returning, don't miss out guys!!",
+          "date": "28 Mar 2019",
+          "raw_date": "2019-03-28T23:20:33.474678Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Ato Buckman",
+          "stars": 1,
+          "text": "They charge you such a high rent, but when you move in, don’t expect the flat to have been cleaned, and expect everything to fall apart without ANY help from maintenance",
+          "date": "19 Mar 2019",
+          "raw_date": "2019-03-19T09:29:49.875703Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "T",
+          "stars": 5,
+          "text": "Mayfair Court is in the heart of Fallowfield , with a direct bus route to the centre of Manchester, what more could you want! Within the Mezzino team they have friendly staff who assist with any possible needs for your flat. Overall it’s a lovely place to live and I’m looking forward to a second year at Mayfair Court.",
+          "date": "18 Mar 2019",
+          "raw_date": "2019-03-18T10:13:03.665696Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Jack Dawson",
+          "stars": 5,
+          "text": "Great place to live. Great location, well furnished and a well ran place. Already signed up to stay again next year!",
+          "date": "15 Mar 2019",
+          "raw_date": "2019-03-15T09:38:35.845318Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Poppy H",
+          "stars": 5,
+          "text": "Currrntly staying here for my 3rd year of university and highly considering staying here again as a postgrad/professional. Super happy with the condition and furnishings in the flat and any maintenance issues have been resolved quickly. Site manager Ian and assistant Will are always happy to help. Location is great for bus access to uni and town centre. Would highly recommend",
+          "date": "12 Mar 2019",
+          "raw_date": "2019-03-12T14:35:51.137222Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Trisha Kumar",
+          "stars": 1,
+          "text": "WORST ACCOMMODATION EVER. Rent is incredibly high for a place where YOU CANNOT EVEN USE YOUR OWN SHOWER. Try ask for maintenance? Your priorities are at the bottom of their agenda. They advertise this place to be a \"modern\" accommodation, when all the appliances are incredibly outdated. The appliances make weird loud noises all night too, which will disrupt your sleep on the regular. \"All bills included\" ? That's because the shower doesn't even get hot,  And if it does get hot, be ready for it to suddenly stop in the middle of your shower, or turn burning hot or freezing cold, and if you try complain, they say the rest of the building faces the same issue. Ridiculous. Worst housing experience ever.",
+          "date": "11 Mar 2019",
+          "raw_date": "2019-03-11T22:42:45.601893Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Jayden Mith",
+          "stars": 1,
+          "text": "Not sure if it's because it's on the scruffiest road in Manchester but my apartment was infested with rats.",
+          "date": "8 Mar 2019",
+          "raw_date": "2019-03-08T20:52:24.901022Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Teresa Lundy",
+          "stars": 4,
+          "text": "",
+          "date": "1 Dec 2018",
+          "raw_date": "2018-12-01T22:46:55.034398Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "james r Hanvey (Jay)",
+          "stars": 2,
+          "text": "For the price that you pay they take too long to fix any issues you have.  The electrics in there  seem outdated. As a member of staff told me that the have had to disconnect some of the heaters in the flats because it cuts off the electrisaty.  Spoke to another tenent in there aparantly when they moved in there was mice/rat droppings",
+          "date": "1 Dec 2018",
+          "raw_date": "2018-12-01T03:18:54.259799Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Jasmin Begum",
+          "stars": 5,
+          "text": "",
+          "date": "25 Oct 2018",
+          "raw_date": "2018-10-25T23:40:08.590370Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Florian Varga",
+          "stars": 3,
+          "text": "You'll be spending a pretty penny on a nice view, if you're lucky enough to be on the right side. Prepare for half hour showers, ducking in when the heating finally decides to kick in and jumping out when it shoots back to freezing, and that was after our shower was replaced. They have a helpful 24hr service to let you in when you're locked out which is nice. However maintainence was never their highest priority, you'll have to pester them half the time to get a job done. It's a cheaply built building so expect the cheap plastic to fall off and even your door to stop working occasionally. Bills included is nice, but intermittent WiFi is less pleasant. Dont expect any help from them, even as simple as opening the car park to make moving out an easy transition. You can expect to hear every movement in the flat above! This place was quite infuriating to live in, but being next to the bus stop, Sainsburys and our view across Manchester, it wasn't the worst housing experience in Manchester.",
+          "date": "8 Oct 2018",
+          "raw_date": "2018-10-08T13:43:14.388522Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Parvat Chundawat",
+          "stars": 5,
+          "text": "",
+          "date": "12 Sep 2018",
+          "raw_date": "2018-09-12T11:50:06.636040Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Mick Jackson",
+          "stars": 1,
+          "text": "",
+          "date": "2 Aug 2018",
+          "raw_date": "2018-08-02T17:29:10.678Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Ceri",
+          "stars": 4,
+          "text": "",
+          "date": "16 Jul 2018",
+          "raw_date": "2018-07-16T17:27:27.998Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Ava Blaise",
+          "stars": 4,
+          "text": "",
+          "date": "27 Apr 2018",
+          "raw_date": "2018-04-27T17:53:42.627Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Jordan Sheffield",
+          "stars": 5,
+          "text": "Stayed here for two years so far and staying with them for another next year. Staff are super friendly and helpful. The maintenance team are very helpful and only ever need things fixing once on the rare occasions they are needed. Perfect location too!",
+          "date": "22 Mar 2018",
+          "raw_date": "2018-03-22T12:51:41.066Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Niall Rogers",
+          "stars": 5,
+          "text": "Friendly staff, perfect location, no big complaints and I'm very happy to live here as a student.",
+          "date": "21 Mar 2018",
+          "raw_date": "2018-03-21T17:34:52.625Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "james r hanvey",
+          "stars": 4,
+          "text": "",
+          "date": "13 Dec 2017",
+          "raw_date": "2017-12-13T08:06:38.659Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Sam",
+          "stars": 2,
+          "text": "",
+          "date": "21 Aug 2017",
+          "raw_date": "2017-08-21T16:16:11.621Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Sarmad Al-Edresi",
+          "stars": 3,
+          "text": "",
+          "date": "19 Jul 2017",
+          "raw_date": "2017-07-19T21:00:32.434Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Babo Victoria Ngwenya",
+          "stars": 5,
+          "text": "Great modern student apartments! Efficient maintenance staff! Amazing members of staff, who are always there when you need them :)",
+          "date": "28 Feb 2017",
+          "raw_date": "2017-02-28T14:23:21.296Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        }
+      ]
     },
     {
       "name": "Chancellors Court",
