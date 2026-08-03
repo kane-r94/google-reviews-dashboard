@@ -1,20 +1,14 @@
 {
-  "last_updated": "29 Jul 2026 08:13 UTC",
+  "last_updated": "03 Aug 2026 12:09 UTC",
   "date_range": {
-    "start": "2025-01",
-    "end": "2026-07"
+    "start": "2025-02",
+    "end": "2026-08"
   },
   "properties": [
     {
       "name": "Student Cribs HQ",
       "region": "HQ",
       "monthly": [
-        {
-          "month": "2025-01",
-          "search_impressions": 444,
-          "direction_requests": 6,
-          "calls": 9
-        },
         {
           "month": "2025-02",
           "search_impressions": 1857,
@@ -119,9 +113,15 @@
         },
         {
           "month": "2026-07",
-          "search_impressions": 3557,
+          "search_impressions": 4204,
           "direction_requests": 44,
-          "calls": 74
+          "calls": 97
+        },
+        {
+          "month": "2026-08",
+          "search_impressions": 0,
+          "direction_requests": 0,
+          "calls": 0
         }
       ]
     },
@@ -129,12 +129,6 @@
       "name": "Newcastle Main",
       "region": "Region 1",
       "monthly": [
-        {
-          "month": "2025-01",
-          "search_impressions": 448,
-          "direction_requests": 0,
-          "calls": 7
-        },
         {
           "month": "2025-02",
           "search_impressions": 1364,
@@ -239,9 +233,15 @@
         },
         {
           "month": "2026-07",
-          "search_impressions": 2579,
+          "search_impressions": 3028,
           "direction_requests": 0,
-          "calls": 98
+          "calls": 115
+        },
+        {
+          "month": "2026-08",
+          "search_impressions": 0,
+          "direction_requests": 0,
+          "calls": 0
         }
       ]
     },
@@ -249,12 +249,6 @@
       "name": "Morrison Circus",
       "region": "Region 1",
       "monthly": [
-        {
-          "month": "2025-01",
-          "search_impressions": 163,
-          "direction_requests": 18,
-          "calls": 2
-        },
         {
           "month": "2025-02",
           "search_impressions": 554,
@@ -359,9 +353,15 @@
         },
         {
           "month": "2026-07",
-          "search_impressions": 303,
+          "search_impressions": 339,
           "direction_requests": 51,
           "calls": 1
+        },
+        {
+          "month": "2026-08",
+          "search_impressions": 0,
+          "direction_requests": 0,
+          "calls": 0
         }
       ]
     },
@@ -369,12 +369,6 @@
       "name": "Byron Lofts",
       "region": "Region 1",
       "monthly": [
-        {
-          "month": "2025-01",
-          "search_impressions": 68,
-          "direction_requests": 20,
-          "calls": 0
-        },
         {
           "month": "2025-02",
           "search_impressions": 268,
@@ -479,9 +473,15 @@
         },
         {
           "month": "2026-07",
-          "search_impressions": 187,
-          "direction_requests": 94,
+          "search_impressions": 206,
+          "direction_requests": 105,
           "calls": 1
+        },
+        {
+          "month": "2026-08",
+          "search_impressions": 0,
+          "direction_requests": 0,
+          "calls": 0
         }
       ]
     },
@@ -489,12 +489,6 @@
       "name": "Jesmond View",
       "region": "Region 1",
       "monthly": [
-        {
-          "month": "2025-01",
-          "search_impressions": 438,
-          "direction_requests": 62,
-          "calls": 3
-        },
         {
           "month": "2025-02",
           "search_impressions": 1297,
@@ -599,9 +593,15 @@
         },
         {
           "month": "2026-07",
-          "search_impressions": 1291,
-          "direction_requests": 386,
-          "calls": 42
+          "search_impressions": 1525,
+          "direction_requests": 445,
+          "calls": 44
+        },
+        {
+          "month": "2026-08",
+          "search_impressions": 0,
+          "direction_requests": 0,
+          "calls": 0
         }
       ]
     },
@@ -609,12 +609,6 @@
       "name": "Kielder House",
       "region": "Region 1",
       "monthly": [
-        {
-          "month": "2025-01",
-          "search_impressions": 211,
-          "direction_requests": 30,
-          "calls": 1
-        },
         {
           "month": "2025-02",
           "search_impressions": 687,
@@ -719,9 +713,15 @@
         },
         {
           "month": "2026-07",
-          "search_impressions": 670,
-          "direction_requests": 136,
+          "search_impressions": 773,
+          "direction_requests": 149,
           "calls": 5
+        },
+        {
+          "month": "2026-08",
+          "search_impressions": 0,
+          "direction_requests": 0,
+          "calls": 0
         }
       ]
     },
@@ -729,12 +729,6 @@
       "name": "Linden House",
       "region": "Region 1",
       "monthly": [
-        {
-          "month": "2025-01",
-          "search_impressions": 85,
-          "direction_requests": 16,
-          "calls": 1
-        },
         {
           "month": "2025-02",
           "search_impressions": 229,
@@ -839,8 +833,14 @@
         },
         {
           "month": "2026-07",
-          "search_impressions": 153,
+          "search_impressions": 182,
           "direction_requests": 125,
+          "calls": 0
+        },
+        {
+          "month": "2026-08",
+          "search_impressions": 0,
+          "direction_requests": 0,
           "calls": 0
         }
       ]
@@ -849,12 +849,6 @@
       "name": "Sanderson House",
       "region": "Region 1",
       "monthly": [
-        {
-          "month": "2025-01",
-          "search_impressions": 48,
-          "direction_requests": 11,
-          "calls": 0
-        },
         {
           "month": "2025-02",
           "search_impressions": 200,
@@ -959,8 +953,14 @@
         },
         {
           "month": "2026-07",
-          "search_impressions": 132,
-          "direction_requests": 36,
+          "search_impressions": 162,
+          "direction_requests": 40,
+          "calls": 0
+        },
+        {
+          "month": "2026-08",
+          "search_impressions": 0,
+          "direction_requests": 0,
           "calls": 0
         }
       ]
@@ -969,12 +969,6 @@
       "name": "Shiners Yard",
       "region": "Region 1",
       "monthly": [
-        {
-          "month": "2025-01",
-          "search_impressions": 42,
-          "direction_requests": 6,
-          "calls": 1
-        },
         {
           "month": "2025-02",
           "search_impressions": 147,
@@ -1079,8 +1073,14 @@
         },
         {
           "month": "2026-07",
-          "search_impressions": 116,
-          "direction_requests": 63,
+          "search_impressions": 138,
+          "direction_requests": 72,
+          "calls": 0
+        },
+        {
+          "month": "2026-08",
+          "search_impressions": 0,
+          "direction_requests": 0,
           "calls": 0
         }
       ]
@@ -1089,12 +1089,6 @@
       "name": "The Square",
       "region": "Region 1",
       "monthly": [
-        {
-          "month": "2025-01",
-          "search_impressions": 98,
-          "direction_requests": 7,
-          "calls": 0
-        },
         {
           "month": "2025-02",
           "search_impressions": 349,
@@ -1199,8 +1193,14 @@
         },
         {
           "month": "2026-07",
-          "search_impressions": 264,
+          "search_impressions": 293,
           "direction_requests": 97,
+          "calls": 0
+        },
+        {
+          "month": "2026-08",
+          "search_impressions": 0,
+          "direction_requests": 0,
           "calls": 0
         }
       ]
@@ -1209,12 +1209,6 @@
       "name": "St Hilds",
       "region": "Region 1",
       "monthly": [
-        {
-          "month": "2025-01",
-          "search_impressions": 84,
-          "direction_requests": 3,
-          "calls": 0
-        },
         {
           "month": "2025-02",
           "search_impressions": 263,
@@ -1319,8 +1313,14 @@
         },
         {
           "month": "2026-07",
-          "search_impressions": 113,
-          "direction_requests": 46,
+          "search_impressions": 126,
+          "direction_requests": 52,
+          "calls": 0
+        },
+        {
+          "month": "2026-08",
+          "search_impressions": 0,
+          "direction_requests": 0,
           "calls": 0
         }
       ]
@@ -1329,12 +1329,6 @@
       "name": "Crossgate Lofts",
       "region": "Region 1",
       "monthly": [
-        {
-          "month": "2025-01",
-          "search_impressions": 244,
-          "direction_requests": 55,
-          "calls": 4
-        },
         {
           "month": "2025-02",
           "search_impressions": 752,
@@ -1439,9 +1433,15 @@
         },
         {
           "month": "2026-07",
-          "search_impressions": 366,
-          "direction_requests": 152,
+          "search_impressions": 425,
+          "direction_requests": 169,
           "calls": 3
+        },
+        {
+          "month": "2026-08",
+          "search_impressions": 0,
+          "direction_requests": 0,
+          "calls": 0
         }
       ]
     },
@@ -1449,12 +1449,6 @@
       "name": "Manchester Main",
       "region": "Region 2",
       "monthly": [
-        {
-          "month": "2025-01",
-          "search_impressions": 333,
-          "direction_requests": 30,
-          "calls": 12
-        },
         {
           "month": "2025-02",
           "search_impressions": 1090,
@@ -1559,9 +1553,15 @@
         },
         {
           "month": "2026-07",
-          "search_impressions": 1446,
-          "direction_requests": 49,
-          "calls": 47
+          "search_impressions": 1764,
+          "direction_requests": 52,
+          "calls": 83
+        },
+        {
+          "month": "2026-08",
+          "search_impressions": 0,
+          "direction_requests": 0,
+          "calls": 0
         }
       ]
     },
@@ -1569,12 +1569,6 @@
       "name": "Mayfair Court",
       "region": "Region 2",
       "monthly": [
-        {
-          "month": "2025-01",
-          "search_impressions": 382,
-          "direction_requests": 67,
-          "calls": 7
-        },
         {
           "month": "2025-02",
           "search_impressions": 1383,
@@ -1679,9 +1673,15 @@
         },
         {
           "month": "2026-07",
-          "search_impressions": 898,
-          "direction_requests": 218,
-          "calls": 10
+          "search_impressions": 1095,
+          "direction_requests": 261,
+          "calls": 14
+        },
+        {
+          "month": "2026-08",
+          "search_impressions": 0,
+          "direction_requests": 0,
+          "calls": 0
         }
       ]
     },
@@ -1689,12 +1689,6 @@
       "name": "Chancellors Court",
       "region": "Region 2",
       "monthly": [
-        {
-          "month": "2025-01",
-          "search_impressions": 504,
-          "direction_requests": 69,
-          "calls": 7
-        },
         {
           "month": "2025-02",
           "search_impressions": 1466,
@@ -1799,9 +1793,15 @@
         },
         {
           "month": "2026-07",
-          "search_impressions": 875,
-          "direction_requests": 174,
-          "calls": 4
+          "search_impressions": 1053,
+          "direction_requests": 226,
+          "calls": 6
+        },
+        {
+          "month": "2026-08",
+          "search_impressions": 0,
+          "direction_requests": 0,
+          "calls": 0
         }
       ]
     },
@@ -1809,12 +1809,6 @@
       "name": "Waterside Village",
       "region": "Region 2",
       "monthly": [
-        {
-          "month": "2025-01",
-          "search_impressions": 180,
-          "direction_requests": 13,
-          "calls": 0
-        },
         {
           "month": "2025-02",
           "search_impressions": 721,
@@ -1919,9 +1913,15 @@
         },
         {
           "month": "2026-07",
-          "search_impressions": 620,
+          "search_impressions": 756,
           "direction_requests": 96,
           "calls": 5
+        },
+        {
+          "month": "2026-08",
+          "search_impressions": 0,
+          "direction_requests": 0,
+          "calls": 0
         }
       ]
     },
@@ -1929,12 +1929,6 @@
       "name": "Rodney Street",
       "region": "Region 2",
       "monthly": [
-        {
-          "month": "2025-01",
-          "search_impressions": 309,
-          "direction_requests": 15,
-          "calls": 3
-        },
         {
           "month": "2025-02",
           "search_impressions": 899,
@@ -2039,9 +2033,15 @@
         },
         {
           "month": "2026-07",
-          "search_impressions": 689,
-          "direction_requests": 46,
-          "calls": 15
+          "search_impressions": 842,
+          "direction_requests": 53,
+          "calls": 17
+        },
+        {
+          "month": "2026-08",
+          "search_impressions": 0,
+          "direction_requests": 0,
+          "calls": 0
         }
       ]
     },
@@ -2049,12 +2049,6 @@
       "name": "Victoria Court Mews",
       "region": "Region 2",
       "monthly": [
-        {
-          "month": "2025-01",
-          "search_impressions": 156,
-          "direction_requests": 1,
-          "calls": 0
-        },
         {
           "month": "2025-02",
           "search_impressions": 562,
@@ -2159,9 +2153,15 @@
         },
         {
           "month": "2026-07",
-          "search_impressions": 660,
+          "search_impressions": 795,
           "direction_requests": 60,
-          "calls": 8
+          "calls": 10
+        },
+        {
+          "month": "2026-08",
+          "search_impressions": 0,
+          "direction_requests": 0,
+          "calls": 0
         }
       ]
     },
@@ -2169,12 +2169,6 @@
       "name": "Park View",
       "region": "Region 3",
       "monthly": [
-        {
-          "month": "2025-01",
-          "search_impressions": 230,
-          "direction_requests": 15,
-          "calls": 2
-        },
         {
           "month": "2025-02",
           "search_impressions": 680,
@@ -2279,9 +2273,15 @@
         },
         {
           "month": "2026-07",
-          "search_impressions": 515,
-          "direction_requests": 101,
-          "calls": 12
+          "search_impressions": 618,
+          "direction_requests": 120,
+          "calls": 14
+        },
+        {
+          "month": "2026-08",
+          "search_impressions": 0,
+          "direction_requests": 0,
+          "calls": 0
         }
       ]
     },
@@ -2289,12 +2289,6 @@
       "name": "Upper New Walk",
       "region": "Region 3",
       "monthly": [
-        {
-          "month": "2025-01",
-          "search_impressions": 195,
-          "direction_requests": 6,
-          "calls": 3
-        },
         {
           "month": "2025-02",
           "search_impressions": 644,
@@ -2399,9 +2393,15 @@
         },
         {
           "month": "2026-07",
-          "search_impressions": 798,
-          "direction_requests": 54,
-          "calls": 5
+          "search_impressions": 940,
+          "direction_requests": 63,
+          "calls": 6
+        },
+        {
+          "month": "2026-08",
+          "search_impressions": 0,
+          "direction_requests": 0,
+          "calls": 0
         }
       ]
     },
@@ -2409,12 +2409,6 @@
       "name": "Hosiery",
       "region": "Region 3",
       "monthly": [
-        {
-          "month": "2025-01",
-          "search_impressions": 160,
-          "direction_requests": 34,
-          "calls": 4
-        },
         {
           "month": "2025-02",
           "search_impressions": 497,
@@ -2519,9 +2513,15 @@
         },
         {
           "month": "2026-07",
-          "search_impressions": 802,
-          "direction_requests": 139,
-          "calls": 13
+          "search_impressions": 961,
+          "direction_requests": 147,
+          "calls": 17
+        },
+        {
+          "month": "2026-08",
+          "search_impressions": 0,
+          "direction_requests": 0,
+          "calls": 0
         }
       ]
     },
@@ -2529,12 +2529,6 @@
       "name": "Shoe & Boot",
       "region": "Region 3",
       "monthly": [
-        {
-          "month": "2025-01",
-          "search_impressions": 345,
-          "direction_requests": 43,
-          "calls": 1
-        },
         {
           "month": "2025-02",
           "search_impressions": 1210,
@@ -2639,9 +2633,15 @@
         },
         {
           "month": "2026-07",
-          "search_impressions": 1499,
-          "direction_requests": 365,
-          "calls": 44
+          "search_impressions": 1765,
+          "direction_requests": 398,
+          "calls": 54
+        },
+        {
+          "month": "2026-08",
+          "search_impressions": 0,
+          "direction_requests": 0,
+          "calls": 0
         }
       ]
     },
@@ -2649,12 +2649,6 @@
       "name": "Bishop Blackall School",
       "region": "Region 4",
       "monthly": [
-        {
-          "month": "2025-01",
-          "search_impressions": 211,
-          "direction_requests": 41,
-          "calls": 0
-        },
         {
           "month": "2025-02",
           "search_impressions": 718,
@@ -2759,9 +2753,15 @@
         },
         {
           "month": "2026-07",
-          "search_impressions": 737,
-          "direction_requests": 90,
+          "search_impressions": 865,
+          "direction_requests": 98,
           "calls": 16
+        },
+        {
+          "month": "2026-08",
+          "search_impressions": 0,
+          "direction_requests": 0,
+          "calls": 0
         }
       ]
     },
@@ -2769,12 +2769,6 @@
       "name": "Hope Court",
       "region": "Region 4",
       "monthly": [
-        {
-          "month": "2025-01",
-          "search_impressions": 106,
-          "direction_requests": 6,
-          "calls": 1
-        },
         {
           "month": "2025-02",
           "search_impressions": 360,
@@ -2879,9 +2873,15 @@
         },
         {
           "month": "2026-07",
-          "search_impressions": 268,
-          "direction_requests": 26,
-          "calls": 3
+          "search_impressions": 308,
+          "direction_requests": 30,
+          "calls": 5
+        },
+        {
+          "month": "2026-08",
+          "search_impressions": 0,
+          "direction_requests": 0,
+          "calls": 0
         }
       ]
     },
@@ -2889,12 +2889,6 @@
       "name": "Isca Lofts",
       "region": "Region 4",
       "monthly": [
-        {
-          "month": "2025-01",
-          "search_impressions": 208,
-          "direction_requests": 13,
-          "calls": 0
-        },
         {
           "month": "2025-02",
           "search_impressions": 579,
@@ -2999,9 +2993,15 @@
         },
         {
           "month": "2026-07",
-          "search_impressions": 440,
+          "search_impressions": 507,
           "direction_requests": 81,
-          "calls": 14
+          "calls": 15
+        },
+        {
+          "month": "2026-08",
+          "search_impressions": 0,
+          "direction_requests": 0,
+          "calls": 0
         }
       ]
     },
@@ -3009,12 +3009,6 @@
       "name": "Walter Road",
       "region": "Region 4",
       "monthly": [
-        {
-          "month": "2025-01",
-          "search_impressions": 82,
-          "direction_requests": 1,
-          "calls": 1
-        },
         {
           "month": "2025-02",
           "search_impressions": 330,
@@ -3119,8 +3113,14 @@
         },
         {
           "month": "2026-07",
-          "search_impressions": 165,
+          "search_impressions": 190,
           "direction_requests": 39,
+          "calls": 1
+        },
+        {
+          "month": "2026-08",
+          "search_impressions": 0,
+          "direction_requests": 0,
           "calls": 0
         }
       ]
@@ -3129,12 +3129,6 @@
       "name": "TW1X",
       "region": "Region 4",
       "monthly": [
-        {
-          "month": "2025-01",
-          "search_impressions": 0,
-          "direction_requests": 0,
-          "calls": 0
-        },
         {
           "month": "2025-02",
           "search_impressions": 0,
@@ -3239,9 +3233,15 @@
         },
         {
           "month": "2026-07",
-          "search_impressions": 472,
-          "direction_requests": 127,
-          "calls": 1
+          "search_impressions": 535,
+          "direction_requests": 136,
+          "calls": 2
+        },
+        {
+          "month": "2026-08",
+          "search_impressions": 0,
+          "direction_requests": 0,
+          "calls": 0
         }
       ]
     }
