@@ -1,5 +1,5 @@
 {
-  "last_updated": "03 Aug 2026 09:35 UTC",
+  "last_updated": "04 Aug 2026 08:30 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
@@ -8151,6 +8151,16 @@
       "name": "Newcastle Main",
       "region": "Region 1",
       "reviews": [
+        {
+          "reviewer": "carnaby lander",
+          "stars": 5,
+          "text": "Steve H, really nice and got everything done efficiently and was really friendly too, was chatting to us instead of making it awkward",
+          "date": "3 Aug 2026",
+          "raw_date": "2026-08-03T14:40:27.973026Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Ruby Thompson",
           "stars": 5,
