@@ -1,10 +1,20 @@
 {
-  "last_updated": "13 Aug 2026 08:35 UTC",
+  "last_updated": "14 Aug 2026 07:18 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
       "region": "HQ",
       "reviews": [
+        {
+          "reviewer": "Lorenzo Bacus",
+          "stars": 5,
+          "text": "They are approachable, kind, patience and understanding. I have nothing any negative feedback in both of them. Thank you all.",
+          "date": "14 Aug 2026",
+          "raw_date": "2026-08-14T00:47:40.135627Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Binara Sandesh",
           "stars": 5,
@@ -12058,6 +12068,16 @@
       "region": "Region 2",
       "reviews": [
         {
+          "reviewer": "M M",
+          "stars": 1,
+          "text": "My daughter has been waiting two months to get a front door key for her flat. Two months of rent paid and she still doesn't have access. Do not use this company.",
+          "date": "13 Aug 2026",
+          "raw_date": "2026-08-13T21:47:50.688951Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
           "reviewer": "Jack Rodea",
           "stars": 5,
           "text": "",
@@ -19567,9 +19587,9 @@
           "text": "I was just charged with stains present from move in date and thay has promted me to write a review and warn future students about this accommodation (well at least flat 32). As well as the damaged curtains that werent fixed the whole time. The water was also constantly turned off and we at times didn't get a warning until it was already gone. The hot water in the shower never worked and ive sent in multiple maintenance requests for this but none were answered either. The windows never shut and it was also never fixed. The room wasnt fully cleaned when i moved in which you can see in the video dated 16th of September 2025. Ive documented all of this in the portal. Parcels would also be stolen everytime without fail, as well as the fact you had to walk through a bin area to access the back flats which was always messy. At the start of the year we were promised maintenence to be done within 24 hours especially for emergencies but our heating didn't work all throughout winter. Not to mention there was a flooding in our bathroom from the flat above at least twice a month as well as a fire alarm at least twice a week, with some being at 2-3 am (when i would have an exam the next morning).",
           "date": "11 Aug 2026",
           "raw_date": "2026-08-11T17:10:53.744437Z",
-          "has_reply": false,
-          "reply_text": "",
-          "reply_date": ""
+          "has_reply": true,
+          "reply_text": "Hi there,\n \nWe’re sorry to hear about your experience and we take the issues you have raised seriously and apologise that your experience has not met the standard we aim to provide.\n \nYour Portfolio Manager will be reaching out to you directly to review the matters you have raised, and work with you towards a resolution.\n \nThank you for taking the time to share your feedback.\n\nStudent Cribs",
+          "reply_date": "13 Aug 2026"
         },
         {
           "reviewer": "kishore saravanan",
