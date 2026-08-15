@@ -1,10 +1,20 @@
 {
-  "last_updated": "14 Aug 2026 07:18 UTC",
+  "last_updated": "15 Aug 2026 06:30 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
       "region": "HQ",
       "reviews": [
+        {
+          "reviewer": "David Oliver",
+          "stars": 4,
+          "text": "",
+          "date": "14 Aug 2026",
+          "raw_date": "2026-08-14T16:08:07.120042Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Lorenzo Bacus",
           "stars": 5,
@@ -10620,6 +10630,16 @@
       "region": "Region 1",
       "reviews": [
         {
+          "reviewer": "Isabella Williams",
+          "stars": 5,
+          "text": "",
+          "date": "21 Jul 2026",
+          "raw_date": "2026-07-21T20:35:44.254024Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
           "reviewer": "Scott Davidson",
           "stars": 5,
           "text": "Wayne was highly professional in his work and easily approachable.",
@@ -10635,16 +10655,6 @@
           "text": "",
           "date": "21 Jul 2026",
           "raw_date": "2026-07-21T21:56:53.831670Z",
-          "has_reply": false,
-          "reply_text": "",
-          "reply_date": ""
-        },
-        {
-          "reviewer": "Isabella Williams",
-          "stars": 5,
-          "text": "",
-          "date": "21 Jul 2026",
-          "raw_date": "2026-07-21T20:35:44.254024Z",
           "has_reply": false,
           "reply_text": "",
           "reply_date": ""
