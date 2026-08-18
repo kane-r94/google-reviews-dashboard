@@ -1,26 +1,36 @@
 {
-  "last_updated": "17 Aug 2026 08:32 UTC",
+  "last_updated": "18 Aug 2026 06:35 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
       "region": "HQ",
       "reviews": [
         {
-          "reviewer": "David Oliver",
-          "stars": 4,
-          "text": "",
-          "date": "14 Aug 2026",
-          "raw_date": "2026-08-14T16:08:07.120042Z",
-          "has_reply": false,
-          "reply_text": "",
-          "reply_date": ""
-        },
-        {
           "reviewer": "Lorenzo Bacus",
           "stars": 5,
           "text": "They are approachable, kind, patience and understanding. I have nothing any negative feedback in both of them. Thank you all.",
           "date": "14 Aug 2026",
           "raw_date": "2026-08-14T00:47:40.135627Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Naveen Kumar",
+          "stars": 5,
+          "text": "",
+          "date": "17 Aug 2026",
+          "raw_date": "2026-08-17T11:03:27.041385Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "David Oliver",
+          "stars": 4,
+          "text": "",
+          "date": "14 Aug 2026",
+          "raw_date": "2026-08-14T16:08:07.120042Z",
           "has_reply": false,
           "reply_text": "",
           "reply_date": ""
