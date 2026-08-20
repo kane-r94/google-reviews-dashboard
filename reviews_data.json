@@ -1,10 +1,20 @@
 {
-  "last_updated": "19 Aug 2026 06:36 UTC",
+  "last_updated": "20 Aug 2026 06:38 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
       "region": "HQ",
       "reviews": [
+        {
+          "reviewer": "enna ibowi",
+          "stars": 5,
+          "text": "Very nice approach to calls, patient, listening and informative.",
+          "date": "19 Aug 2026",
+          "raw_date": "2026-08-19T14:04:12.993685Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Lorenzo Bacus",
           "stars": 5,
