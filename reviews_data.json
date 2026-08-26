@@ -1,10 +1,20 @@
 {
-  "last_updated": "25 Aug 2026 06:38 UTC",
+  "last_updated": "26 Aug 2026 06:40 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
       "region": "HQ",
       "reviews": [
+        {
+          "reviewer": "Bloke",
+          "stars": 1,
+          "text": "do not rent from this company, avoid at all costs. when they have viewings they unlock your door without permission and claim damages after your rent period is up that you havent done. scammers",
+          "date": "7 May 2025",
+          "raw_date": "2025-05-07T10:25:53.415021Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Ebsuvilla",
           "stars": 5,
@@ -1271,16 +1281,6 @@
           "text": "",
           "date": "1 Jul 2025",
           "raw_date": "2025-07-01T10:18:07.204118Z",
-          "has_reply": false,
-          "reply_text": "",
-          "reply_date": ""
-        },
-        {
-          "reviewer": "Bloke",
-          "stars": 1,
-          "text": "",
-          "date": "7 May 2025",
-          "raw_date": "2025-05-07T10:25:53.415021Z",
           "has_reply": false,
           "reply_text": "",
           "reply_date": ""
