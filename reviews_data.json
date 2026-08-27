@@ -1,10 +1,20 @@
 {
-  "last_updated": "26 Aug 2026 06:40 UTC",
+  "last_updated": "27 Aug 2026 17:16 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
       "region": "HQ",
       "reviews": [
+        {
+          "reviewer": "owen scutt",
+          "stars": 1,
+          "text": "I’ve had an extremely disappointing and unsafe experience living with student cribs. we got told that someone reported smelling of gas and later that morning a “passed” gas safety certificate was sent to us, That night our carbon monoxide alarm went off at 5 a.m., people came into our flat and told us we had to leave our rooms immediately because the carbon monoxide levels weren’t safe. Seems scandalous this happened straight after a gas certificate. We were then left without heating or hot water for an entire week.\nFor all of this, we received £30 in compensation — for a gym membership. Honestly, it felt like a joke. Our health was put at risk, and we’re still expected to pay full rent which includes bills when we can’t access half of what our bills cover when we have no heating or hot water. And this isn’t the first issue. When we first moved in, it took them a full week to fix a broken toilet. More recently, part of the wall to our building actually crumbled down, which really highlights the lack of maintenance and basic care.",
+          "date": "26 Aug 2026",
+          "raw_date": "2026-08-26T15:40:47.713496Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Bloke",
           "stars": 1,
@@ -5036,7 +5046,7 @@
           "reply_date": "8 Sep 2022"
         },
         {
-          "reviewer": "Meaghan Barnsley",
+          "reviewer": "Meaghan Byrne",
           "stars": 4,
           "text": "",
           "date": "7 Sep 2022",
@@ -8232,6 +8242,36 @@
       "region": "Region 1",
       "reviews": [
         {
+          "reviewer": "Emily Monk",
+          "stars": 5,
+          "text": "Steve H from maintenance is very friendly and helpful!",
+          "date": "21 Jul 2026",
+          "raw_date": "2026-07-21T11:50:30.950265Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Hope Ratcliffe",
+          "stars": 5,
+          "text": "",
+          "date": "27 Aug 2026",
+          "raw_date": "2026-08-27T13:18:48.912238Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Jack Plowman",
+          "stars": 5,
+          "text": "Steve H came to check my plumbing and washing machine , very thorough with the work and double checked everything as he was going and tested the machine after he sorted it and it’s all fixed now",
+          "date": "27 Aug 2026",
+          "raw_date": "2026-08-27T11:55:32.457604Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
           "reviewer": "joe monaghan",
           "stars": 5,
           "text": "5/5 Stars – Incredible service from Wain!\nHuge shoutout to Wain from the maintenance team! He came into our flat and had everything fixed incredibly quickly and efficiently. On top of doing a fantastic job with the repairs, he was super friendly and took the time to give us great advice on how to report and handle any future issues if they come up. Really grateful for such a hassle-free and helpful experience—Wain is an absolute credit to Student Cribs!",
@@ -8377,16 +8417,6 @@
           "text": "",
           "date": "21 Jul 2026",
           "raw_date": "2026-07-21T12:34:22.359035Z",
-          "has_reply": false,
-          "reply_text": "",
-          "reply_date": ""
-        },
-        {
-          "reviewer": "Emily Monk",
-          "stars": 5,
-          "text": "",
-          "date": "21 Jul 2026",
-          "raw_date": "2026-07-21T11:50:30.950265Z",
           "has_reply": false,
           "reply_text": "",
           "reply_date": ""
@@ -12157,6 +12187,16 @@
       "name": "Manchester Main",
       "region": "Region 2",
       "reviews": [
+        {
+          "reviewer": "Sam Wood",
+          "stars": 5,
+          "text": "",
+          "date": "27 Aug 2026",
+          "raw_date": "2026-08-27T13:03:48.502306Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "M M",
           "stars": 1,
@@ -20292,7 +20332,7 @@
           "reply_date": ""
         },
         {
-          "reviewer": "Megan Smith",
+          "reviewer": "Megan Jackson-Smith",
           "stars": 4,
           "text": "Nice student properties with a very quick to respond team.\nGet perk of a car park underneath!!!",
           "date": "26 Nov 2025",
