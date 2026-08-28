@@ -1,5 +1,5 @@
 {
-  "last_updated": "27 Aug 2026 17:16 UTC",
+  "last_updated": "28 Aug 2026 12:05 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
@@ -10514,6 +10514,16 @@
       "region": "Region 1",
       "reviews": [
         {
+          "reviewer": "Lily Robinson",
+          "stars": 5,
+          "text": "Really good and easy experience with student cribs",
+          "date": "28 Aug 2026",
+          "raw_date": "2026-08-28T11:12:30.527091Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
           "reviewer": "Harry Cushing",
           "stars": 5,
           "text": "Mark Wallace was brilliant polite and perfect work performed. Quick and efficient. And very informative",
@@ -12188,6 +12198,16 @@
       "region": "Region 2",
       "reviews": [
         {
+          "reviewer": "Angus Redgrave-Scott",
+          "stars": 5,
+          "text": "Lovely place, close to station and bus stop, good price and good that they fall after SFE, would recommend",
+          "date": "28 Aug 2026",
+          "raw_date": "2026-08-28T11:46:54.161089Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
           "reviewer": "Sam Wood",
           "stars": 5,
           "text": "",
@@ -12903,6 +12923,16 @@
       "name": "Mayfair Court",
       "region": "Region 2",
       "reviews": [
+        {
+          "reviewer": "Josh Duncombe",
+          "stars": 1,
+          "text": "Worst uni halls I’ve ever seen",
+          "date": "28 Aug 2026",
+          "raw_date": "2026-08-28T11:03:06.572336Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "KaYi Associates",
           "stars": 5,
@@ -16016,7 +16046,7 @@
           "reply_date": ""
         },
         {
-          "reviewer": "Claire Annabelle Howson",
+          "reviewer": "Claire Howson",
           "stars": 4,
           "text": "",
           "date": "30 Jan 2020",
@@ -19711,6 +19741,16 @@
       "name": "Shoe & Boot",
       "region": "Region 3",
       "reviews": [
+        {
+          "reviewer": "Asad Tufail",
+          "stars": 5,
+          "text": "",
+          "date": "28 Aug 2026",
+          "raw_date": "2026-08-28T11:34:33.219272Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Luno",
           "stars": 1,
