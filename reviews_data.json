@@ -1,5 +1,5 @@
 {
-  "last_updated": "28 Aug 2026 12:05 UTC",
+  "last_updated": "28 Aug 2026 18:08 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
@@ -12198,6 +12198,66 @@
       "region": "Region 2",
       "reviews": [
         {
+          "reviewer": "Nikola",
+          "stars": 4,
+          "text": "good stuff",
+          "date": "28 Aug 2026",
+          "raw_date": "2026-08-28T14:19:43.481368Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Benjamin Zavou",
+          "stars": 5,
+          "text": "",
+          "date": "28 Aug 2026",
+          "raw_date": "2026-08-28T13:13:49.864237Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Ollie Houghton",
+          "stars": 4,
+          "text": "",
+          "date": "28 Aug 2026",
+          "raw_date": "2026-08-28T12:57:40.545348Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "harmony k",
+          "stars": 5,
+          "text": "",
+          "date": "28 Aug 2026",
+          "raw_date": "2026-08-28T12:57:18.072524Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Toby Woods",
+          "stars": 5,
+          "text": "Brilliant",
+          "date": "28 Aug 2026",
+          "raw_date": "2026-08-28T12:36:23.573318Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Charles Lambert",
+          "stars": 5,
+          "text": "",
+          "date": "28 Aug 2026",
+          "raw_date": "2026-08-28T12:26:14.608858Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
           "reviewer": "Angus Redgrave-Scott",
           "stars": 5,
           "text": "Lovely place, close to station and bus stop, good price and good that they fall after SFE, would recommend",
@@ -18384,6 +18444,26 @@
       "region": "Region 3",
       "reviews": [
         {
+          "reviewer": "Luke Mere",
+          "stars": 3,
+          "text": "Good",
+          "date": "28 Aug 2026",
+          "raw_date": "2026-08-28T13:16:50.222622Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Caden Brown",
+          "stars": 4,
+          "text": "",
+          "date": "28 Aug 2026",
+          "raw_date": "2026-08-28T13:14:14.881524Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
           "reviewer": "Mohammed Shah",
           "stars": 5,
           "text": "I want to give a huge thank you and well-deserved recognition to Dale from the property maintenance team.\n\nDale recently helped repair my wall, and the quality of his work was genuinely outstanding. From start to finish, he showed real professionalism, skill, and attention to detail. The repair itself was done to a very high standard — you would never know there had been any damage in the first place.\n\nWhat really stood out, though, was his attitude. Dale was friendly, respectful, and clearly takes pride in what he does. He didn’t rush the job and made sure everything was done properly, which really shows his commitment to good workmanship and customer care.\n\nIt’s not often you come across someone who combines technical ability with such a positive and helpful approach, but Dale absolutely does. He’s a real credit to the team he works with, and his effort and hospitality deserve to be recognised.\n\nThank you, Dale, for going above and beyond — genuinely excellent service. Five stars all the way.",
@@ -21863,6 +21943,16 @@
       "name": "Hope Court",
       "region": "Region 4",
       "reviews": [
+        {
+          "reviewer": "Edward George",
+          "stars": 4,
+          "text": "Solid",
+          "date": "28 Aug 2026",
+          "raw_date": "2026-08-28T12:08:41.850389Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "sanjanaa",
           "stars": 3,
