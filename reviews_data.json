@@ -1,5 +1,5 @@
 {
-  "last_updated": "28 Aug 2026 18:08 UTC",
+  "last_updated": "29 Aug 2026 12:12 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
@@ -10740,6 +10740,16 @@
       "region": "Region 1",
       "reviews": [
         {
+          "reviewer": "Charlie Johnston",
+          "stars": 4,
+          "text": "lovely area and accommodation",
+          "date": "28 Aug 2026",
+          "raw_date": "2026-08-28T21:18:49.283995Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
           "reviewer": "Pumpkin face",
           "stars": 5,
           "text": "Just had all our maintenance task finished by Wain was a great help clearly knew what he was talking about and sorted all our problems quickly and effectively.\nWas happy to help out on other issue and queries that I had. Great experience",
@@ -12197,6 +12207,16 @@
       "name": "Manchester Main",
       "region": "Region 2",
       "reviews": [
+        {
+          "reviewer": "Harriet Eden",
+          "stars": 5,
+          "text": "Really smooth experience, great to have a maintenance team and quick replies to any queries.",
+          "date": "28 Aug 2026",
+          "raw_date": "2026-08-28T22:53:44.379708Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Nikola",
           "stars": 4,
