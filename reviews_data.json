@@ -1,5 +1,5 @@
 {
-  "last_updated": "29 Aug 2026 12:12 UTC",
+  "last_updated": "30 Aug 2026 11:08 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
@@ -10739,6 +10739,16 @@
       "name": "Jesmond View",
       "region": "Region 1",
       "reviews": [
+        {
+          "reviewer": "Leo",
+          "stars": 5,
+          "text": "Really easy to settle in and a all round nice place to live",
+          "date": "30 Aug 2026",
+          "raw_date": "2026-08-30T07:11:53.400681Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Charlie Johnston",
           "stars": 4,
