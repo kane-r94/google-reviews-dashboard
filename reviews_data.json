@@ -1,5 +1,5 @@
 {
-  "last_updated": "07 Sep 2026 11:27 UTC",
+  "last_updated": "08 Sep 2026 10:30 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
@@ -8,7 +8,7 @@
         {
           "reviewer": "L T",
           "stars": 1,
-          "text": "Left us with no wifi for days. As a uni accommodation with students doing important work this is so important as it can’t be completed without. Was told to wait 2 more days or go to the library when I reported this meaning we will have had no wifi for almost a week.",
+          "text": "Left us with no wifi for days. As a uni accommodation with students doing important work this is so important as it can’t be completed without. Was told to wait 2 more days or go to the library when I reported this meaning we will have had no wifi for almost a week.\nUpdate: we’ve waited the 2 days and we’re still being ignored by the company with no wifi and no date of when the wifi is fixed. Everyone just keeps passing the responsibility.",
           "date": "5 Sep 2026",
           "raw_date": "2026-09-05T14:35:02.177961Z",
           "has_reply": false,
@@ -19882,6 +19882,16 @@
       "region": "Region 3",
       "reviews": [
         {
+          "reviewer": "This is Mathew Wilcox",
+          "stars": 5,
+          "text": "Well managed student and professional accomadation.",
+          "date": "11 Aug 2026",
+          "raw_date": "2026-08-11T11:21:24.202109Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
           "reviewer": "Asad Tufail",
           "stars": 5,
           "text": "",
@@ -19927,16 +19937,6 @@
           "text": "Great place to live! The management team is incredibly helpful and always quick to respond to any issues or maintenance requests. The location is perfect for students, making it very convenient to get around. Highly recommend it to anyone looking for student accommodation!",
           "date": "11 Aug 2026",
           "raw_date": "2026-08-11T11:32:19.274159Z",
-          "has_reply": false,
-          "reply_text": "",
-          "reply_date": ""
-        },
-        {
-          "reviewer": "This is Mathew Wilcox",
-          "stars": 5,
-          "text": "",
-          "date": "11 Aug 2026",
-          "raw_date": "2026-08-11T11:21:24.202109Z",
           "has_reply": false,
           "reply_text": "",
           "reply_date": ""
