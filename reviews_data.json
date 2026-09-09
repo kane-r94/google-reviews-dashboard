@@ -1,10 +1,20 @@
 {
-  "last_updated": "08 Sep 2026 10:30 UTC",
+  "last_updated": "09 Sep 2026 10:41 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
       "region": "HQ",
       "reviews": [
+        {
+          "reviewer": "Dominic Sicas",
+          "stars": 1,
+          "text": "3 months now of no WiFi in my room… third month of paid rent after constant emails and messaging.",
+          "date": "8 Sep 2026",
+          "raw_date": "2026-09-08T11:12:01.615129Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "L T",
           "stars": 1,
@@ -15375,6 +15385,16 @@
       "name": "Waterside Village",
       "region": "Region 2",
       "reviews": [
+        {
+          "reviewer": "Glyn Chaplin",
+          "stars": 1,
+          "text": "Have looked at the pictures on the website and they look nothing like the flat that our youngest is currently renting. Something is currently tripping the electrics which should have been treated as an emergency and should be checked before the flat was let. Appears to be the cooker. Badly flaking paint in the bathroom which is unhygienic. Broken bed and a wardrobe which is far too big for the bedroom. It's totally unacceptable to not do repairs before students move in. If repairs are outstanding then they should be repaired without delay.",
+          "date": "8 Sep 2026",
+          "raw_date": "2026-09-08T22:33:38.309249Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "estella",
           "stars": 1,
