@@ -1,5 +1,5 @@
 {
-  "last_updated": "14 Sep 2026 08:49 UTC",
+  "last_updated": "14 Sep 2026 11:39 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
@@ -8281,6 +8281,26 @@
       "name": "Newcastle Main",
       "region": "Region 1",
       "reviews": [
+        {
+          "reviewer": "Mia Ghosh",
+          "stars": 5,
+          "text": "Brian came round today to fix a leaky shower and test our fire alarms, and in turn got dragged into fixing another shower and my blind that had fallen down. He was so kind to fix everything and was a super lovely guy who unfortunately had to face us all in pjs after we’d just grumpily woken up so thank you!",
+          "date": "14 Sep 2026",
+          "raw_date": "2026-09-14T10:26:48.923923Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Lucy Cook",
+          "stars": 5,
+          "text": "Brian came out to fix a leak in my ceiling and complete a fire alarm test. He sorted the issue quickly and was very friendly and helpful! Thank you Brian!",
+          "date": "14 Sep 2026",
+          "raw_date": "2026-09-14T10:17:11.624326Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Emily Monk",
           "stars": 5,
