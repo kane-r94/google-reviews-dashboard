@@ -1,5 +1,5 @@
 {
-  "last_updated": "14 Sep 2026 11:39 UTC",
+  "last_updated": "15 Sep 2026 09:51 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
@@ -16881,6 +16881,16 @@
       "name": "Rodney Street",
       "region": "Region 2",
       "reviews": [
+        {
+          "reviewer": "anaya dean",
+          "stars": 5,
+          "text": "John has been a massive help for me and my housemates, very friendly and always more than happy to help us !",
+          "date": "14 Sep 2026",
+          "raw_date": "2026-09-14T16:08:39.908089Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Stian Vegard",
           "stars": 1,
