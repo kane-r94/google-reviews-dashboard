@@ -1,5 +1,5 @@
 {
-  "last_updated": "16 Sep 2026 10:46 UTC",
+  "last_updated": "17 Sep 2026 10:53 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
@@ -13094,6 +13094,16 @@
       "region": "Region 2",
       "reviews": [
         {
+          "reviewer": "Darcey Ewin",
+          "stars": 5,
+          "text": "Mike was assigned to resolve problems at my accommodation on 16/9 at Mayfair Court.  He was fantastic.  Couldn’t have been more helpful professional and friendly.  He turned around a very stressful situation with his positive attitude and reassurance that he would resolve the problems.  Give this main a raise he’s a credit to your org",
+          "date": "17 Sep 2026",
+          "raw_date": "2026-09-17T10:46:45.705022Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
           "reviewer": "Josh Duncombe",
           "stars": 1,
           "text": "Worst uni halls I’ve ever seen",
@@ -14149,6 +14159,16 @@
       "name": "Chancellors Court",
       "region": "Region 2",
       "reviews": [
+        {
+          "reviewer": "Carolina Silva",
+          "stars": 4,
+          "text": "I've had nothing but good experiences with the maintenance crew, Sam in particular. He does a really good job and fixes things promptly. The team are always helpful, fast to react, and friendly.",
+          "date": "17 Sep 2026",
+          "raw_date": "2026-09-17T10:34:59.709915Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Djxy 2252",
           "stars": 5,
@@ -16891,6 +16911,26 @@
       "name": "Rodney Street",
       "region": "Region 2",
       "reviews": [
+        {
+          "reviewer": "Amelie Hampson",
+          "stars": 5,
+          "text": "John can not do enough!! He is absolutely amazing! Thankyou so much",
+          "date": "16 Sep 2026",
+          "raw_date": "2026-09-16T13:27:13.423390Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Amelia Devine",
+          "stars": 5,
+          "text": "John was amazing",
+          "date": "16 Sep 2026",
+          "raw_date": "2026-09-16T13:26:38.971228Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "anaya dean",
           "stars": 5,
