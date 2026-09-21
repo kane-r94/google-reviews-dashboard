@@ -1,5 +1,5 @@
 {
-  "last_updated": "21 Sep 2026 08:06 UTC",
+  "last_updated": "21 Sep 2026 15:23 UTC",
   "date_range": {
     "start": "2025-03",
     "end": "2026-09"
@@ -131,9 +131,9 @@
       "monthly": [
         {
           "month": "2025-03",
-          "search_impressions": 738,
+          "search_impressions": 660,
           "direction_requests": 10,
-          "calls": 9
+          "calls": 8
         },
         {
           "month": "2025-04",
@@ -251,8 +251,8 @@
       "monthly": [
         {
           "month": "2025-03",
-          "search_impressions": 235,
-          "direction_requests": 50,
+          "search_impressions": 220,
+          "direction_requests": 44,
           "calls": 0
         },
         {
@@ -731,8 +731,8 @@
       "monthly": [
         {
           "month": "2025-03",
-          "search_impressions": 111,
-          "direction_requests": 34,
+          "search_impressions": 105,
+          "direction_requests": 32,
           "calls": 0
         },
         {
@@ -1451,8 +1451,8 @@
       "monthly": [
         {
           "month": "2025-03",
-          "search_impressions": 607,
-          "direction_requests": 21,
+          "search_impressions": 545,
+          "direction_requests": 20,
           "calls": 5
         },
         {
@@ -1691,9 +1691,9 @@
       "monthly": [
         {
           "month": "2025-03",
-          "search_impressions": 635,
-          "direction_requests": 142,
-          "calls": 12
+          "search_impressions": 588,
+          "direction_requests": 129,
+          "calls": 11
         },
         {
           "month": "2025-04",
@@ -1931,8 +1931,8 @@
       "monthly": [
         {
           "month": "2025-03",
-          "search_impressions": 446,
-          "direction_requests": 31,
+          "search_impressions": 401,
+          "direction_requests": 26,
           "calls": 2
         },
         {
@@ -2891,8 +2891,8 @@
       "monthly": [
         {
           "month": "2025-03",
-          "search_impressions": 307,
-          "direction_requests": 48,
+          "search_impressions": 285,
+          "direction_requests": 47,
           "calls": 0
         },
         {
