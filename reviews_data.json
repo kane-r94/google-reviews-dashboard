@@ -1,10 +1,20 @@
 {
-  "last_updated": "22 Sep 2026 10:53 UTC",
+  "last_updated": "23 Sep 2026 10:41 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
       "region": "HQ",
       "reviews": [
+        {
+          "reviewer": "Jonathan Ntege",
+          "stars": 5,
+          "text": "",
+          "date": "22 Sep 2026",
+          "raw_date": "2026-09-22T12:03:34.640111Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "johnson elaho",
           "stars": 5,
@@ -8502,16 +8512,6 @@
           "reply_date": ""
         },
         {
-          "reviewer": "Lazy Otaku",
-          "stars": 5,
-          "text": "Wain came to fix our kitchen extremely friendly guy did an amazing job and went above in better Ned repairing things that I hadn’t reported as I hadn’t noticed them",
-          "date": "17 Jul 2026",
-          "raw_date": "2026-07-17T12:57:36.054497Z",
-          "has_reply": false,
-          "reply_text": "",
-          "reply_date": ""
-        },
-        {
           "reviewer": "Evie Sinclair",
           "stars": 5,
           "text": "marc has been so helpful and polite from the start, sorted our issues so fast and everything was completed to a really high standard, thank you so much for all the help",
@@ -13093,6 +13093,16 @@
       "name": "Mayfair Court",
       "region": "Region 2",
       "reviews": [
+        {
+          "reviewer": "Thomas Hankinson",
+          "stars": 4,
+          "text": "",
+          "date": "23 Sep 2026",
+          "raw_date": "2026-09-23T07:54:14.150950Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Darcey Ewin",
           "stars": 5,
@@ -19991,6 +20001,16 @@
       "name": "Shoe & Boot",
       "region": "Region 3",
       "reviews": [
+        {
+          "reviewer": "saroj nobel",
+          "stars": 5,
+          "text": "Nik helped lots. Really recommended",
+          "date": "23 Sep 2026",
+          "raw_date": "2026-09-23T08:02:54.175598Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "This is Mathew Wilcox",
           "stars": 5,
