@@ -1,5 +1,5 @@
 {
-  "last_updated": "23 Sep 2026 10:41 UTC",
+  "last_updated": "24 Sep 2026 11:02 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
@@ -8292,6 +8292,16 @@
       "region": "Region 1",
       "reviews": [
         {
+          "reviewer": "Jack Herman",
+          "stars": 5,
+          "text": "Wayne did an amazing job, came for 1 job, finished 5 in record time which was a very pleasant surprise.",
+          "date": "23 Sep 2026",
+          "raw_date": "2026-09-23T12:03:12.580630Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
           "reviewer": "Mia Ghosh",
           "stars": 5,
           "text": "Brian came round today to fix a leaky shower and test our fire alarms, and in turn got dragged into fixing another shower and my blind that had fallen down. He was so kind to fix everything and was a super lovely guy who unfortunately had to face us all in pjs after we’d just grumpily woken up so thank you!",
@@ -10810,6 +10820,16 @@
       "region": "Region 1",
       "reviews": [
         {
+          "reviewer": "courtney Louise",
+          "stars": 5,
+          "text": "Marc Wallace was very polite, professional, and friendly throughout. He got the job done efficiently and to a high standard!",
+          "date": "23 Sep 2026",
+          "raw_date": "2026-09-23T13:16:35.492852Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
           "reviewer": "Leo",
           "stars": 5,
           "text": "Really easy to settle in and a all round nice place to live",
@@ -11971,6 +11991,16 @@
       "name": "Crossgate Lofts",
       "region": "Region 1",
       "reviews": [
+        {
+          "reviewer": "Simon Fisher",
+          "stars": 4,
+          "text": "Easy to find, good location for the city centre and University.\n\nClean and spacious accommodation.",
+          "date": "24 Sep 2026",
+          "raw_date": "2026-09-24T09:20:39.119613Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "panganai mauzinyu",
           "stars": 4,
@@ -16921,6 +16951,26 @@
       "name": "Rodney Street",
       "region": "Region 2",
       "reviews": [
+        {
+          "reviewer": "Florence Gibson",
+          "stars": 5,
+          "text": "Thank u so much John being so helpful and nice to talk to",
+          "date": "23 Sep 2026",
+          "raw_date": "2026-09-23T11:03:18.277462Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Eleanor Heywood",
+          "stars": 5,
+          "text": "John- great bloke!! We’ve had a few things to sort whilst moving in and he’s been a star fixing up little jobs around the house. Makes life so much easier when he’s so kind!!",
+          "date": "23 Sep 2026",
+          "raw_date": "2026-09-23T10:56:50.066598Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Amelie Hampson",
           "stars": 5,
