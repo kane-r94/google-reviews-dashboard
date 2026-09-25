@@ -1,10 +1,20 @@
 {
-  "last_updated": "24 Sep 2026 11:02 UTC",
+  "last_updated": "25 Sep 2026 11:01 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
       "region": "HQ",
       "reviews": [
+        {
+          "reviewer": "Amelia McGowan",
+          "stars": 5,
+          "text": "At Manchester student cribs Fallowfield Jack was very helpful with showing us around the cribs and keeping us informed through the process. We appreciated all the help.",
+          "date": "24 Sep 2026",
+          "raw_date": "2026-09-24T11:33:31.096163Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Jonathan Ntege",
           "stars": 5,
@@ -754,16 +764,6 @@
           "has_reply": true,
           "reply_text": "Hi Jake, \n\nThank you for taking the time to share your feedback with us. We’re sorry to hear that your experience hasn’t met expectations and we appreciate you bringing these concerns to our attention.\n\nWhile we were not previously aware of all the points you’ve raised, we take this feedback very seriously and understand how frustrating this must have been. Please be assured that we are reviewing the matters raised and are keen to understand the full context so we can address them appropriately.\n\nYour concerns are now being looked at through our formal complaints process, and a member of our team will be in touch with you today to discuss this further. We appreciate you raising this and giving us the opportunity to resolve the matter.\n\nThanks, \nThe Student Cribs Team",
           "reply_date": "2 Jan 2026"
-        },
-        {
-          "reviewer": "Blessing Ifesinachi",
-          "stars": 5,
-          "text": "My Experience in Student Cribs\n\nMy experience in student cribs was both challenging and rewarding, and it taught me important lessons about independence, responsibility, and living with others. Staying in student cribs was very different from living at home, and it pushed me out of my comfort zone in ways I did not expect.\n\nWhen I first arrived, everything felt unfamiliar. I had to share space with other students who came from different backgrounds and had different habits. At the beginning, this was difficult because I was used to my own routines and personal space. Simple things like managing noise, sharing facilities, and respecting one another’s schedules required patience and understanding. However, as time went on, I learned how to adapt and communicate better with others.\n\nLiving in student cribs also taught me independence. I had to manage my time, take care of my belongings, and make decisions on my own. There was no one constantly reminding me what to do, so I learned the importance of self-discipline. Balancing schoolwork with daily responsibilities was not always easy, but it helped me grow more organized and responsible.\n\nOne of the best parts of my experience was the sense of community. Being surrounded by other students made it easier to make friends and share experiences. We supported each other academically and emotionally, especially during stressful periods like exams. These interactions helped me improve my social skills and learn the value of teamwork and cooperation.\n\nIn conclusion, my experience in student cribs was a significant part of my personal growth. Although there were challenges, the lessons I learned about independence, respect, and community made the experience worthwhile. It prepared me for future responsibilities and helped shape me into a more confident and mature individual.",
-          "date": "27 Dec 2025",
-          "raw_date": "2025-12-27T22:13:10.596988Z",
-          "has_reply": false,
-          "reply_text": "",
-          "reply_date": ""
         },
         {
           "reviewer": "Amarachi Osisiogu",
@@ -8292,6 +8292,16 @@
       "region": "Region 1",
       "reviews": [
         {
+          "reviewer": "Izzy Cook",
+          "stars": 5,
+          "text": "Mark wallace was extremely helpful and very friendly !",
+          "date": "24 Sep 2026",
+          "raw_date": "2026-09-24T14:01:21.492764Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
           "reviewer": "Jack Herman",
           "stars": 5,
           "text": "Wayne did an amazing job, came for 1 job, finished 5 in record time which was a very pleasant surprise.",
@@ -14200,6 +14210,36 @@
       "region": "Region 2",
       "reviews": [
         {
+          "reviewer": "alex hall",
+          "stars": 5,
+          "text": "Had a few maintenance issues was fixed by well by sam",
+          "date": "24 Sep 2026",
+          "raw_date": "2026-09-24T11:54:08.643825Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Accu",
+          "stars": 4,
+          "text": "Sam was very helpful in fixing what needed to be repaired. Efficient and communicative and respectful. 👍🏽",
+          "date": "24 Sep 2026",
+          "raw_date": "2026-09-24T11:53:56.045764Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Elon Jomon",
+          "stars": 5,
+          "text": "Sam from the maintenance team was extremely helpful in fixing the repairs in our place",
+          "date": "24 Sep 2026",
+          "raw_date": "2026-09-24T11:53:46.966672Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
           "reviewer": "Carolina Silva",
           "stars": 4,
           "text": "I've had nothing but good experiences with the maintenance crew, Sam in particular. He does a really good job and fixes things promptly. The team are always helpful, fast to react, and friendly.",
@@ -16951,6 +16991,86 @@
       "name": "Rodney Street",
       "region": "Region 2",
       "reviews": [
+        {
+          "reviewer": "Freya Allen",
+          "stars": 5,
+          "text": "John came and did our washer, without question, he fixed it straight away, lovely and friendly. John our favourite maintenance man. Not all heroes wear capes 🦸",
+          "date": "24 Sep 2026",
+          "raw_date": "2026-09-24T16:08:41.329159Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Soph Baxter",
+          "stars": 5,
+          "text": "john is the best and super super helpful",
+          "date": "24 Sep 2026",
+          "raw_date": "2026-09-24T12:40:57.039551Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Mia Carlson",
+          "stars": 5,
+          "text": "",
+          "date": "24 Sep 2026",
+          "raw_date": "2026-09-24T12:40:56.907708Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "soph x",
+          "stars": 5,
+          "text": "Lovely lovely John",
+          "date": "24 Sep 2026",
+          "raw_date": "2026-09-24T12:39:21.653490Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Hannah Poulton",
+          "stars": 5,
+          "text": "Thanks John",
+          "date": "24 Sep 2026",
+          "raw_date": "2026-09-24T12:39:00.133759Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "chloe sharp",
+          "stars": 5,
+          "text": "john is lovely thank you",
+          "date": "24 Sep 2026",
+          "raw_date": "2026-09-24T12:38:57.150013Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "grace",
+          "stars": 5,
+          "text": "John was very helpful and great craic!!",
+          "date": "24 Sep 2026",
+          "raw_date": "2026-09-24T12:26:12.200428Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Eva Gibson",
+          "stars": 5,
+          "text": "John is ao funny and nice",
+          "date": "24 Sep 2026",
+          "raw_date": "2026-09-24T12:23:12.505459Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Florence Gibson",
           "stars": 5,
@@ -22185,8 +22305,8 @@
       "reviews": [
         {
           "reviewer": "Edward George",
-          "stars": 4,
-          "text": "Solid",
+          "stars": 2,
+          "text": "Bad maintenance",
           "date": "28 Aug 2026",
           "raw_date": "2026-08-28T12:08:41.850389Z",
           "has_reply": false,
