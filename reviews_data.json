@@ -1,5 +1,5 @@
 {
-  "last_updated": "25 Sep 2026 11:01 UTC",
+  "last_updated": "26 Sep 2026 10:44 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
@@ -8292,6 +8292,16 @@
       "region": "Region 1",
       "reviews": [
         {
+          "reviewer": "Liam Bebbington",
+          "stars": 5,
+          "text": "Steve H sorted our boiler\nVery efficient and friendly",
+          "date": "25 Sep 2026",
+          "raw_date": "2026-09-25T14:17:26.688771Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
           "reviewer": "Izzy Cook",
           "stars": 5,
           "text": "Mark wallace was extremely helpful and very friendly !",
@@ -11376,6 +11386,16 @@
       "region": "Region 1",
       "reviews": [
         {
+          "reviewer": "Soph Campbell",
+          "stars": 5,
+          "text": "Brian and Mark we’re really chatty and good at job",
+          "date": "25 Sep 2026",
+          "raw_date": "2026-09-25T15:44:34.760665Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
           "reviewer": "luke",
           "stars": 5,
           "text": "",
@@ -11819,6 +11839,16 @@
       "name": "The Square",
       "region": "Region 1",
       "reviews": [
+        {
+          "reviewer": "Rebecca Warnes",
+          "stars": 5,
+          "text": "Brian and Mark came to my flat today and helped fix my window seal. They were really kind and helpful with resolving the job!",
+          "date": "25 Sep 2026",
+          "raw_date": "2026-09-25T14:36:25.417386Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Mary Stewart",
           "stars": 4,
@@ -12327,6 +12357,16 @@
       "name": "Manchester Main",
       "region": "Region 2",
       "reviews": [
+        {
+          "reviewer": "Josh Hart",
+          "stars": 1,
+          "text": "Flat was a state upon moving in. They either take ages to fix maintenance issues or flat out refuse. I am almost 2 months into my tenancy and still have ongoing maintenance issues that were reported within the first week. I have also had their staff walking into the flat un announced. On a positive note the staff in the office are very friendly, they just don’t get much done.",
+          "date": "19 Sep 2026",
+          "raw_date": "2026-09-19T11:38:24.023480Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Nihal Bains",
           "stars": 5,
@@ -16992,6 +17032,36 @@
       "region": "Region 2",
       "reviews": [
         {
+          "reviewer": "Emma Lucas",
+          "stars": 5,
+          "text": "John saved our morning by bringing us keys that work, best man on the job💪",
+          "date": "25 Sep 2026",
+          "raw_date": "2026-09-25T12:01:17.571703Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Alexis Kerr",
+          "stars": 5,
+          "text": "",
+          "date": "25 Sep 2026",
+          "raw_date": "2026-09-25T12:01:11.048692Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Iris Lo",
+          "stars": 5,
+          "text": "John was insanely helpful made our experience so much better",
+          "date": "25 Sep 2026",
+          "raw_date": "2026-09-25T12:01:01.231733Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
           "reviewer": "Freya Allen",
           "stars": 5,
           "text": "John came and did our washer, without question, he fixed it straight away, lovely and friendly. John our favourite maintenance man. Not all heroes wear capes 🦸",
@@ -17057,6 +17127,16 @@
           "text": "John was very helpful and great craic!!",
           "date": "24 Sep 2026",
           "raw_date": "2026-09-24T12:26:12.200428Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "delanie cairns",
+          "stars": 5,
+          "text": "John had amazing service got everything completed quickly and had some great banter!",
+          "date": "24 Sep 2026",
+          "raw_date": "2026-09-24T12:23:59.738737Z",
           "has_reply": false,
           "reply_text": "",
           "reply_date": ""
@@ -20171,16 +20251,6 @@
       "name": "Shoe & Boot",
       "region": "Region 3",
       "reviews": [
-        {
-          "reviewer": "saroj nobel",
-          "stars": 5,
-          "text": "Nik helped lots. Really recommended",
-          "date": "23 Sep 2026",
-          "raw_date": "2026-09-23T08:02:54.175598Z",
-          "has_reply": false,
-          "reply_text": "",
-          "reply_date": ""
-        },
         {
           "reviewer": "This is Mathew Wilcox",
           "stars": 5,
