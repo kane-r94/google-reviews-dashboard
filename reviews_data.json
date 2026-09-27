@@ -1,5 +1,5 @@
 {
-  "last_updated": "26 Sep 2026 10:44 UTC",
+  "last_updated": "27 Sep 2026 11:18 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
@@ -13174,6 +13174,16 @@
       "region": "Region 2",
       "reviews": [
         {
+          "reviewer": "Philip Smith (Nippey Cking)",
+          "stars": 3,
+          "text": "",
+          "date": "26 Sep 2026",
+          "raw_date": "2026-09-26T18:38:12.860664Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
           "reviewer": "Thomas Hankinson",
           "stars": 4,
           "text": "",
@@ -18242,16 +18252,6 @@
           "reply_date": ""
         },
         {
-          "reviewer": "A Google User",
-          "stars": 5,
-          "text": "John has been an exceptional maintenance man. His punctuality and willingness to assist have made a significant impact on my experience as a tenant. Every time I've needed his help, he's been there, ready to tackle any issue with a positive attitude. I highly appreciate his reliability and helpful nature, and we as a house are grateful to have him as part of the maintenance team.",
-          "date": "24 Jan 2024",
-          "raw_date": "2024-01-24T11:22:30.864998Z",
-          "has_reply": false,
-          "reply_text": "",
-          "reply_date": ""
-        },
-        {
           "reviewer": "EwAAnh992 Fifa",
           "stars": 5,
           "text": "",
@@ -20251,6 +20251,16 @@
       "name": "Shoe & Boot",
       "region": "Region 3",
       "reviews": [
+        {
+          "reviewer": "saroj nobel",
+          "stars": 5,
+          "text": "Nik helped lots. Really recommended",
+          "date": "23 Sep 2026",
+          "raw_date": "2026-09-23T08:02:54.175598Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "This is Mathew Wilcox",
           "stars": 5,
