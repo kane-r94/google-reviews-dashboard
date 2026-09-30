@@ -1,5 +1,5 @@
 {
-  "last_updated": "29 Sep 2026 12:02 UTC",
+  "last_updated": "30 Sep 2026 11:50 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
@@ -8292,6 +8292,16 @@
       "region": "Region 1",
       "reviews": [
         {
+          "reviewer": "ruby hima",
+          "stars": 5,
+          "text": "Mark and David were such a big help! They always come in to fix my issues, but we always have a quick chat about what they’re actually doing. So friendly and kind, they know how to deal with issues  and also explain them to me! An important asset to the Student Cribs team, makes me happy that I’ve picked the company when the people helping me are so genuine!",
+          "date": "29 Sep 2026",
+          "raw_date": "2026-09-29T14:24:24.148790Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
           "reviewer": "georgie richards",
           "stars": 5,
           "text": "Thank you so much Brian - you were amazing and fixed all of our house issues!!",
@@ -12388,6 +12398,26 @@
       "region": "Region 2",
       "reviews": [
         {
+          "reviewer": "Tara Cullen",
+          "stars": 5,
+          "text": "Mike porter was extremely helpful in getting everything done around the house",
+          "date": "30 Sep 2026",
+          "raw_date": "2026-09-30T10:43:08.838763Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Lucie Etheridge",
+          "stars": 5,
+          "text": "Mike porter was a great help and made the house feel so much more comfortable.",
+          "date": "30 Sep 2026",
+          "raw_date": "2026-09-30T10:41:17.321735Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
           "reviewer": "Josh Hart",
           "stars": 1,
           "text": "Flat was a state upon moving in. They either take ages to fix maintenance issues or flat out refuse. I am almost 2 months into my tenancy and still have ongoing maintenance issues that were reported within the first week. I have also had their staff walking into the flat un announced. On a positive note the staff in the office are very friendly, they just don’t get much done.",
@@ -14299,6 +14329,36 @@
       "name": "Chancellors Court",
       "region": "Region 2",
       "reviews": [
+        {
+          "reviewer": "madiha khan",
+          "stars": 5,
+          "text": "Fixed my broken shower, lovely and polite and very efficient!!",
+          "date": "29 Sep 2026",
+          "raw_date": "2026-09-29T16:19:07.949680Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Madeline Scragg",
+          "stars": 5,
+          "text": "Sam was amazing and fixed our sink super fast! :))",
+          "date": "29 Sep 2026",
+          "raw_date": "2026-09-29T14:40:15.140283Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Gabby Tegna",
+          "stars": 5,
+          "text": "Mike H is the best maintenance man ever! Fixed my heating and my window!’ Give him a raise⭐️⭐️⭐️",
+          "date": "29 Sep 2026",
+          "raw_date": "2026-09-29T10:18:05.317688Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Marvellous Irebhude",
           "stars": 5,
