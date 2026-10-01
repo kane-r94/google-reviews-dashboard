@@ -1,5 +1,5 @@
 {
-  "last_updated": "30 Sep 2026 13:13 UTC",
+  "last_updated": "01 Oct 2026 12:20 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
@@ -8292,6 +8292,36 @@
       "region": "Region 1",
       "reviews": [
         {
+          "reviewer": "Madeline Webster",
+          "stars": 5,
+          "text": "mark and davey have been in a few times to our property and have been lovely, polite and understanding of our maintenance issues.\nAll round great service",
+          "date": "30 Sep 2026",
+          "raw_date": "2026-09-30T14:41:27.683048Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Olivia d",
+          "stars": 5,
+          "text": "Mark and Davey were both very polite. They were clear with explaining the situation with our bathroom and were helpful in resolving many other issues.",
+          "date": "30 Sep 2026",
+          "raw_date": "2026-09-30T14:13:26.593879Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "mya mceneaney",
+          "stars": 5,
+          "text": "Mark and Davy were great! So helpful and really kind",
+          "date": "30 Sep 2026",
+          "raw_date": "2026-09-30T14:05:00.319627Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
           "reviewer": "ruby hima",
           "stars": 5,
           "text": "Mark and David were such a big help! They always come in to fix my issues, but we always have a quick chat about what they’re actually doing. So friendly and kind, they know how to deal with issues  and also explain them to me! An important asset to the Student Cribs team, makes me happy that I’ve picked the company when the people helping me are so genuine!",
@@ -13244,7 +13274,7 @@
           "reply_date": ""
         },
         {
-          "reviewer": "Philip Smith (Nippey Cking)",
+          "reviewer": "Philip “Nippey Cking” Smith",
           "stars": 3,
           "text": "",
           "date": "26 Sep 2026",
@@ -17151,6 +17181,36 @@
       "name": "Rodney Street",
       "region": "Region 2",
       "reviews": [
+        {
+          "reviewer": "Lucas Woodward",
+          "stars": 5,
+          "text": "John always brilliant, great guy. The work he does round the house is always to the best standard.",
+          "date": "30 Sep 2026",
+          "raw_date": "2026-09-30T12:06:20.946287Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Alex Bradshaw",
+          "stars": 5,
+          "text": "john has been amazing , always friendly and being the best",
+          "date": "30 Sep 2026",
+          "raw_date": "2026-09-30T12:06:06.082346Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Troy Weatherstone",
+          "stars": 5,
+          "text": "John was amazing, dead handy and such a sound bloke",
+          "date": "30 Sep 2026",
+          "raw_date": "2026-09-30T12:05:40.757301Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Emma Lucas",
           "stars": 5,
