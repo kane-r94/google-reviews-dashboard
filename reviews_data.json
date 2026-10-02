@@ -1,5 +1,5 @@
 {
-  "last_updated": "01 Oct 2026 12:20 UTC",
+  "last_updated": "02 Oct 2026 11:48 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
@@ -8567,16 +8567,6 @@
           "text": "",
           "date": "21 Jul 2026",
           "raw_date": "2026-07-21T13:35:50.527968Z",
-          "has_reply": false,
-          "reply_text": "",
-          "reply_date": ""
-        },
-        {
-          "reviewer": "ELLE EMAR",
-          "stars": 4,
-          "text": "Company is a bit disorganised when doing admin and the same problems kept popping up but now that those are sorted everything is smooth sailing and maintenance guys are great, issues reported are solved quite fast which was good as there was a few things broken in the property when we got it",
-          "date": "21 Jul 2026",
-          "raw_date": "2026-07-21T12:41:53.793004Z",
           "has_reply": false,
           "reply_text": "",
           "reply_date": ""
@@ -18657,6 +18647,46 @@
       "name": "Victoria Court Mews",
       "region": "Region 2",
       "reviews": [
+        {
+          "reviewer": "Cool Cookie",
+          "stars": 5,
+          "text": "James was amazing, sorted all of our problems within a morning, going above and beyond for the whole house.",
+          "date": "1 Oct 2026",
+          "raw_date": "2026-10-01T12:49:11.099799Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "R.",
+          "stars": 5,
+          "text": "James is the best maintenance man!!!\nAlways so helpful and always asks when he’s here what else he can do!\n10/10",
+          "date": "1 Oct 2026",
+          "raw_date": "2026-10-01T12:47:03.850876Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "maegrace bird",
+          "stars": 5,
+          "text": "James is the best maintenance man ever. He literally gives us whatever we ask for and is quick and efficient. Not to mention he is absolutely lovely. We are lucky to have him as our maintenance man ☺️",
+          "date": "1 Oct 2026",
+          "raw_date": "2026-10-01T12:47:01.152694Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Sonny Klass",
+          "stars": 5,
+          "text": "James is a sound fella",
+          "date": "1 Oct 2026",
+          "raw_date": "2026-10-01T12:46:19.823466Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Cal e",
           "stars": 5,
