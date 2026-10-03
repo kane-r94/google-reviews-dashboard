@@ -1,5 +1,5 @@
 {
-  "last_updated": "02 Oct 2026 11:48 UTC",
+  "last_updated": "03 Oct 2026 11:02 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
@@ -5076,7 +5076,7 @@
           "reply_date": "9 Sep 2022"
         },
         {
-          "reviewer": "Amy Anderson",
+          "reviewer": "Mqstie",
           "stars": 5,
           "text": "",
           "date": "7 Sep 2022",
@@ -10348,7 +10348,7 @@
           "reply_date": ""
         },
         {
-          "reviewer": "thalia",
+          "reviewer": "Thalia Elbatta",
           "stars": 5,
           "text": "",
           "date": "25 Jul 2026",
@@ -17171,6 +17171,56 @@
       "name": "Rodney Street",
       "region": "Region 2",
       "reviews": [
+        {
+          "reviewer": "Chloe Denton",
+          "stars": 5,
+          "text": "John is always happy to fix anything going on in the house and he's great. He's always really chatty and brightens our day!",
+          "date": "2 Oct 2026",
+          "raw_date": "2026-10-02T13:56:40.472996Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Anna Brooks",
+          "stars": 5,
+          "text": "John is great, sorts all our issues quick, very friendly too!",
+          "date": "2 Oct 2026",
+          "raw_date": "2026-10-02T13:55:50.948134Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Zara Richardson",
+          "stars": 5,
+          "text": "John is the loveliest man, really helpful and sorted our issue quickly",
+          "date": "2 Oct 2026",
+          "raw_date": "2026-10-02T13:55:40.954484Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Sylvie Page",
+          "stars": 5,
+          "text": "John has been amazing, he’s been super helpful. Thankyou so much",
+          "date": "2 Oct 2026",
+          "raw_date": "2026-10-02T13:55:18.097136Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "anna hargreaves",
+          "stars": 5,
+          "text": "John was absolutely lovely and came super quick to fix our problem!",
+          "date": "2 Oct 2026",
+          "raw_date": "2026-10-02T13:55:14.850745Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Lucas Woodward",
           "stars": 5,
