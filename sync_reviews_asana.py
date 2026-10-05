@@ -114,17 +114,9 @@ def get_project_custom_fields(token: str) -> dict:
 
 def create_custom_field(token: str, spec: dict) -> str:
     """Create a workspace-level custom field and return its GID."""
-    body = {"data": {"workspace": WORKSPACE_GID, **{k: v for k, v in spec.items()
-                                                    if k != "enum_options"}}}
+    body = {"data": {"workspace": WORKSPACE_GID, **spec}}
     result = asana_post(token, "/custom_fields", body)
-    field_gid = result["data"]["gid"]
-
-    # Add enum options separately if needed
-    if spec.get("enum_options"):
-        for opt in spec["enum_options"]:
-            asana_post(token, f"/custom_fields/{field_gid}/enum_options", {"data": opt})
-
-    return field_gid
+    return result["data"]["gid"]
 
 
 def attach_field_to_project(token: str, field_gid: str):
