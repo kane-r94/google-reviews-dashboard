@@ -33,7 +33,8 @@ CONFIG_PATH  = ROOT / "config.json"
 
 ASANA_BASE    = "https://app.asana.com/api/1.0"
 WORKSPACE_GID = "11321289793968"
-PROJECT_GID   = "1219151532451213"
+PROJECT_GID          = "1219151532451213"
+GOOGLE_REVIEWS_SECTION = "1219151532451220"
 
 REGIONAL_MANAGERS = {
     "Region 1": {"name": "Joshua Hodson",   "gid": "1204727493984535"},
@@ -257,6 +258,7 @@ def build_task(r: dict, fields: dict) -> dict:
             "notes":         notes,
             "projects":      [PROJECT_GID],
             "workspace":     WORKSPACE_GID,
+            "memberships":   [{"project": PROJECT_GID, "section": GOOGLE_REVIEWS_SECTION}],
             "custom_fields": build_custom_fields(r, fields),
         }
     }
