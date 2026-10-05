@@ -1,0 +1,32 @@
+name: Sync Reviews to Asana
+
+on:
+  schedule:
+    # Daily at 07:00 UTC — runs after review text fetch at 06:00
+    - cron: "0 7 * * *"
+  workflow_dispatch:
+
+jobs:
+  sync-asana:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4.2.2
+
+      - name: Set up Python
+        uses: actions/setup-python@v5.6.0
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Sync reviews to Asana
+        env:
+          ASANA_TOKEN: ${{ secrets.ASANA_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python sync_reviews_asana.py
