@@ -3,10 +3,14 @@ sync_reviews_asana.py
 
 Syncs Google Business Profile reviews to Asana as tasks.
 Each review creates one task in the configured project, assigned to the
-regional manager for that property's region.
+regional manager for that property's region, with structured custom fields.
 
-First run (no asana_synced.json): processes all reviews from the past 3 months.
-Subsequent runs: processes only reviews not yet synced.
+Custom fields created on first run:
+  Property (text), Region (text), Reviewer (text),
+  Star Rating (number), Date Posted (date), Owner Responded (enum Yes/No)
+
+First run (no asana_synced.json): processes reviews from the past 3 months.
+Subsequent runs: incremental — only unsynced reviews.
 
 Run locally:   python sync_reviews_asana.py
 Run in CI:     GitHub Actions — daily at 07:00 UTC, after review text fetch.
@@ -38,8 +42,30 @@ REGIONAL_MANAGERS = {
     "Region 4": {"name": "Josh Lanyon",     "gid": "1204908264262839"},
 }
 
+# Fields to create and attach to the project on first run.
+# Cached GIDs are stored in asana_synced.json under "custom_fields".
+FIELD_SPECS = {
+    "property":    {"name": "Property",        "resource_subtype": "text"},
+    "region":      {"name": "Region",          "resource_subtype": "text"},
+    "reviewer":    {"name": "Reviewer",        "resource_subtype": "text"},
+    "rating":      {"name": "Star Rating",     "resource_subtype": "number", "precision": 0},
+    "date_posted": {"name": "Date Posted",     "resource_subtype": "date"},
+    "responded":   {
+        "name": "Owner Responded",
+        "resource_subtype": "enum",
+        "enum_options": [
+            {"name": "Yes", "color": "green", "enabled": True},
+            {"name": "No",  "color": "red",   "enabled": True},
+        ],
+    },
+}
+
 INITIAL_LOOKBACK_DAYS = 92  # ~3 months on first run
 
+
+# ─────────────────────────────────────────────
+# Helpers
+# ─────────────────────────────────────────────
 
 def star_display(n: int) -> str:
     n = max(1, min(5, int(n)))
@@ -51,10 +77,111 @@ def review_hash(property_name: str, reviewer: str, raw_date: str) -> str:
     return hashlib.sha256(key.encode()).hexdigest()[:16]
 
 
+def asana_headers(token: str) -> dict:
+    return {"Authorization": f"Bearer {token}", "Content-Type": "application/json"}
+
+
+def asana_get(token: str, path: str, params: dict = None) -> dict:
+    resp = requests.get(f"{ASANA_BASE}{path}", headers=asana_headers(token),
+                        params=params, timeout=15)
+    resp.raise_for_status()
+    return resp.json()
+
+
+def asana_post(token: str, path: str, body: dict) -> dict:
+    resp = requests.post(f"{ASANA_BASE}{path}", headers=asana_headers(token),
+                         json=body, timeout=15)
+    if resp.status_code not in (200, 201):
+        raise RuntimeError(f"Asana POST {path} failed {resp.status_code}: {resp.text[:300]}")
+    return resp.json()
+
+
+# ─────────────────────────────────────────────
+# Custom field setup
+# ─────────────────────────────────────────────
+
+def get_project_custom_fields(token: str) -> dict:
+    """Return {field_name: field_gid} for fields already on the project."""
+    data = asana_get(token, f"/projects/{PROJECT_GID}",
+                     {"opt_fields": "custom_field_settings.custom_field.name,"
+                                    "custom_field_settings.custom_field.gid"})
+    result = {}
+    for setting in data["data"].get("custom_field_settings", []):
+        cf = setting["custom_field"]
+        result[cf["name"]] = cf["gid"]
+    return result
+
+
+def create_custom_field(token: str, spec: dict) -> str:
+    """Create a workspace-level custom field and return its GID."""
+    body = {"data": {"workspace": WORKSPACE_GID, **{k: v for k, v in spec.items()
+                                                    if k != "enum_options"}}}
+    result = asana_post(token, "/custom_fields", body)
+    field_gid = result["data"]["gid"]
+
+    # Add enum options separately if needed
+    if spec.get("enum_options"):
+        for opt in spec["enum_options"]:
+            asana_post(token, f"/custom_fields/{field_gid}/enum_options", {"data": opt})
+
+    return field_gid
+
+
+def attach_field_to_project(token: str, field_gid: str):
+    """Attach a custom field to the project."""
+    asana_post(token, f"/projects/{PROJECT_GID}/addCustomFieldSetting",
+               {"data": {"custom_field": field_gid, "is_important": True}})
+
+
+def get_enum_options(token: str, field_gid: str) -> dict:
+    """Return {option_name: option_gid} for an enum field."""
+    data = asana_get(token, f"/custom_fields/{field_gid}",
+                     {"opt_fields": "enum_options.name,enum_options.gid"})
+    return {opt["name"]: opt["gid"] for opt in data["data"].get("enum_options", [])}
+
+
+def ensure_custom_fields(token: str, synced: dict) -> bool:
+    """
+    Creates any missing custom fields and caches their GIDs in synced.
+    Returns True if synced was modified (needs saving).
+    """
+    if "custom_fields" in synced and synced["custom_fields"]:
+        return False  # already set up
+
+    print("Setting up custom fields for the first time...")
+    existing = get_project_custom_fields(token)
+    fields = {}
+
+    for key, spec in FIELD_SPECS.items():
+        field_name = spec["name"]
+        if field_name in existing:
+            print(f"  Found existing field: {field_name}")
+            fields[key] = {"gid": existing[field_name]}
+        else:
+            print(f"  Creating field: {field_name}")
+            gid = create_custom_field(token, spec)
+            attach_field_to_project(token, gid)
+            fields[key] = {"gid": gid}
+            time.sleep(0.3)
+
+        # Cache enum option GIDs
+        if spec.get("resource_subtype") == "enum" or spec.get("enum_options"):
+            opts = get_enum_options(token, fields[key]["gid"])
+            fields[key]["options"] = opts
+
+    synced["custom_fields"] = fields
+    print("Custom fields ready.\n")
+    return True
+
+
+# ─────────────────────────────────────────────
+# Data loading
+# ─────────────────────────────────────────────
+
 def load_synced() -> dict:
     if SYNCED_JSON.exists():
         return json.loads(SYNCED_JSON.read_text(encoding="utf-8"))
-    return {"last_sync": None, "synced_reviews": {}}
+    return {"last_sync": None, "synced_reviews": {}, "custom_fields": {}}
 
 
 def save_synced(synced: dict):
@@ -72,7 +199,51 @@ def load_reviews() -> list:
     return reviews
 
 
-def build_task(r: dict) -> dict:
+# ─────────────────────────────────────────────
+# Task creation
+# ─────────────────────────────────────────────
+
+def parse_date(raw_date: str) -> str | None:
+    """Return YYYY-MM-DD from an ISO timestamp, or None."""
+    if not raw_date:
+        return None
+    try:
+        return raw_date[:10]  # "2026-09-15T..." → "2026-09-15"
+    except Exception:
+        return None
+
+
+def build_custom_fields(r: dict, fields: dict) -> dict:
+    """Build the custom_fields dict for an Asana task."""
+    cf = {}
+
+    if "property" in fields:
+        cf[fields["property"]["gid"]] = r["property"]
+
+    if "region" in fields:
+        cf[fields["region"]["gid"]] = r["region"]
+
+    if "reviewer" in fields:
+        cf[fields["reviewer"]["gid"]] = r["reviewer"]
+
+    if "rating" in fields:
+        cf[fields["rating"]["gid"]] = int(r["stars"])
+
+    if "date_posted" in fields:
+        date_str = parse_date(r.get("raw_date", ""))
+        if date_str:
+            cf[fields["date_posted"]["gid"]] = {"date": date_str}
+
+    if "responded" in fields:
+        opts = fields["responded"].get("options", {})
+        answer = "Yes" if r.get("has_reply") else "No"
+        if answer in opts:
+            cf[fields["responded"]["gid"]] = opts[answer]
+
+    return cf
+
+
+def build_task(r: dict, fields: dict) -> dict:
     stars   = star_display(r["stars"])
     replied = "Yes" if r.get("has_reply") else "No"
     text    = (r.get("text") or "").strip() or "(No written review)"
@@ -90,10 +261,11 @@ def build_task(r: dict) -> dict:
 
     body = {
         "data": {
-            "name":      f"{stars} {r['property']} — {r['reviewer']}",
-            "notes":     notes,
-            "projects":  [PROJECT_GID],
-            "workspace": WORKSPACE_GID,
+            "name":          f"{stars} {r['property']} — {r['reviewer']}",
+            "notes":         notes,
+            "projects":      [PROJECT_GID],
+            "workspace":     WORKSPACE_GID,
+            "custom_fields": build_custom_fields(r, fields),
         }
     }
 
@@ -105,17 +277,17 @@ def build_task(r: dict) -> dict:
 
 
 def create_task(token: str, task_body: dict) -> str | None:
-    resp = requests.post(
-        f"{ASANA_BASE}/tasks",
-        headers={"Authorization": f"Bearer {token}", "Content-Type": "application/json"},
-        json=task_body,
-        timeout=15,
-    )
-    if resp.status_code in (200, 201):
-        return resp.json()["data"]["gid"]
-    print(f"  Asana error {resp.status_code}: {resp.text[:200]}")
-    return None
+    try:
+        result = asana_post(token, "/tasks", task_body)
+        return result["data"]["gid"]
+    except Exception as e:
+        print(f"  Error: {e}")
+        return None
 
+
+# ─────────────────────────────────────────────
+# GitHub push
+# ─────────────────────────────────────────────
 
 def push_synced_json(config: dict, synced: dict, timestamp: str):
     token = os.environ.get("GITHUB_TOKEN")
@@ -155,6 +327,10 @@ def push_synced_json(config: dict, synced: dict, timestamp: str):
     print("Pushed asana_synced.json to GitHub")
 
 
+# ─────────────────────────────────────────────
+# Main
+# ─────────────────────────────────────────────
+
 def main():
     print("=== Review → Asana Sync ===\n")
 
@@ -165,6 +341,13 @@ def main():
     config  = json.loads(CONFIG_PATH.read_text(encoding="utf-8"))
     synced  = load_synced()
     reviews = load_reviews()
+
+    # Set up custom fields if this is the first run
+    fields_changed = ensure_custom_fields(asana_token, synced)
+    if fields_changed:
+        save_synced(synced)
+
+    fields = synced.get("custom_fields", {})
 
     is_first_run = not synced["synced_reviews"]
     cutoff = None
@@ -198,13 +381,14 @@ def main():
             except ValueError:
                 pass
 
-        task_body = build_task(r)
+        task_body = build_task(r, fields)
         task_gid  = create_task(asana_token, task_body)
 
         if task_gid:
             synced["synced_reviews"][h] = task_gid
             manager = REGIONAL_MANAGERS.get(r["region"], {})
-            print(f"  ✓ {star_display(r['stars'])} {r['property']} — {r['reviewer']} → {manager.get('name', 'Unassigned')}")
+            print(f"  ✓ {star_display(r['stars'])} {r['property']} — {r['reviewer']} "
+                  f"→ {manager.get('name', 'Unassigned')}")
             created += 1
             time.sleep(0.2)
         else:
