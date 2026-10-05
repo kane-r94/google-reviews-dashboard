@@ -1,5 +1,5 @@
 {
-  "last_updated": "05 Oct 2026 09:03 UTC",
+  "last_updated": "05 Oct 2026 17:29 UTC",
   "date_range": {
     "start": "2025-04",
     "end": "2026-10"
@@ -131,9 +131,9 @@
       "monthly": [
         {
           "month": "2025-04",
-          "search_impressions": 1669,
-          "direction_requests": 40,
-          "calls": 34
+          "search_impressions": 1607,
+          "direction_requests": 37,
+          "calls": 31
         },
         {
           "month": "2025-05",
@@ -251,8 +251,8 @@
       "monthly": [
         {
           "month": "2025-04",
-          "search_impressions": 486,
-          "direction_requests": 68,
+          "search_impressions": 468,
+          "direction_requests": 63,
           "calls": 3
         },
         {
@@ -731,8 +731,8 @@
       "monthly": [
         {
           "month": "2025-04",
-          "search_impressions": 229,
-          "direction_requests": 61,
+          "search_impressions": 213,
+          "direction_requests": 56,
           "calls": 0
         },
         {
@@ -1091,8 +1091,8 @@
       "monthly": [
         {
           "month": "2025-04",
-          "search_impressions": 278,
-          "direction_requests": 40,
+          "search_impressions": 269,
+          "direction_requests": 32,
           "calls": 0
         },
         {
@@ -1451,9 +1451,9 @@
       "monthly": [
         {
           "month": "2025-04",
-          "search_impressions": 1378,
+          "search_impressions": 1330,
           "direction_requests": 44,
-          "calls": 20
+          "calls": 16
         },
         {
           "month": "2025-05",
@@ -1931,8 +1931,8 @@
       "monthly": [
         {
           "month": "2025-04",
-          "search_impressions": 763,
-          "direction_requests": 34,
+          "search_impressions": 730,
+          "direction_requests": 33,
           "calls": 2
         },
         {
@@ -2411,8 +2411,8 @@
       "monthly": [
         {
           "month": "2025-04",
-          "search_impressions": 479,
-          "direction_requests": 91,
+          "search_impressions": 461,
+          "direction_requests": 89,
           "calls": 3
         },
         {
@@ -2651,7 +2651,7 @@
       "monthly": [
         {
           "month": "2025-04",
-          "search_impressions": 599,
+          "search_impressions": 582,
           "direction_requests": 56,
           "calls": 0
         },
