@@ -1,10 +1,20 @@
 {
-  "last_updated": "05 Oct 2026 13:28 UTC",
+  "last_updated": "06 Oct 2026 12:40 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
       "region": "HQ",
       "reviews": [
+        {
+          "reviewer": "Simon Worthington",
+          "stars": 5,
+          "text": "Tabby has been exceptionally helpful indeed which was greatly appreciated.",
+          "date": "14 Oct 2024",
+          "raw_date": "2024-10-14T11:35:02.970666Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Amelia McGowan",
           "stars": 5,
@@ -1391,16 +1401,6 @@
           "text": "",
           "date": "11 Dec 2024",
           "raw_date": "2024-12-11T13:35:07.411508Z",
-          "has_reply": false,
-          "reply_text": "",
-          "reply_date": ""
-        },
-        {
-          "reviewer": "Simon Worthington",
-          "stars": 5,
-          "text": "Hattie has been exceptionally helpful indeed - helped make the whole process both seamless and smooth . All hugely appreciated.",
-          "date": "14 Oct 2024",
-          "raw_date": "2024-10-14T11:35:02.970666Z",
           "has_reply": false,
           "reply_text": "",
           "reply_date": ""
