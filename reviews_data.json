@@ -1,5 +1,5 @@
 {
-  "last_updated": "07 Oct 2026 12:34 UTC",
+  "last_updated": "07 Oct 2026 16:25 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
@@ -8302,6 +8302,16 @@
       "region": "Region 1",
       "reviews": [
         {
+          "reviewer": "Amelia Corris",
+          "stars": 5,
+          "text": "Marc and David did a great job of our shower. Thank you for getting it done so quickly!",
+          "date": "7 Oct 2026",
+          "raw_date": "2026-10-07T16:04:51.769631Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
           "reviewer": "Madeline Webster",
           "stars": 5,
           "text": "mark and davey have been in a few times to our property and have been lovely, polite and understanding of our maintenance issues.\nAll round great service",
@@ -12428,6 +12438,16 @@
       "region": "Region 2",
       "reviews": [
         {
+          "reviewer": "George Fenton",
+          "stars": 5,
+          "text": "Staff are very happy to help and manage to get jobs done very quickly, Mike Porter especially was extremely helpful and helped us out a lot with making our experience in the house a lot better.",
+          "date": "7 Oct 2026",
+          "raw_date": "2026-10-07T13:21:14.681089Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
           "reviewer": "Mazie Rodgers",
           "stars": 5,
           "text": "mike porter was very helpful and friendly!!",
@@ -14389,6 +14409,16 @@
       "name": "Chancellors Court",
       "region": "Region 2",
       "reviews": [
+        {
+          "reviewer": "Grace Jeannie",
+          "stars": 5,
+          "text": "Very friendly and did a great job",
+          "date": "7 Oct 2026",
+          "raw_date": "2026-10-07T15:24:37.365313Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "madiha khan",
           "stars": 5,
