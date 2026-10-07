@@ -1,10 +1,20 @@
 {
-  "last_updated": "06 Oct 2026 12:40 UTC",
+  "last_updated": "07 Oct 2026 12:34 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
       "region": "HQ",
       "reviews": [
+        {
+          "reviewer": "Bella Evans",
+          "stars": 1,
+          "text": "Would not recommend whatsoever.\nOur keys were given to us when our house was in a disgusting state, sofas, floor and all surfaces were filthy, and so much rubbish was left from previous tenants, which had rotted away over summer. We had to do so much deep cleaning ourselves including washing every single sofa cushion, which when opened exploded with skin cells/dandruff and had clearly not been washed in years. Our wifi did not work for weeks, kept saying someone had ‘fixed it’ but it took a month of complaining to meet one of the team face to face and get him to fix it. The same story applied to our fridge, when we moved in one fridge was working the other smelt disgusting and was completely broken, it again took them weeks to fix it and they only did once we’d met another member of the team face to face who was here for an inspection. A shame as every team member we’ve met in person has been lovely, but the state the house was left in for us was completely unacceptable. Taps and lights also didn’t work when we moved in, the master key they charged us £20 to unlock also didn’t work. Dishwasher and tumble dryer are completely ineffective. Complete shambles. Wouldn’t recommend to anyone and would deffo seek a private landlord for next year as most our friends are paying half what we are with private landlords for clean and functioning houses. Dread to think about how the year is going to go seeing as we’ve only been here a month.",
+          "date": "6 Oct 2026",
+          "raw_date": "2026-10-06T19:26:42.989469Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Simon Worthington",
           "stars": 5,
@@ -2836,7 +2846,7 @@
           "reply_date": ""
         },
         {
-          "reviewer": "Molly Runc",
+          "reviewer": "Molly Lawe",
           "stars": 5,
           "text": "I have lived with Student Cribs for a couple of years now and the process is always so easy. Houses are always clean and comfortable - perfect for a student house.",
           "date": "19 Jul 2023",
@@ -12418,6 +12428,26 @@
       "region": "Region 2",
       "reviews": [
         {
+          "reviewer": "Mazie Rodgers",
+          "stars": 5,
+          "text": "mike porter was very helpful and friendly!!",
+          "date": "7 Oct 2026",
+          "raw_date": "2026-10-07T12:15:31.709369Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Ben Craig",
+          "stars": 5,
+          "text": "Thank you Mike, super helpful and great. What a man",
+          "date": "7 Oct 2026",
+          "raw_date": "2026-10-07T10:33:25.376811Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
           "reviewer": "Tara Cullen",
           "stars": 5,
           "text": "Mike porter was extremely helpful in getting everything done around the house",
@@ -17182,11 +17212,31 @@
       "region": "Region 2",
       "reviews": [
         {
-          "reviewer": "Chloe Denton",
+          "reviewer": "Suimno",
           "stars": 5,
-          "text": "John is always happy to fix anything going on in the house and he's great. He's always really chatty and brightens our day!",
-          "date": "2 Oct 2026",
-          "raw_date": "2026-10-02T13:56:40.472996Z",
+          "text": "John fixed up our bathroom very well and was very polite and helpful the whole time",
+          "date": "6 Oct 2026",
+          "raw_date": "2026-10-06T12:54:09.038929Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Shayan Patel",
+          "stars": 5,
+          "text": "John was a really good chap did the job well and was really friendly",
+          "date": "6 Oct 2026",
+          "raw_date": "2026-10-06T12:53:27.808702Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "rosie chapman",
+          "stars": 5,
+          "text": "John from Student Cribs is absolutely amazing. He’s so diligent and always so lovely when he comes to do repairs.",
+          "date": "6 Oct 2026",
+          "raw_date": "2026-10-06T11:36:03.895404Z",
           "has_reply": false,
           "reply_text": "",
           "reply_date": ""
@@ -17202,19 +17252,9 @@
           "reply_date": ""
         },
         {
-          "reviewer": "Zara Richardson",
-          "stars": 5,
-          "text": "John is the loveliest man, really helpful and sorted our issue quickly",
-          "date": "2 Oct 2026",
-          "raw_date": "2026-10-02T13:55:40.954484Z",
-          "has_reply": false,
-          "reply_text": "",
-          "reply_date": ""
-        },
-        {
           "reviewer": "Sylvie Page",
           "stars": 5,
-          "text": "John has been amazing, he’s been super helpful. Thankyou so much",
+          "text": "John is the best",
           "date": "2 Oct 2026",
           "raw_date": "2026-10-02T13:55:18.097136Z",
           "has_reply": false,
@@ -17224,9 +17264,29 @@
         {
           "reviewer": "anna hargreaves",
           "stars": 5,
-          "text": "John was absolutely lovely and came super quick to fix our problem!",
+          "text": "John was great as always!",
           "date": "2 Oct 2026",
           "raw_date": "2026-10-02T13:55:14.850745Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Chloe Denton",
+          "stars": 5,
+          "text": "John is always happy to fix anything going on in the house and he's great. He's always really chatty and brightens our day!",
+          "date": "2 Oct 2026",
+          "raw_date": "2026-10-02T13:56:40.472996Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Zara Richardson",
+          "stars": 5,
+          "text": "John is the loveliest man, really helpful and sorted our issue quickly",
+          "date": "2 Oct 2026",
+          "raw_date": "2026-10-02T13:55:40.954484Z",
           "has_reply": false,
           "reply_text": "",
           "reply_date": ""
