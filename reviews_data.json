@@ -1,5 +1,5 @@
 {
-  "last_updated": "07 Oct 2026 16:25 UTC",
+  "last_updated": "08 Oct 2026 12:43 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
@@ -8312,6 +8312,36 @@
           "reply_date": ""
         },
         {
+          "reviewer": "Abigail Cotton",
+          "stars": 5,
+          "text": "Bryan came to do many jobs for our house today. Lovely bloke and did a great job",
+          "date": "7 Oct 2026",
+          "raw_date": "2026-10-07T14:28:29.989311Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Emily Neale",
+          "stars": 5,
+          "text": "Thank you so much Brian! You're a star!",
+          "date": "7 Oct 2026",
+          "raw_date": "2026-10-07T14:25:18.249524Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Olivia Cowley",
+          "stars": 5,
+          "text": "Amazing service via Brian. Super helpful ⭐️",
+          "date": "7 Oct 2026",
+          "raw_date": "2026-10-07T14:24:50.261022Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
           "reviewer": "Madeline Webster",
           "stars": 5,
           "text": "mark and davey have been in a few times to our property and have been lovely, polite and understanding of our maintenance issues.\nAll round great service",
@@ -12437,6 +12467,16 @@
       "name": "Manchester Main",
       "region": "Region 2",
       "reviews": [
+        {
+          "reviewer": "Henry Gatt",
+          "stars": 5,
+          "text": "Mike porter, lovely bloke, very helpful, 10/10 service",
+          "date": "7 Oct 2026",
+          "raw_date": "2026-10-07T14:45:34.808861Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "George Fenton",
           "stars": 5,
