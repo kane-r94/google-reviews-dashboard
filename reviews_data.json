@@ -1,5 +1,5 @@
 {
-  "last_updated": "09 Oct 2026 14:01 UTC",
+  "last_updated": "10 Oct 2026 11:49 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
@@ -14460,6 +14460,16 @@
       "region": "Region 2",
       "reviews": [
         {
+          "reviewer": "Amina",
+          "stars": 5,
+          "text": "Sam was very helpful with the multiple issues we had in our house, and was there to help us when we saw him around the building.",
+          "date": "9 Oct 2026",
+          "raw_date": "2026-10-09T16:34:16.927797Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
           "reviewer": "Grace Jeannie",
           "stars": 5,
           "text": "Very friendly and did a great job",
@@ -17291,6 +17301,16 @@
       "name": "Rodney Street",
       "region": "Region 2",
       "reviews": [
+        {
+          "reviewer": "Shoni Rambau",
+          "stars": 5,
+          "text": "John was very efficient and kind. He helped understand what goes on around the building and reassured me about the condition of my place",
+          "date": "9 Oct 2026",
+          "raw_date": "2026-10-09T15:07:37.039714Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Suimno",
           "stars": 5,
