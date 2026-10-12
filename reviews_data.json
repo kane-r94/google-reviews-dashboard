@@ -1,10 +1,20 @@
 {
-  "last_updated": "12 Oct 2026 09:17 UTC",
+  "last_updated": "12 Oct 2026 14:18 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
       "region": "HQ",
       "reviews": [
+        {
+          "reviewer": "Debra Sesay",
+          "stars": 5,
+          "text": "Very kind team, great communication!",
+          "date": "12 Oct 2026",
+          "raw_date": "2026-10-12T12:09:51.621071Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Bella Evans",
           "stars": 1,
