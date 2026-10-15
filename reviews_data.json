@@ -1,5 +1,5 @@
 {
-  "last_updated": "14 Oct 2026 11:05 UTC",
+  "last_updated": "15 Oct 2026 10:47 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
@@ -13374,16 +13374,6 @@
       "region": "Region 2",
       "reviews": [
         {
-          "reviewer": "Philip Smith (Nippey Cking)",
-          "stars": 2,
-          "text": "",
-          "date": "4 Oct 2026",
-          "raw_date": "2026-10-04T22:01:03.517964Z",
-          "has_reply": false,
-          "reply_text": "",
-          "reply_date": ""
-        },
-        {
           "reviewer": "beefedup",
           "stars": 5,
           "text": "Mike was absolutely brilliant. He helped replace my mattress. Work aside he was professional and funny too. Great guy",
@@ -14479,6 +14469,26 @@
       "name": "Chancellors Court",
       "region": "Region 2",
       "reviews": [
+        {
+          "reviewer": "Ashley Horseman",
+          "stars": 5,
+          "text": "Sam did a great job fixing our kitchen tap when we needed it fixed.",
+          "date": "15 Oct 2026",
+          "raw_date": "2026-10-15T10:04:46.558958Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Esha Abu taiyab",
+          "stars": 5,
+          "text": "Sam did an amazing job and on time for our home maintenance issue. Very respectful and on time ☺️",
+          "date": "15 Oct 2026",
+          "raw_date": "2026-10-15T10:04:46.355648Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Hayden Bilton",
           "stars": 5,
