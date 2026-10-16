@@ -1,5 +1,5 @@
 {
-  "last_updated": "15 Oct 2026 10:47 UTC",
+  "last_updated": "16 Oct 2026 10:35 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
@@ -8311,6 +8311,16 @@
       "name": "Newcastle Main",
       "region": "Region 1",
       "reviews": [
+        {
+          "reviewer": "DIVYA JOHNY",
+          "stars": 5,
+          "text": "I would like to give a big thank you to Steve Hudspith for his excellent service today. He came to check our fire alarm, but he also kindly took the time to look at our faulty washing machine and managed to repair it. We really appreciate his extra effort, kindness, and willingness to help beyond what he came for. He was professional, helpful, and went above and beyond our expectations. Excellent service from Steve — thank you so much! ⭐",
+          "date": "15 Oct 2026",
+          "raw_date": "2026-10-15T14:30:31.099364Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Amelia Corris",
           "stars": 5,
