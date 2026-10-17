@@ -1,5 +1,5 @@
 {
-  "last_updated": "16 Oct 2026 10:35 UTC",
+  "last_updated": "17 Oct 2026 10:04 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
@@ -8311,6 +8311,26 @@
       "name": "Newcastle Main",
       "region": "Region 1",
       "reviews": [
+        {
+          "reviewer": "Erica James",
+          "stars": 5,
+          "text": "Student Cribs hasn’t been the best so far, seems they workers come in, look and try to fix but doesn’t actually help.\nBrian, however, was the first one that genuinely seemed like he wanted to help and get things sorted.\nHe conversed well, we are really happy for him!!",
+          "date": "16 Oct 2026",
+          "raw_date": "2026-10-16T12:35:27.086722Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Linda Irbina",
+          "stars": 5,
+          "text": "Bryon is the most helpful maintenance guy we have ever dealt with at student cribs, really cares to solve problems and communicates well.",
+          "date": "16 Oct 2026",
+          "raw_date": "2026-10-16T12:34:45.002353Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "DIVYA JOHNY",
           "stars": 5,
