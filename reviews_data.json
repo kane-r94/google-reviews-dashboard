@@ -1,5 +1,5 @@
 {
-  "last_updated": "19 Oct 2026 11:59 UTC",
+  "last_updated": "20 Oct 2026 10:52 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
@@ -11,6 +11,16 @@
           "text": "Very kind team, great communication!",
           "date": "12 Oct 2026",
           "raw_date": "2026-10-12T12:09:51.621071Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Erin Hennessy",
+          "stars": 1,
+          "text": "Poor communication & unhelpful staff. No one turned up for our viewings and we were sent to voicemail every time we tried to contact them. We were not informed that a flat we had booked a viewing for had been taken until we were already there for the appointment, even the email informing us of this was sent late.",
+          "date": "12 Oct 2026",
+          "raw_date": "2026-10-12T09:07:07.321853Z",
           "has_reply": false,
           "reply_text": "",
           "reply_date": ""
