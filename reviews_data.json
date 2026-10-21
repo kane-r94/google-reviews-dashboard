@@ -1,5 +1,5 @@
 {
-  "last_updated": "20 Oct 2026 10:52 UTC",
+  "last_updated": "21 Oct 2026 11:04 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
@@ -14509,6 +14509,26 @@
       "name": "Chancellors Court",
       "region": "Region 2",
       "reviews": [
+        {
+          "reviewer": "Emily Wright",
+          "stars": 5,
+          "text": "Sam came to fix the blinds in our property, as four rooms had broken blinds. He was very quick, efficient and got everything fixed in no time! Thank you :)",
+          "date": "20 Oct 2026",
+          "raw_date": "2026-10-20T15:13:31.681068Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Alice Thorpe",
+          "stars": 5,
+          "text": "Sam came round today to paint my bedroom walls. He was very lovely and also helped fix a lamp shade too. He will be back tomorrow to finish the job but great service from him!",
+          "date": "20 Oct 2026",
+          "raw_date": "2026-10-20T12:23:07.093355Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Ashley Horseman",
           "stars": 5,
