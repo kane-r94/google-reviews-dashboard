@@ -1,5 +1,5 @@
 {
-  "last_updated": "21 Oct 2026 11:04 UTC",
+  "last_updated": "21 Oct 2026 14:17 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
@@ -8321,6 +8321,36 @@
       "name": "Newcastle Main",
       "region": "Region 1",
       "reviews": [
+        {
+          "reviewer": "Imogen Kedward",
+          "stars": 5,
+          "text": "Steve H was amazing he saved our ovens !!",
+          "date": "21 Oct 2026",
+          "raw_date": "2026-10-21T12:58:47.105021Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Lucy Burnett",
+          "stars": 5,
+          "text": "Steve H was great at helping with the issue! Very nice",
+          "date": "21 Oct 2026",
+          "raw_date": "2026-10-21T12:57:48.725971Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Liv Greenwoodx",
+          "stars": 5,
+          "text": "Steve H was fabulous!!!",
+          "date": "21 Oct 2026",
+          "raw_date": "2026-10-21T12:57:43.168865Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Erica James",
           "stars": 5,
