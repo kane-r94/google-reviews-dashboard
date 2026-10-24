@@ -1,5 +1,5 @@
 {
-  "last_updated": "23 Oct 2026 10:56 UTC",
+  "last_updated": "24 Oct 2026 10:12 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
@@ -14560,6 +14560,16 @@
       "region": "Region 2",
       "reviews": [
         {
+          "reviewer": "Tabitha Mitchell",
+          "stars": 5,
+          "text": "Sam was lovely, came over to fix drain and made sure to fix other stuff that we hadn’t even reported",
+          "date": "23 Oct 2026",
+          "raw_date": "2026-10-23T11:39:44.515961Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
           "reviewer": "Phoebe Woodley",
           "stars": 5,
           "text": "Sam and Mike came and sorted my blind, they were very friendly and efficient. Did a brilliant job. Thank you very much 👍👍",
@@ -19804,7 +19814,7 @@
           "reply_date": "22 Jan 2020"
         },
         {
-          "reviewer": "Wagatongi",
+          "reviewer": "Joe Etchells",
           "stars": 5,
           "text": "Very good service from Melanie and her team in Nottingham, every query we had as tenants was sorted promptly and without any hassle, would definitely recommend renting from them!",
           "date": "10 Jul 2019",
