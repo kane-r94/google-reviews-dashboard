@@ -1,5 +1,5 @@
 {
-  "last_updated": "25 Oct 2026 10:37 UTC",
+  "last_updated": "26 Oct 2026 09:37 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
@@ -16005,6 +16005,16 @@
       "name": "Waterside Village",
       "region": "Region 2",
       "reviews": [
+        {
+          "reviewer": "Andrejs Bluks",
+          "stars": 5,
+          "text": "Really nice place to live as a student.",
+          "date": "25 Oct 2026",
+          "raw_date": "2026-10-25T11:45:44.226411Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Glyn Chaplin",
           "stars": 1,
