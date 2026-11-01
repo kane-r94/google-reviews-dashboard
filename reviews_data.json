@@ -1,10 +1,20 @@
 {
-  "last_updated": "31 Oct 2026 11:37 UTC",
+  "last_updated": "01 Nov 2026 12:36 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
       "region": "HQ",
       "reviews": [
+        {
+          "reviewer": "Taylor Smitheram",
+          "stars": 1,
+          "text": "Unhelpful service when contacted. Constant flat visits, you get no peace as a tennant",
+          "date": "31 Oct 2026",
+          "raw_date": "2026-10-31T09:33:22.362893Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Debra Sesay",
           "stars": 5,
