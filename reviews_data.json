@@ -1,5 +1,5 @@
 {
-  "last_updated": "02 Nov 2026 10:08 UTC",
+  "last_updated": "02 Nov 2026 14:39 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
@@ -14549,6 +14549,16 @@
       "name": "Chancellors Court",
       "region": "Region 2",
       "reviews": [
+        {
+          "reviewer": "Aisha Barnley",
+          "stars": 5,
+          "text": "Sam from maintenance came down to fix one of the headboards that had fallen down, did a great job sorting it and was fixed within less than 10 minutes, very helpful! Much appreciated.",
+          "date": "2 Nov 2026",
+          "raw_date": "2026-11-02T10:21:52.143873Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Tabitha Mitchell",
           "stars": 5,
