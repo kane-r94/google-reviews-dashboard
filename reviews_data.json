@@ -1,5 +1,5 @@
 {
-  "last_updated": "04 Nov 2026 13:42 UTC",
+  "last_updated": "05 Nov 2026 13:55 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
@@ -12060,6 +12060,16 @@
       "region": "Region 1",
       "reviews": [
         {
+          "reviewer": "Rosie Blanchard",
+          "stars": 5,
+          "text": "Our student cribs flat in Newcastle has had Steve H in today for maintenance to fix our washing machine, sink and one of our showers. Steve was efficient and took his own time to explain what the problems were to us to prevent further issues.",
+          "date": "4 Nov 2026",
+          "raw_date": "2026-11-04T12:22:18.919240Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
           "reviewer": "Rebecca Warnes",
           "stars": 5,
           "text": "Brian and Mark came to my flat today and helped fix my window seal. They were really kind and helpful with resolving the job!",
@@ -14539,6 +14549,16 @@
       "name": "Chancellors Court",
       "region": "Region 2",
       "reviews": [
+        {
+          "reviewer": "Emil Goddard",
+          "stars": 5,
+          "text": "Really helpful, explained everything about what they were doing and worked very quickly",
+          "date": "4 Nov 2026",
+          "raw_date": "2026-11-04T16:15:48.498065Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Aisha Barnley",
           "stars": 5,
@@ -23365,6 +23385,16 @@
       "name": "Walter Road",
       "region": "Region 4",
       "reviews": [
+        {
+          "reviewer": "Jonathan Sastrodidjojo",
+          "stars": 2,
+          "text": "The company, agent or maintenance team do not care about tenants unless it is about money. They will complain about 1 day late fees while they will not handle with your maintenance problems for 3-4 months until after you have left the property. I had a flatmate with room full of mold and got told it was his fault, also they did not fix or replace our washing machine for 3-4 months before we left. Then charged us for fees because we couldnt unlock that washing machine which still had clothing in them. Then after we payed those fees fully, they are still calling me with an AI chatbot and sending an email to my guarantor every day of every week just because their whole team (customer service or accounts or the whole department) cannot update their system or communicate within the company well. Please fix your issues and stop calling us with an automated AI voice. Are you guys a real company.",
+          "date": "4 Nov 2026",
+          "raw_date": "2026-11-04T16:06:37.547255Z",
+          "has_reply": true,
+          "reply_text": "Hi Jonathan, \n\nThank you for your feedback. We're sorry to hear that your experience did not meet expectations. \n\nWe take all comments seriously and your portfolio manager will be contacting you directly to better understand your concerns, and see how we can support you in resolving the matter.\n\nKind regards, \nThe Student Cribs Team\n0203 758 7000",
+          "reply_date": "4 Nov 2026"
+        },
         {
           "reviewer": "Joel john",
           "stars": 1,
