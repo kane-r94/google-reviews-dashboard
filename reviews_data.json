@@ -1,5 +1,5 @@
 {
-  "last_updated": "06 Nov 2026 13:40 UTC",
+  "last_updated": "06 Nov 2026 16:40 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
@@ -14550,6 +14550,16 @@
       "region": "Region 2",
       "reviews": [
         {
+          "reviewer": "romily pearce",
+          "stars": 5,
+          "text": "Sam was great he came over because we had an issue with the front door and has offered to help with any other issues that we may have.",
+          "date": "6 Nov 2026",
+          "raw_date": "2026-11-06T15:07:59.342383Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
           "reviewer": "Aaliyah Ahmed",
           "stars": 5,
           "text": "We had some problems at the flat and the maintenance team had it sorted very quickly, Mike.H was so quick at finding and explaining the problem and helping solve it, lovely speedy service",
@@ -17512,6 +17522,16 @@
       "region": "Region 2",
       "reviews": [
         {
+          "reviewer": "Emma Lucas",
+          "stars": 5,
+          "text": "Any issue we have had in the house John has come and sorted out for us. He is a lovely man and goes above and beyond for us",
+          "date": "25 Sep 2026",
+          "raw_date": "2026-09-25T12:01:17.571703Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
           "reviewer": "Shoni Rambau",
           "stars": 5,
           "text": "John was very efficient and kind. He helped understand what goes on around the building and reassured me about the condition of my place",
@@ -17627,16 +17647,6 @@
           "text": "John was amazing, dead handy and such a sound bloke",
           "date": "30 Sep 2026",
           "raw_date": "2026-09-30T12:05:40.757301Z",
-          "has_reply": false,
-          "reply_text": "",
-          "reply_date": ""
-        },
-        {
-          "reviewer": "Emma Lucas",
-          "stars": 5,
-          "text": "John saved our morning by bringing us keys that work, best man on the job💪",
-          "date": "25 Sep 2026",
-          "raw_date": "2026-09-25T12:01:17.571703Z",
           "has_reply": false,
           "reply_text": "",
           "reply_date": ""
