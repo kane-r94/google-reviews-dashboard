@@ -1,5 +1,5 @@
 {
-  "last_updated": "05 Nov 2026 13:55 UTC",
+  "last_updated": "06 Nov 2026 13:40 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
@@ -14549,6 +14549,26 @@
       "name": "Chancellors Court",
       "region": "Region 2",
       "reviews": [
+        {
+          "reviewer": "Aaliyah Ahmed",
+          "stars": 5,
+          "text": "We had some problems at the flat and the maintenance team had it sorted very quickly, Mike.H was so quick at finding and explaining the problem and helping solve it, lovely speedy service",
+          "date": "6 Nov 2026",
+          "raw_date": "2026-11-06T13:21:19.538359Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Harley Smith",
+          "stars": 5,
+          "text": "Great service and fast response time",
+          "date": "5 Nov 2026",
+          "raw_date": "2026-11-05T14:26:30.496001Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Emil Goddard",
           "stars": 5,
