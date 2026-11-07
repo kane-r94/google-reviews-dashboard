@@ -1,5 +1,5 @@
 {
-  "last_updated": "06 Nov 2026 16:40 UTC",
+  "last_updated": "07 Nov 2026 12:21 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
@@ -14550,6 +14550,16 @@
       "region": "Region 2",
       "reviews": [
         {
+          "reviewer": "Philip “Nippey Cking” Smith",
+          "stars": 5,
+          "text": "",
+          "date": "7 Nov 2026",
+          "raw_date": "2026-11-07T02:26:20.032327Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
           "reviewer": "romily pearce",
           "stars": 5,
           "text": "Sam was great he came over because we had an issue with the front door and has offered to help with any other issues that we may have.",
@@ -17522,11 +17532,41 @@
       "region": "Region 2",
       "reviews": [
         {
+          "reviewer": "Annie Roberts",
+          "stars": 5,
+          "text": "John is brilliant",
+          "date": "6 Nov 2026",
+          "raw_date": "2026-11-06T15:23:15.714087Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
           "reviewer": "Emma Lucas",
           "stars": 5,
           "text": "Any issue we have had in the house John has come and sorted out for us. He is a lovely man and goes above and beyond for us",
           "date": "25 Sep 2026",
           "raw_date": "2026-09-25T12:01:17.571703Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Olivia Gagen",
+          "stars": 5,
+          "text": "John who looks after our house is really helpful and always goes above and beyond xxx",
+          "date": "6 Nov 2026",
+          "raw_date": "2026-11-06T15:19:07.527143Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Iris Lo",
+          "stars": 5,
+          "text": "john was so helpful and fixed everything we wanted doing he always goes above and beyond",
+          "date": "25 Sep 2026",
+          "raw_date": "2026-09-25T12:01:01.231733Z",
           "has_reply": false,
           "reply_text": "",
           "reply_date": ""
@@ -17657,16 +17697,6 @@
           "text": "",
           "date": "25 Sep 2026",
           "raw_date": "2026-09-25T12:01:11.048692Z",
-          "has_reply": false,
-          "reply_text": "",
-          "reply_date": ""
-        },
-        {
-          "reviewer": "Iris Lo",
-          "stars": 5,
-          "text": "John was insanely helpful made our experience so much better",
-          "date": "25 Sep 2026",
-          "raw_date": "2026-09-25T12:01:01.231733Z",
           "has_reply": false,
           "reply_text": "",
           "reply_date": ""
