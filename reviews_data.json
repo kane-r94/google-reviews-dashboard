@@ -1,5 +1,5 @@
 {
-  "last_updated": "09 Nov 2026 09:31 UTC",
+  "last_updated": "09 Nov 2026 15:01 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
@@ -21,9 +21,9 @@
           "text": "Very kind team, great communication!",
           "date": "12 Oct 2026",
           "raw_date": "2026-10-12T12:09:51.621071Z",
-          "has_reply": false,
-          "reply_text": "",
-          "reply_date": ""
+          "has_reply": true,
+          "reply_text": "Thanks for the great review, Debra! We're so glad you're enjoying your home in Salford. Our team is always here if you need anything, so don't hesitate to reach out. The Student Cribs Team",
+          "reply_date": "9 Nov 2026"
         },
         {
           "reviewer": "Lillie abbott",
@@ -41,9 +41,9 @@
           "text": "Poor communication & unhelpful staff. No one turned up for our viewings and we were sent to voicemail every time we tried to contact them. We were not informed that a flat we had booked a viewing for had been taken until we were already there for the appointment, even the email informing us of this was sent late.",
           "date": "12 Oct 2026",
           "raw_date": "2026-10-12T09:07:07.321853Z",
-          "has_reply": false,
-          "reply_text": "",
-          "reply_date": ""
+          "has_reply": true,
+          "reply_text": "Hi Erin,\n\nThank you for taking the time to share your feedback. We are sorry to hear that your experience with our viewings did not meet your expectations.\n\nWe understand your frustration regarding the communication surrounding your scheduled viewings and the notification that the property had already been let. Properties can be secured quickly during busy letting periods, and whilst we aim to keep all prospective tenants updated as promptly as possible, we appreciate the inconvenience this situation may have caused.\n\nYour feedback has been noted and will be shared with our Lettings Team as we continue to review our processes. Should you wish to discuss this further, please do not hesitate to contact us on 0203 758 7000.\n\nThank you,\nThe Student Cribs Team",
+          "reply_date": "9 Nov 2026"
         },
         {
           "reviewer": "Bella Evans",
@@ -61,9 +61,9 @@
           "text": "Tabby has been exceptionally helpful indeed which was greatly appreciated.",
           "date": "14 Oct 2024",
           "raw_date": "2024-10-14T11:35:02.970666Z",
-          "has_reply": false,
-          "reply_text": "",
-          "reply_date": ""
+          "has_reply": true,
+          "reply_text": "Thanks for the great review! Our team is always here if you need anything, so don't hesitate to reach out. The Student Cribs Team",
+          "reply_date": "9 Nov 2026"
         },
         {
           "reviewer": "Amelia McGowan",
@@ -71,9 +71,9 @@
           "text": "At Manchester student cribs Fallowfield Jack was very helpful with showing us around the cribs and keeping us informed through the process. We appreciated all the help.",
           "date": "24 Sep 2026",
           "raw_date": "2026-09-24T11:33:31.096163Z",
-          "has_reply": false,
-          "reply_text": "",
-          "reply_date": ""
+          "has_reply": true,
+          "reply_text": "Thanks for the great review, Amelia! Our team is always here if you need anything, so don't hesitate to reach out. The Student Cribs Team",
+          "reply_date": "9 Nov 2026"
         },
         {
           "reviewer": "Jonathan Ntege",
@@ -14549,6 +14549,16 @@
       "name": "Chancellors Court",
       "region": "Region 2",
       "reviews": [
+        {
+          "reviewer": "KJV TV",
+          "stars": 5,
+          "text": "Mike H was great. He had great customer service and got on with the job promptly- went above and beyond also fixing a minor secondary problem. Great work.",
+          "date": "9 Nov 2026",
+          "raw_date": "2026-11-09T11:50:12.612008Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Philip “Nippey Cking” Smith",
           "stars": 5,
