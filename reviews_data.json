@@ -1,5 +1,5 @@
 {
-  "last_updated": "08 Nov 2026 12:41 UTC",
+  "last_updated": "09 Nov 2026 09:31 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
@@ -11,9 +11,9 @@
           "text": "Unhelpful service when contacted. Constant flat visits, you get no peace as a tennant",
           "date": "31 Oct 2026",
           "raw_date": "2026-10-31T09:33:22.362893Z",
-          "has_reply": false,
-          "reply_text": "",
-          "reply_date": ""
+          "has_reply": true,
+          "reply_text": "Hi Taylor, \n\nThank you for taking the time to share your feedback. We're sorry to hear that your experience did not meet your expectations.\n \nProviding a positive experience for our tenants is extremely important to us, and we're disappointed to learn we've fallen short on this occasion. A member of our team will be contacting you directly to discuss your concerns in more detail and see how we can help resolve the issues raised.\n \nWe appreciate your feedback and the opportunity to improve.\n\nKind regards, \nStudent Cribs Team",
+          "reply_date": "9 Nov 2026"
         },
         {
           "reviewer": "Debra Sesay",
