@@ -1,5 +1,5 @@
 {
-  "last_updated": "09 Nov 2026 15:01 UTC",
+  "last_updated": "10 Nov 2026 14:14 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
@@ -8332,6 +8332,16 @@
       "region": "Region 1",
       "reviews": [
         {
+          "reviewer": "Rhiannon",
+          "stars": 1,
+          "text": "I had hoped that my experience with student cribs would have been a positive one, yet we continue to have issues with our house, that remain unfixed. To begin with, our front door has been given the landlord special, alongside many other areas of our house, there is black mould across the downstairs; the bathroom, kitchen and my flatmate's room (as pictured) which has not been treated, only had a temporary fix, such as opening vents and windows, which is completly unreasonable in the winter months. We have been requesting maintenance for around 1-2 months, and as this is a health hazard we had hoped it would have been quicker. Alongside this, our maintenance reports are closed even when the job hasnt been completed which is entirely unfair on us as we are told to report things yet they dont get fixed. Furthermore, the hob has been wired into the wrong thing which is a fire hazard, the oven has no decals so we cant see temp or function with the oven. We thought the house should have been fully PAT tested and checked over before we moved in but here we are.",
+          "date": "9 Nov 2026",
+          "raw_date": "2026-11-09T23:58:08.991866Z",
+          "has_reply": true,
+          "reply_text": "Hi Rhiannon,\n\nThank you for taking the time to share your concerns with us.\n\nWe are sorry to hear about the issues you have experienced and understand how frustrating this must be. Please be assured that we take your concerns seriously, and our priority is to ensure that you and your fellow tenants feel happy and comfortable in your home.\n\nWe have further works scheduled with our contractor this week to address the issues you have highlighted, and we are committed to resolving these as quickly as possible.\n\nWith this in mind, we would welcome the opportunity to arrange a call with you to discuss your concerns in more detail, provide an update on the planned works and answer any questions you may have.\n\nIn the meantime, should you have any further concerns or require additional support, please do not hesitate to contact your regional team directly.\n\nThank you again for your patience and understanding while we work towards resolving these matters.\n\nKind regards,\nThe Student Cribs Team",
+          "reply_date": "10 Nov 2026"
+        },
+        {
           "reviewer": "Libbi Mercer",
           "stars": 5,
           "text": "Steve H was really helpful and friendly and got things sorted out quickly!",
@@ -14549,6 +14559,26 @@
       "name": "Chancellors Court",
       "region": "Region 2",
       "reviews": [
+        {
+          "reviewer": "Jessica Hodgkins",
+          "stars": 5,
+          "text": "We love Mike, he sorted a massive crater in my wall, big up Mike",
+          "date": "10 Nov 2026",
+          "raw_date": "2026-11-10T13:53:04.211732Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Kyle Masuku",
+          "stars": 5,
+          "text": "Mike came in to fix our blinds and washing machine and he was extremely helpful and friendly and managed to get everything sorted out quickly whilst also helping with other issues that we had around the flat",
+          "date": "9 Nov 2026",
+          "raw_date": "2026-11-09T18:20:42.876078Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "KJV TV",
           "stars": 5,
