@@ -1,5 +1,5 @@
 {
-  "last_updated": "10 Nov 2026 14:14 UTC",
+  "last_updated": "11 Nov 2026 13:28 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
@@ -11060,6 +11060,16 @@
       "region": "Region 1",
       "reviews": [
         {
+          "reviewer": "Khurram Awan",
+          "stars": 3,
+          "text": "",
+          "date": "3 Nov 2026",
+          "raw_date": "2026-11-03T18:49:23.534619Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
           "reviewer": "courtney Louise",
           "stars": 5,
           "text": "Marc Wallace was very polite, professional, and friendly throughout. He got the job done efficiently and to a high standard!",
@@ -14559,6 +14569,16 @@
       "name": "Chancellors Court",
       "region": "Region 2",
       "reviews": [
+        {
+          "reviewer": "Fareedat Olaoye",
+          "stars": 5,
+          "text": "Been having a problem sorting out a maintenance issue in the flat and was getting  worried over it but Sam from student cribs maintenace team came by and helped sort it out, really quickly and efficiently. Really appreciate the service!",
+          "date": "11 Nov 2026",
+          "raw_date": "2026-11-11T10:23:10.598364Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Jessica Hodgkins",
           "stars": 5,
