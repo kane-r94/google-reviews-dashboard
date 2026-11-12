@@ -1,5 +1,5 @@
 {
-  "last_updated": "11 Nov 2026 13:28 UTC",
+  "last_updated": "12 Nov 2026 14:32 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
@@ -14569,6 +14569,16 @@
       "name": "Chancellors Court",
       "region": "Region 2",
       "reviews": [
+        {
+          "reviewer": "Lucy Hodgkinson",
+          "stars": 5,
+          "text": "Sam has been really helpful in fixing any issues we’ve had! He is friendly and fast. Would highly recommend.",
+          "date": "12 Nov 2026",
+          "raw_date": "2026-11-12T11:15:05.912831Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Fareedat Olaoye",
           "stars": 5,
