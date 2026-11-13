@@ -1,5 +1,5 @@
 {
-  "last_updated": "12 Nov 2026 14:32 UTC",
+  "last_updated": "13 Nov 2026 13:51 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
@@ -11060,6 +11060,16 @@
       "region": "Region 1",
       "reviews": [
         {
+          "reviewer": "Mia Gregory",
+          "stars": 5,
+          "text": "Marc Wallace was quick and efficient at coming for maintenance. No complaints",
+          "date": "13 Nov 2026",
+          "raw_date": "2026-11-13T10:27:23.865401Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
           "reviewer": "Khurram Awan",
           "stars": 3,
           "text": "",
@@ -11791,6 +11801,26 @@
       "name": "Linden House",
       "region": "Region 1",
       "reviews": [
+        {
+          "reviewer": "imogen clough",
+          "stars": 5,
+          "text": "Steve H came round to fix our washing machine and he was extremely friendly and helpful, thank you!!!",
+          "date": "12 Nov 2026",
+          "raw_date": "2026-11-12T15:48:38.299480Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "hannah nicholls",
+          "stars": 5,
+          "text": "Steve H came round to fix our washing machine. He was very attentive and friendly. Thank you Steve!",
+          "date": "12 Nov 2026",
+          "raw_date": "2026-11-12T15:43:27.366306Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Katie Lang",
           "stars": 5,
@@ -21742,7 +21772,7 @@
           "reply_date": ""
         },
         {
-          "reviewer": "orangeebat",
+          "reviewer": "yasmin kinrade",
           "stars": 4,
           "text": "Spacious flats with good utilities, good location for best uni experience",
           "date": "26 Nov 2025",
