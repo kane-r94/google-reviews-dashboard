@@ -1,5 +1,5 @@
 {
-  "last_updated": "13 Nov 2026 13:51 UTC",
+  "last_updated": "14 Nov 2026 12:54 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
@@ -8332,6 +8332,16 @@
       "region": "Region 1",
       "reviews": [
         {
+          "reviewer": "Hollie Bratt",
+          "stars": 5,
+          "text": "sorted out the problem very quickly, very helpful and friendly - Steve H",
+          "date": "13 Nov 2026",
+          "raw_date": "2026-11-13T12:31:12.041369Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
           "reviewer": "Rhiannon",
           "stars": 1,
           "text": "I had hoped that my experience with student cribs would have been a positive one, yet we continue to have issues with our house, that remain unfixed. To begin with, our front door has been given the landlord special, alongside many other areas of our house, there is black mould across the downstairs; the bathroom, kitchen and my flatmate's room (as pictured) which has not been treated, only had a temporary fix, such as opening vents and windows, which is completly unreasonable in the winter months. We have been requesting maintenance for around 1-2 months, and as this is a health hazard we had hoped it would have been quicker. Alongside this, our maintenance reports are closed even when the job hasnt been completed which is entirely unfair on us as we are told to report things yet they dont get fixed. Furthermore, the hob has been wired into the wrong thing which is a fire hazard, the oven has no decals so we cant see temp or function with the oven. We thought the house should have been fully PAT tested and checked over before we moved in but here we are.",
@@ -11986,9 +11996,19 @@
         {
           "reviewer": "amelie",
           "stars": 5,
-          "text": "",
+          "text": "Wain B was very professional and did a great and thorough job. He explained each job he was doing and kept us updated, as well as being very friendly. Thank you wain b!",
           "date": "25 Jul 2026",
           "raw_date": "2026-07-25T10:32:08.763077Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Julia Rosol",
+          "stars": 5,
+          "text": "Wain. B was very helpful and efficient when changing all of our locks and installing alarms. He was very friendly and patient even though the job was very time consuming.",
+          "date": "13 Nov 2026",
+          "raw_date": "2026-11-13T12:13:55.528140Z",
           "has_reply": false,
           "reply_text": "",
           "reply_date": ""
