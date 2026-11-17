@@ -1,5 +1,5 @@
 {
-  "last_updated": "17 Nov 2026 09:52 UTC",
+  "last_updated": "17 Nov 2026 15:26 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
@@ -11821,6 +11821,16 @@
       "name": "Linden House",
       "region": "Region 1",
       "reviews": [
+        {
+          "reviewer": "Urvi Patel",
+          "stars": 5,
+          "text": "Brian was very quick and did an excellent job",
+          "date": "17 Nov 2026",
+          "raw_date": "2026-11-17T15:17:20.361221Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "imogen clough",
           "stars": 5,
