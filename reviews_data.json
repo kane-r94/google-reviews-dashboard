@@ -1,5 +1,5 @@
 {
-  "last_updated": "23 Nov 2026 17:15 UTC",
+  "last_updated": "24 Nov 2026 16:54 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
@@ -8342,6 +8342,26 @@
       "region": "Region 1",
       "reviews": [
         {
+          "reviewer": "Rory Jones",
+          "stars": 5,
+          "text": "Brian was excellent in helping fix our power cut and bleeding the radiators as well.",
+          "date": "24 Nov 2026",
+          "raw_date": "2026-11-24T15:05:49.340152Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Matt Jeremy",
+          "stars": 5,
+          "text": "Brian - Worked hard and thoroughly, explained and helped with electrical issues really well, fixed every radiator and cleaned mold/damp in one bedroom. Very dedicated service and extremely nice guy. Couldn’t have asked for a better service.",
+          "date": "24 Nov 2026",
+          "raw_date": "2026-11-24T15:03:53.724282Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
           "reviewer": "Hollie Bratt",
           "stars": 5,
           "text": "sorted out the problem very quickly, very helpful and friendly - Steve H",
@@ -14650,6 +14670,16 @@
       "region": "Region 2",
       "reviews": [
         {
+          "reviewer": "Yap Way Ryn",
+          "stars": 5,
+          "text": "Sam initially came in to fix our bathroom light and door handle but when we brought up a few other maintenance issues we needed fixed he was more than happy to help. He was quick, polite, and friendly. We really appreciate the help thank you!",
+          "date": "23 Nov 2026",
+          "raw_date": "2026-11-23T15:42:07.281908Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
           "reviewer": "Josh Namdjou",
           "stars": 5,
           "text": "Sam from the maintenance team came to replace a table today and he was very kind and helpful answering any questions.",
@@ -14715,16 +14745,6 @@
           "text": "Mike H was great. He had great customer service and got on with the job promptly- went above and beyond also fixing a minor secondary problem. Great work.",
           "date": "9 Nov 2026",
           "raw_date": "2026-11-09T11:50:12.612008Z",
-          "has_reply": false,
-          "reply_text": "",
-          "reply_date": ""
-        },
-        {
-          "reviewer": "Philip “Nippey Cking” Smith",
-          "stars": 5,
-          "text": "",
-          "date": "7 Nov 2026",
-          "raw_date": "2026-11-07T02:26:20.032327Z",
           "has_reply": false,
           "reply_text": "",
           "reply_date": ""
