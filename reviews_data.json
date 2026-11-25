@@ -1,10 +1,20 @@
 {
-  "last_updated": "24 Nov 2026 16:54 UTC",
+  "last_updated": "25 Nov 2026 16:43 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
       "region": "HQ",
       "reviews": [
+        {
+          "reviewer": "Nelson Chukwu",
+          "stars": 5,
+          "text": "Their response to my request was fast, polite and the issue was resolved quickly",
+          "date": "25 Nov 2026",
+          "raw_date": "2026-11-25T11:04:43.543190Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Riley Levitt",
           "stars": 4,
@@ -8352,11 +8362,31 @@
           "reply_date": ""
         },
         {
+          "reviewer": "Finlay Tootill",
+          "stars": 5,
+          "text": "Brian - fixed our radiators in every room and cleaned up the mold in the upstairs rooms. Really nice guy and amazing customer service.",
+          "date": "24 Nov 2026",
+          "raw_date": "2026-11-24T15:04:54.796445Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
           "reviewer": "Matt Jeremy",
           "stars": 5,
           "text": "Brian - Worked hard and thoroughly, explained and helped with electrical issues really well, fixed every radiator and cleaned mold/damp in one bedroom. Very dedicated service and extremely nice guy. Couldn’t have asked for a better service.",
           "date": "24 Nov 2026",
           "raw_date": "2026-11-24T15:03:53.724282Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Tom Elliott07",
+          "stars": 5,
+          "text": "Brian was amazing and sorted out everything we needed quickly and efficiently",
+          "date": "24 Nov 2026",
+          "raw_date": "2026-11-24T15:02:15.300411Z",
           "has_reply": false,
           "reply_text": "",
           "reply_date": ""
@@ -14669,6 +14699,16 @@
       "name": "Chancellors Court",
       "region": "Region 2",
       "reviews": [
+        {
+          "reviewer": "Will Derry",
+          "stars": 5,
+          "text": "Sam came round today and painted some windows in the bedrooms that needed redoing. He was very nice to talk to and very polite in explaining what he was doing",
+          "date": "25 Nov 2026",
+          "raw_date": "2026-11-25T13:59:35.138346Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Yap Way Ryn",
           "stars": 5,
