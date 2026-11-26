@@ -1,10 +1,20 @@
 {
-  "last_updated": "25 Nov 2026 16:43 UTC",
+  "last_updated": "26 Nov 2026 16:17 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
       "region": "HQ",
       "reviews": [
+        {
+          "reviewer": "Lily Monery",
+          "stars": 5,
+          "text": "Very quick on the phone and very helpful",
+          "date": "26 Nov 2026",
+          "raw_date": "2026-11-26T13:04:04.840540Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Nelson Chukwu",
           "stars": 5,
@@ -8352,6 +8362,16 @@
       "region": "Region 1",
       "reviews": [
         {
+          "reviewer": "Lazy Otaku",
+          "stars": 5,
+          "text": "Steve H redone our bath to fix a water leak and also fixed the light bulb in our second bathroom",
+          "date": "17 Jul 2026",
+          "raw_date": "2026-07-17T12:57:36.054497Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
           "reviewer": "Rory Jones",
           "stars": 5,
           "text": "Brian was excellent in helping fix our power cut and bleeding the radiators as well.",
@@ -14700,6 +14720,36 @@
       "region": "Region 2",
       "reviews": [
         {
+          "reviewer": "Justine Poulton",
+          "stars": 5,
+          "text": "Sam came and unclogged the shower drain, he was quick, efficient and very kind",
+          "date": "26 Nov 2026",
+          "raw_date": "2026-11-26T16:16:10.847778Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Ella Eaton",
+          "stars": 5,
+          "text": "Sam was very helpful",
+          "date": "26 Nov 2026",
+          "raw_date": "2026-11-26T15:36:57.523509Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "iris daniels",
+          "stars": 5,
+          "text": "sam was great super quick and everything fixed well",
+          "date": "25 Nov 2026",
+          "raw_date": "2026-11-25T16:04:19.099745Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
           "reviewer": "Will Derry",
           "stars": 5,
           "text": "Sam came round today and painted some windows in the bedrooms that needed redoing. He was very nice to talk to and very polite in explaining what he was doing",
@@ -14965,16 +15015,6 @@
           "text": "Exceptional work",
           "date": "28 Sep 2026",
           "raw_date": "2026-09-28T15:27:33.259364Z",
-          "has_reply": false,
-          "reply_text": "",
-          "reply_date": ""
-        },
-        {
-          "reviewer": "alex hall",
-          "stars": 5,
-          "text": "Had a few maintenance issues was fixed by well by sam",
-          "date": "24 Sep 2026",
-          "raw_date": "2026-09-24T11:54:08.643825Z",
           "has_reply": false,
           "reply_text": "",
           "reply_date": ""
@@ -23023,9 +23063,9 @@
           "text": "Very bad experience here. The whole building is falling apart, and my room in flat D had mould, which the manager didn't sort for months. Almost every appliance in the flat needed replacing and the fire alarm would routinely go off for no reason at 2am on a regular basis. Don't go here.",
           "date": "20 Nov 2026",
           "raw_date": "2026-11-20T23:08:31.675067Z",
-          "has_reply": false,
-          "reply_text": "",
-          "reply_date": ""
+          "has_reply": true,
+          "reply_text": "Thank you for taking the time to share your feedback. We're sorry to hear that your experience did not meet your expectations.\n \nProviding a positive experience for our tenants is extremely important to us, and we're disappointed to learn we've fallen short on this occasion. A member of our team will be contacting you directly to discuss your concerns in more detail and see how we can help resolve the issues raised.\n \nWe appreciate your feedback and the opportunity to improve.\n\nKind regards, \nStudent Cribs Team",
+          "reply_date": "26 Nov 2026"
         },
         {
           "reviewer": "elouise stewart",
