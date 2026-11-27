@@ -1,5 +1,5 @@
 {
-  "last_updated": "26 Nov 2026 16:17 UTC",
+  "last_updated": "27 Nov 2026 16:02 UTC",
   "properties": [
     {
       "name": "Student Cribs HQ",
@@ -8362,6 +8362,36 @@
       "region": "Region 1",
       "reviews": [
         {
+          "reviewer": "ria grace",
+          "stars": 5,
+          "text": "Steve H was very friendly, polite and professional when I met him. He was helpful and approachable, and made a really good impression. Thank you, Steve, for your help!",
+          "date": "27 Nov 2026",
+          "raw_date": "2026-11-27T14:03:23.281635Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Hope Ratcliffe",
+          "stars": 5,
+          "text": "Steve H - Great work lovely man really grateful!!",
+          "date": "27 Aug 2026",
+          "raw_date": "2026-08-27T13:18:48.912238Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
+          "reviewer": "Hope Brassington",
+          "stars": 5,
+          "text": "Steve H did some work in Bedroom 6 and Bedroom 4 and did an absolutely amazing job! Really recommend.",
+          "date": "27 Nov 2026",
+          "raw_date": "2026-11-27T14:01:24.293523Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
+        {
           "reviewer": "Lazy Otaku",
           "stars": 5,
           "text": "Steve H redone our bath to fix a water leak and also fixed the light bulb in our second bathroom",
@@ -8667,16 +8697,6 @@
           "text": "Steve H from maintenance is very friendly and helpful!",
           "date": "21 Jul 2026",
           "raw_date": "2026-07-21T11:50:30.950265Z",
-          "has_reply": false,
-          "reply_text": "",
-          "reply_date": ""
-        },
-        {
-          "reviewer": "Hope Ratcliffe",
-          "stars": 5,
-          "text": "",
-          "date": "27 Aug 2026",
-          "raw_date": "2026-08-27T13:18:48.912238Z",
           "has_reply": false,
           "reply_text": "",
           "reply_date": ""
@@ -14719,6 +14739,16 @@
       "name": "Chancellors Court",
       "region": "Region 2",
       "reviews": [
+        {
+          "reviewer": "sara gupta",
+          "stars": 5,
+          "text": "Sam was exceptional for the maintenance in sorting our leak, and helping us sort any issues that may come up",
+          "date": "27 Nov 2026",
+          "raw_date": "2026-11-27T15:34:14.365506Z",
+          "has_reply": false,
+          "reply_text": "",
+          "reply_date": ""
+        },
         {
           "reviewer": "Justine Poulton",
           "stars": 5,
